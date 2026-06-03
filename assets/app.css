@@ -187,16 +187,16 @@
   transform: translateX(-50%);
 }
 
-.app-screen .placeholder {
+.app-screen img {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(244,237,224,0.3);
-  font-family: var(--serif-jp);
-  font-size: 12px;
-  letter-spacing: 0.28em;
+  top: 6px;
+  left: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 30px;
+  display: block;
 }
 
 .features {
