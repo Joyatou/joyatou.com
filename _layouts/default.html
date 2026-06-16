@@ -6,7 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% if page.description %}<meta name="description" content="{{ page.description }}">
 {% endif %}<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="常夜燈 JOYATOU">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{{ page.title }}">
+{% if page.description %}<meta property="og:description" content="{{ page.description }}">
+{% endif %}<meta property="og:image" content="{{ page.og_image | default: '/assets/og-default.jpg' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+{% if page.description %}<meta name="twitter:description" content="{{ page.description }}">
+{% endif %}<meta name="twitter:image" content="{{ page.og_image | default: '/assets/og-default.jpg' | absolute_url }}">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
