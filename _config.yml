@@ -2,6 +2,9 @@ title: 常夜燈
 description: 常夜燈（JOYATOU）公式サイト
 url: https://joyatou.com
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - .claude/
   - README.md
