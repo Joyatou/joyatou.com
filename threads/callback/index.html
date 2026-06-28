@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Threads OAuth Callback</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; max-width: 720px; margin: 4em auto; padding: 0 1.25em; color: #222; line-height: 1.65; }
+  h1 { font-size: 1.25em; margin-bottom: 1em; }
+  pre { background: #f5f5f5; padding: 1em; border-radius: 4px; word-break: break-all; white-space: pre-wrap; font-family: "SF Mono", Menlo, Consolas, monospace; }
+</style>
+</head>
+<body>
+<h1>Threads OAuth Callback</h1>
+<p>Threads API の OAuth リダイレクト先です。URL に含まれる <code>code</code> パラメータをコピーし、所定のスクリプトに渡してください。</p>
+<pre id="code"></pre>
+<script>
+  const params = new URLSearchParams(location.search);
+  const code = params.get("code");
+  const error = params.get("error");
+  const el = document.getElementById("code");
+  if (code) {
+    el.textContent = code;
+  } else if (error) {
+    el.textContent = "エラー: " + error + "（" + (params.get("error_description") || "") + "）";
+  } else {
+    el.textContent = "コードがまだ発行されていません。Threads の OAuth フローを経由してこのページにアクセスしてください。";
+  }
+</script>
+</body>
+</html>
