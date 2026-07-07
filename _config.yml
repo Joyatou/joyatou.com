@@ -5,6 +5,16 @@ url: https://joyatou.com
 plugins:
   - jekyll-sitemap
 
+defaults:
+  - scope:
+      path: "x/callback"
+    values:
+      sitemap: false
+  - scope:
+      path: "threads/callback"
+    values:
+      sitemap: false
+
 exclude:
   - .claude/
   - README.md
