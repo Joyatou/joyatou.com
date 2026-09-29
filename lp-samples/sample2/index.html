@@ -16,16 +16,6 @@
 {"@context":"https://schema.org","@type":"Store","name":"御菓子司 玉水","foundingDate":"1899","address":{"@type":"PostalAddress","addressRegion":"島根県","addressLocality":"松江市","addressCountry":"JP"},"telephone":"0852-00-0000","openingHours":"Mo,Tu,Th,Fr,Sa,Su 09:00-18:00"}
 </script>
 <style>
-/* Swiper 11 の最低限の指定（swiper.css から、使う分だけ写した） */
-.swiper{position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}
-.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}
-.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}
-.swiper-fade .swiper-slide{pointer-events:none;transition-property:opacity}
-.swiper-fade .swiper-slide-active{pointer-events:auto}
-.swiper-pagination{position:absolute;z-index:10;text-align:center}
-.swiper-pagination-bullet{display:inline-block;width:30px;height:2px;margin:0 4px;background:#b9b2aa;cursor:pointer}
-.swiper-pagination-bullet-active{background:var(--beni)}
-
 /* 字と余白は、老舗和菓子の実在105件の実測と、手本にした店の数値から採った。
    本文は明朝15px・行間1.8・字間.04em、節の題は28px・細字で字間.25em、下に英字16px。
    節の上下は80px、外枠は1200px、ボタンは角丸6px。 */
@@ -79,7 +69,7 @@ ul,ol{padding:0;list-style:none}
 .list-menu__item:hover{color:var(--beni)}
 .menu-drawer__toggle{display:none}
 
-/* メインビジュアル。左に品の札、右に写真。三つの詰合せを順に見せる */
+/* メインビジュアル。左に品の札、右に写真 */
 .banner{background:var(--beige)}
 .banner__slide{display:grid;grid-template-columns:40% 60%;min-height:560px}
 .banner__text{display:flex;flex-direction:column;justify-content:center;padding:48px 44px 48px max(20px,calc((100vw - 1240px)/2 + 20px))}
@@ -88,17 +78,14 @@ ul,ol{padding:0;list-style:none}
 .banner__price{font-size:16px;letter-spacing:.08em}
 .price-item{margin:0 .15em 0 .35em}
 .banner__price .price-item{font-size:22px}
-.banner__thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 22px}
-.banner__thumbs figure{font-size:11px;text-align:center;color:var(--mute);line-height:1.5}
-.banner__thumbs img{width:100%;aspect-ratio:1;object-fit:cover;background:#fff;margin-bottom:4px}
-.banner__award{font-size:13px;letter-spacing:.08em;color:var(--beni);margin-bottom:6px}
-.banner__link{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#5b4f4a;color:#fff;font-size:13px;letter-spacing:.12em}
+.banner__link{display:flex;justify-content:space-between;align-items:center;margin-top:30px;padding:12px 18px;background:#5b4f4a;color:#fff;font-size:13px;letter-spacing:.12em}
 .banner__media img{width:100%;height:100%;object-fit:cover}
-/* 印は写真の中央に。左の札の列（40%）を外して並べる */
-.banner .swiper-pagination{left:40%;right:0;bottom:18px}
-.banner__pause{position:absolute;z-index:10;right:20px;bottom:10px;padding:3px 12px;border:1px solid #b9b2aa;border-radius:4px;
-  background:rgba(255,255,255,.9);color:var(--text);font:inherit;font-size:12px;letter-spacing:.08em;cursor:pointer}
-.swiper-fade .swiper-slide:not(.swiper-slide-active) .banner__text{visibility:hidden}
+/* 季のほかの2品は、下の節で使っていない写真で案内する */
+.banner__others-title{margin-top:30px;font-size:12px;letter-spacing:.12em;color:var(--mute)}
+.banner__others li{margin-top:10px}
+.banner__others a{display:flex;align-items:center;gap:14px;font-size:14px;letter-spacing:.08em}
+.banner__others a:hover{color:var(--beni)}
+.banner__others img{width:56px;height:56px;object-fit:cover;flex:none}
 
 /* お知らせ。細い罫で区切った一覧 */
 .news-list{max-width:800px;margin:0 auto;border-top:1px solid var(--line)}
@@ -193,7 +180,6 @@ ul,ol{padding:0;list-style:none}
 .order__tel b{display:block;font-size:30px;font-weight:500;letter-spacing:.08em;color:#222}
 .form{padding:32px 34px;background:var(--beige)}
 .form label,.form legend{display:block;font-size:14px;font-weight:600;margin:16px 0 6px;padding:0}
-.form>label:first-of-type{margin-top:0}
 .req{margin-left:.6em;padding:1px 7px;border-radius:3px;background:var(--beni);color:#fff;font-size:11px;font-weight:400;letter-spacing:.06em;vertical-align:1px}
 .req--any{background:#fff;color:var(--mute);box-shadow:inset 0 0 0 1px #cfc8bd}
 .form-lead{font-size:12px;color:var(--mute);margin-bottom:14px}
@@ -211,6 +197,8 @@ ul,ol{padding:0;list-style:none}
 .form legend{font-size:15px;margin-top:0;padding-bottom:4px;border-bottom:1px solid #d9d1c4;width:100%}
 .form__row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
 .form__other{margin-top:4px}
+.form__item{display:grid;grid-template-columns:1fr 5em;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid #e3dccf}
+.form .form__item label{margin:0;font-weight:400}
 .confirm h3{font-size:17px;margin-bottom:14px}
 .confirm dl{display:grid;grid-template-columns:9em 1fr;gap:10px 16px;font-size:14px;margin:0}
 .confirm dt{font-weight:600}
@@ -277,7 +265,6 @@ ul,ol{padding:0;list-style:none}
   .banner__media{order:-1}
   .banner__media img{aspect-ratio:4/3}
   .banner__text{padding:26px 18px 44px}
-  .banner .swiper-pagination{left:0}
   .banner__name{font-size:21px}
   .grid--4{grid-template-columns:1fr 1fr}
   .grid--3{grid-template-columns:1fr}
@@ -307,7 +294,7 @@ ul,ol{padding:0;list-style:none}
 @media print{
   [data-rise]{opacity:1!important;transform:none!important}
   .header{position:static}
-  .banner .swiper-slide:not(:first-child),.swiper-pagination,.banner__pause,.sp-cta,.announcement-bar{display:none!important}
+  .sp-cta,.announcement-bar{display:none!important}
   .legal dl{display:block}
 }
 /* 和文の折り返し。数字と単位の間は pretty でも割れるので .nw で括る */
@@ -316,11 +303,11 @@ p,li,dd,dt,th,td,figcaption,summary,blockquote{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 .nw{white-space:nowrap}
 </style>
-<noscript><style>[data-rise]{opacity:1;transform:none}.banner .swiper-slide:not(:first-child){display:none}</style></noscript>
+<noscript><style>[data-rise]{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
-<div class="announcement-bar">常温の詰合せ（初霜・川霧）は、税込8,640円以上のご注文で送料無料<a href="#shipping">送料と日持ち</a></div>
+<div class="announcement-bar">「初霜」「川霧」は、税込8,640円以上のご注文で送料無料です<a href="#shipping">送料と日持ち</a></div>
 
 <header class="header">
   <div class="header__top">
@@ -334,7 +321,7 @@ h1,h2,h3{text-wrap:balance}
   <nav id="menu" aria-label="ページ内の案内">
     <ul class="header__menu">
       <li><a class="list-menu__item" href="#news">お知らせ</a></li>
-      <li><a class="list-menu__item" href="#season">季節の上生菓子</a></li>
+      <li><a class="list-menu__item" href="#season">季節の和菓子</a></li>
       <li><a class="list-menu__item" href="#products">お品書き</a></li>
       <li><a class="list-menu__item" href="#gift">贈り物とのし</a></li>
       <li><a class="list-menu__item" href="#about">玉水のこだわり</a></li>
@@ -346,54 +333,21 @@ h1,h2,h3{text-wrap:balance}
 </header>
 
 <main id="top">
-<section class="banner swiper" aria-label="おすすめの詰合せ">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide banner__slide">
-      <div class="banner__text">
-        <p class="banner__catch">松江の茶席に納めてきた上生菓子</p>
-        <p class="banner__name">上生菓子詰合せ「季」</p>
-        <p class="banner__price"><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）</p>
-        <div class="banner__thumbs">
-          <figure><img src="img/tsukimi.jpg" alt="黒い皿にのせた白い薯蕷饅頭"><figcaption>月見</figcaption></figure>
-          <figure><img src="img/kikyo.jpg" alt="紫の花の練り切り"><figcaption>桔梗</figcaption></figure>
-          <figure><img src="img/hatsukari.jpg" alt="白い布に広げた青と紫の琥珀糖"><figcaption>初雁</figcaption></figure>
-        </div>
-        <a class="banner__link" href="#toki">お品書きはこちら<span>→</span></a>
-      </div>
-      <div class="banner__media"><img src="img/noshibox.jpg" alt="黒塗りの盆にのせた桃の形の練り切りと煎茶" fetchpriority="high"></div>
+<section class="banner" aria-label="おすすめの詰合せ">
+  <div class="banner__slide">
+    <div class="banner__text">
+      <p class="banner__catch">松江の茶席に納めてきた上生菓子</p>
+      <p class="banner__name">上生菓子詰合せ「季」</p>
+      <p class="banner__price"><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）</p>
+      <a class="banner__link" href="#toki">詳しく見る<span>→</span></a>
+      <p class="banner__others-title">ほかの詰合せ</p>
+      <ul class="banner__others">
+        <li><a href="#hatsushimo"><img src="img/yokan_cut.jpg" alt="染付皿にのせた練羊羹">羊羹詰合せ「初霜」</a></li>
+        <li><a href="#kawagiri"><img src="img/monaka.jpg" alt="俵形の最中と、その割り口">半生菓子詰合せ「川霧」</a></li>
+      </ul>
     </div>
-    <div class="swiper-slide banner__slide">
-      <div class="banner__text">
-        <p class="banner__catch">日持ちのするご挨拶の品</p>
-        <p class="banner__name">羊羹詰合せ「初霜」</p>
-        <p class="banner__award">第<span class="nw">27回</span>全国菓子大博覧会・名誉総裁賞受賞<a class="note-ref" href="#note">※</a></p>
-        <p class="banner__price">2棹入<span class="price-item">2,916円</span>（税込）</p>
-        <div class="banner__thumbs">
-          <figure><img src="img/yokan_cut.jpg" alt="染付皿の練羊羹" loading="lazy"><figcaption>本練</figcaption></figure>
-          <figure><img src="img/anko.jpg" alt="両手ですくった小豆" loading="lazy"><figcaption>十勝の小豆</figcaption></figure>
-          <figure><img src="img/gift.jpg" alt="御礼ののし紙" loading="lazy"><figcaption>のし紙</figcaption></figure>
-        </div>
-        <a class="banner__link" href="#hatsushimo">お品書きはこちら<span>→</span></a>
-      </div>
-      <div class="banner__media"><img src="img/yokan2.jpg" alt="練羊羹の一切れと葛饅頭" loading="lazy"></div>
-    </div>
-    <div class="swiper-slide banner__slide">
-      <div class="banner__text">
-        <p class="banner__catch">お茶の時間に、ひとつずつ</p>
-        <p class="banner__name">半生菓子詰合せ「川霧」</p>
-        <p class="banner__price"><span class="nw">8個</span>入<span class="price-item"><span class="nw">3,780円</span></span>（税込）</p>
-        <div class="banner__thumbs">
-          <figure><img src="img/momoyama.jpg" alt="紅葉の形の焼き饅頭と湯呑み" loading="lazy"><figcaption>お茶菓子</figcaption></figure>
-          <figure><img src="img/monaka.jpg" alt="俵形の最中と、その割り口" loading="lazy"><figcaption>最中</figcaption></figure>
-          <figure><img src="img/hands.jpg" alt="職人の手と練り切り" loading="lazy"><figcaption>職人の手</figcaption></figure>
-        </div>
-        <a class="banner__link" href="#kawagiri">お品書きはこちら<span>→</span></a>
-      </div>
-      <div class="banner__media"><img src="img/kawagiri.jpg" alt="どら焼き・焼き菓子・シュークリームを詰めた白い菓子箱" loading="lazy"></div>
-    </div>
+    <div class="banner__media"><img src="img/noshibox.jpg" alt="黒塗りの盆にのせた桃の形の練り切りと煎茶" fetchpriority="high"></div>
   </div>
-  <div class="swiper-pagination"></div>
-  <button class="banner__pause" type="button" hidden>一時停止</button>
 </section>
 
 <section class="section-template" id="news">
@@ -401,23 +355,23 @@ h1,h2,h3{text-wrap:balance}
     <div class="title-wrapper" data-rise><h2 class="title">お知らせ</h2><span class="title__en">INFORMATION</span></div>
     <ul class="news-list" data-rise>
       <li><time datetime="2026-08-25"><span class="nw">2026年8月25日</span></time><p>敬老の日のご進物のご予約を承っております。表書きは「敬老の日」「寿」からお選びいただけます。</p></li>
-      <li><time datetime="2026-08-01"><span class="nw">2026年8月1日</span></time><p>九月の上生菓子をご用意いたします。銘については、<a href="#season">季節の上生菓子</a>をご覧ください。</p></li>
-      <li><time datetime="2026-07-10"><span class="nw">2026年7月10日</span></time><p>7〜9月は、常温の詰合せもクール便でお送りします。詳しくは、<a href="#shipping">送料と日持ち</a>をご覧ください。</p></li>
+      <li><time datetime="2026-08-01"><span class="nw">2026年8月1日</span></time><p>長月の上生菓子の販売が<span class="nw">9月1日</span>よりはじまります。詳しくは、<a href="#season">季節の和菓子</a>をご覧ください。</p></li>
+      <li><time datetime="2026-07-10"><span class="nw">2026年7月10日</span></time><p>7〜9月は、「初霜」「川霧」もクール便でお送りします。詳しくは、<a href="#shipping">送料と日持ち</a>をご覧ください。</p></li>
     </ul>
   </div>
 </section>
 
 <section class="section-template section-template--beige" id="season">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">季節の上生菓子</h2><span class="title__en">SEASON</span></div>
+    <div class="title-wrapper" data-rise><h2 class="title">季節の和菓子</h2><span class="title__en">SEASON</span></div>
     <div class="grid grid--4" data-rise>
       <figure class="card-photo"><img src="img/tsukimi.jpg" alt="黒い皿にのせた白い薯蕷饅頭" loading="lazy"><figcaption><span>薯蕷饅頭</span>月見</figcaption></figure>
       <figure class="card-photo"><img src="img/kikyo.jpg" alt="紫の花の練り切り" loading="lazy"><figcaption><span>練り切り</span>桔梗</figcaption></figure>
-      <figure class="card-photo"><img src="img/hatsukari.jpg" alt="白い布に広げた青と紫の琥珀糖" loading="lazy"><figcaption><span>琥珀糖</span>初雁</figcaption></figure>
       <figure class="card-photo"><img src="img/kurinoko.jpg" alt="茶巾絞りの栗きんとん" loading="lazy"><figcaption><span>栗きんとん</span>栗の子</figcaption></figure>
+      <figure class="card-photo"><img src="img/hatsukari.jpg" alt="白い布に広げた青と紫の琥珀糖" loading="lazy"><figcaption><span>琥珀糖</span>初雁</figcaption></figure>
     </div>
-    <p class="lead" data-rise>九月の上生菓子は「月見」「桔梗」「初雁」「栗の子」です。</p>
-    <p class="season-buy" data-rise>四種を詰め合わせた「季」<br><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）<a class="button" href="#order">ご注文</a></p>
+    <p class="lead" data-rise>長月の上生菓子は「月見」「桔梗」「栗の子」です。琥珀糖の「初雁」は、店頭のみの販売となります。</p>
+    <p class="season-buy" data-rise>上生菓子詰合せ「季」<br><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）<a class="button" href="#order">ご注文</a></p>
   </div>
 </section>
 
@@ -431,11 +385,11 @@ h1,h2,h3{text-wrap:balance}
           <h3 class="product__name">季<small>TOKI</small></h3>
           <span class="product__kind">上生菓子詰合せ・冷蔵</span>
           <p class="product__price"><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）</p>
-          <p class="product__desc">四種のうち二種を<span class="nw">2個</span>ずつ、残る二種を<span class="nw">1個</span>ずつお詰めいたします。</p>
+          <p class="product__desc">その月の上生菓子<span class="nw">3種類</span>を、<span class="nw">2個</span>ずつお詰めいたします。</p>
           <dl class="product__spec">
-            <div><dt>原材料名</dt><dd>白いんげん豆（手亡豆）、砂糖、小豆、栗、やまいも、米粉、寒天／着色料（紅麹、<span class="nw">クチナシ</span>）</dd></div>
-            <div><dt>アレルゲン</dt><dd>特定原材料（表示が義務づけられた<span class="nw">9品目</span>）は使用しておりません。薯蕷饅頭にやまいも（表示が推奨される品目）を使用しております。</dd></div>
-            <div><dt>消費期限</dt><dd>製造日から<span class="nw">4日</span>（要冷蔵）。お届けから<span class="nw">2日</span>以上日持ちするものをお送りしております。</dd></div>
+            <div><dt>原材料名</dt><dd>白いんげん豆（手亡豆）、砂糖、小豆、栗、やまいも、米粉／着色料（<span class="nw">紅麹</span>、<span class="nw">クチナシ</span>）</dd></div>
+            <div><dt>アレルゲン</dt><dd>特定原材料（表示が義務づけられた<span class="nw">9品目</span>）は使用しておりません。薯蕷饅頭にやまいも（表示が推奨される品目）を使用しております。同じ工房で、小麦と卵を使用する菓子も製造しております。</dd></div>
+            <div><dt>消費期限</dt><dd>製造日から<span class="nw">4日</span>（要冷蔵）。お届け時点での日持ちは<span class="nw">2日</span>以上です。</dd></div>
           </dl>
         </div>
       </article>
@@ -448,8 +402,8 @@ h1,h2,h3{text-wrap:balance}
           <p class="product__desc">本練と小倉の詰合せです。第<span class="nw">27回</span>全国菓子大博覧会にて名誉総裁賞<a class="note-ref" href="#note">※</a>を受賞いたしました。</p>
           <dl class="product__spec">
             <div><dt>原材料名</dt><dd>小豆、砂糖（白双糖）、寒天</dd></div>
-            <div><dt>アレルゲン</dt><dd>特定原材料（表示が義務づけられた<span class="nw">9品目</span>）も、表示が推奨される品目も使用しておりません。</dd></div>
-            <div><dt>賞味期限</dt><dd>製造日から<span class="nw">90日</span>（常温）。お届けから<span class="nw">60日</span>以上日持ちするものをお送りしております。</dd></div>
+            <div><dt>アレルゲン</dt><dd>特定原材料（表示が義務づけられた<span class="nw">9品目</span>）も、表示が推奨される品目も使用しておりません。同じ工房で、小麦と卵を使用する菓子も製造しております。</dd></div>
+            <div><dt>賞味期限</dt><dd>製造日から<span class="nw">90日</span>（常温）。お届け時点での日持ちは<span class="nw">60日</span>以上です。</dd></div>
           </dl>
         </div>
       </article>
@@ -459,16 +413,16 @@ h1,h2,h3{text-wrap:balance}
           <h3 class="product__name">川霧<small>KAWAGIRI</small></h3>
           <span class="product__kind">半生菓子詰合せ・常温</span>
           <p class="product__price"><span class="nw">8個</span>入<span class="price-item"><span class="nw">3,780円</span></span>（税込）<br><span class="nw">16個</span>入<span class="nw">7,020円</span>（税込）</p>
-          <p class="product__desc">最中二種・栗蒸羊羹・桃山の四種を、<span class="nw">8個</span>入は<span class="nw">2個</span>ずつ、<span class="nw">16個</span>入は<span class="nw">4個</span>ずつお詰めいたします。切り分けずに、そのまま召し上がれる大きさにお作りしております。</p>
+          <p class="product__desc">最中<span class="nw">2種</span>・一口栗羊羹・桃山の<span class="nw">4種類</span>を、<span class="nw">8個</span>入は<span class="nw">2個</span>ずつ、<span class="nw">16個</span>入は<span class="nw">4個</span>ずつお詰めいたします。</p>
           <dl class="product__spec">
-            <div><dt>原材料名</dt><dd>小豆、砂糖（和三盆糖、白双糖）、もち米、鶏卵、小麦粉、白いんげん豆（手亡豆）、栗、寒天</dd></div>
-            <div><dt>アレルゲン</dt><dd>小麦（栗蒸羊羹）、卵（桃山）を使用しております。表示が推奨される品目は使用しておりません。</dd></div>
-            <div><dt>賞味期限</dt><dd>製造日から<span class="nw">30日</span>（常温）。お届けから<span class="nw">20日</span>以上日持ちするものをお送りしております。</dd></div>
+            <div><dt>原材料名</dt><dd>小豆、砂糖（和三盆糖、白双糖）、もち米、鶏卵、白いんげん豆（手亡豆）、栗、寒天</dd></div>
+            <div><dt>アレルゲン</dt><dd>桃山に卵を使用しております。表示が推奨される品目は使用しておりません。同じ工房で、小麦を使用する菓子も製造しております。</dd></div>
+            <div><dt>賞味期限</dt><dd>製造日から<span class="nw">30日</span>（常温）。お届け時点での日持ちは<span class="nw">20日</span>以上です。</dd></div>
           </dl>
         </div>
       </article>
     </div>
-    <p class="product-note" data-rise>同じ工房で、小麦と卵を使用する菓子も製造しております。お届けする箱に、名称・原材料名・添加物・内容量・期限・保存方法・製造者を表示しております。</p>
+    <p class="product-note" data-rise>お届けする箱に、名称・原材料名・添加物・内容量・期限・保存方法・製造者を表示しております。</p>
   </div>
 </section>
 
@@ -478,20 +432,20 @@ h1,h2,h3{text-wrap:balance}
     <div class="gift">
       <div class="gift__col" data-rise>
         <div class="gift__photos">
-          <figure><img src="img/noshi.jpg" alt="蝶結びの水引を刷ったのし紙を掛けた菓子箱" loading="lazy"><figcaption>蝶結びののし紙。水引は紅白です。</figcaption></figure>
+          <figure><img src="img/noshi.jpg" alt="蝶結びの水引を刷ったのし紙を掛けた菓子箱と、包装した箱" loading="lazy"><figcaption>蝶結びののし紙</figcaption></figure>
           <figure><img src="img/gift.jpg" alt="御礼ののし紙" loading="lazy"><figcaption>表書き「御礼」ののし紙</figcaption></figure>
         </div>
         <h3>箱の大きさ</h3>
         <ul class="box-sizes">
-          <li><b>季</b>6個入（18×12cm）</li>
-          <li><b>川霧</b>8個入（18×14cm）・16個入（27×18cm）</li>
-          <li><b>初霜</b>2棹入（26×12cm）・4棹入（26×26cm）</li>
+          <li><b>季</b>6個入（18×12×6cm）</li>
+          <li><b>川霧</b>8個入（18×14×6cm）・16個入（27×18×6cm）</li>
+          <li><b>初霜</b>2棹入（26×12×6cm）・4棹入（26×26×6cm）</li>
         </ul>
       </div>
       <div data-rise>
         <h3>のし紙・掛け紙と名入れは無料です</h3>
         <p>ご用途とお名前は、ご注文<span class="nw">フォーム</span>の「のし・掛け紙の用途」と「のし・掛け紙の名入れ」にご記入ください。表書きはご用途に合わせて、当店でお入れいたします。</p>
-        <p>内のしは箱に直接のし紙を掛け、その上から包装紙で包む体裁です。外のしは包装紙で包んだ上からのし紙を掛ける体裁です。どちらも承ります。お送りする場合は内のし、お手渡しの場合は外のしをおすすめしております。</p>
+        <p>内のしは、箱に直接のし紙を掛け、その上から包装紙でお包みいたします。外のしは、包装紙でお包みした上から、のし紙をお掛けいたします。どちらも承ります。お送りする場合は内のし、お手渡しの場合は外のしをおすすめしております。</p>
         <p>弔事には、黒白または黄白の結び切りの掛け紙をご用意しております。「御供」「志」「粗供養」の表書きも承ります。掛け紙の様式は地域により異なる場合がございますので、ご用途とお届け先の地域をお知らせください。</p>
         <p>お中元、お歳暮、お盆とお彼岸のご進物も承ります。</p>
         <p class="voice">「法要の返礼に選びました。掛け紙の表書きをお店に相談したところ、私の住む地域の慣習まで教えていただけました」<cite><span class="nw">2025年3月</span>・50代のお客様</cite></p>
@@ -506,25 +460,25 @@ h1,h2,h3{text-wrap:balance}
     <div class="grid grid--3">
       <article class="commit__card" data-rise>
         <div class="commit__media"><img src="img/hands.jpg" alt="職人の手と練り切り" loading="lazy"><span class="commit__label">茶席の菓子</span></div>
-        <p>松江には、松江藩七代藩主・松平治郷（不昧公）が広めた茶の湯がいまも残っています。玉水は城下の菓子屋として、茶席の菓子を納めてまいりました。</p>
+        <p>松江には、松江藩七代藩主・松平治郷（不昧公）が広めた茶の湯が、いまも受け継がれています。玉水は城下の菓子屋として、茶席の菓子を納めてまいりました。</p>
       </article>
       <article class="commit__card" data-rise>
         <div class="commit__media"><img src="img/anko.jpg" alt="両手ですくった小豆" loading="lazy"><span class="commit__label">十勝の小豆</span></div>
         <p>北海道十勝産の小豆と、白餡用の手亡豆を使い、毎朝<span class="nw">5時</span>から銅鍋で餡を炊いております。砂糖はそれぞれの菓子に合わせて、和三盆糖と白双糖を使い分けております。</p>
       </article>
       <article class="commit__card" data-rise>
-        <div class="commit__media"><img src="img/tsumeawase.jpg" alt="黒塗りの盆にのせた紫陽花・白い花・てんとう虫の青葉の上生菓子" loading="lazy"><span class="commit__label">お稽古と法要</span></div>
-        <p>茶道の先生方や寺院へ、お稽古と法要に使う菓子を納めております。前日までにご注文をいただき、当日の朝にお作りしてお届けしております。</p>
+        <div class="commit__media"><img src="img/tsumeawase.jpg" alt="黒塗りの盆にのせた上生菓子三つ（紫陽花・白い花・青葉にてんとう虫）" loading="lazy"><span class="commit__label">お稽古と法要</span></div>
+        <p>お稽古やご法要の菓子のご注文も承っております。当日の朝に仕上げた品を、松江市内の会場までお届けいたします。</p>
       </article>
     </div>
     <div class="history" data-rise>
       <h3>玉水のあゆみ</h3>
       <ol>
         <li><b>明治三十二年</b><span>初代が松江・白潟に店を開く。近隣の茶席へ菓子を納める</span></li>
-        <li><b>昭和二十七年</b><span>砂糖の統制が解け、戦中から休んでいた店を再開</span></li>
+        <li><b>昭和二十七年</b><span>砂糖の統制が解け、戦中から休んでいた店を二代目が再開</span></li>
         <li><b>昭和四十八年</b><span>三代目が継ぎ、上生菓子の銘を月替わりにする</span></li>
         <li><b>平成二十年</b><span>四代目（当代）が継ぐ。遠方へ移ったお客様から「同じものを送ってほしい」と頼まれ、通販を始める</span></li>
-        <li><b>平成二十九年</b><span>第<span class="nw">27回</span>全国菓子大博覧会（三重）で、「初霜」が名誉総裁賞<a class="note-ref" href="#note">※</a>を受ける</span></li>
+        <li><b>平成二十九年</b><span>第二十七回全国菓子大博覧会（三重）で、「初霜」が名誉総裁賞<a class="note-ref" href="#note">※</a>を受ける</span></li>
       </ol>
     </div>
   </div>
@@ -546,19 +500,20 @@ h1,h2,h3{text-wrap:balance}
       </table>
     </div>
     <ul class="notes" data-rise>
-      <li>常温の詰合せ（初霜・川霧）は、税込8,640円以上のご注文で送料が無料になります。お届け先が複数の場合は、<span class="nw">1件</span>ごとのご注文額が対象です。冷蔵の「季」は<span class="nw">クール</span>便のため対象外です。</li>
+      <li>「初霜」「川霧」は、税込8,640円以上のご注文で送料が無料になります。お届け先が複数の場合は、<span class="nw">1件</span>ごとのご注文額が対象です。「季」の代金は、送料無料の計算には含まれませんので、ご了承ください。</li>
+      <li>「季」と「初霜」「川霧」を一緒にご注文の場合は、それぞれの梱包でのお届けとなるため、「季」の送料を別途いただきます。</li>
       <li>代金引換の手数料<span class="nw">330円</span>はお客様のご負担となります。</li>
-      <li>7〜9月は常温の詰合せも<span class="nw">クール</span>便でお送りします。送料は常温便の額のままです。</li>
+      <li>7〜9月は「初霜」「川霧」も<span class="nw">クール</span>便でお送りします。送料は常温便の額のままです。</li>
       <li>お届けは<span class="nw">ヤマト</span>運輸の宅急便です。発送のご連絡の際に、お問い合わせ番号をお知らせいたします。</li>
     </ul>
     <div class="keep" data-rise>
       <div>
-        <h3>「季」</h3>
+        <h3>「季」の保存方法</h3>
         <p>冷蔵庫で保存してください。召し上がる<span class="nw">30分</span>ほど前に冷蔵庫から出しておくと、餡のやわらかさが戻ります。</p>
       </div>
       <div>
-        <h3>「初霜」「川霧」</h3>
-        <p>直射日光と高温多湿を避け、常温で保存してください。開封後はお早めにお召し上がりください。</p>
+        <h3>「初霜」「川霧」の保存方法</h3>
+        <p>直射日光と高温多湿を避け、常温で保存してください。7〜9月に<span class="nw">クール</span>便でお届けした品も、お受け取りのあとは常温で保存してください。冷蔵庫に入れられますと、固くなる場合がございます。開封後はお早めにお召し上がりください。</p>
       </div>
     </div>
   </div>
@@ -568,11 +523,11 @@ h1,h2,h3{text-wrap:balance}
   <div class="page-width">
     <div class="title-wrapper" data-rise><h2 class="title">よくあるご質問</h2><span class="title__en">QUESTIONS</span></div>
     <div class="qa">
-      <div class="qa__item" data-rise><h3 class="qa__q">1．お届け日と時間帯を指定できますか？</h3><p class="qa__a">ご注文<span class="nw">フォーム</span>でお選びいただけます。お届け日はご注文の<span class="nw">3日</span>後から承ります。</p></div>
-      <div class="qa__item" data-rise><h3 class="qa__q">2．上生菓子「季」の中身は選べますか？</h3><p class="qa__a">季は、その月の四種を当店で取り合わせてお詰めいたします。中身のご指定は承っておりません。召し上がれない原材料がございましたら、ご注文の前にお電話でご相談ください。</p></div>
-      <div class="qa__item" data-rise><h3 class="qa__q">3．領収書をお願いできますか？</h3><p class="qa__a">品物に同封してお送りいたします。宛名とただし書きは、ご注文<span class="nw">フォーム</span>の備考にお書き添えください。<span class="nw">インボイス</span>制度の登録番号も記載いたします。</p></div>
+      <div class="qa__item" data-rise><h3 class="qa__q">1．お届け日と時間帯を指定できますか？</h3><p class="qa__a">ご注文<span class="nw">フォーム</span>でお選びいただけます。お届け日は、ご注文より<span class="nw">5日</span>後からご指定いただけます。</p></div>
+      <div class="qa__item" data-rise><h3 class="qa__q">2．上生菓子詰合せ「季」の中身は選べますか？</h3><p class="qa__a">「季」は、その月の上生菓子<span class="nw">3種類</span>をお詰めしております。中身のご指定は承っておりません。召し上がれない原材料がございましたら、ご注文の前にお電話でご相談ください。</p></div>
+      <div class="qa__item" data-rise><h3 class="qa__q">3．領収書をお願いできますか？</h3><p class="qa__a">ご注文者様へのお届けの場合は、品物に同封いたします。ご注文者様とお届け先が異なる場合は、品物には同封せず、別途ご注文者様宛に郵送いたします。宛名とただし書きは、ご注文<span class="nw">フォーム</span>の備考にお書き添えください。領収書には、適格請求書発行事業者の登録番号を記載いたします。</p></div>
       <div class="qa__item" data-rise><h3 class="qa__q">4．複数のお届け先へ送れますか？</h3><p class="qa__a">承っております。お手数ですが、お届け先ごとにご注文いただくか、お電話でご相談ください。送料はお届け先<span class="nw">1件</span>ごとにかかります。</p></div>
-      <div class="qa__item" data-rise><h3 class="qa__q">5．手提げ袋は付けることはできますか？</h3><p class="qa__a">ご注文の箱の数だけ、無料でお付けいたします。数のご希望がございましたら、ご注文<span class="nw">フォーム</span>の備考にお書き添えください。</p></div>
+      <div class="qa__item" data-rise><h3 class="qa__q">5．手提げ袋を付けていただけますか？</h3><p class="qa__a">ご注文の箱の数だけ、無料でお付けいたします。箱の数と異なる枚数をご希望の場合は、ご注文<span class="nw">フォーム</span>の備考にお書き添えください。</p></div>
     </div>
   </div>
 </section>
@@ -585,7 +540,7 @@ h1,h2,h3{text-wrap:balance}
         <ol class="steps">
           <li><b>一</b><span>詰合せと数量、お届け日をお選びください。</span></li>
           <li><b>二</b><span>ご注文者とお届け先をご記入ください。のし紙・掛け紙をご希望の方は、用途と名入れもご記入ください。</span></li>
-          <li><b>三</b><span>お支払い方法をお選びいただき、確認の画面で合計額をご確認のうえ、ご注文を確定してください。</span></li>
+          <li><b>三</b><span>お支払い方法をお選びいただき、確認画面で合計額をお確かめのうえ、ご注文を確定してください。</span></li>
         </ol>
         <div class="order__tel">
           <p>お電話でのご注文・お問い合わせ</p>
@@ -595,28 +550,16 @@ h1,h2,h3{text-wrap:balance}
         </div>
       </div>
       <form class="form" id="order-form" data-rise>
-        <p class="form-lead"><span class="req">必須</span>の印がある欄にご記入のうえ、確認の画面へお進みください。</p>
-        <label for="o-item">詰合せ<span class="req">必須</span></label>
-        <select id="o-item" name="o-item" required>
-          <option data-price="4320" data-cool="1">季　上生菓子6個入　4,320円</option>
-          <option data-price="2916">初霜　羊羹2棹入　2,916円</option>
-          <option data-price="5400">初霜　羊羹4棹入　5,400円</option>
-          <option data-price="3780">川霧　半生菓子8個入　3,780円</option>
-          <option data-price="7020">川霧　半生菓子16個入　7,020円</option>
-        </select>
-        <label for="o-num">数量<span class="req">必須</span></label>
-        <select id="o-num" name="o-num"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>
-        <label for="o-item2">ほかの詰合せ<span class="req req--any">任意</span></label>
-        <select id="o-item2" name="o-item2">
-          <option value="">なし</option>
-          <option data-price="2916">初霜　羊羹2棹入　2,916円</option>
-          <option data-price="5400">初霜　羊羹4棹入　5,400円</option>
-          <option data-price="3780">川霧　半生菓子8個入　3,780円</option>
-          <option data-price="7020">川霧　半生菓子16個入　7,020円</option>
-        </select>
-        <label for="o-num2">ほかの詰合せの数量<span class="req req--any">任意</span></label>
-        <select id="o-num2" name="o-num2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>
-        <p class="form-hint">冷蔵の「季」と常温の詰合せをまとめてご注文の場合や、同じ詰合せを<span class="nw">10箱</span>以上ご注文の場合は、お電話で承ります。「ほかの詰合せ」では、常温の詰合せ（初霜・川霧）をお選びいただけます。</p>
+        <p class="form-lead"><span class="req">必須</span>の印がある欄にご記入のうえ、確認画面へお進みください。</p>
+        <fieldset>
+          <legend>詰合せと数量<span class="req">必須</span></legend>
+          <div class="form__item"><label for="q-toki">季　上生菓子<span class="nw">6個</span>入　<span class="nw">4,320円</span></label><select id="q-toki" name="q-toki" data-price="4320" data-cool="1"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+          <div class="form__item"><label for="q-hatsushimo2">初霜　羊羹2棹入　<span class="nw">2,916円</span></label><select id="q-hatsushimo2" name="q-hatsushimo2" data-price="2916"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+          <div class="form__item"><label for="q-hatsushimo4">初霜　羊羹4棹入　<span class="nw">5,400円</span></label><select id="q-hatsushimo4" name="q-hatsushimo4" data-price="5400"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+          <div class="form__item"><label for="q-kawagiri8">川霧　半生菓子<span class="nw">8個</span>入　<span class="nw">3,780円</span></label><select id="q-kawagiri8" name="q-kawagiri8" data-price="3780"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+          <div class="form__item"><label for="q-kawagiri16">川霧　半生菓子<span class="nw">16個</span>入　<span class="nw">7,020円</span></label><select id="q-kawagiri16" name="q-kawagiri16" data-price="7020"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+        </fieldset>
+        <p class="form-hint"><span class="nw">1種類</span>につき<span class="nw">10箱</span>以上のご注文は、お電話にて承ります。</p>
         <div class="form__row">
           <div><label for="o-date">お届け日<span class="req">必須</span></label><input id="o-date" name="o-date" type="date" required></div>
           <div><label for="o-time">時間帯<span class="req req--any">任意</span></label><select id="o-time" name="o-time"><option>指定なし</option><option>午前中</option><option>14〜16時</option><option>16〜18時</option><option>18〜20時</option><option>19〜21時</option></select></div>
@@ -660,12 +603,11 @@ h1,h2,h3{text-wrap:balance}
         <input id="o-name3" name="o-name3" type="text" placeholder="例）山田 太郎、山田家">
         <p class="form-hint">連名は「・」で区切ってご記入ください。</p>
         <fieldset>
-          <legend>のしの掛け方</legend>
+          <legend>のし紙・掛け紙の掛け方</legend>
           <div class="radio">
-            <label><input type="radio" name="o-way" value="不要" checked>不要</label>
+            <label><input type="radio" name="o-way" value="おまかせ" checked>おまかせ</label>
             <label><input type="radio" name="o-way" value="内のし">内のし</label>
             <label><input type="radio" name="o-way" value="外のし">外のし</label>
-            <label><input type="radio" name="o-way" value="おまかせ">おまかせ</label>
           </div>
         </fieldset>
         <fieldset>
@@ -679,7 +621,7 @@ h1,h2,h3{text-wrap:balance}
         <label for="o-note">備考（ご質問・領収書の宛名など）<span class="req req--any">任意</span></label>
         <textarea id="o-note" name="o-note"></textarea>
         <button class="button" type="submit">ご注文内容の確認へ</button>
-        <p class="form-note">お預かりした内容は、ご注文の確認とお届けのご連絡にのみ使用いたします。詳しくは<a href="#privacy">個人情報の取り扱い</a>をご覧ください。この<span class="nw">フォーム</span>は見本のため、送信しても届きません。</p>
+        <p class="form-note">お預かりした内容は、ご注文の確認、品物の発送、お届けに関するご連絡にのみ使用いたします。詳しくは<a href="#privacy">個人情報の取り扱い</a>をご覧ください。この<span class="nw">フォーム</span>は見本のため、送信しても届きません。</p>
       </form>
       <div class="form confirm" id="order-confirm" hidden></div>
     </div>
@@ -691,16 +633,18 @@ h1,h2,h3{text-wrap:balance}
     <div class="title-wrapper" data-rise><h2 class="title">店舗のご案内</h2><span class="title__en">SHOP</span></div>
     <div class="shop">
       <img src="img/shop.jpg" alt="生成りの暖簾を掛けた格子戸の店構え" loading="lazy" data-rise>
-      <dl data-rise>
+      <div data-rise>
+      <dl>
         <div><dt>屋号</dt><dd>御菓子司 玉水</dd></div>
         <div><dt>所在地</dt><dd>島根県松江市白潟本町0-0（架空の住所です）</dd></div>
         <div><dt>営業時間</dt><dd>9:00〜18:00</dd></div>
         <div><dt>定休日</dt><dd>水曜（<span class="nw">1月1日</span>・<span class="nw">2日</span>は休業）</dd></div>
         <div><dt>電話</dt><dd>0852-00-0000</dd></div>
         <div><dt>交通</dt><dd>松江駅から徒歩<span class="nw">12分</span>です。店の前にお車を<span class="nw">2台</span>までお停めいただけます。</dd></div>
-        <div><dt>店頭</dt><dd>上生菓子は店頭でもお求めいただけます。<span class="nw">6個</span>以上ご入用の場合は、前日までにご予約ください。</dd></div>
+        <div><dt>店頭</dt><dd>上生菓子は店頭でもお求めいただけます。ご予約の場合は、お受け取りの<span class="nw">3日</span>前までにお願いいたします。</dd></div>
       </dl>
-      <a class="shop__map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E6%B1%9F%E5%B8%82%E7%99%BD%E6%BD%9F%E6%9C%AC%E7%94%BA" target="_blank" rel="noopener" data-rise>地図を見る</a>
+      <a class="shop__map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E6%B1%9F%E5%B8%82%E7%99%BD%E6%BD%9F%E6%9C%AC%E7%94%BA" target="_blank" rel="noopener">地図を見る</a>
+      </div>
     </div>
   </div>
 </section>
@@ -709,7 +653,7 @@ h1,h2,h3{text-wrap:balance}
 <footer class="footer">
   <div class="footer__blocks">
     <ul>
-      <li><a href="#season">季節の上生菓子</a></li>
+      <li><a href="#season">季節の和菓子</a></li>
       <li><a href="#products">お品書き</a></li>
       <li><a href="#gift">贈り物とのし</a></li>
       <li><a href="#about">玉水のこだわり</a></li>
@@ -737,12 +681,12 @@ h1,h2,h3{text-wrap:balance}
       <div><dt>電話・<span class="nw">メール</span></dt><dd>0852-00-0000（9:00〜18:00・水曜定休）／order@example.jp</dd></div>
       <div><dt>販売価格</dt><dd>季　<span class="nw">6個</span>入4,320円、初霜　2棹入2,916円・4棹入<span class="nw">5,400円</span>、川霧　<span class="nw">8個</span>入<span class="nw">3,780円</span>・<span class="nw">16個</span>入<span class="nw">7,020円</span>（いずれも税込）</dd></div>
       <div><dt>商品代金以外の費用</dt><dd>送料（「送料と日持ち」の表のとおり）、代金引換の手数料<span class="nw">330円</span>、銀行振込の振込手数料</dd></div>
-      <div><dt>販売数量の制限</dt><dd>ご注文<span class="nw">フォーム</span>では、<span class="nw">1回</span>のご注文につき2品まで、同じ詰合せを<span class="nw">9箱</span>までお選びいただけます。冷蔵の「季」と常温の詰合せをまとめてご注文の場合や、同じ詰合せを<span class="nw">10箱</span>以上ご注文の場合は、お電話で承ります</dd></div>
+      <div><dt>販売数量の制限</dt><dd>ご注文<span class="nw">フォーム</span>では、<span class="nw">1種類</span>につき<span class="nw">9箱</span>までお選びいただけます。<span class="nw">10箱</span>以上のご注文は、お電話にて承ります</dd></div>
       <div><dt>お申し込みの有効期限</dt><dd>銀行振込の場合、ご注文から<span class="nw">3日</span>以内にご入金がないときは、ご注文を取り消しとさせていただきます</dd></div>
       <div><dt>お支払いの時期と方法</dt><dd><span class="nw">クレジットカード</span>はご注文時、銀行振込はご注文から<span class="nw">3日</span>以内、代金引換はお受け取り時</dd></div>
-      <div><dt>お届けの時期</dt><dd><span class="nw">クレジットカード</span>は決済の確認後、銀行振込はご入金の確認後、代金引換はご注文の確認後に発送します。「初霜」「川霧」は、これらの確認から<span class="nw">3営業日</span>以内に発送します。「季」はお届けの前日（遠方は前々日）にお作りし、その日のうちに発送いたします。お届け日のご指定は、いずれの品もご注文の<span class="nw">3日</span>後から承ります</dd></div>
+      <div><dt>お届けの時期</dt><dd><span class="nw">クレジットカード</span>は決済の確認後、銀行振込はご入金の確認後、代金引換はご注文の確認後に発送します。「初霜」「川霧」は、お届け日のご指定がない場合、これらの確認から<span class="nw">3営業日</span>以内に発送します。「季」はお届けの前日（遠方は前々日）にお作りし、その日のうちに発送いたします。お届け日は、いずれの品もご注文より<span class="nw">5日</span>後からご指定いただけます。銀行振込の場合、ご入金の確認が遅れますと、ご指定の日にお届けできない場合がございます</dd></div>
       <div><dt>ご注文の取り消し</dt><dd>「季」は製造の前日まで、「初霜」「川霧」は発送の前日まで、お電話で承ります</dd></div>
-      <div><dt>返品について</dt><dd>食品のため、お客様のご都合による返品はお受けできません。傷み・破損があった場合は、お届けから<span class="nw">2日</span>以内にご連絡ください。作り直してお送りし、その送料は当店が負担いたします</dd></div>
+      <div><dt>返品について</dt><dd>食品のため、お客様のご都合による返品はお受けできません。傷み・破損があった場合は、お届けから<span class="nw">2日</span>以内にご連絡ください。代わりの品をお送りし、その送料は当店が負担いたします</dd></div>
     </dl>
   </details>
   <details class="legal" id="privacy">
@@ -750,7 +694,7 @@ h1,h2,h3{text-wrap:balance}
     <dl>
       <div><dt>利用の目的</dt><dd>ご注文の確認、品物の発送、お届けに関するご連絡に使用いたします。上記以外の目的には利用いたしません</dd></div>
       <div><dt>第三者への提供</dt><dd>お届け先のお名前・ご住所・お電話番号を、配送のために配送業者へ提供いたします。法令に基づく場合を除き、ご本人の同意なく第三者へ提供することはございません</dd></div>
-      <div><dt>管理</dt><dd>お預かりした個人情報は、管理責任者を置いて、適切な管理を行っております</dd></div>
+      <div><dt>管理</dt><dd>お預かりした個人情報は、管理責任者を定め、適切に管理しております</dd></div>
       <div><dt>開示・訂正・削除</dt><dd>ご本人からのご依頼は、0852-00-0000（9:00〜18:00・水曜定休）で承ります</dd></div>
     </dl>
   </details>
@@ -796,7 +740,7 @@ h1,h2,h3{text-wrap:balance}
   var PAY={'クレジットカード':'ご注文の確定時にお支払い','銀行振込':'ご注文から3日以内にお振り込み、ご入金の確認後に発送','代金引換':'お受け取りの時にお支払い'};
   var yen=function(n){return n.toLocaleString('ja-JP')+'円'};
   var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
-  var d=new Date();d.setDate(d.getDate()+3);
+  var d=new Date();d.setDate(d.getDate()+5);
   form['o-date'].min=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
   form.querySelectorAll('[name="o-dest"]').forEach(function(r){
     r.addEventListener('change',function(){
@@ -805,39 +749,45 @@ h1,h2,h3{text-wrap:balance}
       ['o-name2','o-tel2','o-zip2','o-pref2','o-addr2'].forEach(function(n){form[n].required=other});
     });
   });
-  // 季は常温の詰合せと別の便になり、送料無料の額の数え方が決まらないので、一緒の注文はお電話で承る
-  var mix=function(){
-    var a=form['o-item'].selectedOptions[0],b=form['o-item2'].selectedOptions[0],msg='';
-    if(b.value&&a.dataset.cool)msg='冷蔵の「季」と常温の詰合せをまとめてご注文の場合は、お電話で承ります。';
-    else if(b.value&&a.textContent===b.textContent)msg='同じ詰合せは、上の数量でお選びください。';
-    form['o-item2'].setCustomValidity(msg);
+  // 数量はどれも0から始まるので、1つも選ばないまま確認の画面へ進ませない
+  var items=form.querySelectorAll('.form__item select');
+  var pick=function(){
+    var n=0;items.forEach(function(s){n+=+s.value});
+    items[0].setCustomValidity(n?'':'詰合せの数量をお選びください。');
   };
-  form['o-item'].addEventListener('change',mix);
-  form['o-item2'].addEventListener('change',mix);
+  items.forEach(function(s){s.addEventListener('change',pick)});
+  pick();
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var lines=[[form['o-item'].selectedOptions[0],+form['o-num'].value]];
-    if(form['o-item2'].value)lines.push([form['o-item2'].selectedOptions[0],+form['o-num2'].value]);
-    var cool=!!lines[0][0].dataset.cool,sub=0;
-    lines.forEach(function(l){sub+=l[0].dataset.price*l[1]});
+    var lines=[],cool=0,normal=0;
+    items.forEach(function(s){
+      var n=+s.value;if(!n)return;
+      lines.push([document.querySelector('label[for="'+s.id+'"]').textContent.replace(/　[\d,]+円$/,''),n]);
+      if(s.dataset.cool)cool+=s.dataset.price*n;else normal+=s.dataset.price*n;
+    });
+    var sub=cool+normal;
     var k=form['o-dest'].value==='other'?'2':'';
     var pref=form['o-pref'+k].value,zone=pref in FAR?FAR[pref]:WEST.test(pref)?0:1;
-    var ship=cool?FEE.cool[zone]:(sub>=8640?0:FEE.normal[zone]);
+    // 季と常温の詰合せは別の梱包で送る。常温の送料無料は、常温の詰合せの代金だけで数える
+    var shipCool=cool?FEE.cool[zone]:0,shipNormal=normal&&normal<8640?FEE.normal[zone]:0;
     // 7〜9月は常温の詰合せもクール便で送るが、送料は常温便の額のまま
     var summer=/^\d+-0[789]-/.test(form['o-date'].value);
+    var fee=[];
+    if(cool)fee.push((normal?'「季」':'')+yen(shipCool)+'（クール便）');
+    if(normal)fee.push((cool?'「初霜」「川霧」':'')+(shipNormal?yen(shipNormal):'無料')+(summer?'（クール便）':'（常温便）'));
     var pay=form['o-pay'].value,cod=pay==='代金引換'?330:0;
     var to=esc(form['o-name'+k].value)+' 様／〒'+esc(form['o-zip'+k].value)+' '+esc(pref+form['o-addr'+k].value);
     box.innerHTML='<h3>ご注文内容の確認</h3><dl>'+
-      '<dt>ご注文の品</dt><dd>'+lines.map(function(l){return esc(l[0].textContent.replace(/　[\d,]+円$/,''))+' × '+l[1]}).join('<br>')+'</dd>'+
+      '<dt>ご注文の品</dt><dd>'+lines.map(function(l){return esc(l[0])+' × '+l[1]}).join('<br>')+'</dd>'+
       '<dt>商品代金</dt><dd>'+yen(sub)+'</dd>'+
-      '<dt>送料</dt><dd>'+(ship?yen(ship):'無料')+(cool||summer?'（クール便）':'（常温便）')+'</dd>'+
+      '<dt>送料</dt><dd>'+fee.join('<br>')+'</dd>'+
       (cod?'<dt>代金引換手数料</dt><dd>330円</dd>':'')+
-      '<dt>お支払いの合計</dt><dd class="confirm__total">'+yen(sub+ship+cod)+'（税込）</dd>'+
+      '<dt>お支払いの合計</dt><dd class="confirm__total">'+yen(sub+shipCool+shipNormal+cod)+'（税込）</dd>'+
       '<dt>お支払い</dt><dd>'+pay+'（'+PAY[pay]+'）</dd>'+
       '<dt>お届け日</dt><dd>'+form['o-date'].value.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$1年$2月$3日')+'　'+esc(form['o-time'].value)+'</dd>'+
       '<dt>お届け先</dt><dd>'+to+'</dd>'+
-      '<dt>のし・掛け紙</dt><dd>'+(form['o-noshi'].value||form['o-name3'].value||form['o-way'].value!=='不要'
-        ?[esc(form['o-noshi'].value)||'おまかせ',esc(form['o-name3'].value)||'名入れなし',form['o-way'].value==='不要'?'おまかせ':form['o-way'].value].join('／')
+      '<dt>のし・掛け紙</dt><dd>'+(form['o-noshi'].value||form['o-name3'].value
+        ?'用途：'+(esc(form['o-noshi'].value)||'記入なし')+'／名入れ：'+(esc(form['o-name3'].value)||'なし')+'／掛け方：'+form['o-way'].value
         :'なし')+'</dd>'+
       '<dt>取り消し</dt><dd>「季」は製造の前日まで、「初霜」「川霧」は発送の前日まで、お電話で取り消しを承ります。食品のため、お届け後の返品はお受けできません</dd>'+
       '</dl><div class="confirm__btns"><button class="button button--quiet" type="button" data-back>入力に戻る</button><button class="button" type="button" data-done>ご注文を確定する</button></div>';
@@ -848,23 +798,6 @@ h1,h2,h3{text-wrap:balance}
     if(e.target.matches('[data-done]'))box.innerHTML='<p>（見本のため送信されていません）実際のページでは、ご注文の確認メールをお送りいたします。</p>';
   });
 })();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
-<script>
-var banner=window.Swiper&&new Swiper('.banner',{
-  effect:'fade',fadeEffect:{crossFade:true},loop:true,speed:1200,
-  autoplay:matchMedia('(prefers-reduced-motion: reduce)').matches?false:{delay:5500,disableOnInteraction:false},
-  pagination:{el:'.swiper-pagination',clickable:true},
-  a11y:{paginationBulletMessage:'{{index}}枚目の詰合せ',slideLabelMessage:'{{slidesLength}}枚中{{index}}枚目'}
-});
-var pause=document.querySelector('.banner__pause');
-if(banner&&banner.autoplay.running){
-  pause.hidden=false;
-  pause.addEventListener('click',function(){
-    if(banner.autoplay.running){banner.autoplay.stop();pause.textContent='再生';}
-    else{banner.autoplay.start();pause.textContent='一時停止';}
-  });
-}
 </script>
 </body>
 </html>
