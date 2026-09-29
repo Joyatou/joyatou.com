@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ヨルゼミ｜神田の夜間プログラミング教室 火・木19:30から</title>
+<meta name="description" content="東京・神田の夜間プログラミング教室。火曜と木曜の19時30分から、3か月・全24回で自分のWebアプリを公開するところまで進みます。1クラス10名まで。無料説明会（60分）受付中。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ヨルゼミ">
+<meta property="og:title" content="ヨルゼミ｜神田の夜間プログラミング教室 火・木19:30から">
+<meta property="og:description" content="仕事帰りに通う、3か月・全24回のプログラミング教室。無料説明会を受け付けています。">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/moon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"ヨルゼミ","address":{"@type":"PostalAddress","addressRegion":"東京都","addressLocality":"千代田区","addressCountry":"JP"},"telephone":"03-0000-0000"}
+</script>
+<style>
+/* 字と余白は、プログラミング教室の実在116件の実測と、手本にした教室の数値から採った。
+   本文はゴシック16px・行間1.7、節の題は30px・太字で下に青い短い線、節の上下は70〜100px。
+   ヘッダーは黒地に固定、電話はピンク、説明会は黄色のボタン（角丸200px）。数字は Oswald。 */
+:root{
+  --black:#0f1116;--text:#1b1b1f;--mute:#666a73;--line:#e1e3e8;--gray:#eff2f7;--blue:#1d74c9;--blue-pale:#e7f1f9;
+  --yellow:#ffec4f;--pink:#ea3c67;--red:#e0344f;--navy:#1a2238;
+  --sans:"游ゴシック体",YuGothic,"游ゴシック Medium","Yu Gothic Medium","Hiragino Kaku Gothic ProN","Hiragino Sans","メイリオ",Meiryo,sans-serif;
+  --num:Oswald,"Helvetica Neue",Arial,sans-serif;
+}
+*,::before,::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:var(--sans);font-size:16px;font-weight:500;line-height:1.7;color:var(--text);background:#fff;font-feature-settings:"palt"}
+img{max-width:100%;height:auto;vertical-align:middle}
+a{color:inherit}
+h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}
+p,li,dd{text-wrap:pretty}
+ul,ol{padding:0;list-style:none}
+.inner01{max-width:1080px;margin:0 auto;padding:0 20px}
+.section01{padding:76px 0 96px}
+.section01.bg_gray{background:var(--gray)}
+.section_title01{text-align:center;font-size:30px;font-weight:700;line-height:1.45;margin-bottom:50px}
+.section_title01::after{content:"";display:block;width:50px;height:3px;margin:16px auto 0;background:var(--blue)}
+.text_blue{color:var(--blue)}
+.text_red{color:var(--red)}
+.mark{background:linear-gradient(transparent 58%,var(--yellow) 58%)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+.btn_yellow,.btn_tel{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:200px;font-weight:700;text-decoration:none;white-space:nowrap}
+.btn_yellow{min-width:300px;min-height:60px;padding:0 44px;background:var(--yellow);color:var(--black);font-size:18px;box-shadow:0 4px 0 #c9b700}
+.btn_yellow::after{content:"\f138";font:900 20px/1 "Font Awesome 6 Free";color:var(--black)}
+.btn_yellow:hover{filter:brightness(.97)}
+.btn_tel{padding:10px 22px;background:var(--pink);color:#fff;font-family:var(--num);font-size:18px;letter-spacing:.04em;line-height:1.3}
+
+/* ヘッダー */
+.header{position:fixed;left:0;right:0;top:0;z-index:50;background:rgba(15,17,22,.96)}
+.header_inner{display:flex;align-items:center;gap:22px;max-width:1280px;height:70px;margin:0 auto;padding:0 20px}
+.header_logo{flex:none;color:#fff;text-decoration:none;line-height:1.2}
+.header_logo b{display:block;font-size:24px;letter-spacing:.08em}
+.header_logo small{font-size:11px;color:#b9bdc7}
+.header_menu{display:flex;gap:2px;margin-left:10px}
+.header_menu a{padding:8px 10px;color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.header_menu a:hover{color:var(--yellow)}
+.header_btns{display:flex;gap:10px;margin-left:auto;flex:none}
+.header_btns .btn_yellow{min-width:0;min-height:0;padding:12px 24px;font-size:15px;line-height:1.3;box-shadow:none}
+.header_btns .btn_yellow::after{display:none}
+.menu_btn{display:none}
+
+/* メインビジュアル。写真の上に黄色い帯の見出しを重ねる */
+.mv{position:relative;margin-top:70px;height:640px;overflow:hidden;background:var(--black)}
+/* 写真の2人は右に寄っていて、携帯の縦長の枠を中央で切ると2人とも枠の外に出る */
+.mv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:90% 57%}
+.mv::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,20,.75) 0%,rgba(10,12,20,.35) 55%,rgba(10,12,20,.1) 100%)}
+.mv_inner{position:relative;z-index:1;max-width:1180px;height:100%;margin:0 auto;padding:70px 20px 0;color:#fff}
+.mv_place{display:inline-block;padding:4px 14px;border:1px solid #fff;font-size:15px;font-weight:700;letter-spacing:.08em}
+.mv h1{margin:20px 0 18px;font-size:52px;font-weight:900;line-height:1.25;letter-spacing:.04em}
+/* 子孫まで拾うと、中の .nw にも帯と余白が二重に付いて見出しが割れる */
+.mv h1 > span{display:inline-block;margin:4px 0;padding:0 12px;background:var(--yellow);color:var(--black)}
+.mv_lead{font-size:18px;font-weight:700;line-height:1.7;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.mv_btn{margin-top:22px}
+.mv_note{margin-top:14px;font-size:12px;line-height:1.6;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.mv_badges{position:absolute;z-index:1;left:max(20px,calc((100% - 1180px)/2 + 20px));bottom:38px;display:flex;color:#fff}
+.mv_badges li{padding:0 26px;font-size:12px;font-weight:700;line-height:1.5}
+.mv_badges li:first-child{padding-left:0}
+.mv_badges li:last-child{padding-right:0}
+.mv_badges li+li{border-left:1px solid rgba(255,255,255,.45)}
+.mv_badges b{display:block;font-family:var(--num);font-size:32px;font-weight:600;color:var(--yellow);line-height:1.15}
+
+/* ヨルゼミとは */
+
+/* お知らせ */
+.news_list{max-width:880px;margin:0 auto;border-top:1px solid var(--line)}
+.news_list li{display:grid;grid-template-columns:110px 70px 1fr;gap:14px;align-items:baseline;padding:16px 8px;border-bottom:1px solid var(--line);font-size:15px}
+.news_list time{font-family:var(--num);color:var(--mute)}
+.news_list em{justify-self:start;font-style:normal;font-size:12px;font-weight:700;text-align:center;padding:1px 10px;border-radius:3px;background:var(--blue-pale);color:var(--blue)}
+
+/* 4つの特徴 */
+.feature_list{display:grid;grid-template-columns:1fr 1fr;gap:36px 40px;max-width:960px;margin:0 auto}
+.feature_item{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.12)}
+.feature_item img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.feature_item div{padding:20px 24px 26px}
+.feature_item h3{font-size:19px;font-weight:700;text-align:center;margin-bottom:10px}
+.feature_item p{font-size:14.5px;line-height:1.8}
+
+/* こんな方に */
+.target_box{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:center;max-width:960px;margin:0 auto;padding:36px 40px;border:2px solid var(--blue);border-radius:6px;background:#fff}
+.target_box img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%}
+.target_box li{position:relative;padding:8px 0 8px 30px;border-bottom:1px dashed #c7cfdc;font-weight:700}
+.target_box li::before{content:"\f00c";position:absolute;left:3px;top:8px;font:900 15px/27px "Font Awesome 6 Free";color:var(--red)}
+.target_note{max-width:960px;margin:24px auto 0;padding:22px 28px;background:var(--blue-pale);border-radius:6px;font-size:15px}
+.target_note h3{font-size:16px;font-weight:700;color:var(--blue);margin-bottom:6px}
+
+/* 3か月で学ぶこと */
+.course_list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.course_item{display:flex;flex-direction:column;padding:26px 22px 24px;background:#fff;border-radius:6px;box-shadow:0 3px 14px rgba(0,0,0,.1)}
+.course_item .number{display:block;text-align:center;font-family:var(--num);font-size:15px;letter-spacing:.14em;color:var(--blue)}
+.course_item h3{text-align:center;font-size:21px;font-weight:700;margin:4px 0 12px}
+.course_tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:14px}
+.course_tags li{padding:1px 10px;border-radius:3px;background:var(--blue-pale);color:var(--blue);font-size:12px;font-weight:700}
+.course_item p:not([class]){font-size:14px;line-height:1.8;flex:1}
+.course_skill{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:13px}
+.course_skill > span{display:inline-block;margin:2px 4px 2px 0;padding:1px 8px;background:#fdecef;color:var(--red);border-radius:3px;font-size:12px}
+.course_photos{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.course_photos img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px}
+.course_photos figcaption{font-size:13px;color:var(--mute);margin-top:6px}
+
+/* 授業について。枠で囲んだ一覧 */
+.lesson_box{border:2px solid var(--blue);padding:30px 34px}
+.lesson_box dl div{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.lesson_box dt{font-weight:700;color:var(--blue)}
+.lesson_box dd b{display:block;font-size:18px}
+/* 子孫まで拾うと、値の中の .nw だけが小さい灰色になる */
+.lesson_box dd > span{font-size:14px;color:var(--mute)}
+.lesson_photo{margin-top:26px}
+.lesson_photo img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:6px}
+.lesson_photo figcaption{font-size:13px;color:var(--mute);margin-top:6px}
+
+/* 講師 */
+.teacher_lead{text-align:center}
+.teacher_item img{display:block;width:120px;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:14px}
+.teacher_list{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.teacher_item{padding:24px 26px;background:#fff;border-radius:6px;box-shadow:0 3px 14px rgba(0,0,0,.08)}
+.teacher_item small{display:inline-block;padding:1px 10px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;border-radius:3px}
+.teacher_item h3{font-size:22px;font-weight:700;margin:8px 0 10px}
+.teacher_item p{font-size:14.5px;line-height:1.85}
+
+/* 受講生の声 */
+.voice_list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.voice_item{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.1)}
+.voice_item img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%}
+.voice_item div{padding:20px 22px 24px}
+.voice_item .voice_no{font-family:var(--num);font-size:13px;color:var(--blue);letter-spacing:.1em}
+.voice_item h3{font-size:18px;font-weight:700;line-height:1.55;margin:6px 0 10px}
+.voice_item p{font-size:13.5px;color:var(--mute);line-height:1.75}
+.voice_item .voice_body{font-size:14.5px;color:var(--text);line-height:1.85;margin-bottom:10px}
+
+/* 受講料 */
+.price_box{max-width:900px;margin:0 auto;padding:40px 44px;background:#fff;border-radius:8px}
+.price_box h3{font-size:22px;font-weight:700;color:var(--blue);margin-bottom:4px}
+.price_box > p{font-size:13px;color:var(--mute);margin-bottom:18px}
+.price_table{width:100%;border-collapse:collapse;text-align:center}
+.price_table th,.price_table td{padding:14px 12px;border:2px solid #fff}
+.price_table thead th{background:var(--blue);color:#fff;font-size:14px}
+.price_table tbody th{background:var(--blue);color:#fff;font-size:14px;width:40%}
+.price_table td{background:var(--blue-pale);font-size:15px}
+.price_table .price{font-family:var(--num);font-size:30px;font-weight:600;color:var(--red);white-space:nowrap}
+.price_table .price small{font-family:var(--sans);font-size:14px;color:var(--text)}
+.price_box > .price_note{margin:14px 0 0;font-size:16px;line-height:1.7;color:var(--text)}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:40px auto 0}
+.results div{padding:22px 16px;background:var(--blue-pale);border-radius:8px;text-align:center}
+.results b{display:block;font-family:var(--num);font-size:44px;font-weight:600;color:var(--blue);line-height:1.1}
+.results b small{font-family:var(--sans);font-size:16px;color:var(--text)}
+.results p{font-size:13px;color:var(--mute)}
+.results_note{max-width:900px;margin:12px auto 0;font-size:13px;color:var(--mute)}
+
+/* よくあるご質問 */
+.faq_list{max-width:900px;margin:0 auto}
+.faq_item{padding:20px 0;border-bottom:1px solid var(--line)}
+.faq_item dt,.faq_item dd{position:relative;padding-left:32px}
+.faq_item dt{font-weight:700}
+.faq_item dd{margin-top:8px;font-size:15px;line-height:1.8}
+.faq_item dt::before,.faq_item dd::before{position:absolute;left:0;font-family:var(--num);font-size:20px;line-height:1.3}
+.faq_item dt::before{content:"Q:";color:var(--blue)}
+.faq_item dd::before{content:"A:";color:var(--red)}
+.faq_item dd em{font-style:normal;background:#fff6a8}
+
+/* 説明会 */
+.seminar_flow{max-width:900px;margin:0 auto}
+.seminar_flow li{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:16px 0;border-bottom:1px dashed #c7cfdc}
+.seminar_flow time{font-family:var(--num);font-size:22px;color:var(--blue);text-align:right}
+.seminar_flow h3{font-size:17px;font-weight:700}
+.seminar_flow p{font-size:14px;color:var(--mute)}
+.cta_band{position:relative;padding:74px 20px;text-align:center;color:#fff;background:var(--black);overflow:hidden}
+.cta_band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.cta_band > *{position:relative}
+.cta_band h2{font-size:30px;font-weight:700;margin-bottom:8px}
+.cta_band p{margin-bottom:26px}
+.form_box{max-width:760px;margin:0 auto;padding:36px 40px;background:#fff;border-radius:8px;box-shadow:0 3px 14px rgba(0,0,0,.08)}
+.form_box label,.form_box legend{display:block;font-weight:700;font-size:15px;margin:16px 0 6px;padding:0}
+.form_box label:first-child{margin-top:0}
+.form_box input,.form_box textarea{width:100%;padding:12px;border:1px solid #c9cdd6;border-radius:4px;font:inherit;font-size:16px}
+.form_box textarea{min-height:100px}
+.form_box fieldset{border:0;margin:0;padding:0}
+.form_box .radio{display:grid;gap:4px;font-size:15px}
+.form_box .radio label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
+.form_box .radio input{width:auto}
+.form_box button{width:100%;margin-top:24px;border:0;cursor:pointer;font-family:inherit}
+.form_note{font-size:16px;margin-top:10px;line-height:1.7}
+
+/* アクセス */
+.access_table{width:100%;max-width:800px;margin:0 auto;border-collapse:collapse;font-size:15px}
+.access_table th,.access_table td{padding:16px 18px;border:1px solid var(--line);text-align:left}
+.access_table th{width:26%;background:var(--gray)}
+.access_map{max-width:800px;margin:28px auto 0;border:1px solid var(--line)}
+.access_map iframe{display:block;width:100%;height:auto;aspect-ratio:8/3}
+.legal{max-width:800px;margin:36px auto 0;font-size:13px}
+.legal summary{cursor:pointer;font-weight:700;padding:12px 16px;background:var(--gray)}
+.legal dl div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line)}
+
+/* フッター */
+.footer{background:#f0f1f3;font-size:13px}
+.footer_inner{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px;max-width:1080px;margin:0 auto;padding:50px 20px 36px}
+.footer_logo b{display:block;font-size:22px;letter-spacing:.08em;margin-bottom:10px}
+.footer h3{font-size:14px;font-weight:700;padding-bottom:8px;margin-bottom:10px;border-bottom:2px solid #555}
+.footer li{margin-bottom:6px}
+.footer a{text-decoration:none}
+.footer_note{max-width:1080px;margin:0 auto;padding:0 20px 20px;font-size:11px;color:var(--mute)}
+.copyright{padding:14px;text-align:center;font-size:11px;background:var(--black);color:#aaa;font-family:var(--num);letter-spacing:.1em}
+
+/* 動き */
+.fadein{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.fadein.is-in{opacity:1;transform:none}
+
+.fix_cta{display:none}
+@media (max-width:1080px){
+  .header_menu{display:none}
+  .header_btns .btn_tel{display:none}
+  .menu_btn{display:block;width:44px;height:44px;padding:0;border:0;background:none;line-height:44px;cursor:pointer}
+  .menu_btn .fa-solid{font-size:22px;line-height:44px;color:#fff}
+  .header_menu.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:70px;margin:0;padding:10px 20px 18px;background:rgba(15,17,22,.98)}
+}
+@media (max-width:767px){
+  body{font-size:15px}
+  .section01{padding:56px 0 64px}
+  .section_title01{font-size:23px;margin-bottom:34px}
+  .header_inner{height:60px;gap:10px}
+  .header_logo b{font-size:20px}
+  .header_logo small{display:none}
+  .header_btns .btn_yellow{padding:10px 14px;font-size:13px}
+  .header_menu.is-open{top:60px}
+  .mv{margin-top:60px;height:auto;min-height:520px}
+  .mv_inner{padding:40px 18px 130px}
+  .mv h1{font-size:32px}
+  .mv_lead{font-size:15px}
+  .mv_note{font-size:11px}
+  .mv_badges{left:18px;right:18px;bottom:20px}
+  .mv_badges li{padding:0 12px;font-size:10px}
+  .mv_badges b{font-size:22px}
+  .news_list li{grid-template-columns:90px 1fr;gap:6px 10px}
+  .news_list p{grid-column:1/-1}
+  .feature_list,.teacher_list,.voice_list,.course_list,.results,.course_photos{grid-template-columns:1fr}
+  .target_box{grid-template-columns:1fr;padding:24px 18px;text-align:left}
+  .target_box img{max-width:180px;margin:0 auto}
+  .lesson_box{padding:18px}
+  .lesson_box dl div{grid-template-columns:1fr;gap:4px}
+  .price_box{padding:26px 16px}
+  .price_table .price{font-size:24px}
+  .btn_yellow{min-width:0;width:100%;padding:0 20px;font-size:16px}
+  .form_box{padding:24px 18px}
+  .access_map iframe{aspect-ratio:4/5}
+  .legal dl div{grid-template-columns:1fr;gap:2px}
+  .footer_inner{grid-template-columns:1fr}
+  .fix_cta{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40}
+  .fix_cta a{display:flex;align-items:center;justify-content:center;height:54px;font-weight:700;text-decoration:none}
+  .fix_cta a:first-child{background:var(--pink);color:#fff}
+  .fix_cta a:last-child{background:var(--yellow);color:var(--black)}
+  .footer{padding-bottom:54px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .fadein{opacity:1;transform:none;transition:none}
+}
+@media print{
+  .fadein{opacity:1!important;transform:none!important}
+  .header{position:static}
+  .mv{margin-top:0}
+  .fix_cta,.menu_btn{display:none!important}
+}
+/* 和文の折り返し。数字と単位の間は pretty でも割れるので .nw で括る */
+body{line-break:strict}
+p,li,dd,dt,th,td,figcaption,summary,blockquote{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+.nw{white-space:nowrap}
+/* 見出しと中央ぞろえの2文は、語の途中で折れると目立つので文節で折る。対応は Chrome だけで、ほかのブラウザは従来の折り方になる */
+h2,h3{word-break:auto-phrase}
+</style>
+<noscript><style>.fadein{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<header class="header">
+  <div class="header_inner">
+    <a class="header_logo" href="#top"><b>ヨルゼミ</b><small>夜間プログラミング教室・神田</small></a>
+    <nav class="header_menu" id="gnav" aria-label="ページ内の案内">
+      <a href="#feature">特徴</a>
+      <a href="#course">カリキュラム</a>
+      <a href="#lesson">授業について</a>
+      <a href="#teacher">講師紹介</a>
+      <a href="#price">受講料</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <div class="header_btns">
+      <a class="btn_tel" href="tel:0300000000">Tel: 03-0000-0000</a>
+      <a class="btn_yellow" href="#seminar">無料説明会を予約</a>
+    </div>
+    <button class="menu_btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="mv">
+  <img src="img/night.jpg" alt="夜の事務所とパソコンに向かう会社員" fetchpriority="high">
+  <div class="mv_inner">
+    <p class="mv_place">東京・神田｜JR神田駅徒歩<span class="nw">5分</span></p>
+    <h1><span><span class="nw">3か月</span>で、自分の</span><br><span>Web<span class="nw">アプリ</span>を公開</span></h1>
+    <p class="mv_lead">社会人のための夜間<span class="nw">プログラミング</span>教室です。<br>授業は火曜と木曜の19:30〜21:30。未経験から始められます。</p>
+    <a class="btn_yellow mv_btn" href="#seminar">無料説明会を予約する</a>
+    <p class="mv_note">※修了率は、<span class="nw">2022年10月</span>から<span class="nw">2026年6月</span>までの受講生<span class="nw">119名</span>のうち、最終回まで通った方（<span class="nw">110名</span>）の割合です。</p>
+  </div>
+  <ul class="mv_badges">
+    <li>1クラス<b>10名まで</b></li>
+    <li>3か月で<b>全24回</b></li>
+    <li>修了率※<b>92%</b></li>
+  </ul>
+</section>
+
+<section class="section01" id="news">
+  <div class="inner01">
+    <h2 class="section_title01">お知らせ</h2>
+    <ul class="news_list fadein">
+      <li><time datetime="2026-09-08">2026.09.08</time><em>募集</em><p>次の期の受付を始めました。お申し込みは<span class="nw">10月6日</span>（火）までです。定員になり次第、締め切らせていただきます。</p></li>
+      <li><time datetime="2026-08-22">2026.08.22</time><em>予約</em><p>無料説明会の日程が決まりました。<span class="nw">10月1日</span>（木）18:30からです。</p></li>
+      <li><time datetime="2026-08-05">2026.08.05</time><em>お休み</em><p>お盆の<span class="nw">8月13日</span>（木）は休講です。振替の日程は<span class="nw">8月28日</span>（金）です。</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section01 bg_gray" id="feature">
+  <div class="inner01">
+    <h2 class="section_title01"><span class="nw">ヨルゼミ</span>の<span class="text_blue">4</span>つの特徴</h2>
+    <div class="feature_list">
+      <div class="feature_item fadein"><img src="img/room.jpg" alt="セミナー会場の長机と椅子" loading="lazy"><div><h3>1<span class="nw">クラス</span><span class="nw">10名</span>までの少人数制</h3><p>1<span class="nw">クラス</span>の定員は<span class="nw">10名</span>です。火曜は代表の小笠原が、木曜は更科が、最初の回から最終回まで担当します。</p></div></div>
+      <div class="feature_item fadein"><img src="img/class.jpg" alt="HTMLのコードと指先" loading="lazy"><div><h3>授業の半分は演習</h3><p><span class="nw">2時間</span>の授業のうち、講師の説明は前半の<span class="nw">1時間</span>です。後半の演習で、一人ひとりに合わせた指導を行います。</p></div></div>
+      <div class="feature_item fadein"><img src="img/pair.jpg" alt="ノートパソコンをのぞき込むふたり" loading="lazy"><div><h3>受講生どうしの学び合い</h3><p>演習は、同じ期の受講生と並んで進めます。隣の席の受講生がどこでつまずき、どう直したかが、そのまま教材になります。</p></div></div>
+      <div class="feature_item fadein"><img src="img/target.jpg" alt="手もとのスマホ" loading="lazy"><div><h3><span class="nw">チャット</span>での質問</h3><p>授業のない日も、受講生用の<span class="nw">チャット</span>で質問できます。講師が翌日の夜までにお答えします。込み入った質問は、次の授業で画面を見ながらご説明します。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section01" id="target">
+  <div class="inner01">
+    <h2 class="section_title01">こんな方に<span class="nw">ヨルゼミ</span>がおすすめ</h2>
+    <div class="target_box fadein">
+      <img src="img/street.jpg" alt="赤れんがの高架と夜の電車" loading="lazy">
+      <ul>
+        <li>火曜と木曜の夜に通える方</li>
+        <li>自分の<span class="nw">アプリ</span>を公開したい方</li>
+        <li>独学で始めたものの、途中で止まってしまった方</li>
+        <li>ひとりで進めるより、教室のほうが続けられそうな方</li>
+        <li>授業のほかに、週<span class="nw">4時間</span>の学習時間を確保できる方</li>
+      </ul>
+    </div>
+    <div class="target_note fadein">
+      <h3>これまでの受講生</h3>
+      <p>お仕事は営業や事務、看護、調理などさまざまで、30代や40代の方が通っています。受講生の7割は<span class="nw">プログラミング</span>未経験から始めています。受講生の8割が働きながら学んでいて、残りは転職の準備中の方や、育児の合間に通う方です。数字はいずれも、<span class="nw">2022年10月</span>から<span class="nw">2026年6月</span>までに通った方のものです。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section01 bg_gray" id="course">
+  <div class="inner01">
+    <h2 class="section_title01"><span class="nw">ヨルゼミ</span>の<span class="nw">カリキュラム</span></h2>
+    <div class="course_list">
+      <div class="course_item fadein">
+        <span class="number">STEP 1</span>
+        <h3><span class="nw">コード</span>を読み書きする</h3>
+        <ul class="course_tags"><li><span class="nw">1か月</span>目</li><li><span class="nw">全8回</span></li></ul>
+        <p>HTML（<span class="nw">ページ</span>の骨組みを書く言語）、CSS（見た目を整える言語）、JavaScript（動きをつける言語）を使い、Web<span class="nw">ページ</span>の作り方を学びます。簡単な<span class="nw">コード</span>の読み書きができるようになります。</p>
+        <p class="course_skill">学ぶこと<br><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+      </div>
+      <div class="course_item fadein">
+        <span class="number">STEP 2</span>
+        <h3>Ruby on Railsを学ぶ</h3>
+        <ul class="course_tags"><li><span class="nw">2か月</span>目</li><li><span class="nw">全8回</span></li></ul>
+        <p>RubyとRuby on Rails（<span class="nw">サーバー</span>側の言語と、その<span class="nw">フレームワーク</span>）を使い、<span class="nw">ルーティング</span>（URLと画面の対応づけ）、<span class="nw">データベース</span>（<span class="nw">データ</span>の保存先）との連携、<span class="nw">ログイン</span>機能を学びます。身近な題材を使いながら、3つとも自分で実装していきます。</p>
+        <p class="course_skill">学ぶこと<br><span>Ruby</span><span>Ruby on Rails</span><span><span class="nw">データベース</span></span></p>
+      </div>
+      <div class="course_item fadein">
+        <span class="number">STEP 3</span>
+        <h3><span class="nw">アプリ</span>を公開する</h3>
+        <ul class="course_tags"><li><span class="nw">3か月</span>目</li><li><span class="nw">全8回</span></li></ul>
+        <p>題材はご自身で決めていただきます。日々の業務の手間を減らすものなど、身近なもので構いません。公開まで仕上げ、最終回に受講生どうしで発表します。</p>
+        <p class="course_skill">学ぶこと<br><span>公開</span><span>発表</span></p>
+      </div>
+    </div>
+    <div class="course_photos">
+      <figure class="fadein"><img src="img/login.png" alt="メールアドレスとパスワードを入れる、家計簿アプリのログイン画面" loading="lazy"><figcaption><span class="nw">2か月</span>目の課題で作る<span class="nw">ログイン</span>画面</figcaption></figure>
+      <figure class="fadein"><img src="img/stock.png" alt="品名ごとに数を増減できる、棚卸しのアプリの画面" loading="lazy"><figcaption><span class="nw">13期</span>生が作った、店の棚卸しの<span class="nw">アプリ</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section01" id="lesson">
+  <div class="inner01">
+    <h2 class="section_title01">授業について</h2>
+    <div class="lesson_box fadein">
+      <dl>
+        <div><dt>曜日と時間</dt><dd><b>火曜と木曜の19:30〜21:30</b><span><span class="nw">3か月</span>で<span class="nw">全24回</span>です。</span></dd></div>
+        <div><dt>場所</dt><dd><b>東京・神田（JR神田駅から徒歩<span class="nw">5分</span>）</b><span>ビルの<span class="nw">8階</span>です。教室の見学は説明会の日にできます。</span></dd></div>
+        <div><dt>定員</dt><dd><b>1<span class="nw">クラス</span><span class="nw">10名</span>まで</b><span><span class="nw">1期</span>につき1<span class="nw">クラス</span>です。</span></dd></div>
+        <div><dt>次の期</dt><dd><b><span class="nw">2026年10月13日</span>（火）開講</b><span>お申し込みは<span class="nw">10月6日</span>（火）まで。残席はお電話でご案内します。</span></dd></div>
+        <div><dt>欠席したとき</dt><dd><b>欠席された回の録画を翌日にお送りします</b><span>次の期に同じ回を受け直すこともできます。</span></dd></div>
+        <div><dt>持ちもの</dt><dd><b>ご自身の<span class="nw">パソコン</span></b><span>WindowsでもMacでも構いません。目安は発売から<span class="nw">5年</span>以内の機種です。お持ちでない方は、機種選びからお手伝いします。</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section01 bg_gray" id="teacher">
+  <div class="inner01">
+    <h2 class="section_title01">講師紹介</h2>
+    <p class="teacher_lead fadein">火曜は小笠原が、木曜は更科が、最初の回から最終回まで担当します。</p>
+    <div class="teacher_list">
+      <div class="teacher_item fadein"><img src="img/teacher_a.jpg" alt="代表の小笠原亮介" loading="lazy"><small>代表・火曜担当</small><h3>小笠原 亮介</h3><p>受託開発の会社で<span class="nw">12年</span>。いまも週の半分は案件の<span class="nw">コード</span>を書いています。授業では仕事で使っている書き方をそのままお見せします。</p></div>
+      <div class="teacher_item fadein"><img src="img/teacher_b.jpg" alt="講師の更科あかり" loading="lazy"><small>木曜担当・<span class="nw">3期</span>生</small><h3>更科 あかり</h3><p><span class="nw">2023年</span>春に当教室へ通い、<span class="nw">34歳</span>で事務職から<span class="nw">エンジニア</span>に転職しました。いまは社内<span class="nw">システム</span>の開発をしています。自分がつまずいたところを覚えているので、受講生の手が止まりそうなところでは、先に声をかけます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section01" id="voice">
+  <div class="inner01">
+    <h2 class="section_title01">受講生の声</h2>
+    <div class="voice_list">
+      <div class="voice_item fadein"><img src="img/voice_a.jpg" alt="夜の事務所と経理職の修了生" loading="lazy"><div><span class="voice_no">VOICE 01</span><h3>独学でつまずいた自分でも、最後まで続けられました</h3><p class="voice_body">独学用の入門書を2冊買いましたが、どちらも途中で読むのをやめてしまいました。教室へ行く日が火曜と木曜に決まっていたので、続けられたと思います。<span class="nw">ログイン</span>のところでいちばんつまずいて、講師の方と画面を見ながら<span class="nw">3回</span>作り直しました。いまは月末の仕訳の下準備を、自分の<span class="nw">アプリ</span>で済ませています。</p><p><span class="nw">7期</span>（<span class="nw">2024年</span>春）・経理職</p></div></div>
+      <div class="voice_item fadein"><img src="img/voice_b.jpg" alt="飲食店のボックス席と営業職の修了生" loading="lazy"><div><span class="voice_no">VOICE 02</span><h3>週<span class="nw">2回</span>の授業を、最後まで続けられました</h3><p class="voice_body">外回りが多く、日中や夕方の教室には通えませんでした。授業が19:30からなので、外回りの帰りでも間に合いました。最初の<span class="nw">1か月</span>は、隣の画面をのぞいて<span class="nw">エラー</span>の読み方を覚えました。作った訪問記録の<span class="nw">アプリ</span>は、いまは営業部の6人が毎日使っています。始めたころは、ここまで使ってもらえるとは思っていませんでした。</p><p><span class="nw">9期</span>（<span class="nw">2024年</span>秋）・営業職</p></div></div>
+      <div class="voice_item fadein"><img src="img/voice_c.jpg" alt="段ボール箱とタブレットを持つ販売職の修了生" loading="lazy"><div><span class="voice_no">VOICE 03</span><h3>説明会で触った<span class="nw">アプリ</span>を手本に、勤め先の店に合わせて作りました</h3><p class="voice_body">説明会で、修了生が作った在庫管理の<span class="nw">アプリ</span>を触らせてもらい、これなら勤め先の店に合わせて作れると思って申し込みました。<span class="nw">2か月</span>目の<span class="nw">データベース</span>で一度手が止まりましたが、<span class="nw">チャット</span>で聞いた翌日の夜には答えが届いていました。独学ならあそこでやめていたと思います。いまは棚卸しのとき、自分で作った<span class="nw">アプリ</span>で数えています。</p><p><span class="nw">13期</span>（<span class="nw">2025年</span>秋）・販売職</p></div></div>
+    </div>
+    <div class="results fadein">
+      <div><b>119<small>名</small></b><p>開講からの受講生数</p></div>
+      <div><b>92<small>%</small></b><p>受講生の修了率</p></div>
+      <div><b>15<small>期</small></b><p>これまでに開講した期の数</p></div>
+    </div>
+    <p class="results_note">上の数字は、<span class="nw">2022年10月</span>〜<span class="nw">2026年6月</span>の実績です。最終回まで通った<span class="nw">110名</span>は、自分の<span class="nw">アプリ</span>を公開して発表しています。</p>
+  </div>
+</section>
+
+<section class="section01 bg_gray" id="price">
+  <div class="inner01">
+    <h2 class="section_title01">受講料</h2>
+    <div class="price_box fadein">
+      <h3><span class="nw">3か月</span>・<span class="nw">全24回</span></h3>
+      <p>教材費込みの金額です。</p>
+      <table class="price_table">
+        <thead><tr><th scope="col">項目</th><th scope="col">金額（税込）</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">入会金</th><td><span class="price">22,000<small>円</small></span></td></tr>
+          <tr><th scope="row">受講料</th><td><span class="price">165,000<small>円</small></span></td></tr>
+          <tr><th scope="row">一括払いの総額</th><td><span class="price">187,000<small>円</small></span></td></tr>
+        </tbody>
+      </table>
+      <p class="price_note">入会金と受講料は、開講日の<span class="nw">7日</span>前までにお支払いください。お支払い方法は銀行振込・<span class="nw">クレジットカード</span>・提携の信販会社による分割払いです。分割払いは<span class="nw">12回</span>まで、実質年率<span class="nw">12.0%</span>です。</p>
+      <p class="price_note">総額<span class="nw">187,000円</span>を<span class="nw">12回</span>払いにした場合、月々<span class="nw">約16,600円</span>、分割手数料は<span class="nw">約12,400円</span>、支払総額は<span class="nw">約199,400円</span>です。分割払いのご利用には信販会社の審査があります。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section01" id="faq">
+  <div class="inner01">
+    <h2 class="section_title01">よくある質問</h2>
+    <dl class="faq_list">
+      <div class="faq_item fadein"><dt>まったくの初心者ですが、授業についていけますか？</dt><dd><em>これまでの受講生<span class="nw">119名</span>のうち、<span class="nw">84名</span>が未経験から始めています。</em>ただし、授業のほかに週<span class="nw">4時間</span>ほど、ご自身で学習する時間が必要になります。その時間がとれるかどうかを、説明会で一緒に確かめます。</dd></div>
+      <div class="faq_item fadein"><dt>残業などで授業を欠席する場合はどうすればよいですか？</dt><dd><em>欠席された回の録画を、翌日にお送りします。</em>欠席される場合は、事前にご連絡をお願いします。</dd></div>
+      <div class="faq_item fadein"><dt><span class="nw">オンライン</span>の受講は可能ですか？</dt><dd><em><span class="nw">オンライン</span>受講はありません。</em>神田の教室に、週<span class="nw">2回</span>通っていただきます。</dd></div>
+      <div class="faq_item fadein"><dt>転職の相談はできますか？</dt><dd><em>授業のあとにご相談いただけます。</em>職務経歴書の書き方や、作ったものの見せ方をお伝えします。</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="cta_band">
+  <img src="img/window.jpg" alt="" loading="lazy">
+  <h2>無料説明会 受付中</h2>
+  <p>所要時間は<span class="nw">60分</span>です。<br><span class="nw">10月</span>は<span class="nw">1回</span>、神田の教室で開きます。</p>
+  <a class="btn_yellow" href="#seminar">無料説明会を予約する</a>
+</section>
+
+<section class="section01 bg_gray" id="seminar">
+  <div class="inner01">
+    <h2 class="section_title01">無料説明会のご予約</h2>
+    <ol class="seminar_flow fadein">
+      <li><time>開始</time><div><h3>いまのお仕事と目標の確認</h3><p>最初に、いまのお仕事と目標をうかがい、<span class="nw">3か月</span>で何をどこまで進めるかをご説明します。</p></div></li>
+      <li><time><span class="nw">15分</span></time><div><h3>実際の教材のご紹介</h3><p>いま進んでいる期の教材を開いて、<span class="nw">1か月</span>目から順にお見せします。修了生が作った<span class="nw">アプリ</span>も、その場で操作していただけます。</p></div></li>
+      <li><time><span class="nw">30分</span></time><div><h3>総額のご説明</h3><p>入会金と受講料を合わせた総額をその場でご説明し、分割払いにした場合の手数料まで記載した概要書面をお渡しします。</p></div></li>
+      <li><time><span class="nw">45分</span></time><div><h3>ほかの教室との違い</h3><p>ほかに検討中の教室があれば、違いをご説明します。</p></div></li>
+      <li><time><span class="nw">55分</span></time><div><h3>お申し込みのご案内</h3><p>その場でご記入いただける申込書をご用意しています。その場で決めない方には、同じ内容の<span class="nw">フォーム</span>を翌日にお送りします。</p></div></li>
+    </ol>
+    <form class="form_box fadein" id="seminar-form" style="margin-top:36px">
+      <label for="s-name">お名前</label>
+      <input id="s-name" type="text" autocomplete="name" required>
+      <label for="s-mail">メールアドレス</label>
+      <input id="s-mail" type="email" autocomplete="email" required>
+      <fieldset>
+        <legend>ご希望の日時</legend>
+        <div class="radio">
+          <label><input type="radio" name="slot" required>10月1日（木）18:30〜19:30</label>
+        </div>
+      </fieldset>
+      <label for="s-note">ご質問・ご要望（任意）</label>
+      <textarea id="s-note"></textarea>
+      <button class="btn_yellow" type="submit">この内容で予約する</button>
+      <p class="form_note">いただいた内容は、ご予約の確認をお送りし、ご質問にお答えするためだけに使います。ほかの事業者へ渡すことはありません。受講のお申し込みに至らなかった方の個人情報は、説明会から<span class="nw">6か月</span>で消去します。ご予約の確認は、<span class="nw">2営業日</span>以内にお送りします。この<span class="nw">フォーム</span>は見本のため、送信しても届きません。</p>
+    </form>
+  </div>
+</section>
+
+<section class="section01" id="access">
+  <div class="inner01">
+    <h2 class="section_title01">教室への<span class="nw">アクセス</span></h2>
+    <table class="access_table fadein">
+      <tr><th scope="row">所在地</th><td>東京都千代田区神田○○0-0 ○○ビル8階（架空の住所です）<br>JR神田駅から徒歩<span class="nw">5分</span></td></tr>
+      <tr><th scope="row">お電話</th><td>03-0000-0000（平日13:00〜21:00）</td></tr>
+      <tr><th scope="row">授業</th><td>火曜と木曜の19:30〜21:30</td></tr>
+    </table>
+    <div class="access_map fadein">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3240.3989084058658!2d139.7709!3d35.6918!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c019a160dbd%3A0x5db48e4e41b360ec!2z56We55Sw6aeF!5e0!3m2!1sja!2sjp!4v1790601400405!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="神田駅周辺の地図"></iframe>
+    </div>
+    <details class="legal" id="law">
+      <summary>特定商取引法に基づく表記</summary>
+      <dl>
+        <div><dt>販売事業者</dt><dd>株式会社<span class="nw">ヨルゼミ</span>（架空の会社です）</dd></div>
+        <div><dt>代表者</dt><dd>代表取締役 小笠原 亮介</dd></div>
+        <div><dt>所在地</dt><dd>東京都千代田区神田○○0-0 ○○ビル8階（架空の住所です）</dd></div>
+        <div><dt>電話</dt><dd>03-0000-0000（平日13:00〜21:00）</dd></div>
+        <div><dt>役務の内容</dt><dd><span class="nw">プログラミング</span>教室。<span class="nw">3か月</span>・<span class="nw">全24回</span></dd></div>
+        <div><dt>対価</dt><dd>入会金22,000円、受講料165,000円（税込・教材費を含む）。分割払いは<span class="nw">12回</span>まで、実質年率<span class="nw">12.0%</span></dd></div>
+        <div><dt>役務の提供期間</dt><dd>開講日から<span class="nw">3か月</span>（<span class="nw">全24回</span>）</dd></div>
+        <div><dt>支払方法</dt><dd>銀行振込・<span class="nw">クレジットカード</span>・提携の信販会社による分割払い</dd></div>
+        <div><dt>支払時期</dt><dd>開講日の<span class="nw">7日</span>前まで</dd></div>
+        <div><dt>書面の交付</dt><dd>説明会で概要書面を、お申し込み後に契約書面をお渡しします</dd></div>
+        <div><dt><span class="nw">クーリング</span>・オフ</dt><dd>契約書面を受け取った日から<span class="nw">8日</span>以内は、書面または<span class="nw">メール</span>で契約を解除できます。お支払い済みの金額は全額返金します</dd></div>
+        <div><dt>中途解約</dt><dd>入会金と受講料の合計額（<span class="nw">187,000円</span>）をもとに精算します。開講前の解約手数料は<span class="nw">15,000円</span>を上限とします。開講後はお支払い済みの額から、受けた回数分の受講料（<span class="nw">1回</span><span class="nw">6,875円</span>）と解約手数料を差し引いて返金します。解約手数料は契約残額（合計額から、受けた回数分の受講料を差し引いた額）の2割と<span class="nw">5万円</span>のうち低いほうです。解約手数料が最も高くなるのは、<span class="nw">1回</span>目を受けた直後で<span class="nw">36,025円</span>です</dd></div>
+        <div><dt>役務提供地</dt><dd>東京都千代田区神田○○0-0 ○○ビル8階（架空の住所です）</dd></div>
+      </dl>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer_inner">
+    <div class="footer_logo"><b>ヨルゼミ</b><p>運営：株式会社ヨルゼミ（架空の会社です）<br>東京都千代田区神田○○0-0 ○○ビル8階（架空の住所です）<br>電話：03-0000-0000（平日13:00〜21:00）</p></div>
+    <div><h3><span class="nw">ヨルゼミ</span>について</h3><ul><li><a href="#feature">特徴</a></li><li><a href="#course">カリキュラム</a></li><li><a href="#teacher">講師紹介</a></li><li><a href="#voice">受講生の声</a></li></ul></div>
+    <div><h3>ご案内</h3><ul><li><a href="#price">受講料</a></li><li><a href="#seminar">無料説明会</a></li><li><a href="#access">アクセス</a></li><li><a href="#law">特定商取引法に基づく表記</a></li></ul></div>
+  </div>
+  <p class="footer_note"><span class="nw">ヨルゼミ</span>は架空の教室で、この<span class="nw">ページ</span>は教室向けLP制作の見本です。講師名・数字・住所・電話番号はすべて架空で、写真と画面の画像は、素材サイトから借りたものと、この見本のために制作したものです（一覧は<a href="img/CREDITS.md">img/CREDITS.md</a>、制作：常夜燈）。</p>
+  <p class="copyright">© YORU-ZEMI</p>
+</footer>
+
+<div class="fix_cta"><a href="tel:0300000000">電話する</a><a href="#seminar">無料説明会を予約</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.fadein');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('is-in')});
+  }else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}
+    })},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    addEventListener('scroll',function(){
+      if(innerHeight+scrollY<document.body.scrollHeight-4)return;
+      els.forEach(function(e){e.classList.add('is-in')});
+    },{passive:true});
+  }
+  // 折りたたみは閉じたまま着地するので、案内から来た時だけ開く
+  var law=document.getElementById('law');
+  document.querySelectorAll('a[href="#law"]').forEach(function(a){a.addEventListener('click',function(){law.open=true;});});
+  if(location.hash==='#law')law.open=true;
+  var btn=document.querySelector('.menu_btn'),nav=document.getElementById('gnav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open');btn.setAttribute('aria-expanded','false');});});
+  document.getElementById('seminar-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    this.innerHTML='<p>（見本のため送信されていません）実際のページでは、2営業日以内にご予約の確認をお送りする旨をここに表示します。</p>';
+  });
+})();
+</script>
+</body>
+</html>

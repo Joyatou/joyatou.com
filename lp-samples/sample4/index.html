@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クラウド勤怠管理システム「ハカル勤怠」｜月末の締めをラクにする</title>
+<meta name="description" content="中小企業向けのクラウド勤怠管理システム「ハカル勤怠」。打刻から集計・申請・給与ソフトへの書き出しまで、これひとつで。10名まで月3,300円、勤務形態2種類まで初期費用0円。30日間すべての機能を無料でお試しいただけます。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ハカル勤怠">
+<meta property="og:title" content="クラウド勤怠管理システム「ハカル勤怠」｜月末の締めをラクにする">
+<meta property="og:description" content="打刻から集計・申請・給与ソフトへの書き出しまで。10名まで月3,300円、30日間の無料トライアルつき。">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/clock.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ハカル勤怠","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android","offers":{"@type":"Offer","price":"3300","priceCurrency":"JPY"},"provider":{"@type":"Organization","name":"ハカルワークス株式会社"}}
+</script>
+<style>
+/* 字と余白は、勤怠管理SaaSの実在104件の実測と、手本にしたサービスの数値から採った。
+   本文はゴシック16px・行間1.6、節の題は32〜40px・太字・字間.08em、節の上下は100〜120px、ボタンは角丸50px。
+   数字と英字の見出しには Montserrat を使う（実在の手本と同じ組み合わせ）。 */
+:root{
+  --ink:#1e1e1e;--text:#333;--mute:#6b6b6b;--line:#e2e5e1;--bg:#fff;--gray:#f2f5ef;--pale:#f1f7f2;
+  --main:#23945f;--main-d:#18724a;--cta:#f27a2a;--cta-d:#d9661b;--navy:#1d2b3a;
+  --sans:"游ゴシック体",YuGothic,"游ゴシック Medium","Yu Gothic Medium","Hiragino Kaku Gothic ProN","Hiragino Sans","メイリオ",Meiryo,sans-serif;
+  --en:Montserrat,"Helvetica Neue",Arial,sans-serif;
+}
+*,::before,::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--sans);font-size:16px;font-weight:500;line-height:1.6;letter-spacing:.04em;color:var(--text);background:var(--bg);
+  font-feature-settings:"palt"}
+img{max-width:100%;height:auto;vertical-align:middle}
+a{color:inherit}
+h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.inner{max-width:1200px;margin:0 auto;padding:0 20px}
+.text-center{text-align:center}
+.mt-5{margin-top:48px}
+.d-inline-block{display:inline-block}
+.w-100{width:100%}
+.img-fluid{max-width:100%;height:auto}
+.pc{display:inline}
+.sp{display:none}
+:focus-visible{outline:2px solid var(--main);outline-offset:3px}
+
+.sec{padding:110px 0}
+.sec--gray{background:var(--gray)}
+.sec--pale{background:var(--pale)}
+.h2_ttl{font-size:36px;font-weight:700;line-height:1.45;letter-spacing:.08em;color:var(--ink);text-align:center;margin-bottom:56px}
+.h2_ttl .sub_ttl{display:block;font-family:var(--en);font-size:14px;letter-spacing:.2em;color:var(--main);margin-bottom:8px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:210px;min-height:52px;padding:0 30px;border-radius:50px;white-space:nowrap;
+  font-size:16px;font-weight:700;letter-spacing:.06em;text-decoration:none;transition:background .25s,color .25s}
+.btn--cta{background:var(--cta);color:#fff;box-shadow:0 4px 0 var(--cta-d)}
+.btn--cta:hover{background:var(--cta-d)}
+.btn--line{background:#fff;color:var(--main);box-shadow:inset 0 0 0 2px var(--main)}
+.btn--line:hover{background:var(--pale)}
+.btn--sm{min-width:0;min-height:0;padding:10px 20px;font-size:13px;line-height:1.4;box-shadow:none}
+.btn--sm.btn--line{box-shadow:inset 0 0 0 2px var(--main)}
+
+/* ヘッダー */
+.header{position:fixed;left:0;right:0;top:0;z-index:50;background:rgba(255,255,255,.96);box-shadow:0 1px 0 var(--line)}
+.header__inner{display:flex;align-items:center;gap:26px;max-width:1280px;height:72px;margin:0 auto;padding:0 20px}
+.header__logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex:none}
+.header__logo .fa-solid{font-size:30px;color:var(--main)}
+.header__logo b{font-size:21px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
+.header__logo small{display:block;font-size:10px;font-weight:500;color:var(--mute);letter-spacing:.04em;line-height:1.2}
+.header__nav{display:flex;gap:4px;margin-left:auto}
+.header__nav a{padding:8px 11px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.header__nav a:hover{color:var(--main)}
+.header__btns{display:flex;gap:8px;flex:none}
+.menu-btn{display:none}
+
+/* 主景 */
+.mv{position:relative;padding:72px 0 0;background:linear-gradient(115deg,#e8f5ec 0%,#e8f5ec 58%,#cfe9d8 58.1%,#bfe2cc 100%);overflow:hidden}
+.mv__inner{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:20px;max-width:1200px;margin:0 auto;padding:56px 20px 64px}
+.mv__label{display:inline-block;padding:3px 12px;background:var(--main);color:#fff;font-size:15px;font-weight:700;letter-spacing:.1em}
+.mv h1{font-size:46px;font-weight:700;line-height:1.35;letter-spacing:.04em;color:var(--ink);margin:16px 0 18px}
+.mv h1 small{display:block;font-size:18px;letter-spacing:.06em;color:var(--main-d);margin-bottom:6px}
+.mv__lead{font-size:16px;line-height:1.8}
+.mv__btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.mv__note{font-size:12px;color:var(--mute);margin-top:12px}
+.mv__terms{color:var(--text)}
+.mv__visual{position:relative}
+.mv__pc{width:100%;border-radius:8px;box-shadow:0 18px 40px rgba(20,60,40,.22);background:#fff}
+.mv__sp{position:absolute;right:-6px;bottom:-24px;width:26%;border-radius:14px;box-shadow:0 12px 26px rgba(20,60,40,.28);border:5px solid #1f2a26;background:#fff}
+.mv__badge{position:absolute;left:-8px;bottom:-30px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:132px;height:132px;border-radius:50%;
+  background:radial-gradient(circle at 50% 35%,#fbf0c0,#e7c455);box-shadow:0 0 0 4px #fff,0 6px 14px rgba(0,0,0,.2);text-align:center;font-size:11px;font-weight:700;color:#3a2f10;line-height:1.35}
+.mv__badge b{font-family:var(--en);font-size:30px;line-height:1.05}
+.pickup{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.pickup__item{display:grid;grid-template-columns:1fr 120px;gap:18px;align-items:center;padding:22px 40px}
+.pickup__item+.pickup__item{border-left:1px solid var(--line)}
+.pickup__item small{font-family:var(--en);font-size:11px;letter-spacing:.14em;color:var(--main)}
+.pickup__item h2{font-size:17px;font-weight:700;margin:2px 0 4px}
+.pickup__item p{font-size:13px;color:var(--mute)}
+.pickup__item img{width:120px;aspect-ratio:4/3;object-fit:cover;object-position:50% 20%;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+
+/* 導入企業の名前が流れる帯 */
+.logos{padding:26px 0;overflow:hidden;background:#fff}
+.logos p{text-align:center;font-size:13px;color:var(--mute);margin-bottom:12px}
+.logos__track{display:flex;gap:56px;width:max-content;animation:logos 40s linear infinite}
+.logos__track{color:#8a918c}
+.logos__track span{display:flex;align-items:center;gap:10px;height:30px;font-size:19px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.logos__track .fa-solid{font-size:24px}
+@keyframes logos{to{transform:translateX(-50%)}}
+
+/* お悩み */
+.worry{background:#fff}
+.worry__list{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:980px;margin:0 auto}
+.worry__item{display:flex;flex-direction:column;align-items:center;padding:36px 20px 26px;border-radius:50%;aspect-ratio:1;background:#f0f1ee;text-align:center;justify-content:center}
+.worry__no{font-family:var(--en);font-size:22px;font-weight:700;color:var(--ink)}
+.worry__no small{font-family:var(--sans);font-size:12px;margin-right:4px}
+.worry__item p{width:100%;font-size:16px;font-weight:700;line-height:1.55;margin:8px 0 12px}
+.worry__item .fa-solid{font-size:46px;color:var(--mute)}
+.solve{position:relative;background:var(--main);padding:90px 0 100px;color:#fff}
+.solve::before{content:"";position:absolute;left:0;right:0;top:-1px;height:70px;background:#fff;border-radius:0 0 50% 50%/0 0 100% 100%}
+.solve__box{position:relative;max-width:880px;margin:0 auto;padding:54px 50px 44px;border:2px solid #fff;border-radius:12px}
+.solve__label{position:absolute;left:50%;top:-18px;transform:translateX(-50%);padding:4px 22px;border-radius:30px;background:var(--ink);font-size:15px;font-weight:700;white-space:nowrap}
+.solve__box li{display:flex;align-items:center;gap:16px;font-size:24px;font-weight:700;letter-spacing:.06em}
+.solve__box li+li{margin-top:22px}
+.solve__box li b{flex:none;display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--ink);font-size:14px;box-shadow:0 0 0 3px #fff}
+
+/* 選ばれる理由。写真と文を左右に振り、大きな番号を薄く敷く */
+.reason__item{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.reason__item+.reason__item{margin-top:90px}
+.reason__item:nth-child(even) .reason__media{order:2}
+.reason__media img{border-radius:10px;box-shadow:0 10px 26px rgba(0,0,0,.12)}
+/* 携帯の画面は縦に2倍以上長い。幅で合わせると段の高さが本文の3倍になり、文の側が大きく空く。
+   高さで抑え、余る左右は淡い地の板で埋める */
+.reason__media--sp{display:flex;align-items:center;justify-content:center;padding:28px 0;border-radius:10px;background:var(--pale)}
+.reason__media--sp img{width:auto;max-height:400px;border-radius:22px;border:7px solid #1f2a26;box-shadow:none}
+.reason__body{position:relative}
+.reason__num{position:absolute;right:0;top:-44px;font-family:var(--en);font-size:110px;font-weight:700;line-height:1;color:#eef2ee;z-index:-1}
+.reason__body h3{font-size:26px;font-weight:700;line-height:1.5;color:var(--ink);margin-bottom:18px}
+.reason__body h3 em{font-style:normal;color:var(--main)}
+.reason__body p{line-height:1.85}
+.check{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 22px}
+.check li{position:relative;padding-left:24px;font-size:14px;font-weight:700}
+.check li::before{content:"\f00c";position:absolute;left:0;top:.1em;font:900 14px/1.4 "Font Awesome 6 Free";color:var(--main)}
+
+/* 機能一覧 */
+/* 札は8枚。3枚ずつ並べると最後の段に1枠空くので、最後の2枚（オプション）だけ幅を広げて段を埋める */
+.func__list{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.func__item{grid-column:span 2;padding:34px 26px 28px;background:#fff;border-radius:10px;text-align:center}
+.func__item .fa-solid{display:flex;align-items:center;justify-content:center;width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:#dff1e5;color:var(--main);font-size:28px}
+.func__item .fa-triangle-exclamation{background:#fde9d7;color:var(--cta)}
+.func__item h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--ink)}
+.func__item p{font-size:14px;text-align:left;line-height:1.75}
+.func__item:nth-last-child(-n+2){grid-column:span 3}
+
+/* 数字 */
+.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.numbers div{padding:30px 14px;background:#fff;text-align:center}
+.numbers b{display:block;font-family:var(--en);font-size:46px;line-height:1.1;color:var(--main)}
+.numbers b small{font-family:var(--sans);font-size:16px;color:var(--ink);margin-left:2px}
+.numbers p{font-size:13px;color:var(--mute);margin-top:8px}
+.numbers__note,.law__note{font-size:12px;color:var(--mute);margin-top:14px;text-align:right}
+
+/* 導入事例 */
+.case__item{display:grid;grid-template-columns:320px 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line)}
+.case__item:last-child{border-bottom:1px solid var(--line)}
+.case__item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.case__tag{display:inline-block;padding:2px 10px;background:var(--pale);color:var(--main-d);font-size:12px;font-weight:700}
+.case__item blockquote{position:relative;margin:12px 0 8px;padding-left:48px;font-size:23px;font-weight:700;line-height:1.55;color:var(--ink)}
+.case__item blockquote::before{content:"“";position:absolute;left:0;top:-14px;font-family:Georgia,serif;font-size:72px;line-height:1;color:#e8c341}
+.case__who{font-size:14px;font-weight:700}
+.case__ba{display:flex;align-items:center;gap:18px;margin:16px 0 10px;padding:14px 20px;background:#fff;border-radius:8px;width:fit-content}
+.case__ba span{font-size:12px;color:var(--mute);display:block}
+.case__ba b{font-family:var(--en);font-size:28px;color:var(--ink)}
+.case__ba b small{font-family:var(--sans);font-size:14px}
+.case__ba .after b{color:var(--main)}
+.case__ba i{font-style:normal;font-size:22px;color:var(--mute)}
+.case__item p:not([class]){font-size:13px;color:var(--mute)}
+
+/* 料金 */
+.price{background:var(--main)}
+.price .h2_ttl{color:#fff}
+.price .h2_ttl .sub_ttl{color:#d9f2e2}
+.price__box{position:relative;max-width:900px;margin:0 auto;padding:48px 50px 40px;background:#fff;border-radius:14px}
+.price__zero{position:absolute;right:-24px;top:-34px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:108px;height:108px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:700;line-height:1.3;text-align:center}
+.price__zero b{font-family:var(--en);font-size:34px;line-height:1}
+.price__main{text-align:center;padding-bottom:26px;border-bottom:2px dashed var(--line)}
+.price__main p{font-weight:700}
+.price__main strong{display:block;font-family:var(--en);font-size:66px;line-height:1.1;color:var(--main)}
+.price__main strong small{font-family:var(--sans);font-size:22px;color:var(--ink);margin-left:4px}
+.price__table{width:100%;margin-top:22px;border-collapse:collapse;font-size:14px}
+.price__table th,.price__table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left}
+.price__table thead th{font-size:12px;color:var(--mute);font-weight:700}
+.price__table td:nth-child(2){font-weight:700;white-space:nowrap}
+.price__ex{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:26px auto 0}
+.price__ex div{padding:20px 22px;background:#fff;border-radius:10px}
+.price__ex h3{font-size:14px;font-weight:700;color:var(--mute)}
+.price__ex b{display:block;font-family:var(--en);font-size:32px;color:var(--ink);margin:4px 0}
+.price__ex b small{font-family:var(--sans);font-size:14px}
+.price__ex p{font-size:12px;color:var(--mute);line-height:1.6}
+.price__fine{max-width:720px;margin:20px auto 0;font-size:12px;color:#e2f3e8;line-height:1.8}
+
+/* 導入までの流れ。縦の線でつなぐ */
+.flow__list{position:relative;max-width:760px;margin:0 auto}
+/* 縦線を段の番号の中央に合わせる（余白26px＋列80pxの半分）。版面の中央では番号とつながらない */
+.flow__list::before{content:"";position:absolute;left:66px;top:0;bottom:0;width:4px;margin-left:-2px;background:#e8c341}
+.flow__item{position:relative;display:grid;grid-template-columns:80px 1fr;gap:18px;align-items:center;padding:24px 26px;background:#fff;border-radius:10px}
+.flow__item+.flow__item,.flow__pill+.flow__item{margin-top:18px}
+.flow__step{text-align:center;font-family:var(--en);font-weight:700;color:var(--ink)}
+.flow__step small{display:block;width:fit-content;margin:0 auto 2px;padding:0 10px;border-radius:20px;background:#e8c341;font-size:11px;letter-spacing:.1em}
+.flow__step b{font-size:30px;line-height:1}
+.flow__item h3{font-size:19px;font-weight:700;margin-bottom:4px;color:var(--ink)}
+.flow__item p{font-size:14px;line-height:1.75}
+.flow__pill{position:relative;display:block;width:fit-content;margin:18px 0 0;padding:6px 26px;border-radius:30px;background:var(--ink);color:#fff;font-size:15px;font-weight:700}
+
+/* 法令への対応 */
+.law__list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.law__item{padding:28px 26px;border:1px solid var(--line);border-top:4px solid var(--main);background:#fff}
+/* 3枚目は数字が多く、ほかの2枚の倍の丈になる。3枚を横に並べると1・2枚目の下が空くので、3枚目だけ全幅に回す */
+.law__item:last-child{grid-column:1/-1}
+.law__item h3{font-size:18px;font-weight:700;margin-bottom:12px;color:var(--ink)}
+.law__item p{font-size:13.5px;line-height:1.8}
+
+/* よくある質問 */
+.faq__list{max-width:960px;margin:0 auto;border-top:1px solid var(--line)}
+.faq__item{border-bottom:1px solid var(--line);background:#fff}
+.faq__item summary{position:relative;display:block;padding:20px 56px 20px 50px;font-weight:700;cursor:pointer;list-style:none}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::before{content:"Q.";position:absolute;left:18px;top:19px;font-family:var(--en);color:var(--main)}
+.faq__item summary::after{content:"+";position:absolute;right:22px;top:16px;font-size:24px;font-weight:400;color:#aaa}
+.faq__item[open] summary::after{content:"−"}
+.faq__item p{padding:0 30px 22px 50px;font-size:14.5px;line-height:1.85}
+
+/* お知らせ */
+.news__list{max-width:960px;margin:0 auto;border-top:1px solid var(--line)}
+.news__list li{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:20px 12px;border-bottom:1px solid var(--line);font-size:15px}
+.news__list time{font-family:var(--en);font-size:13px;color:var(--mute)}
+
+/* 最後の三つの窓口 */
+.contact__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact__card{padding:30px 24px;border-radius:10px;background:var(--pale);text-align:center}
+.contact__card .fa-solid{display:flex;align-items:center;justify-content:center;width:66px;height:66px;margin:0 auto 10px;border-radius:50%;background:#fff;color:var(--main);font-size:28px}
+.contact__card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.contact__card p{font-size:13.5px;text-align:left;margin-bottom:16px;line-height:1.75}
+.contact__card b{display:block;font-family:var(--en);font-size:clamp(20px,2.4vw,26px);white-space:nowrap;color:var(--main-d);margin:6px 0}
+.contact__card b a{text-decoration:none}
+
+/* フォーム */
+.form{max-width:760px;margin:0 auto;padding:40px 44px;border-radius:12px;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.form label,.form legend{display:block;font-size:14px;font-weight:700;margin:16px 0 6px;padding:0}
+.form fieldset{border:0;margin:0;padding:0}
+.form .radio{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px}
+.form .radio label{display:flex;align-items:center;gap:6px;margin:0;font-weight:500}
+.form .radio input{width:auto}
+.form input,.form select{width:100%;padding:11px 12px;border:1px solid #cdd3cd;border-radius:6px;font:inherit;font-size:16px;background:#fff}
+.form .req{margin-left:8px;padding:2px 7px;border-radius:3px;background:var(--cta);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em}
+.form .agree{display:flex;align-items:center;margin-top:18px;font-weight:500}
+.form .agree input{width:auto;margin-right:8px}
+.form button{display:flex;width:100%;margin-top:22px;border:0;cursor:pointer;font-family:inherit}
+.form__note{font-size:12px;color:var(--mute);margin-top:10px;text-align:center}
+.legal{max-width:960px;margin:44px auto 0;font-size:13px}
+.legal summary{cursor:pointer;font-weight:700;padding:12px 16px;background:var(--gray)}
+.legal dl div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line)}
+
+/* フッター */
+.footer{background:var(--navy);color:#dfe6ea;font-size:13px}
+.footer__inner{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;max-width:1200px;margin:0 auto;padding:54px 20px 36px}
+.footer__logo{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:700;color:#fff;margin-bottom:12px}
+.footer__logo .fa-solid{font-size:28px;color:var(--main)}
+/* HTMLはページの並びで書き、読み上げの順と左の列から読む順をそろえる。4段に収めて左の運営表示と丈をそろえる */
+.footer__nav{display:grid;grid-template-columns:repeat(3,auto);grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:8px 28px}
+.footer__nav a{text-decoration:none}
+.footer__note{max-width:1200px;margin:0 auto;padding:0 20px 24px;font-size:11px;color:#9fb0ba}
+.footer__copy{padding:14px;text-align:center;font-family:var(--en);font-size:11px;background:#16212c;color:#9fb0ba}
+
+/* 動き */
+.scrollanime{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.scrollanime.is-in{opacity:1;transform:none}
+
+.fix-cta{display:none}
+@media (max-width:1240px){
+  .mv h1{font-size:36px}
+  .header__nav{display:none}
+  .header__btns{margin-left:auto}
+  .menu-btn{display:block;width:44px;height:44px;padding:0;border:0;background:none;line-height:44px;cursor:pointer}
+  .menu-btn .fa-solid{font-size:24px;color:var(--ink)}
+  .header__nav.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:72px;background:#fff;padding:10px 20px 18px;box-shadow:0 8px 14px rgba(0,0,0,.08)}
+}
+@media (max-width:1023px){
+  .func__list{grid-template-columns:repeat(2,1fr)}
+  .func__item,.func__item:nth-last-child(-n+2){grid-column:auto}
+  .law__list{grid-template-columns:1fr}
+}
+@media (max-width:767px){
+  .pc{display:none}
+  .sp{display:inline}
+  body{font-size:15px}
+  .sec{padding:64px 0}
+  .h2_ttl{font-size:24px;margin-bottom:34px}
+  .header__inner{height:60px}
+  .header__btns .btn--line{display:none}
+  .header__btns .btn--sm{padding:10px 14px}
+  .header__logo small{display:none}
+  .mv{padding-top:60px;background:#e8f5ec}
+  .mv__inner{grid-template-columns:1fr;padding:30px 18px 70px}
+  .mv h1{font-size:29px}
+  .mv h1 small{font-size:14px}
+  .mv__btns .btn{flex:1 1 100%}
+  .mv__badge{width:112px;height:112px;left:-6px;bottom:-40px;letter-spacing:0}
+  .mv__badge b{font-size:22px}
+  .pickup{grid-template-columns:1fr}
+  .pickup__item{padding:18px;grid-template-columns:1fr 90px}
+  .pickup__item+.pickup__item{border-left:0;border-top:1px solid var(--line)}
+  .worry__list{grid-template-columns:1fr;max-width:none;gap:10px}
+  .worry__item{display:grid;grid-template-columns:44px 1fr;grid-template-areas:"icon no" "icon text";align-items:center;column-gap:14px;aspect-ratio:auto;border-radius:12px;padding:14px 16px;text-align:left}
+  .worry__item .fa-solid{grid-area:icon;font-size:34px;text-align:center}
+  .worry__no{grid-area:no;font-size:15px}
+  .worry__item p{grid-area:text;margin:0;font-size:15px}
+  .worry__item p br{display:none}
+  .solve__box{padding:44px 20px 30px}
+  .solve__box li{font-size:16px;gap:12px}
+  .solve__box li b{width:42px;height:42px;font-size:12px}
+  .reason__item{grid-template-columns:1fr;gap:26px}
+  .reason__item:nth-child(even) .reason__media{order:0}
+  .reason__item+.reason__item{margin-top:60px}
+  /* 携帯では見出しが右端の番号の下まで伸びて重なるので、番号を見出しの左に並べる */
+  .reason__body{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}
+  .reason__body>:not(.reason__num):not(h3){grid-column:1/-1}
+  .reason__num{position:static;font-size:44px}
+  .reason__body h3{font-size:21px;margin-bottom:0}
+  .reason__body p{margin-top:14px}
+  .func__list,.law__list,.contact__cards,.price__ex{grid-template-columns:1fr}
+  /* 札を縦に積むと1枚が絵の分だけ高くなり、機能一覧だけで2,500pxを超えた。絵を左に寄せて丈を詰める */
+  .func__list{gap:12px}
+  .func__item{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:18px;text-align:left}
+  .func__item .fa-solid{grid-row:span 2;width:44px;height:44px;margin:0;font-size:20px}
+  .func__item h3{font-size:16px;margin-bottom:4px}
+  .numbers{grid-template-columns:1fr}
+  .numbers div{display:flex;align-items:center;gap:16px;padding:16px 20px;text-align:left}
+  .numbers b{flex:none;width:112px;font-size:34px}
+  .numbers p{margin-top:0}
+  .case__item{grid-template-columns:1fr;gap:18px}
+  .case__item blockquote{font-size:18px;padding-left:36px}
+  .price__box{padding:44px 18px 28px}
+  .price__zero{right:-8px;top:-40px;width:90px;height:90px}
+  .price__main strong{font-size:46px}
+  .price__table{font-size:13px}
+  .price__table thead{display:none}
+  .price__table tr{display:grid;grid-template-columns:1fr auto;padding:10px 0;border-bottom:1px solid var(--line)}
+  .price__table td,.price__table th{border:0;padding:2px 4px}
+  .price__table td:last-child{grid-column:1/-1;font-size:12px;color:var(--mute)}
+  .flow__list::before{left:49px}
+  /* 本文まで番号の右の列に入れると1行が15字に満たず、「お名前・」の後ろで早く折れた。本文は番号と見出しの下に全幅で組む */
+  .flow__item{grid-template-columns:62px 1fr;row-gap:8px;padding:18px}
+  .flow__item>div{display:contents}
+  .flow__item p:not(.flow__step){grid-column:1/-1}
+  .news__list li{grid-template-columns:1fr;gap:2px}
+  .form{padding:26px 18px}
+  .legal dl div{grid-template-columns:1fr;gap:2px}
+  .footer__inner{grid-template-columns:1fr}
+  .footer__nav{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(6,auto)}
+  .fix-cta{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40}
+  .fix-cta a{display:flex;align-items:center;justify-content:center;height:54px;font-weight:700;text-decoration:none}
+  .fix-cta a:first-child{background:#fff;color:var(--main);box-shadow:inset 0 2px 0 var(--main)}
+  .fix-cta a:last-child{background:var(--cta);color:#fff}
+  .footer{padding-bottom:54px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .scrollanime{opacity:1;transform:none;transition:none}
+  .logos__track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}
+}
+@media print{
+  .scrollanime{opacity:1!important;transform:none!important}
+  .header{position:static}
+  .mv{padding-top:0}
+  .logos__track{animation:none;flex-wrap:wrap;width:auto}
+  .fix-cta,.menu-btn{display:none!important}
+}
+/* 和文の折り返し。数字と単位の間は pretty でも割れるので .nw で括る */
+body{line-break:strict}
+p,li,dd,dt,th,td,figcaption,summary,blockquote{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+.nw{white-space:nowrap}
+/* pretty だけでは、2〜4行の短い段落の最後の行に「ます。」「すか？」が残り、「か｜かる」「回｜答」と語の途中でも折れる。
+   短い段落と見出しは文節で折り、行の長さもそろえる。長い段落に文節の折り返しを当てると、長い文節の手前で行が半分空くので当てない
+   （auto-phrase は Chrome のみ。ほかのブラウザは従来の折り返しに戻るだけ） */
+h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phrase}
+.mv__lead,.mv__note,.pickup__item p,.reason__body p,.numbers p,.case__item p,.price__main p,.price__ex p,.price__fine,.price__table th,.flow__item p,.faq__item summary,.contact__card p,.legal dt,.legal dd{text-wrap:balance;word-break:auto-phrase}
+</style>
+<noscript><style>.scrollanime{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="header__logo" href="#top"><i class="fa-solid fa-clock" aria-hidden="true"></i><span><b>ハカル勤怠</b><small>ハカルワークス株式会社</small></span></a>
+    <nav class="header__nav" id="gnav" aria-label="ページ内の案内">
+      <a class="gtm-nav" href="#reason">選ばれる理由</a>
+      <a class="gtm-nav" href="#function">機能一覧</a>
+      <a class="gtm-nav" href="#case">導入事例</a>
+      <a class="gtm-nav" href="#price">料金プラン</a>
+      <a class="gtm-nav" href="#flow">導入までの流れ</a>
+      <a class="gtm-nav" href="#law">法令への対応</a>
+      <a class="gtm-nav" href="#faq">よくある質問</a>
+    </nav>
+    <div class="header__btns">
+      <a class="btn btn--line btn--sm gtm-cta" href="#entry" data-kind="doc">資料請求</a>
+      <a class="btn btn--cta btn--sm gtm-cta" href="#entry" data-kind="trial">無料で試す</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="mv">
+  <div class="mv__inner">
+    <div>
+      <p class="mv__label"><span class="nw">10名</span>まで月3,300円・勤務形態2種類まで初期費用<span class="nw">0円</span>※</p>
+      <h1><small>月末の締めをラクにする</small>中小企業向け<br><span class="nw">クラウド</span>勤怠管理</h1>
+      <p class="mv__lead">打刻から集計・申請・給与<span class="nw">ソフト</span>への書き出しまで、これひとつで。就業<span class="nw">ルール</span>の設定は当社が代行します。</p>
+      <div class="mv__btns">
+        <a class="btn btn--line gtm-cta" href="#entry" data-kind="doc">資料請求</a>
+        <a class="btn btn--cta gtm-cta" href="#entry" data-kind="trial">30日間無料で試す</a>
+      </div>
+      <p class="mv__note"><span class="nw">クレジットカード</span>登録なしで、すべての機能をお試しいただけます。<br><span class="mv__terms">※勤務形態が3種類以上の会社は、初期費用として初回に<span class="nw">88,000円</span>（税込）がかかります。</span></p>
+    </div>
+    <div class="mv__visual">
+      <img class="mv__pc" src="img/app_pc.png" alt="従業員ごとの実働と時間外が並ぶ勤怠の集計画面" fetchpriority="high">
+      <img class="mv__sp" src="img/app_sp.png" alt="出勤と退勤のボタンが並ぶスマートフォンの打刻画面">
+      <p class="mv__badge">導入企業数<b>1,840</b>社<br>2026年7月末時点</p>
+    </div>
+  </div>
+  <div class="pickup">
+    <div class="pickup__item">
+      <div><small>PICK UP</small><h2>就業<span class="nw">ルール</span>の設定を無料で代行</h2><p>勤務形態2種類までの会社が対象です。設定済みの環境を、通常<span class="nw">3営業日</span>ほどでお渡しします。</p></div>
+      <img src="img/pickup.jpg" alt="ヘッドセット姿のオペレーター">
+    </div>
+    <div class="pickup__item">
+      <div><small>PICK UP</small><h2>継続率<span class="nw">98.2%</span></h2><p>毎月の更新を迎えたご契約のうち、継続されたものの割合です（<span class="nw">2026年7月</span>末時点・自社調べ）。</p></div>
+      <img src="img/team.jpg" alt="3人の打ち合わせ">
+    </div>
+  </div>
+</section>
+
+<div class="logos" aria-label="ご利用中の会社（一部）">
+  <p>ご利用中の会社（一部）</p>
+  <div class="logos__track">
+    <span><i class="fa-solid fa-gear" aria-hidden="true"></i>大井川金属工業</span><span><i class="fa-solid fa-dove" aria-hidden="true"></i>つばさ訪問介護</span><span><i class="fa-solid fa-mountain" aria-hidden="true"></i>北山運輸</span><span><i class="fa-solid fa-print" aria-hidden="true"></i>SETO PRINT</span><span><i class="fa-solid fa-sun" aria-hidden="true"></i>みなと保育園</span><span><i class="fa-solid fa-building" aria-hidden="true"></i>山際商事</span>
+    <span aria-hidden="true"><i class="fa-solid fa-gear"></i>大井川金属工業</span><span aria-hidden="true"><i class="fa-solid fa-dove"></i>つばさ訪問介護</span><span aria-hidden="true"><i class="fa-solid fa-mountain"></i>北山運輸</span><span aria-hidden="true"><i class="fa-solid fa-print"></i>SETO PRINT</span><span aria-hidden="true"><i class="fa-solid fa-sun"></i>みなと保育園</span><span aria-hidden="true"><i class="fa-solid fa-building"></i>山際商事</span>
+  </div>
+</div>
+
+<section class="sec worry">
+  <div class="inner">
+    <h2 class="h2_ttl">勤怠管理のお悩み</h2>
+    <ul class="worry__list">
+      <li class="worry__item scrollanime"><span class="worry__no"><small>悩み</small>01</span><p>毎月<span class="nw">3日間</span>かかる<br>集計作業</p><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i></li>
+      <li class="worry__item scrollanime"><span class="worry__no"><small>悩み</small>02</span><p>部署ごとの<br>打刻方法の違い</p><i class="fa-solid fa-building-user" aria-hidden="true"></i></li>
+      <li class="worry__item scrollanime"><span class="worry__no"><small>悩み</small>03</span><p>時間外の上限への<br>不安</p><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+</section>
+<section class="solve">
+  <div class="inner">
+    <div class="solve__box scrollanime">
+      <p class="solve__label"><span class="nw">ハカル</span>勤怠で解決</p>
+      <ul>
+        <li><b>解決</b>打刻と同時に集計、月末の締めは確認のみ</li>
+        <li><b>解決</b>打刻は部署ごと、集計はひとつに</li>
+        <li><b>解決</b>時間外が上限に近づいた従業員の名前を、一覧で色分けして表示</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reason">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">REASON</span>ハカル勤怠が選ばれる理由</h2>
+    <div class="reason__item scrollanime">
+      <div class="reason__media"><img src="img/app_pc.png" alt="実働・時間外・深夜・休日の時間が従業員ごとに並ぶ集計画面" loading="lazy"></div>
+      <div class="reason__body">
+        <span class="reason__num" aria-hidden="true">01</span>
+        <h3>打刻と同時に<em>自動集計</em></h3>
+        <p>月末に集計する手間がなくなります。締め日の作業は、結果の確認と確定だけです。</p>
+        <ul class="check"><li>時間外・休暇も自動集計</li><li>弥生給与・freee人事労務などの取り込み形式で書き出し</li></ul>
+      </div>
+    </div>
+    <div class="reason__item scrollanime">
+      <div class="reason__media"><img src="img/clock.jpg" alt="壁のカードリーダー" loading="lazy"></div>
+      <div class="reason__body">
+        <span class="reason__num" aria-hidden="true">02</span>
+        <h3>打刻の方法を<em>部署ごとに設定</em></h3>
+        <p>事務所では<span class="nw">パソコン</span>、工場では交通系IC<span class="nw">カード</span>、外回りでは<span class="nw">スマートフォン</span>で打刻できます。集計や確認は、<span class="nw">ハカル</span>勤怠の画面だけで完結します。</p>
+        <ul class="check"><li>交通系IC<span class="nw">カード</span></li><li>iPhone・Androidの<span class="nw">アプリ</span></li><li><span class="nw">パソコン</span>の<span class="nw">ブラウザ</span></li></ul>
+      </div>
+    </div>
+    <div class="reason__item scrollanime">
+      <div class="reason__media"><img src="img/support.jpg" alt="モニター前の打ち合わせ" loading="lazy"></div>
+      <div class="reason__body">
+        <span class="reason__num" aria-hidden="true">03</span>
+        <h3>就業<span class="nw">ルール</span>の<em>設定代行</em></h3>
+        <p>就業規則を拝見し、変形労働時間制や<span class="nw">フレックスタイム</span>制にも対応した設定済みの環境をご用意します。<span class="nw">トライアル</span>期間中から、お客様の就業<span class="nw">ルール</span>でご利用いただけます。</p>
+        <ul class="check"><li>変形労働時間制・<span class="nw">フレックスタイム</span>制</li><li>給与<span class="nw">ソフト</span>の出力形式の設定</li></ul>
+      </div>
+    </div>
+    <div class="reason__item scrollanime">
+      <div class="reason__media reason__media--sp"><img src="img/app_sp.png" alt="今日の打刻と今月の集計が並ぶスマートフォンの打刻画面" loading="lazy"></div>
+      <div class="reason__body">
+        <span class="reason__num" aria-hidden="true">04</span>
+        <h3>従業員の画面は<em>3つだけ</em></h3>
+        <p>従業員が使うのは打刻・申請・履歴の3画面です。打刻の画面で、その日の実働を確認できます。休暇の申請や打刻の修正依頼も、従業員の画面からできます。</p>
+        <ul class="check"><li>打刻・申請・履歴</li><li>今月の実働と有給休暇の残日数</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--gray" id="function">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">FUNCTION</span>機能一覧</h2>
+    <div class="func__list">
+      <div class="func__item scrollanime"><i class="fa-solid fa-id-card" aria-hidden="true"></i><h3>打刻</h3><p><span class="nw">パソコン</span>、<span class="nw">スマートフォン</span>、交通系IC<span class="nw">カード</span>で打刻できます。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-calculator" aria-hidden="true"></i><h3>自動集計</h3><p>実働・時間外・深夜・休日の時間を、従業員ごとに集計します。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><h3>申請・承認</h3><p>休暇と時間外労働を申請でき、打刻の修正も依頼できます。承認は管理画面から行えます。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-file-export" aria-hidden="true"></i><h3>給与<span class="nw">ソフト</span>への書き出し</h3><p>CSVで出力します。列の並びと項目名を、お使いの給与<span class="nw">ソフト</span>に合わせて設定できます。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i><h3>時間外が上限に近づいた従業員名の色分け</h3><p>上限までの残り時間に応じて、一覧の従業員名を色分けして表示します。変形労働時間制や自動車運転業務の上限にも対応します。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-book" aria-hidden="true"></i><h3>年次有給休暇管理簿</h3><p>基準日・日数・時季を記載した管理簿を出力できます。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-calendar-plus" aria-hidden="true"></i><h3>有給休暇の自動付与（<span class="nw">オプション</span>）</h3><p>入社日・勤続年数・出勤率から付与日数を計算し、比例付与にも対応します。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-calendar-week" aria-hidden="true"></i><h3><span class="nw">シフト</span>の作成（<span class="nw">オプション</span>）</h3><p>従業員の希望休を反映した<span class="nw">シフト</span>表を作成できます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">NUMBERS</span>数字で見るハカル勤怠</h2>
+    <div class="numbers scrollanime">
+      <div><b>12<small>分</small></b><p>お問い合わせへの初回返信までの平均時間</p></div>
+      <div><b>210<small>万回</small></b><p><span class="nw">1か月</span>の打刻回数</p></div>
+      <div><b>4.6<small>/5</small></b><p><span class="nw">サポート</span>の満足度（回答<span class="nw">312件</span>）</p></div>
+    </div>
+    <p class="numbers__note">いずれも<span class="nw">2026年7月</span>の集計・自社調べ。</p>
+  </div>
+</section>
+
+<section class="sec sec--gray" id="case">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">CASE STUDY</span>導入事例</h2>
+    <div class="case__item scrollanime">
+      <img src="img/office.jpg" alt="事務所の机に向かう女性" loading="lazy">
+      <div>
+        <span class="case__tag">製造業・従業員<span class="nw">30名</span></span>
+        <blockquote>締めが<span class="nw">3日</span>から<span class="nw">30分</span>になり、月初の出荷に手が回るようになりました。</blockquote>
+        <p class="case__who">大井川金属工業株式会社 総務ご担当者様</p>
+        <div class="case__ba"><div><span>導入前の締め作業</span><b>3<small>日</small></b></div><i>→</i><div class="after"><span>導入後</span><b>30<small>分</small></b></div></div>
+        <p><span class="nw">2026年3月</span>の実測。工場は交通系IC<span class="nw">カード</span>、事務所は<span class="nw">パソコン</span>で打刻。就業<span class="nw">ルール</span>の設定は当社が代行しました。削減できる時間は、会社の規模や勤務形態により異なります。</p>
+      </div>
+    </div>
+    <div class="case__item scrollanime">
+      <img src="img/care.jpg" alt="小道でスマートフォンを操作する女性" loading="lazy">
+      <div>
+        <span class="case__tag">訪問介護・従業員<span class="nw">18名</span></span>
+        <blockquote>外回りの打刻を<span class="nw">スマートフォン</span>で済ませられるようになり、月末に訪問記録と勤怠を突き合わせる作業がなくなりました。</blockquote>
+        <p class="case__who">つばさ訪問介護株式会社 管理者様</p>
+        <div class="case__ba"><div><span>導入前の突き合わせ</span><b>6<small>時間／月</small></b></div><i>→</i><div class="after"><span>導入後</span><b>0<small>時間</small></b></div></div>
+        <p><span class="nw">2026年5月</span>の実測。全員が<span class="nw">スマートフォン</span>の<span class="nw">アプリ</span>で打刻。有給休暇の自動付与を利用。実際の削減効果は、これまでの集計の仕方により異なります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec price" id="price">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">PRICE</span>料金プラン</h2>
+    <div class="price__box scrollanime">
+      <p class="price__zero">初期費用<b>0</b>円※</p>
+      <div class="price__main">
+        <p>基本料金（<span class="nw">10名</span>まで・税込）</p>
+        <strong>月3,300<small>円</small></strong>
+      </div>
+      <table class="price__table">
+        <thead><tr><th scope="col">項目</th><th scope="col">金額（税込）</th><th scope="col">条件</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><span class="nw">11名</span>目以降のご利用</th><td><span class="nw">1名</span> <span class="nw">月330円</span></td><td><span class="nw">10名</span>を超えた人数分を基本料金に加算</td></tr>
+          <tr><th scope="row">有給休暇の自動付与</th><td><span class="nw">1名</span> <span class="nw">月110円</span></td><td>お使いになる場合のみ。ご利用の人数分</td></tr>
+          <tr><th scope="row"><span class="nw">シフト</span>の作成</th><td><span class="nw">1名</span> <span class="nw">月110円</span></td><td>お使いになる場合のみ。ご利用の人数分</td></tr>
+          <tr><th scope="row">給与<span class="nw">ソフト</span>への書き出し</th><td><span class="nw">0円</span></td><td>基本料金の範囲内</td></tr>
+          <tr><th scope="row">IC<span class="nw">カードリーダー</span></th><td>1拠点につき<span class="nw">1台</span>まで<span class="nw">0円</span></td><td>無償貸し出し。同じ拠点の<span class="nw">2台</span>目からは<span class="nw">1台</span> <span class="nw">月330円</span></td></tr>
+          <tr><th scope="row">初期費用（就業<span class="nw">ルール</span>の設定代行）</th><td><span class="nw">0円</span></td><td>※勤務形態が3種類以上の場合は、初回に<span class="nw">88,000円</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="price__ex scrollanime">
+      <div><h3><span class="nw">5名</span>・<span class="nw">オプション</span>なし</h3><b>月3,300<small>円</small></b><p>基本料金だけで、打刻から給与<span class="nw">ソフト</span>への書き出しまでの機能が使えます。</p></div>
+      <div><h3><span class="nw">30名</span>・全<span class="nw">オプション</span>利用</h3><b>月16,500<small>円</small></b><p>3,300円<span class="nw">＋20名</span>×<span class="nw">330円</span><span class="nw">＋30名</span>×<span class="nw">220円</span>（<span class="nw">オプション</span>2つで<span class="nw">1名</span><span class="nw">220円</span>）。</p></div>
+      <div><h3><span class="nw">200名</span>・全<span class="nw">オプション</span>利用</h3><b>月110,000<small>円</small></b><p>勤務形態が3種類以上ある会社は、初期費用<span class="nw">88,000円</span>を加えて、初月は<span class="nw">198,000円</span>です。</p></div>
+    </div>
+    <p class="price__fine">ご請求の人数には、その月に一度でも打刻した方を含みます。お支払い方法は、翌月初めの請求書払い（銀行振込）と<span class="nw">クレジットカード</span>払いからお選びいただけます。ご契約は<span class="nw">1か月</span>単位です。</p>
+  </div>
+</section>
+
+<section class="sec sec--gray" id="flow">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">FLOW</span>導入までの流れ</h2>
+    <div class="flow__list">
+      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>01</b></p><div><h3>お申し込み</h3><p>入力するのは会社名・お名前・<span class="nw">メールアドレス</span>・ご利用予定の人数です。営業日の17時までのお申し込みなら、その日のうちに管理画面の<span class="nw">ログイン</span>情報をお送りします。</p></div></div>
+      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>02</b></p><div><h3>就業<span class="nw">ルール</span>の設定代行</h3><p>通常<span class="nw">3営業日</span>ほどで、設定済みの環境をお渡しします。勤務形態が3種類以上の場合は、初期費用<span class="nw">88,000円</span>（税込）を本契約の初月分とあわせてご請求します。</p></div></div>
+      <p class="flow__pill">無料<span class="nw">トライアル</span>開始</p>
+      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>03</b></p><div><h3>まず1部署で打刻開始</h3><p>締め日を<span class="nw">1回</span>またぐまで打刻を続けてみてください。締めの作業がどう変わるかを、<span class="nw">トライアル</span>の<span class="nw">30日</span>のうちに確かめられます。</p></div></div>
+      <p class="flow__pill"><span class="nw">30日</span>目</p>
+      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>04</b></p><div><h3>本契約のお申し込み</h3><p>本契約は管理画面からお申し込みください。設定も打刻の記録も、そのまま引き継げます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="law">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">COMPLIANCE</span>法令への対応</h2>
+    <div class="law__list">
+      <div class="law__item scrollanime">
+        <h3>労働時間の把握</h3>
+        <p>労働時間の状況を把握することは事業者の義務です。原則として、<span class="nw">タイムカード</span>や<span class="nw">パソコン</span>の使用時間の記録など、客観的な方法で記録する必要があります（労働安全衛生法66条の8の3、労働安全衛生規則52条の7の3第1項）。<span class="nw">ハカル</span>勤怠は打刻の日時を<span class="nw">サーバー</span>の時刻で記録し、打刻を修正したときは申請と承認の履歴を残します。</p>
+      </div>
+      <div class="law__item scrollanime">
+        <h3>記録の保存</h3>
+        <p>労働時間の状況の記録は、<span class="nw">3年</span>間の保存が求められます（労働安全衛生規則52条の7の3第2項）。出勤簿や<span class="nw">タイムカード</span>は労働基準法109条の「労働関係に関する重要な書類」に当たり、保存期間は<span class="nw">5年</span>、経過措置で当分の間は<span class="nw">3年</span>です（同法附則143条）。当社はいずれの記録も<span class="nw">5年</span>分お預かりします。</p>
+      </div>
+      <div class="law__item scrollanime">
+        <h3>時間外の上限</h3>
+        <p>時間外労働の上限は、36協定を結んだうえで原則として<span class="nw">月45時間</span>・年<span class="nw">360時間</span>です。特別条項付きの36協定を締結した場合も年<span class="nw">720時間</span>以内（休日労働は含みません）。これとは別に、時間外労働と休日労働の合計は単<span class="nw">月100時間</span>未満・<span class="nw">2〜6か月</span>平均<span class="nw">80時間</span>以内で、<span class="nw">月45時間</span>を超えてよいのは年<span class="nw">6か月</span>までです。対象期間が<span class="nw">3か月</span>を超える<span class="nw">1年</span>単位の変形労働時間制では、原則の上限が<span class="nw">月42時間</span>・年<span class="nw">320時間</span>。自動車運転の業務は、特別条項付きの36協定を締結した場合の上限が年<span class="nw">960時間</span>です（<span class="nw">2024年4月</span>から）。<span class="nw">月60時間</span>を超える時間外労働の割増賃金率は、中小企業も<span class="nw">2023年4月</span>から<span class="nw">50%</span>です。</p>
+      </div>
+    </div>
+    <p class="law__note"><span class="nw">2026年9月</span>時点の条文にもとづいて記載しています。</p>
+  </div>
+</section>
+
+<section class="sec sec--gray" id="faq">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">FAQ</span>よくある質問</h2>
+    <div class="faq__list">
+      <details class="faq__item"><summary>他社<span class="nw">システム</span>の<span class="nw">データ</span>移行はできますか？</summary><p>CSVでお送りいただければ、過去<span class="nw">5年</span>分まで無料で取り込みます。形式が分からない場合は書き出した<span class="nw">ファイル</span>をそのままお送りください。こちらで形式を確かめます。</p></details>
+      <details class="faq__item"><summary>給与<span class="nw">ソフト</span>との連携はできますか？</summary><p>取り込み形式をあらかじめ用意しているのは、弥生給与・freee人事労務・<span class="nw">マネーフォワード</span> <span class="nw">クラウド</span>給与・給与奉行<span class="nw">クラウド</span>・PCA給与・給与大臣・給料王の7つです（<span class="nw">2026年9月</span>時点）。この7つ以外の<span class="nw">ソフト</span>でも、CSVの取り込みができるものなら、書き出す列の並びと項目名を管理画面で組み替えて合わせられます。この書き出しの設定も、初回の設定代行にあわせて当社で行います。</p></details>
+      <details class="faq__item"><summary>料金の改定はありますか？</summary><p>単価を改定することがあります。その場合は、<span class="nw">3か月</span>前に<span class="nw">メール</span>でお知らせします。</p></details>
+      <details class="faq__item"><summary><span class="nw">データ</span>の保存場所と安全管理について教えてください。</summary><p>国内の<span class="nw">データセンター</span>に保存し、通信と保管<span class="nw">データ</span>を暗号化しています。ISO/IEC 27001（ISMS）の認証とプライバシーマークを取得しています。過去<span class="nw">12か月</span>の稼働率は<span class="nw">99.96%</span>です（<span class="nw">2026年7月</span>末時点・自社調べ）。障害が起きたときは状況と復旧の見込みを<span class="nw">メール</span>でお知らせします。</p></details>
+      <details class="faq__item"><summary>工場や訪問先でも使えますか？</summary><p>工場や訪問先でもご利用いただけます。工場は交通系IC<span class="nw">カード</span>、外回りは<span class="nw">スマートフォン</span>の<span class="nw">アプリ</span>で打刻できます。打刻の画面の<span class="nw">ボタン</span>は、出勤・退勤・休憩に入る・休憩から戻るの4つです。画面の文字の大きさは従業員が自分で変えられ、表示言語も切り替えられます。</p></details>
+      <details class="faq__item"><summary>IC<span class="nw">カードリーダー</span>は必要ですか？</summary><p>IC<span class="nw">カード</span>で打刻する拠点だけに必要です。<span class="nw">パソコン</span>のUSBにつなぐ機器を使います。1拠点につき<span class="nw">1台</span>まで無料でお貸しします。同じ拠点の<span class="nw">2台</span>目からは、<span class="nw">1台</span>につき<span class="nw">月330円</span>です。すでにIC<span class="nw">カードリーダー</span>をお持ちでしたら、型式をお知らせください。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="news">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">NEWS</span>お知らせ</h2>
+    <ul class="news__list">
+      <li><time datetime="2026-08-12">2026.08.12</time><p><span class="nw">シフト</span>の作成で、従業員の希望休をそのまま取り込めるようになりました。</p></li>
+      <li><time datetime="2026-07-01">2026.07.01</time><p>年次有給休暇管理簿（基準日・日数・時季）を書き出せるようになりました。</p></li>
+      <li><time datetime="2026-06-02">2026.06.02</time><p>打刻の画面を英語表示に切り替えられるようになりました。</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec--pale" id="entry">
+  <div class="inner">
+    <h2 class="h2_ttl"><span class="sub_ttl">CONTACT</span>資料請求・<span class="nw">無料トライアル</span>のお申し込み</h2>
+    <div class="contact__cards">
+      <div class="contact__card scrollanime"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><h3>資料請求</h3><p>機能と料金、導入事例をまとめた資料をお送りします。社内での検討にお使いください。</p><a class="btn btn--line btn--sm gtm-cta" href="#entry-form" data-kind="doc">資料を請求する</a></div>
+      <div class="contact__card scrollanime"><i class="fa-solid fa-laptop" aria-hidden="true"></i><h3><span class="nw">30日</span>間無料<span class="nw">トライアル</span></h3><p>すべての機能をお使いいただけます。<span class="nw">トライアル</span>は、設定済みの環境をお渡しした日から<span class="nw">30日</span>で終了します。</p><a class="btn btn--cta btn--sm gtm-cta" href="#entry-form" data-kind="trial">無料で試す</a></div>
+      <div class="contact__card scrollanime"><i class="fa-solid fa-phone" aria-hidden="true"></i><h3>お電話でのお問い合わせ</h3><p>導入のご相談や、お見積りのご依頼を承ります。</p><b><a href="tel:0300000000">03-0000-0000</a></b><p>平日9:00〜18:00</p></div>
+    </div>
+    <form class="form mt-5 scrollanime" id="entry-form">
+      <fieldset>
+        <legend>ご希望</legend>
+        <div class="radio">
+          <label><input type="radio" name="kind" id="kind-trial" checked>30日間無料トライアル</label>
+          <label><input type="radio" name="kind" id="kind-doc">資料請求のみ</label>
+        </div>
+      </fieldset>
+      <label for="f-company">会社名<span class="req">必須</span></label>
+      <input id="f-company" type="text" autocomplete="organization" required>
+      <label for="f-name">お名前<span class="req">必須</span></label>
+      <input id="f-name" type="text" autocomplete="name" required>
+      <label for="f-mail">メールアドレス<span class="req">必須</span></label>
+      <input id="f-mail" type="email" autocomplete="email" required>
+      <label for="f-size">ご利用予定の人数</label>
+      <select id="f-size"><option>1〜10名</option><option>11〜30名</option><option>31〜100名</option><option>101名以上</option></select>
+      <label class="agree"><input type="checkbox" required><a href="#privacy">個人情報の取り扱い</a>に同意します</label>
+      <button class="btn btn--cta gtm-cta" type="submit">この内容で申し込む</button>
+      <p class="form__note">見本の<span class="nw">フォーム</span>のため、送信はされません。</p>
+    </form>
+    <details class="legal" id="privacy">
+      <summary>個人情報の取り扱い</summary>
+      <dl>
+        <div><dt>この<span class="nw">フォーム</span>でお預かりする情報</dt><dd>会社名・お名前・<span class="nw">メールアドレス</span>・ご利用予定の人数。資料の送付、<span class="nw">トライアル</span>環境のご用意、導入のご案内に使います</dd></div>
+        <div><dt><span class="nw">サービス</span>でお預かりする情報</dt><dd>従業員の氏名・所属・打刻の記録と、ご担当者の連絡先</dd></div>
+        <div><dt>利用目的</dt><dd>勤怠の集計と書き出し、<span class="nw">サポート</span>のご連絡に使います</dd></div>
+        <div><dt>保存先と委託</dt><dd>国内の<span class="nw">データセンター</span>で管理し、通信と保管<span class="nw">データ</span>を暗号化しています。<span class="nw">データセンター</span>の運用は国内の事業者に委託し、委託先にも同じ管理を求めます</dd></div>
+        <div><dt>第三者認証</dt><dd>情報<span class="nw">セキュリティ</span>の国際規格ISO/IEC 27001（ISMS）の認証を<span class="nw">2024年</span>に、プライバシーマークを<span class="nw">2023年</span>に取得しています</dd></div>
+        <div><dt>第三者への提供</dt><dd>法令にもとづく場合を除き、行いません</dd></div>
+        <div><dt>開示・訂正・削除</dt><dd>下記の窓口へお申し出ください。ご本人であることを確認のうえ、<span class="nw">10営業日</span>以内にお答えします</dd></div>
+        <div><dt>保存期間</dt><dd>打刻の記録の保存年数は、<a href="#law">法令への対応</a>に記載しています。お申し込みの情報は、ご契約に至らなかった場合、お申し込みから<span class="nw">90日</span>で消去します。ご解約後の扱いは、<a href="#terms">利用規約の要点</a>に記載しています</dd></div>
+        <div><dt>窓口</dt><dd><span class="nw">ハカルワークス</span>株式会社 個人情報の窓口 東京都千代田区○○0-0-0（架空の住所です）03-0000-0000</dd></div>
+      </dl>
+    </details>
+    <details class="legal" id="terms">
+      <summary>利用規約の要点</summary>
+      <dl>
+        <div><dt>ご契約</dt><dd><span class="nw">1か月</span>単位のご契約で、解約のお申し出がない限り翌月へ更新されます</dd></div>
+        <div><dt>解約</dt><dd>管理画面からお申し出ください。解約は翌月から適用となり、お申し出のあった月の末日までご利用いただけます</dd></div>
+        <div><dt>料金の改定</dt><dd>単価を改定する場合は、<span class="nw">3か月</span>前に<span class="nw">メール</span>でお知らせします</dd></div>
+        <div><dt><span class="nw">データ</span></dt><dd>ご解約時は全期間の<span class="nw">データ</span>をCSVで書き出せます。<span class="nw">データ</span>はご解約の翌月末に消去します</dd></div>
+        <div><dt>全文</dt><dd>お申し込みの画面で、利用規約の全文をご確認ください</dd></div>
+      </dl>
+    </details>
+    <details class="legal" id="company">
+      <summary>会社概要</summary>
+      <dl>
+        <div><dt>会社名</dt><dd><span class="nw">ハカルワークス</span>株式会社（架空の会社です）</dd></div>
+        <div><dt>代表者</dt><dd>代表取締役 ○○ ○○（架空の氏名です）</dd></div>
+        <div><dt>所在地</dt><dd>東京都千代田区○○0-0-0（架空の住所です）</dd></div>
+        <div><dt>設立</dt><dd><span class="nw">2016年4月</span></dd></div>
+        <div><dt>事業内容</dt><dd><span class="nw">クラウド</span>勤怠管理<span class="nw">サービス</span>「<span class="nw">ハカル</span>勤怠」の開発と提供、就業<span class="nw">ルール</span>の設定代行</dd></div>
+        <div><dt>電話</dt><dd>03-0000-0000（平日9:00〜18:00）</dd></div>
+      </dl>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <p class="footer__logo"><i class="fa-solid fa-clock" aria-hidden="true"></i>ハカル勤怠</p>
+      <p>運営：<span class="nw">ハカルワークス</span>株式会社<br>東京都千代田区○○0-0-0（架空の住所です）<br>受付：平日9:00〜18:00 03-0000-0000</p>
+    </div>
+    <nav class="footer__nav" aria-label="フッターの案内">
+      <a href="#reason">選ばれる理由</a><a href="#function">機能一覧</a>
+      <a href="#case">導入事例</a><a href="#price">料金プラン</a>
+      <a href="#flow">導入までの流れ</a><a href="#law">法令への対応</a>
+      <a href="#faq">よくある質問</a><a href="#news">お知らせ</a>
+      <a href="#company">会社概要</a><a href="#terms">利用規約</a>
+      <a href="#privacy">個人情報の取り扱い</a>
+    </nav>
+  </div>
+  <p class="footer__note"><span class="nw">ハカル</span>勤怠は架空の<span class="nw">サービス</span>で、この<span class="nw">ページ</span>はSaaS向けLP制作の見本です。社名・数字・電話番号・認証はすべて架空の設定で、実在の事業者とは関係がありません。写真と画面の出典は、同じ<span class="nw">フォルダ</span>の「<a href="img/CREDITS.md">img/CREDITS.md</a>」に記載しています（制作：常夜燈）。3人の打ち合わせの写真は株式会社<span class="nw">オンカ</span>の作品（<a href="https://commons.wikimedia.org/wiki/File:92A0780.jpg">92A0780</a>／<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">CC BY-SA 4.0</a>）です。記載している会社名・製品名は、各社の商標または登録商標です。</p>
+  <p class="footer__copy">© HAKARU WORKS Inc.</p>
+</footer>
+
+<div class="fix-cta"><a class="gtm-cta" href="#entry" data-kind="doc">資料請求</a><a class="gtm-cta" href="#entry" data-kind="trial">30日間無料で試す</a></div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.scrollanime');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('is-in')});
+  }else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}
+    })},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    addEventListener('scroll',function(){
+      if(innerHeight+scrollY<document.body.scrollHeight-4)return;
+      els.forEach(function(e){e.classList.add('is-in')});
+    },{passive:true});
+  }
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('gnav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open');btn.setAttribute('aria-expanded','false');});});
+  // 閉じた欄へのリンクは、飛んだ先で開いておく。閉じたままだと見出しの1行しか見えない
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t&&t.tagName==='DETAILS')a.addEventListener('click',function(){t.open=true;});
+  });
+  // 押したボタンに合わせて希望を選び直す。資料だけ欲しい人が、トライアルの申し込みを送ってしまうのを防ぐ
+  document.querySelectorAll('a[data-kind]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var r=document.getElementById('kind-'+a.getAttribute('data-kind'));
+      if(r)r.checked=true;
+    });
+  });
+  // ラベルの中のリンクは、押すと同意の印まで切り替わる。リンクだけを働かせる
+  document.querySelectorAll('.agree a').forEach(function(a){
+    a.addEventListener('click',function(e){e.stopPropagation();});
+  });
+  document.getElementById('entry-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    this.innerHTML='<p>（見本のため送信されていません）実際のページでは、ログイン情報か資料をお送りする旨をここに表示します。</p>';
+  });
+})();
+</script>
+</body>
+</html>
