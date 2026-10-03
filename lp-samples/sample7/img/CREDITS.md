@@ -10,29 +10,30 @@ CC BYは表示が条件なので、実案件で流用する時は下の表示を
 
 | ファイル | 使用箇所 | 取得元 | 作者 | ライセンス | 写真のページ |
 |---|---|---|---|---|---|
-| hero_smile.jpg | 最初の画面（窓辺の女性の笑顔） | Pexels | Việt Anh Nguyễn | Pexels License | https://www.pexels.com/photo/smiling-woman-sitting-in-sunlit-cafe-33482948/ |
+| hero_smile.jpg | 最初の画面（診療台の患者さんと歯科医師） | Pexels | Nadezhda Moryak | Pexels License | https://www.pexels.com/photo/a-woman-on-a-dental-chair-7803063/ |
 | counsel.jpg | 当院の4つの特徴の01（クリップボードの白紙とペン） | Pexels | Monstera Production | Pexels License | https://www.pexels.com/photo/blank-paper-on-a-clipboard-9480111/ |
-| scan.jpg | 当院の4つの特徴の02（模型スキャナーと歯列の3D画像を映したモニター） | Pexels | Ivan Babydov | Pexels License | https://www.pexels.com/photo/unrecognizable-specialist-working-on-computer-in-modern-dental-clinic-7788368/ |
-| aligner.jpg | 当院の4つの特徴の03（マウスピース型の矯正装置） | Unsplash | Geniova Technologies | Unsplash License | https://unsplash.com/photos/irPpXQF5bSI |
-| clinic.jpg | 当院の4つの特徴の04（個室の診療室） | Unsplash | Kari Bjorn Photography | Unsplash License | https://unsplash.com/photos/Fdku_oMrDvk |
+| scan.jpg | 当院の4つの特徴の02（装置をつけた歯列の口腔内スキャン） | Unsplash | Quang Tri NGUYEN | Unsplash License | https://unsplash.com/photos/objNAvixRho |
+| aligner.jpg | 当院の4つの特徴の03（マウスピース型の矯正装置の装着） | Unsplash | Diana Polekhina | Unsplash License | https://unsplash.com/photos/fmB7IdFjhTM |
+| clinic.jpg | 当院の4つの特徴の04（個室の診療室） | Pexels | Tima Miroshnichenko | Pexels License | https://www.pexels.com/photo/a-clinic-with-dental-equipment-5355920/ |
 | braces.jpg | 費用と期間の写真の1枚目（表側の装置をつけた歯） | ウィキメディア・コモンズ | Tamaki Sono | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:2015-03-10_teeth_wearing_dental_braces.jpg |
 | aligner_case.jpg | 費用と期間の写真の2枚目（上下のマウスピースとケース） | Unsplash | Aurela Redenica | Unsplash License | https://unsplash.com/photos/VuN-RYI4XU4 |
-| counsel_room.jpg | 費用と期間の写真の3枚目（相談室の丸テーブルといす） | Pixabay | jraffin | Pixabay Content License | https://pixabay.com/photos/meeting-room-cable-four-chairs-2170534/ |
+| counsel_room.jpg | 費用と期間の写真の3枚目（相談室の机といす） | Pexels | Ivan Babydov | Pexels License | https://www.pexels.com/photo/desk-and-chairs-in-doctor-office-7789614/ |
 | cast.jpg | 初診相談の流れの写真の1枚目（輪ゴムでまとめた石膏の歯列模型） | Pixabay | Humusak | Pixabay Content License | https://pixabay.com/photos/teeth-models-gypsum-dentist-dental-797308/ |
 | reception.jpg | 初診相談の流れの写真の2枚目（窓際の待合のいす） | Pixabay | aldineiderios | Pixabay Content License | https://pixabay.com/photos/clinic-front-desk-architecture-1198337/ |
-| entrance.jpg | アクセス（木の枠のガラス戸の入口） | Pexels | Hiba Q. Omar | Pexels License | https://www.pexels.com/photo/a-wooden-framed-glass-door-of-the-house-14613660/ |
-| director.jpg | 院長あいさつ（診療台の横に立つ白衣の女性） | Unsplash | Ozkan Guner | Unsplash License | https://unsplash.com/photos/tU51A2WWwxw |
+| entrance.jpg | アクセス（金属枠のガラス張りの入口） | Unsplash | Anastasia Yaroshenko | Unsplash License | https://unsplash.com/photos/BtjNPYmqSPU |
+| director.jpg | 院長あいさつ（装置をつけた歯列模型を両手に持つ女性の手元） | Unsplash | Enis Yavuz | Unsplash License | https://unsplash.com/photos/3H8LuhoSbdc |
 
-`aligner.jpg`・`entrance.jpg` は3:2、`aligner_case.jpg` は4:3、`cast.jpg`・`reception.jpg` は16:9、`director.jpg` は4:5に、枠の縦横比に合わせて切り出してから縮小しました。
-`counsel.jpg`・`scan.jpg`・`clinic.jpg`・`counsel_room.jpg`・`braces.jpg` は枠と同じ縦横比なので、`hero_smile.jpg` は画面の幅で枠の縦横比が変わるので、切り出していません。
+`entrance.jpg` は3:2、`aligner_case.jpg`・`counsel_room.jpg` は4:3、`cast.jpg`・`reception.jpg` は16:9、`director.jpg` は4:5に、枠の縦横比に合わせて切り出してから縮小しました。
+`counsel.jpg`・`scan.jpg`・`aligner.jpg`・`clinic.jpg`・`braces.jpg` は枠と同じ縦横比なので、`hero_smile.jpg` は画面の幅で枠の縦横比が変わるので、切り出していません。
 
 写っている人は、この医院の患者さんや職員ではありません。
-Pexelsの利用条件は、写っている人が商品やサービスを推奨しているように見せる使い方を禁じています（`hero_smile.jpg` の女性と、`counsel.jpg` の手、`scan.jpg` の男性2人）。
-Unsplashの利用規約（5. 画像に対するライセンス供与）は、写っている商標やロゴ、人の肖像を使う権利をライセンスに含めていません（`director.jpg` の女性と患者）。
-`director.jpg` は、写真のページの撮影地の欄が「Turkey」で、タグにも「トルコ」があります。
-`director.jpg` には、白衣の胸の刺繍の名前、スニーカーの側面の旗の形の印、診療台の土台の銘板とCEの印、足元の操作器の「IPX4」の字が写っています。縮小した画像では、刺繍の名前と銘板と「IPX4」の字は読めません。旗の形の印は形が分かり、CEの印は拡大すると形が分かる程度です。
-`clinic.jpg` には、機器の銘柄の印（DENTECH・PLANMECA・LG）と、英語の掲示（二次元コードを並べた札・注意書き）が写っています。
-`scan.jpg` には、モニターの枠のhpの印と、画面の操作欄のロシア語の小さな文字（縮小した画像では読めません）が写っています。
+Pexelsの利用条件は、写っている人が商品やサービスを推奨しているように見せる使い方を禁じています（`hero_smile.jpg` の女性と白衣の人、`counsel.jpg` の手）。
+Unsplashの利用規約（5. 画像に対するライセンス供与）は、写っている商標やロゴ、人の肖像を使う権利をライセンスに含めていません（`director.jpg`・`scan.jpg`・`aligner.jpg` の女性）。
+`hero_smile.jpg` には、白衣の胸に刺繍された星形のマークと「MEDICAL SER…」の字が写っています。幅1120px以下の画面では、刺繍が最初の画面の左上に出て、タブレットで見ると字が読めます（幅390pxの携帯では小さくて読めません）。幅1280px以上では、写真の上の端より外に出て見えません。
+`clinic.jpg` には、ロシア語で書かれた札と箱が写っています。棚の上に置いた箱の札に「…ксия」、ガラス戸の棚に入った消毒剤の箱に「ГИПОХЛОРАН-3」とあり、ワゴンに載せた容器にも札があります。縮小した画像では、棚に置いた箱の札だけ字の形が分かり、ほかは読めません。
+`counsel_room.jpg` には、机に置いた化粧品の箱とノートに「soskin」の字が写っています。縮小した画像では読めません。
+`scan.jpg` はスキャナーの胴に、`director.jpg` は胸ポケットの縁に付いた札に薄い字がありますが、元の写真でも読めません。
+`entrance.jpg` は左上の端に、隣の区画の看板の光る字が2つほど、写真の端で切れて写っています。字の中まで白く飛んでいて、元の写真でも読めません。
 実案件では、医院で撮った写真（写る人の同意つき）に差し替えてください。
 
 ### braces.jpgの表示（CC BY 2.0）
@@ -48,5 +49,5 @@ Unsplashの利用規約（5. 画像に対するライセンス供与）は、写
 
 | 借りたもの | 使用箇所 | 版と読み込み先 | 利用条件 |
 |---|---|---|---|
-| Font Awesome Free | 上部の医院名の左の印（tooth）、WEB予約のボタン（calendar）、携帯の幅のメニューのボタン（bars）、お悩みとご質問の一覧の印（circle-check）と矢印（chevron-right）、初診相談の流れの段のあいだの矢印（caret-right）、ブラウザのタブに出る印（tooth） | 6.7.2。CSSはcdnjs（https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css）、タブの印はjsDelivr（https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/tooth.svg） | アイコンはCC BY 4.0、フォントはSIL OFL 1.1、CSSはMIT License（https://fontawesome.com/license/free）。表示は、読み込むCSSとSVGの中の著作権表示で足りる（配布物のLICENSE.txtの「Attribution」の項） |
+| Font Awesome Free | 上部の医院名の左のアイコン（tooth）、初診相談のお申し込みのボタン（calendar）、携帯の幅のメニューのボタン（bars）、お悩みとご質問の一覧のアイコン（circle-question）と矢印（chevron-right）、初診相談の流れの段のあいだの矢印（caret-right）、ブラウザのタブに出るアイコン（tooth） | 6.7.2。CSSはcdnjs（https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css）、タブのアイコンはjsDelivr（https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/tooth.svg） | アイコンはCC BY 4.0、フォントはSIL OFL 1.1、CSSはMIT License（https://fontawesome.com/license/free）。表示は、読み込むCSSとSVGの中の著作権表示で足りる（配布物のLICENSE.txtの「Attribution」の項） |
 | Googleマップの埋め込み | 診療時間のご案内の右の地図（中心は広島電鉄の袋町電停） | Googleマップで袋町駅（電停・広島市中区袋町5）を開き、「共有」→「地図を埋め込む」で出たiframe（2026-09-28） | 埋め込みに許可は要らない。地図の中に出るGoogleのロゴと地図データの表示は、消したり隠したりしない（https://about.google/brand-resource-center/products-and-services/geo-guidelines/） |
