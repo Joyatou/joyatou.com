@@ -9,31 +9,31 @@
 
 | ファイル | 使用箇所 | 取得元 | 作者 | ライセンス | 写真のページ |
 |---|---|---|---|---|---|
-| night.jpg | 最初の画面（夜の事務所で机に向かう女性と、後ろに立つ男性） | Pexels | Vitaly Gariev | Pexels License | https://www.pexels.com/photo/nighttime-office-work-with-two-professionals-36713440/ |
-| room.jpg | 4つの特徴の1つ目（誰もいない夕方の部屋の長机と椅子） | Unsplash | Firas Wardhana | Unsplash License | https://unsplash.com/photos/dYPbE5tDHo0 |
-| class.jpg | 4つの特徴の2つ目（ノートパソコンのHTMLのコードを指す手） | Pexels | Mizuno K | Pexels License | https://www.pexels.com/photo/close-up-of-a-man-pointing-code-on-a-laptop-screen-12899188/ |
-| pair.jpg | 4つの特徴の3つ目（1台のノートパソコンを並んで見るふたり） | Unsplash | Mimi Thian | Unsplash License | https://unsplash.com/photos/54uolC2jjm4 |
+| night.jpg | 最初の画面（木の棚の前でノートパソコンに向かう人たち） | Unsplash | Nasik Lababan | Unsplash License | https://unsplash.com/photos/pKbePv-7V10 |
+| room.jpg | 4つの特徴の1つ目（木の棚の部屋で机を囲む人たち。`night.jpg` と同じ部屋） | Unsplash | Nasik Lababan | Unsplash License | https://unsplash.com/photos/1vsqeq3EAMg |
+| class.jpg | 4つの特徴の2つ目（Ruby on Railsのコードとフォルダの一覧を映した画面） | Pexels | Digital Buggu | Pexels License | https://www.pexels.com/photo/monitor-displaying-computer-application-374559/ |
+| pair.jpg | 4つの特徴の3つ目（パソコンを指さして話す男性と、あごに手を当てて見る女性） | Unsplash | AN LY | Unsplash License | https://unsplash.com/photos/QooESgXRg8w |
 | target.jpg | 4つの特徴の4つ目（スマートフォンを両手で持つ手もと） | Unsplash | Priscilla Du Preez | Unsplash License | https://unsplash.com/photos/BjhUu6BpUZA |
 | street.jpg | こんな方にヨルゼミがおすすめ（赤れんがの高架と夜の電車。撮影地は千代田区鍛冶町二丁目） | Unsplash | ayumi kubo | Unsplash License | https://unsplash.com/photos/0f3wNpAzMZ4 |
 | window.jpg | 説明会の上の暗い帯（夜のオフィスビルの窓明かり） | Unsplash | Tsuyoshi Kozu | Unsplash License | https://unsplash.com/photos/ee0PEbw_CQs |
 | teacher_a.jpg | 講師紹介（小笠原） | Unsplash | Sean S | Unsplash License | https://unsplash.com/photos/V16fvLUU35s |
 | teacher_b.jpg | 講師紹介（更科） | Unsplash | Vitaly Gariev | Unsplash License | https://unsplash.com/photos/Xe-turIIQoE |
-| voice_a.jpg | 受講生の声の1人目（経理職の修了生） | Unsplash | Vitaly Gariev | Unsplash License | https://unsplash.com/photos/5rG70Pk9vjs |
-| voice_b.jpg | 受講生の声の2人目（営業職の修了生） | Unsplash | tommao wang | Unsplash License | https://unsplash.com/photos/A2j242oN6qc |
-| voice_c.jpg | 受講生の声の3人目（販売職の修了生） | Unsplash | Rifki Kurniawan | Unsplash License | https://unsplash.com/photos/11RN4bX7aH8 |
+| voice_a.jpg | 受講生の声の1人目（経理職の修了生） | Unsplash | Andrew Teoh | Unsplash License | https://unsplash.com/photos/SnV63oz7D0M |
+| voice_b.jpg | 受講生の声の2人目（営業職の修了生） | Unsplash | Johan Mouchet | Unsplash License | https://unsplash.com/photos/_RLag2OPSu8 |
+| voice_c.jpg | 受講生の声の3人目（販売職の修了生） | Unsplash | JAEGON LEE | Unsplash License | https://unsplash.com/photos/weVAeFqqZX8 |
 
 `night.jpg` と `window.jpg` は切り出さずに縮小し、ほかの10枚は枠の縦横比に合わせて切り出してから縮小しました。
 
 講師紹介と受講生の声の5枚（`teacher_a.jpg`・`teacher_b.jpg`・`voice_a.jpg`・`voice_b.jpg`・`voice_c.jpg`）に写っているのは、講師や受講生ではありません。
 Unsplashの利用規約（5条）は、写真に写っている人の肖像をライセンスに含めていません。実案件では、講師と受講生ご本人の写真（載せる同意を取ったもの）に差し替えてください。
 
-`night.jpg` に写っている2人も、講師や受講生ではありません。Pexelsのライセンスは、写っている人が商品やサービスを推奨しているように見せる使い方を禁じています。
+`night.jpg`・`room.jpg`・`pair.jpg` に写っている人も、講師や受講生ではありません。
 
 ## 借りたアイコン・部品と地図
 
 | 借りたもの | 使用箇所 | 版と読み込み先 | 利用条件 |
 |---|---|---|---|
-| Font Awesome Free | 説明会の予約ボタンの矢印（circle-chevron-right）、携帯の幅のメニューのボタン（bars）、こんな方にヨルゼミがおすすめの一覧の印（check）、ブラウザのタブに出る印（moon） | 6.7.2。CSSはcdnjs（https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css）、タブの印はjsDelivr（https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/moon.svg） | アイコンはCC BY 4.0、フォントはSIL OFL 1.1、CSSはMIT License（https://fontawesome.com/license/free）。表示は、読み込むCSSとSVGの中の著作権表示で足りる（配布物のLICENSE.txtの「Attribution」の項） |
+| Font Awesome Free | 上部の電話のボタンの印（phone）、説明会の予約ボタンの矢印（circle-chevron-right）、携帯の幅のメニューのボタン（bars）、こんな方にヨルゼミがおすすめの一覧の印（check）、ブラウザのタブに出る印（moon） | 6.7.2。CSSはcdnjs（https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css）、タブの印はjsDelivr（https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/moon.svg） | アイコンはCC BY 4.0、フォントはSIL OFL 1.1、CSSはMIT License（https://fontawesome.com/license/free）。表示は、読み込むCSSとSVGの中の著作権表示で足りる（配布物のLICENSE.txtの「Attribution」の項） |
 | Tabler | 画面の画像2枚（login.png・stock.png）の部品（カード・入力欄・ボタン・表・進みの帯・札） | 1.6.0。CSSはjsDelivr（https://cdn.jsdelivr.net/npm/@tabler/core@1.6.0/dist/css/tabler.min.css） | MIT License（https://github.com/tabler/tabler/blob/main/LICENSE）。表示は、読み込むCSSの中の著作権表示で足りる |
 | Googleマップの埋め込み | 教室へのアクセスの地図（中心はJR神田駅） | Googleマップで神田駅を開き、「共有」→「地図を埋め込む」で出たiframe（2026-09-28） | 埋め込みに許可は要らない。地図の中に出るGoogleのロゴと地図データの表示は、消したり隠したりしない（https://about.google/brand-resource-center/products-and-services/geo-guidelines/） |
 
