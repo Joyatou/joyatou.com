@@ -13,28 +13,27 @@ CC BY・CC BY-SAは表示が条件なので、実案件で流用する時は下�
 | house.jpg | 最初の画面の1枚目（紅葉と茅葺きの民家） | Pixabay | shell_ghostcage | Pixabay Content License | https://pixabay.com/photos/japan-landscape-japanese-style-3812703/ |
 | yube.jpg | 最初の画面の2枚目（田植え後の水田と夕焼け） | ぱくたそ | 安西成文 | ぱくたそ利用規約 | https://www.pakutaso.com/20210857216post-35951.html |
 | hero.jpg | 最初の画面の3枚目（盆地の町と実りの田） | ぱくたそ | 前田3号 | ぱくたそ利用規約 | https://www.pakutaso.com/20190943269post-23365.html |
-| hazekake.jpg | 季節のご案内（稲刈り後の棚田のはぜ掛け） | ぱくたそ | 前田3号 | ぱくたそ利用規約 | https://www.pakutaso.com/20190958268post-23363.html |
-| irori_day.jpg | 穂ノ家について（板の間の囲炉裏と銀瓶） | ウィキメディア・コモンズ | Fg2 | パブリックドメイン（PD-self） | https://commons.wikimedia.org/wiki/File:Japanese_Traditional_Hearth_L4817.jpg |
-| engawa.jpg | 穂ノ家について（ガラス戸の縁側と座敷） | Pixabay | ujeans | Pixabay Content License | https://pixabay.com/photos/corridor-rural-houses-old-folk-house-1255827/ |
+| hazekake.jpg | お知らせ（稲刈り後の棚田のはぜ掛け） | ぱくたそ | 前田3号 | ぱくたそ利用規約 | https://www.pakutaso.com/20190958268post-23363.html |
+| irori_day.jpg | お宿について（高窓の光と囲炉裏の鉄瓶） | Pexels | Evgeny Tchebotarev | Pexels License | https://www.pexels.com/photo/black-cooking-pot-in-the-middle-of-a-room-2187966/ |
+| engawa.jpg | お宿について（縁側の土瓶と魔法瓶） | Pexels | Alex Toi | Pexels License | https://www.pexels.com/photo/tray-with-kettle-set-on-patio-floor-5499874/ |
 | irori_night.jpg | 4つの魅力の01（囲炉裏の鉄瓶と薪の火） | Pexels | Satoshi Hirayama | Pexels License | https://www.pexels.com/photo/photo-of-a-pot-over-the-fire-7792199/ |
 | bath.jpg | 4つの魅力の02（窓際の木の湯船） | Unsplash | Fidel Fernando | Unsplash License | https://unsplash.com/photos/X7NzByz9bdI |
 | terrace.jpg | 4つの魅力の03（霧の棚田と案山子） | Pixabay | jackmac34 | Pixabay Content License | https://pixabay.com/photos/japan-paddy-fields-culture-terraces-4608112/ |
-| breakfast.jpg | お料理（干物と小鉢の朝食） | Unsplash | Takafumi Yamashita | Unsplash License | https://unsplash.com/photos/YCrrO9mAm-A |
+| breakfast.jpg | お料理（焼き鮭と玉子焼きの朝食） | Unsplash | 逸 韩 | Unsplash License | https://unsplash.com/photos/eRN-dm6ouhA |
 | sansai.jpg | お料理（山菜の天ぷらとご飯） | ウィキメディア・コモンズ | Manabu Itoh | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E8%8F%9C%E5%A4%A9%E3%81%B7%E3%82%89_%E5%A4%A7%E7%9B%9B%E3%82%8A%E9%A3%AF_(18562023572).jpg |
 | road.jpg | 交通アクセス（菜の花畑の農道） | Unsplash | waa towaw | Unsplash License | https://unsplash.com/photos/2AN9bKLZSdQ |
-| genkan.jpg | 交通アクセスの小さな写真（茅葺き屋根の軒下の入口） | Pixabay | shell_ghostcage | Pixabay Content License | https://pixabay.com/photos/japan-landscape-japanese-style-3812704/ |
+| genkan.jpg | 交通アクセスの小さな写真（茅葺き屋根の軒と紅葉） | Pixabay | shell_ghostcage | Pixabay Content License | https://pixabay.com/photos/japan-landscape-japanese-style-3812704/ |
 | dinner.jpg | お料理（炭火と鮎の串焼き） | ウィキメディア・コモンズ | Tomomarusan | CC BY 2.5 | https://commons.wikimedia.org/wiki/File:Charcoal_broiled_Ayu.JPG |
 | kinoko.jpg | お料理（土鍋の湯豆腐） | ウィキメディア・コモンズ（元はFlickr） | cobacco（hiro kobashi） | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Yud%C5%8Dfu_001.jpg |
-| room.jpg | 館内のご案内（布団と竹編みの照明） | Pixabay | chonchoro7 | Pixabay Content License | https://pixabay.com/photos/japanese-style-room-japan-3805579/ |
-| daidokoro.jpg | 素泊まりの箱（タイル貼りの台所とガスレンジ） | Unsplash | Se. Tsuchiya | Unsplash License | https://unsplash.com/photos/gm7OwXLhJFY |
+| room.jpg | 館内のご案内（畳の上の布団） | ウィキメディア・コモンズ（元はFlickr） | Tim Herrick | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Ryokan_bedding.jpg |
+| daidokoro.jpg | 素泊まりの箱（流しとガスこんろの台所） | ウィキメディア・コモンズ | Asanagi | CC0 | https://commons.wikimedia.org/wiki/File:Kitchen_in_Showa_era_2024-12-22.jpg |
 | zen.jpg | 1泊2食付の箱（丼と海老フライと汁椀の膳） | Pexels | minchephoto photography | Pexels License | https://www.pexels.com/photo/close-up-of-a-meal-6880541/ |
 | hoshi.jpg | 過ごし方（天の川と山並み） | ぱくたそ | クマキチ | ぱくたそ利用規約 | https://www.pakutaso.com/20181106318post-17676.html |
-| hosts.jpg | ご予約（桜の下で休む年配の夫婦） | Unsplash | Loris Boulinguez | Unsplash License | https://unsplash.com/photos/ss14s5bwVDo |
 | kamado.jpg | 館内のご案内（土間の竈） | ウィキメディア・コモンズ | Asanagi | CC0 | https://commons.wikimedia.org/wiki/File%3AJapanese_traditional_cook_stove_%281%29_2024-12-22.jpg |
 | sougei.jpg | 4つの魅力の04（上田駅前のロータリー） | ウィキメディア・コモンズ（元はPanoramio） | くろふね | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E7%94%B0%E9%A7%85_-_panoramio_(2).jpg |
-| washi.jpg | 和紙の地の模様（予約の帯、穂ノ家について、4つの魅力の札2枚、過ごし方・宿泊プラン・よくあるご質問・交通アクセスの地） | Unsplash | Alexander Nedviga | Unsplash License | https://unsplash.com/photos/0h-6eHHwA0s |
+| washi.jpg | 和紙の地の模様（予約の帯、お宿について、お料理と館内のご案内の札2枚、過ごし方・宿泊プラン・よくあるご質問・交通アクセス・施設概要の地） | Unsplash | Alexander Nedviga | Unsplash License | https://unsplash.com/photos/0h-6eHHwA0s |
 
-`engawa.jpg`・`bath.jpg`・`breakfast.jpg`・`genkan.jpg`・`daidokoro.jpg`・`zen.jpg`・`hosts.jpg` の7枚は、枠の縦横比に合わせて切り出してから縮小しました。
+`bath.jpg`・`genkan.jpg`・`room.jpg`・`daidokoro.jpg`・`zen.jpg` の5枚は、枠の縦横比に合わせて切り出してから縮小しました。
 
 ### sansai.jpgの表示（CC BY-SA 2.0）
 
@@ -65,6 +64,16 @@ CC BY・CC BY-SAは表示が条件なので、実案件で流用する時は下�
 - 2026-09-27に、元の写真のページでCC BY 2.0の表示を確かめました
 - ウィキメディア・コモンズの掲載：https://commons.wikimedia.org/wiki/File:Yud%C5%8Dfu_001.jpg
 - 手を加えたところ：幅730pxに縮小し、ブラウザで元と同じ色に見えるよう、色空間をカメラの色空間からsRGBに変換しました。切り出しはしていません
+
+### room.jpgの表示（CC BY 2.0）
+
+- 作品：Ryokan bedding
+- 作者：Tim Herrick
+- ライセンス：CC BY 2.0（表示2.0一般）https://creativecommons.org/licenses/by/2.0/deed.ja
+- 元の写真：https://www.flickr.com/photos/45614557@N00/336016142
+- 2026-10-02に、元の写真のページでCC BY 2.0の表示を確かめました
+- ウィキメディア・コモンズの掲載：https://commons.wikimedia.org/wiki/File:Ryokan_bedding.jpg
+- 手を加えたところ：元の写真（2816×2112px）の上の352pxを切り落として枠の縦横比（16:10）に合わせ、幅1472pxに縮小しました
 
 ### sougei.jpgの表示（CC BY 3.0）
 
