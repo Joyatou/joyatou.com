@@ -5,11 +5,11 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>クラウド勤怠管理システム「ハカル勤怠」｜月末の締めをラクにする</title>
-<meta name="description" content="中小企業向けのクラウド勤怠管理システム「ハカル勤怠」。打刻から集計・申請・給与ソフトへの書き出しまで、これひとつで。10名まで月3,300円、勤務形態2種類まで初期費用0円。30日間すべての機能を無料でお試しいただけます。">
+<meta name="description" content="中小企業向けのクラウド勤怠管理システム「ハカル勤怠」。打刻から申請・集計・給与ソフトへの書き出しまで、これひとつで。10名まで月3,300円、勤務形態2種類まで初期費用0円。30日間すべての機能を無料でお試しいただけます。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ハカル勤怠">
 <meta property="og:title" content="クラウド勤怠管理システム「ハカル勤怠」｜月末の締めをラクにする">
-<meta property="og:description" content="打刻から集計・申請・給与ソフトへの書き出しまで。10名まで月3,300円、30日間の無料トライアルつき。">
+<meta property="og:description" content="打刻から申請・集計・給与ソフトへの書き出しまで。10名まで月3,300円、30日間の無料トライアルつき。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/clock.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,6 +129,7 @@ ul,ol{padding:0;list-style:none}
 .reason__item+.reason__item{margin-top:90px}
 .reason__item:nth-child(even) .reason__media{order:2}
 .reason__media img{border-radius:10px;box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.reason__media figcaption{margin-top:8px;font-size:12px;color:var(--mute);text-align:right}
 /* 携帯の画面は縦に2倍以上長い。幅で合わせると段の高さが本文の3倍になり、文の側が大きく空く。
    高さで抑え、余る左右は淡い地の板で埋める */
 .reason__media--sp{display:flex;align-items:center;justify-content:center;padding:28px 0;border-radius:10px;background:var(--pale)}
@@ -215,8 +216,10 @@ ul,ol{padding:0;list-style:none}
 /* 法令への対応 */
 .law__list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .law__item{padding:28px 26px;border:1px solid var(--line);border-top:4px solid var(--main);background:#fff}
-/* 3枚目は数字が多く、ほかの2枚の倍の丈になる。3枚を横に並べると1・2枚目の下が空くので、3枚目だけ全幅に回す */
-.law__item:last-child{grid-column:1/-1}
+/* 3枚目は数字が多く、ほかの2枚の倍の丈になる。3枚を横に並べると1・2枚目の下が空くので、3枚目だけ全幅に回す。
+   全幅の1段では1行が70字を超えて読み通せないので、本文を2段に組む */
+.law__item:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.law__item:last-child h3{grid-column:1/-1}
 .law__item h3{font-size:18px;font-weight:700;margin-bottom:12px;color:var(--ink)}
 .law__item p{font-size:13.5px;line-height:1.8}
 
@@ -237,10 +240,10 @@ ul,ol{padding:0;list-style:none}
 
 /* 最後の三つの窓口 */
 .contact__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.contact__card{padding:30px 24px;border-radius:10px;background:var(--pale);text-align:center}
-.contact__card .fa-solid{display:flex;align-items:center;justify-content:center;width:66px;height:66px;margin:0 auto 10px;border-radius:50%;background:#fff;color:var(--main);font-size:28px}
+.contact__card{padding:30px 24px;border-radius:10px;background:var(--pale)}
+.contact__card .fa-solid{display:flex;align-items:center;justify-content:center;width:66px;height:66px;margin:0 0 10px;border-radius:50%;background:#fff;color:var(--main);font-size:28px}
 .contact__card h3{font-size:18px;font-weight:700;margin-bottom:8px}
-.contact__card p{font-size:13.5px;text-align:left;margin-bottom:16px;line-height:1.75}
+.contact__card p{font-size:13.5px;margin-bottom:16px;line-height:1.75}
 .contact__card b{display:block;font-family:var(--en);font-size:clamp(20px,2.4vw,26px);white-space:nowrap;color:var(--main-d);margin:6px 0}
 .contact__card b a{text-decoration:none}
 
@@ -328,8 +331,9 @@ ul,ol{padding:0;list-style:none}
   .reason__num{position:static;font-size:44px}
   .reason__body h3{font-size:21px;margin-bottom:0}
   .reason__body p{margin-top:14px}
-  .func__list,.law__list,.contact__cards,.price__ex{grid-template-columns:1fr}
+  .func__list,.law__list,.contact__cards,.price__ex,.law__item:last-child{grid-template-columns:1fr}
   /* 札を縦に積むと1枚が絵の分だけ高くなり、機能一覧だけで2,500pxを超えた。絵を左に寄せて丈を詰める */
+  .law__item p+p{margin-top:10px}
   .func__list{gap:12px}
   .func__item{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:18px;text-align:left}
   .func__item .fa-solid{grid-row:span 2;width:44px;height:44px;margin:0;font-size:20px}
@@ -385,7 +389,7 @@ h1,h2,h3{text-wrap:balance}
    短い段落と見出しは文節で折り、行の長さもそろえる。長い段落に文節の折り返しを当てると、長い文節の手前で行が半分空くので当てない
    （auto-phrase は Chrome のみ。ほかのブラウザは従来の折り返しに戻るだけ） */
 h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phrase}
-.mv__lead,.mv__note,.pickup__item p,.reason__body p,.numbers p,.case__item p,.price__main p,.price__ex p,.price__fine,.price__table th,.flow__item p,.faq__item summary,.contact__card p,.legal dt,.legal dd{text-wrap:balance;word-break:auto-phrase}
+.mv__lead,.mv__note,.pickup__item p,.reason__body p,.numbers p,.case__item p,.price__main p,.price__ex p,.price__fine,.price__table th,.flow__item p,.faq__item summary,.contact__card p,.law__item p,.news__list p,.legal dt,.legal dd{text-wrap:balance;word-break:auto-phrase}
 </style>
 <noscript><style>.scrollanime{opacity:1;transform:none}</style></noscript>
 </head>
@@ -415,14 +419,14 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
 <section class="mv">
   <div class="mv__inner">
     <div>
-      <p class="mv__label"><span class="nw">10名</span>まで月3,300円・勤務形態2種類まで初期費用<span class="nw">0円</span>※</p>
+      <p class="mv__label"><span class="nw">10名</span>まで月3,300円・<span class="nw">勤務形態2種類まで初期費用0円※</span></p>
       <h1><small>月末の締めをラクにする</small>中小企業向け<br><span class="nw">クラウド</span>勤怠管理</h1>
-      <p class="mv__lead">打刻から集計・申請・給与<span class="nw">ソフト</span>への書き出しまで、これひとつで。就業<span class="nw">ルール</span>の設定は当社が代行します。</p>
+      <p class="mv__lead">打刻から申請・集計・給与<span class="nw">ソフト</span>への書き出しまで、これひとつで。就業<span class="nw">ルール</span>の設定は当社が代行します。</p>
       <div class="mv__btns">
         <a class="btn btn--line gtm-cta" href="#entry" data-kind="doc">資料請求</a>
         <a class="btn btn--cta gtm-cta" href="#entry" data-kind="trial">30日間無料で試す</a>
       </div>
-      <p class="mv__note"><span class="nw">クレジットカード</span>登録なしで、すべての機能をお試しいただけます。<br><span class="mv__terms">※勤務形態が3種類以上の会社は、初期費用として初回に<span class="nw">88,000円</span>（税込）がかかります。</span></p>
+      <p class="mv__note"><span class="nw">クレジットカード</span>登録なしで、すべての機能をお試しいただけます。<br><span class="mv__terms">※勤務形態は労働時間の制度ごとに数えます。3種類以上の会社は、本契約の初回に初期費用<span class="nw">88,000円</span>（税込）がかかります。</span></p>
     </div>
     <div class="mv__visual">
       <img class="mv__pc" src="img/app_pc.png" alt="従業員ごとの実働と時間外が並ぶ勤怠の集計画面" fetchpriority="high">
@@ -433,17 +437,17 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
   <div class="pickup">
     <div class="pickup__item">
       <div><small>PICK UP</small><h2>就業<span class="nw">ルール</span>の設定を無料で代行</h2><p>勤務形態2種類までの会社が対象です。設定済みの環境を、通常<span class="nw">3営業日</span>ほどでお渡しします。</p></div>
-      <img src="img/pickup.jpg" alt="ヘッドセット姿のオペレーター">
+      <img src="img/pickup.jpg" alt="ソファでの書類の確認">
     </div>
     <div class="pickup__item">
-      <div><small>PICK UP</small><h2>継続率<span class="nw">98.2%</span></h2><p>毎月の更新を迎えたご契約のうち、継続されたものの割合です（<span class="nw">2026年7月</span>末時点・自社調べ）。</p></div>
-      <img src="img/team.jpg" alt="3人の打ち合わせ">
+      <div><small>PICK UP</small><h2>継続率<span class="nw">98.2%</span></h2><p>毎月の更新を迎えたご契約のうち、継続されたものの割合です（<span class="nw">2025年8月</span>〜<span class="nw">2026年7月</span>の平均・自社調べ）。</p></div>
+      <img src="img/team.jpg" alt="オフィスでのパソコン作業">
     </div>
   </div>
 </section>
 
-<div class="logos" aria-label="ご利用中の会社（一部）">
-  <p>ご利用中の会社（一部）</p>
+<div class="logos" aria-label="ご利用中の事業所（一部）">
+  <p>ご利用中の事業所（一部）</p>
   <div class="logos__track">
     <span><i class="fa-solid fa-gear" aria-hidden="true"></i>大井川金属工業</span><span><i class="fa-solid fa-dove" aria-hidden="true"></i>つばさ訪問介護</span><span><i class="fa-solid fa-mountain" aria-hidden="true"></i>北山運輸</span><span><i class="fa-solid fa-print" aria-hidden="true"></i>SETO PRINT</span><span><i class="fa-solid fa-sun" aria-hidden="true"></i>みなと保育園</span><span><i class="fa-solid fa-building" aria-hidden="true"></i>山際商事</span>
     <span aria-hidden="true"><i class="fa-solid fa-gear"></i>大井川金属工業</span><span aria-hidden="true"><i class="fa-solid fa-dove"></i>つばさ訪問介護</span><span aria-hidden="true"><i class="fa-solid fa-mountain"></i>北山運輸</span><span aria-hidden="true"><i class="fa-solid fa-print"></i>SETO PRINT</span><span aria-hidden="true"><i class="fa-solid fa-sun"></i>みなと保育園</span><span aria-hidden="true"><i class="fa-solid fa-building"></i>山際商事</span>
@@ -456,7 +460,7 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
     <ul class="worry__list">
       <li class="worry__item scrollanime"><span class="worry__no"><small>悩み</small>01</span><p>毎月<span class="nw">3日間</span>かかる<br>集計作業</p><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i></li>
       <li class="worry__item scrollanime"><span class="worry__no"><small>悩み</small>02</span><p>部署ごとの<br>打刻方法の違い</p><i class="fa-solid fa-building-user" aria-hidden="true"></i></li>
-      <li class="worry__item scrollanime"><span class="worry__no"><small>悩み</small>03</span><p>時間外の上限への<br>不安</p><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></li>
+      <li class="worry__item scrollanime"><span class="worry__no"><small>悩み</small>03</span><p>36協定の<br>超過リスク</p><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></li>
     </ul>
   </div>
 </section>
@@ -486,12 +490,12 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
       </div>
     </div>
     <div class="reason__item scrollanime">
-      <div class="reason__media"><img src="img/clock.jpg" alt="壁のカードリーダー" loading="lazy"></div>
+      <figure class="reason__media"><img src="img/clock.jpg" alt="USB接続のICカードリーダー" loading="lazy"><figcaption>対応機種の一例</figcaption></figure>
       <div class="reason__body">
         <span class="reason__num" aria-hidden="true">02</span>
         <h3>打刻の方法を<em>部署ごとに設定</em></h3>
         <p>事務所では<span class="nw">パソコン</span>、工場では交通系IC<span class="nw">カード</span>、外回りでは<span class="nw">スマートフォン</span>で打刻できます。集計や確認は、<span class="nw">ハカル</span>勤怠の画面だけで完結します。</p>
-        <ul class="check"><li>交通系IC<span class="nw">カード</span></li><li>iPhone・Androidの<span class="nw">アプリ</span></li><li><span class="nw">パソコン</span>の<span class="nw">ブラウザ</span></li></ul>
+        <ul class="check"><li>交通系IC<span class="nw">カード</span>・社員証</li><li>iPhone・Androidの<span class="nw">アプリ</span></li><li><span class="nw">パソコン</span>の<span class="nw">ブラウザ</span></li></ul>
       </div>
     </div>
     <div class="reason__item scrollanime">
@@ -499,8 +503,8 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
       <div class="reason__body">
         <span class="reason__num" aria-hidden="true">03</span>
         <h3>就業<span class="nw">ルール</span>の<em>設定代行</em></h3>
-        <p>就業規則を拝見し、変形労働時間制や<span class="nw">フレックスタイム</span>制にも対応した設定済みの環境をご用意します。<span class="nw">トライアル</span>期間中から、お客様の就業<span class="nw">ルール</span>でご利用いただけます。</p>
-        <ul class="check"><li>変形労働時間制・<span class="nw">フレックスタイム</span>制</li><li>給与<span class="nw">ソフト</span>の出力形式の設定</li></ul>
+        <p>就業規則を拝見し、<span class="nw">1か月</span>単位・<span class="nw">1年</span>単位の変形労働時間制や<span class="nw">フレックスタイム</span>制も、そのとおりに設定してお渡しします。<span class="nw">トライアル</span>期間中から、お客様の就業<span class="nw">ルール</span>でご利用いただけます。</p>
+        <ul class="check"><li>変形労働時間制・<span class="nw">フレックスタイム</span>制</li><li>給与<span class="nw">ソフト</span>の取り込み形式に合わせた書き出し設定</li></ul>
       </div>
     </div>
     <div class="reason__item scrollanime">
@@ -508,7 +512,7 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
       <div class="reason__body">
         <span class="reason__num" aria-hidden="true">04</span>
         <h3>従業員の画面は<em>3つだけ</em></h3>
-        <p>従業員が使うのは打刻・申請・履歴の3画面です。打刻の画面で、その日の実働を確認できます。休暇の申請や打刻の修正依頼も、従業員の画面からできます。</p>
+        <p>従業員が使うのは打刻・申請・履歴の3画面です。打刻の画面で、その日と今月の実働、有給休暇の残日数を確認できます。休暇の申請や打刻の修正依頼も、申請の画面からできます。</p>
         <ul class="check"><li>打刻・申請・履歴</li><li>今月の実働と有給休暇の残日数</li></ul>
       </div>
     </div>
@@ -519,7 +523,7 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
   <div class="inner">
     <h2 class="h2_ttl"><span class="sub_ttl">FUNCTION</span>機能一覧</h2>
     <div class="func__list">
-      <div class="func__item scrollanime"><i class="fa-solid fa-id-card" aria-hidden="true"></i><h3>打刻</h3><p><span class="nw">パソコン</span>、<span class="nw">スマートフォン</span>、交通系IC<span class="nw">カード</span>で打刻できます。</p></div>
+      <div class="func__item scrollanime"><i class="fa-solid fa-id-card" aria-hidden="true"></i><h3>打刻</h3><p><span class="nw">パソコン</span>、<span class="nw">スマートフォン</span>、交通系IC<span class="nw">カード</span>や社員証で打刻できます。</p></div>
       <div class="func__item scrollanime"><i class="fa-solid fa-calculator" aria-hidden="true"></i><h3>自動集計</h3><p>実働・時間外・深夜・休日の時間を、従業員ごとに集計します。</p></div>
       <div class="func__item scrollanime"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><h3>申請・承認</h3><p>休暇と時間外労働を申請でき、打刻の修正も依頼できます。承認は管理画面から行えます。</p></div>
       <div class="func__item scrollanime"><i class="fa-solid fa-file-export" aria-hidden="true"></i><h3>給与<span class="nw">ソフト</span>への書き出し</h3><p>CSVで出力します。列の並びと項目名を、お使いの給与<span class="nw">ソフト</span>に合わせて設定できます。</p></div>
@@ -535,7 +539,7 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
   <div class="inner">
     <h2 class="h2_ttl"><span class="sub_ttl">NUMBERS</span>数字で見るハカル勤怠</h2>
     <div class="numbers scrollanime">
-      <div><b>12<small>分</small></b><p>お問い合わせへの初回返信までの平均時間</p></div>
+      <div><b>12<small>分</small></b><p><span class="nw">チャット</span>での初回返信までの平均時間（受付時間内）</p></div>
       <div><b>210<small>万回</small></b><p><span class="nw">1か月</span>の打刻回数</p></div>
       <div><b>4.6<small>/5</small></b><p><span class="nw">サポート</span>の満足度（回答<span class="nw">312件</span>）</p></div>
     </div>
@@ -547,10 +551,10 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
   <div class="inner">
     <h2 class="h2_ttl"><span class="sub_ttl">CASE STUDY</span>導入事例</h2>
     <div class="case__item scrollanime">
-      <img src="img/office.jpg" alt="事務所の机に向かう女性" loading="lazy">
+      <img src="img/office.jpg" alt="パソコン作業中の男性" loading="lazy">
       <div>
         <span class="case__tag">製造業・従業員<span class="nw">30名</span></span>
-        <blockquote>締めが<span class="nw">3日</span>から<span class="nw">30分</span>になり、月初の出荷に手が回るようになりました。</blockquote>
+        <blockquote>締めが<span class="nw">3日</span>から<span class="nw">30分</span>になり、給与計算の確認に集中できるようになりました。</blockquote>
         <p class="case__who">大井川金属工業株式会社 総務ご担当者様</p>
         <div class="case__ba"><div><span>導入前の締め作業</span><b>3<small>日</small></b></div><i>→</i><div class="after"><span>導入後</span><b>30<small>分</small></b></div></div>
         <p><span class="nw">2026年3月</span>の実測。工場は交通系IC<span class="nw">カード</span>、事務所は<span class="nw">パソコン</span>で打刻。就業<span class="nw">ルール</span>の設定は当社が代行しました。削減できる時間は、会社の規模や勤務形態により異なります。</p>
@@ -560,9 +564,9 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
       <img src="img/care.jpg" alt="小道でスマートフォンを操作する女性" loading="lazy">
       <div>
         <span class="case__tag">訪問介護・従業員<span class="nw">18名</span></span>
-        <blockquote>外回りの打刻を<span class="nw">スマートフォン</span>で済ませられるようになり、月末に訪問記録と勤怠を突き合わせる作業がなくなりました。</blockquote>
+        <blockquote>外回りの打刻を<span class="nw">スマートフォン</span>で済ませられるようになり、月末に訪問記録と勤怠を突き合わせる作業が<span class="nw">6時間</span>から<span class="nw">1時間</span>になりました。</blockquote>
         <p class="case__who">つばさ訪問介護株式会社 管理者様</p>
-        <div class="case__ba"><div><span>導入前の突き合わせ</span><b>6<small>時間／月</small></b></div><i>→</i><div class="after"><span>導入後</span><b>0<small>時間</small></b></div></div>
+        <div class="case__ba"><div><span>導入前の突き合わせ</span><b>6<small>時間／月</small></b></div><i>→</i><div class="after"><span>導入後</span><b>1<small>時間／月</small></b></div></div>
         <p><span class="nw">2026年5月</span>の実測。全員が<span class="nw">スマートフォン</span>の<span class="nw">アプリ</span>で打刻。有給休暇の自動付与を利用。実際の削減効果は、これまでの集計の仕方により異なります。</p>
       </div>
     </div>
@@ -586,16 +590,16 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
           <tr><th scope="row"><span class="nw">シフト</span>の作成</th><td><span class="nw">1名</span> <span class="nw">月110円</span></td><td>お使いになる場合のみ。ご利用の人数分</td></tr>
           <tr><th scope="row">給与<span class="nw">ソフト</span>への書き出し</th><td><span class="nw">0円</span></td><td>基本料金の範囲内</td></tr>
           <tr><th scope="row">IC<span class="nw">カードリーダー</span></th><td>1拠点につき<span class="nw">1台</span>まで<span class="nw">0円</span></td><td>無償貸し出し。同じ拠点の<span class="nw">2台</span>目からは<span class="nw">1台</span> <span class="nw">月330円</span></td></tr>
-          <tr><th scope="row">初期費用（就業<span class="nw">ルール</span>の設定代行）</th><td><span class="nw">0円</span></td><td>※勤務形態が3種類以上の場合は、初回に<span class="nw">88,000円</span></td></tr>
+          <tr><th scope="row">初期費用（就業<span class="nw">ルール</span>の設定代行）</th><td><span class="nw">0円</span></td><td>※勤務形態は、雇用形態を問わず、固定時間制・<span class="nw">1か月</span>単位の変形労働時間制・<span class="nw">1年</span>単位の変形労働時間制・<span class="nw">フレックスタイム</span>制など、労働時間の制度ごとに数えます。3種類以上の場合は、本契約の初回に<span class="nw">88,000円</span></td></tr>
         </tbody>
       </table>
     </div>
     <div class="price__ex scrollanime">
       <div><h3><span class="nw">5名</span>・<span class="nw">オプション</span>なし</h3><b>月3,300<small>円</small></b><p>基本料金だけで、打刻から給与<span class="nw">ソフト</span>への書き出しまでの機能が使えます。</p></div>
       <div><h3><span class="nw">30名</span>・全<span class="nw">オプション</span>利用</h3><b>月16,500<small>円</small></b><p>3,300円<span class="nw">＋20名</span>×<span class="nw">330円</span><span class="nw">＋30名</span>×<span class="nw">220円</span>（<span class="nw">オプション</span>2つで<span class="nw">1名</span><span class="nw">220円</span>）。</p></div>
-      <div><h3><span class="nw">200名</span>・全<span class="nw">オプション</span>利用</h3><b>月110,000<small>円</small></b><p>勤務形態が3種類以上ある会社は、初期費用<span class="nw">88,000円</span>を加えて、初月は<span class="nw">198,000円</span>です。</p></div>
+      <div><h3><span class="nw">200名</span>・全<span class="nw">オプション</span>利用</h3><b>月110,000<small>円</small></b><p>3,300円<span class="nw">＋190名</span>×<span class="nw">330円</span><span class="nw">＋200名</span>×<span class="nw">220円</span>（<span class="nw">オプション</span>2つで<span class="nw">1名</span><span class="nw">220円</span>）。</p></div>
     </div>
-    <p class="price__fine">ご請求の人数には、その月に一度でも打刻した方を含みます。お支払い方法は、翌月初めの請求書払い（銀行振込）と<span class="nw">クレジットカード</span>払いからお選びいただけます。ご契約は<span class="nw">1か月</span>単位です。</p>
+    <p class="price__fine">課金の対象となる人数は、その月に一度でも打刻した方の人数です。お支払い方法は、翌月初めの請求書払い（銀行振込）と<span class="nw">クレジットカード</span>払いからお選びいただけます。ご契約は<span class="nw">1か月</span>単位です。</p>
   </div>
 </section>
 
@@ -604,11 +608,11 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
     <h2 class="h2_ttl"><span class="sub_ttl">FLOW</span>導入までの流れ</h2>
     <div class="flow__list">
       <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>01</b></p><div><h3>お申し込み</h3><p>入力するのは会社名・お名前・<span class="nw">メールアドレス</span>・ご利用予定の人数です。営業日の17時までのお申し込みなら、その日のうちに管理画面の<span class="nw">ログイン</span>情報をお送りします。</p></div></div>
-      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>02</b></p><div><h3>就業<span class="nw">ルール</span>の設定代行</h3><p>通常<span class="nw">3営業日</span>ほどで、設定済みの環境をお渡しします。勤務形態が3種類以上の場合は、初期費用<span class="nw">88,000円</span>（税込）を本契約の初月分とあわせてご請求します。</p></div></div>
+      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>02</b></p><div><h3>就業<span class="nw">ルール</span>の設定代行</h3><p>就業規則を<span class="nw">PDF</span>形式で管理画面にアップロードしてください。通常<span class="nw">3営業日</span>ほどで、設定済みの環境をお渡しします。</p></div></div>
       <p class="flow__pill">無料<span class="nw">トライアル</span>開始</p>
       <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>03</b></p><div><h3>まず1部署で打刻開始</h3><p>締め日を<span class="nw">1回</span>またぐまで打刻を続けてみてください。締めの作業がどう変わるかを、<span class="nw">トライアル</span>の<span class="nw">30日</span>のうちに確かめられます。</p></div></div>
       <p class="flow__pill"><span class="nw">30日</span>目</p>
-      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>04</b></p><div><h3>本契約のお申し込み</h3><p>本契約は管理画面からお申し込みください。設定も打刻の記録も、そのまま引き継げます。</p></div></div>
+      <div class="flow__item scrollanime"><p class="flow__step"><small>STEP</small><b>04</b></p><div><h3>本契約のお申し込み</h3><p>本契約は管理画面からお申し込みください。設定も打刻の記録も、そのまま引き継げます。<span class="nw">トライアル</span>期間の終了後に、自動で本契約に移行することはありません。お申し込みがなければ料金も初期費用もかからず、<span class="nw">トライアル</span>中に登録したデータは、終了後も<span class="nw">90日</span>間保持します。</p></div></div>
     </div>
   </div>
 </section>
@@ -627,7 +631,7 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
       </div>
       <div class="law__item scrollanime">
         <h3>時間外の上限</h3>
-        <p>時間外労働の上限は、36協定を結んだうえで原則として<span class="nw">月45時間</span>・年<span class="nw">360時間</span>です。特別条項付きの36協定を締結した場合も年<span class="nw">720時間</span>以内（休日労働は含みません）。これとは別に、時間外労働と休日労働の合計は単<span class="nw">月100時間</span>未満・<span class="nw">2〜6か月</span>平均<span class="nw">80時間</span>以内で、<span class="nw">月45時間</span>を超えてよいのは年<span class="nw">6か月</span>までです。対象期間が<span class="nw">3か月</span>を超える<span class="nw">1年</span>単位の変形労働時間制では、原則の上限が<span class="nw">月42時間</span>・年<span class="nw">320時間</span>。自動車運転の業務は、特別条項付きの36協定を締結した場合の上限が年<span class="nw">960時間</span>です（<span class="nw">2024年4月</span>から）。<span class="nw">月60時間</span>を超える時間外労働の割増賃金率は、中小企業も<span class="nw">2023年4月</span>から<span class="nw">50%</span>です。</p>
+        <p>時間外労働の上限は、36協定を締結したうえで原則として<span class="nw">月45時間</span>・年<span class="nw">360時間</span>です。特別条項付きの36協定を締結した場合も、時間外労働は年<span class="nw">720時間</span>以内です（休日労働は含みません）。これとは別に、時間外労働と休日労働の合計は単<span class="nw">月100時間</span>未満・<span class="nw">2〜6か月</span>平均<span class="nw">80時間</span>以内で、<span class="nw">月45時間</span>を超えてよいのは年<span class="nw">6か月</span>までです。</p><p>対象期間が<span class="nw">3か月</span>を超える<span class="nw">1年</span>単位の変形労働時間制では、原則の上限は<span class="nw">月42時間</span>・年<span class="nw">320時間</span>です。自動車運転の業務は、特別条項付きの36協定を締結した場合の上限が年<span class="nw">960時間</span>です（<span class="nw">2024年4月</span>から）。<span class="nw">月60時間</span>を超える時間外労働の割増賃金率は、中小企業も<span class="nw">2023年4月</span>から<span class="nw">50%</span>です。<span class="nw">ハカル</span>勤怠では、36協定の上限時間に近づいた従業員の名前を、一覧で色分けして表示します。</p>
       </div>
     </div>
     <p class="law__note"><span class="nw">2026年9月</span>時点の条文にもとづいて記載しています。</p>
@@ -638,12 +642,12 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
   <div class="inner">
     <h2 class="h2_ttl"><span class="sub_ttl">FAQ</span>よくある質問</h2>
     <div class="faq__list">
-      <details class="faq__item"><summary>他社<span class="nw">システム</span>の<span class="nw">データ</span>移行はできますか？</summary><p>CSVでお送りいただければ、過去<span class="nw">5年</span>分まで無料で取り込みます。形式が分からない場合は書き出した<span class="nw">ファイル</span>をそのままお送りください。こちらで形式を確かめます。</p></details>
+      <details class="faq__item"><summary>他社<span class="nw">システム</span>の<span class="nw">データ</span>移行はできますか？</summary><p>書き出した<span class="nw">ファイル</span>（CSVなど）をお送りいただければ、過去<span class="nw">5年</span>分まで無料で取り込みます。形式は当社で確かめます。</p></details>
       <details class="faq__item"><summary>給与<span class="nw">ソフト</span>との連携はできますか？</summary><p>取り込み形式をあらかじめ用意しているのは、弥生給与・freee人事労務・<span class="nw">マネーフォワード</span> <span class="nw">クラウド</span>給与・給与奉行<span class="nw">クラウド</span>・PCA給与・給与大臣・給料王の7つです（<span class="nw">2026年9月</span>時点）。この7つ以外の<span class="nw">ソフト</span>でも、CSVの取り込みができるものなら、書き出す列の並びと項目名を管理画面で組み替えて合わせられます。この書き出しの設定も、初回の設定代行にあわせて当社で行います。</p></details>
-      <details class="faq__item"><summary>料金の改定はありますか？</summary><p>単価を改定することがあります。その場合は、<span class="nw">3か月</span>前に<span class="nw">メール</span>でお知らせします。</p></details>
       <details class="faq__item"><summary><span class="nw">データ</span>の保存場所と安全管理について教えてください。</summary><p>国内の<span class="nw">データセンター</span>に保存し、通信と保管<span class="nw">データ</span>を暗号化しています。ISO/IEC 27001（ISMS）の認証とプライバシーマークを取得しています。過去<span class="nw">12か月</span>の稼働率は<span class="nw">99.96%</span>です（<span class="nw">2026年7月</span>末時点・自社調べ）。障害が起きたときは状況と復旧の見込みを<span class="nw">メール</span>でお知らせします。</p></details>
-      <details class="faq__item"><summary>工場や訪問先でも使えますか？</summary><p>工場や訪問先でもご利用いただけます。工場は交通系IC<span class="nw">カード</span>、外回りは<span class="nw">スマートフォン</span>の<span class="nw">アプリ</span>で打刻できます。打刻の画面の<span class="nw">ボタン</span>は、出勤・退勤・休憩に入る・休憩から戻るの4つです。画面の文字の大きさは従業員が自分で変えられ、表示言語も切り替えられます。</p></details>
-      <details class="faq__item"><summary>IC<span class="nw">カードリーダー</span>は必要ですか？</summary><p>IC<span class="nw">カード</span>で打刻する拠点だけに必要です。<span class="nw">パソコン</span>のUSBにつなぐ機器を使います。1拠点につき<span class="nw">1台</span>まで無料でお貸しします。同じ拠点の<span class="nw">2台</span>目からは、<span class="nw">1台</span>につき<span class="nw">月330円</span>です。すでにIC<span class="nw">カードリーダー</span>をお持ちでしたら、型式をお知らせください。</p></details>
+      <details class="faq__item"><summary>工場や外回りでも使えますか？</summary><p>ご利用いただけます。工場は交通系IC<span class="nw">カード</span>、外回りは<span class="nw">スマートフォン</span>の<span class="nw">アプリ</span>で打刻できます。<span class="nw">スマートフォン</span>で打刻した時の位置情報は、管理画面で確認できます。</p></details>
+      <details class="faq__item"><summary>IC<span class="nw">カードリーダー</span>は必要ですか？</summary><p>IC<span class="nw">カード</span>で打刻する拠点だけに必要です。<span class="nw">パソコン</span>のUSBにつなぐ機器を使います。IC<span class="nw">カード</span>は、交通系IC<span class="nw">カード</span>のほか、FeliCaやMIFAREの社員証が利用できます。貸し出しの料金は、料金プランに記載のとおりです。すでにIC<span class="nw">カードリーダー</span>をお持ちでしたら、型式をお知らせください。</p></details>
+      <details class="faq__item"><summary>導入後の<span class="nw">サポート</span>体制はどのようになっていますか？</summary><p>運用開始後も追加費用なしで、操作方法や設定について、管理画面の<span class="nw">チャット</span>・<span class="nw">メール</span>・お電話でお問い合わせいただけます。受付時間は、平日9:00〜18:00です。</p></details>
     </div>
   </div>
 </section>
@@ -653,7 +657,7 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
     <h2 class="h2_ttl"><span class="sub_ttl">NEWS</span>お知らせ</h2>
     <ul class="news__list">
       <li><time datetime="2026-08-12">2026.08.12</time><p><span class="nw">シフト</span>の作成で、従業員の希望休をそのまま取り込めるようになりました。</p></li>
-      <li><time datetime="2026-07-01">2026.07.01</time><p>年次有給休暇管理簿（基準日・日数・時季）を書き出せるようになりました。</p></li>
+      <li><time datetime="2026-07-01">2026.07.01</time><p>年次有給休暇管理簿を<span class="nw">PDF</span>形式で出力できるようになりました。</p></li>
       <li><time datetime="2026-06-02">2026.06.02</time><p>打刻の画面を英語表示に切り替えられるようになりました。</p></li>
     </ul>
   </div>
@@ -691,14 +695,14 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
       <summary>個人情報の取り扱い</summary>
       <dl>
         <div><dt>この<span class="nw">フォーム</span>でお預かりする情報</dt><dd>会社名・お名前・<span class="nw">メールアドレス</span>・ご利用予定の人数。資料の送付、<span class="nw">トライアル</span>環境のご用意、導入のご案内に使います</dd></div>
-        <div><dt><span class="nw">サービス</span>でお預かりする情報</dt><dd>従業員の氏名・所属・打刻の記録と、ご担当者の連絡先</dd></div>
+        <div><dt><span class="nw">サービス</span>でお預かりする情報</dt><dd>従業員の氏名・所属・打刻の記録（<span class="nw">スマートフォン</span>での打刻時に取得する位置情報を含む）と、ご担当者の連絡先</dd></div>
         <div><dt>利用目的</dt><dd>勤怠の集計と書き出し、<span class="nw">サポート</span>のご連絡に使います</dd></div>
         <div><dt>保存先と委託</dt><dd>国内の<span class="nw">データセンター</span>で管理し、通信と保管<span class="nw">データ</span>を暗号化しています。<span class="nw">データセンター</span>の運用は国内の事業者に委託し、委託先にも同じ管理を求めます</dd></div>
         <div><dt>第三者認証</dt><dd>情報<span class="nw">セキュリティ</span>の国際規格ISO/IEC 27001（ISMS）の認証を<span class="nw">2024年</span>に、プライバシーマークを<span class="nw">2023年</span>に取得しています</dd></div>
         <div><dt>第三者への提供</dt><dd>法令にもとづく場合を除き、行いません</dd></div>
         <div><dt>開示・訂正・削除</dt><dd>下記の窓口へお申し出ください。ご本人であることを確認のうえ、<span class="nw">10営業日</span>以内にお答えします</dd></div>
         <div><dt>保存期間</dt><dd>打刻の記録の保存年数は、<a href="#law">法令への対応</a>に記載しています。お申し込みの情報は、ご契約に至らなかった場合、お申し込みから<span class="nw">90日</span>で消去します。ご解約後の扱いは、<a href="#terms">利用規約の要点</a>に記載しています</dd></div>
-        <div><dt>窓口</dt><dd><span class="nw">ハカルワークス</span>株式会社 個人情報の窓口 東京都千代田区○○0-0-0（架空の住所です）03-0000-0000</dd></div>
+        <div><dt>窓口</dt><dd><span class="nw">ハカルワークス</span>株式会社 個人情報お問い合わせ窓口 東京都千代田区○○0-0-0（架空の住所です）03-0000-0000</dd></div>
       </dl>
     </details>
     <details class="legal" id="terms">
@@ -741,7 +745,7 @@ h1,h2,h3,blockquote,.solve__box li,.check li,.func__item p{word-break:auto-phras
       <a href="#privacy">個人情報の取り扱い</a>
     </nav>
   </div>
-  <p class="footer__note"><span class="nw">ハカル</span>勤怠は架空の<span class="nw">サービス</span>で、この<span class="nw">ページ</span>はSaaS向けLP制作の見本です。社名・数字・電話番号・認証はすべて架空の設定で、実在の事業者とは関係がありません。写真と画面の出典は、同じ<span class="nw">フォルダ</span>の「<a href="img/CREDITS.md">img/CREDITS.md</a>」に記載しています（制作：常夜燈）。3人の打ち合わせの写真は株式会社<span class="nw">オンカ</span>の作品（<a href="https://commons.wikimedia.org/wiki/File:92A0780.jpg">92A0780</a>／<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">CC BY-SA 4.0</a>）です。記載している会社名・製品名は、各社の商標または登録商標です。</p>
+  <p class="footer__note"><span class="nw">ハカル</span>勤怠は架空の<span class="nw">サービス</span>で、この<span class="nw">ページ</span>はSaaS向けLP制作の見本です。社名・数字・電話番号・認証はすべて架空の設定で、実在の事業者とは関係がありません。写真と画面の出典は、同じ<span class="nw">フォルダ</span>の「<a href="img/CREDITS.md">img/CREDITS.md</a>」に記載しています（制作：常夜燈）。<span class="nw">カードリーダー</span>の写真はRuinDig/Yuki Uchida氏の作品（<a href="https://commons.wikimedia.org/wiki/File:PaSoRi_RC-S380_sony.jpg">PaSoRi RC-S380 sony</a>／<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>）です。記載している会社名・製品名は、各社の商標または登録商標です。</p>
   <p class="footer__copy">© HAKARU WORKS Inc.</p>
 </footer>
 
