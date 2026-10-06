@@ -14,11 +14,11 @@ CC BYは表示が条件なので、実案件で流用する時は下の表示を
 | counsel.jpg | 当院の4つの特徴の01（クリップボードの白紙とペン） | Pexels | Monstera Production | Pexels License | https://www.pexels.com/photo/blank-paper-on-a-clipboard-9480111/ |
 | scan.jpg | 当院の4つの特徴の02（装置をつけた歯列の口腔内スキャン） | Unsplash | Quang Tri NGUYEN | Unsplash License | https://unsplash.com/photos/objNAvixRho |
 | aligner.jpg | 当院の4つの特徴の03（マウスピース型の矯正装置の装着） | Unsplash | Diana Polekhina | Unsplash License | https://unsplash.com/photos/fmB7IdFjhTM |
-| clinic.jpg | 当院の4つの特徴の04（個室の診療室） | Pexels | Tima Miroshnichenko | Pexels License | https://www.pexels.com/photo/a-clinic-with-dental-equipment-5355920/ |
+| clinic.jpg | 当院の4つの特徴の04（診療台の無影灯を調整する歯科医師） | Unsplash | SoyBreno | Unsplash License | https://unsplash.com/photos/z8BIWPwV3zo |
 | braces.jpg | 費用と期間の写真の1枚目（表側の装置をつけた歯） | ウィキメディア・コモンズ | Tamaki Sono | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:2015-03-10_teeth_wearing_dental_braces.jpg |
 | aligner_case.jpg | 費用と期間の写真の2枚目（上下のマウスピースとケース） | Unsplash | Aurela Redenica | Unsplash License | https://unsplash.com/photos/VuN-RYI4XU4 |
-| counsel_room.jpg | 費用と期間の写真の3枚目（相談室の机といす） | Pexels | Ivan Babydov | Pexels License | https://www.pexels.com/photo/desk-and-chairs-in-doctor-office-7789614/ |
-| cast.jpg | 初診相談の流れの写真の1枚目（輪ゴムでまとめた石膏の歯列模型） | Pixabay | Humusak | Pixabay Content License | https://pixabay.com/photos/teeth-models-gypsum-dentist-dental-797308/ |
+| counsel_room.jpg | 費用と期間の写真の3枚目（ノートパソコンで説明する歯科医師） | Pexels | Kaboompics（Pexelsの表示名は「https://kaboompics.com/」） | Pexels License | https://www.pexels.com/photo/dentist-having-a-discussion-with-a-patient-6627347/ |
+| cast.jpg | 初診相談の流れの写真の1枚目（口腔内スキャナーの画面で説明する歯科医師） | Unsplash | Filip Rankovic Grobgaard | Unsplash License | https://unsplash.com/photos/Bd0RmCsJOCc |
 | reception.jpg | 初診相談の流れの写真の2枚目（窓際の待合のいす） | Pixabay | aldineiderios | Pixabay Content License | https://pixabay.com/photos/clinic-front-desk-architecture-1198337/ |
 | entrance.jpg | アクセス（金属枠のガラス張りの入口） | Unsplash | Anastasia Yaroshenko | Unsplash License | https://unsplash.com/photos/BtjNPYmqSPU |
 | director.jpg | 院長あいさつ（装置をつけた歯列模型を両手に持つ女性の手元） | Unsplash | Enis Yavuz | Unsplash License | https://unsplash.com/photos/3H8LuhoSbdc |
@@ -27,12 +27,12 @@ CC BYは表示が条件なので、実案件で流用する時は下の表示を
 `counsel.jpg`・`scan.jpg`・`aligner.jpg`・`clinic.jpg`・`braces.jpg` は枠と同じ縦横比なので、`hero_smile.jpg` は画面の幅で枠の縦横比が変わるので、切り出していません。
 
 写っている人は、この医院の患者さんや職員ではありません。
-Pexelsの利用条件は、写っている人が商品やサービスを推奨しているように見せる使い方を禁じています（`hero_smile.jpg` の女性と白衣の人、`counsel.jpg` の手）。
-Unsplashの利用規約（5. 画像に対するライセンス供与）は、写っている商標やロゴ、人の肖像を使う権利をライセンスに含めていません（`director.jpg`・`scan.jpg`・`aligner.jpg` の女性）。
+Pexelsの利用条件は、写っている人が商品やサービスを推奨しているように見せる使い方を禁じています（`hero_smile.jpg` の女性と白衣の人、`counsel.jpg` の手、`counsel_room.jpg` の歯科医師と患者さん）。
+Unsplashの利用規約（5. 画像に対するライセンス供与）は、写っている商標やロゴ、人の肖像を使う権利をライセンスに含めていません（`director.jpg`・`scan.jpg`・`aligner.jpg` の女性、`clinic.jpg`・`cast.jpg` の歯科医師と患者さん）。
 `hero_smile.jpg` には、白衣の胸に刺繍された星形のマークと「MEDICAL SER…」の字が写っています。幅1120px以下の画面では、刺繍が最初の画面の左上に出て、タブレットで見ると字が読めます（幅390pxの携帯では小さくて読めません）。幅1280px以上では、写真の上の端より外に出て見えません。
-`clinic.jpg` には、ロシア語で書かれた札と箱が写っています。棚の上に置いた箱の札に「…ксия」、ガラス戸の棚に入った消毒剤の箱に「ГИПОХЛОРАН-3」とあり、ワゴンに載せた容器にも札があります。縮小した画像では、棚に置いた箱の札だけ字の形が分かり、ほかは読めません。
-`counsel_room.jpg` には、机に置いた化粧品の箱とノートに「soskin」の字が写っています。縮小した画像では読めません。
-`scan.jpg` はスキャナーの胴に、`director.jpg` は胸ポケットの縁に付いた札に薄い字がありますが、元の写真でも読めません。
+`clinic.jpg` には、歯科医師のマスクに「FAVA」の字が写っています。縮小した画像でも、拡大すると読めます。
+`counsel_room.jpg` には、ノートパソコンの「lenovo」の字と、棚に置いた歯間ブラシの台紙の字（「…ksters」）が写っています。縮小した画像では読めません。
+`scan.jpg` はスキャナーの胴に、`director.jpg` は胸ポケットの縁に付いた札に薄い字があり、`cast.jpg` は画面の下の縁に白い印がありますが、どれも元の写真でも読めません。
 `entrance.jpg` は左上の端に、隣の区画の看板の光る字が2つほど、写真の端で切れて写っています。字の中まで白く飛んでいて、元の写真でも読めません。
 実案件では、医院で撮った写真（写る人の同意つき）に差し替えてください。
 

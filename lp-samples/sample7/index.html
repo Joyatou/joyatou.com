@@ -158,7 +158,7 @@ ul,ol{padding:0;list-style:none}
 .TopPrice__common table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}
 .TopPrice__common th,.TopPrice__common td{padding:14px 16px;border:1px solid var(--line);text-align:left}
 .TopPrice__common th{width:22%;background:var(--mint)}
-.TopPrice__common td b{display:inline-block;min-width:110px;color:var(--head)}
+.TopPrice__common td b{margin-right:1em;color:var(--head)}
 .note{font-size:13px;line-height:1.85;margin-top:12px;color:var(--mute)}
 .TopPrice__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 .TopPrice__photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
@@ -181,7 +181,7 @@ ul,ol{padding:0;list-style:none}
 .TopFlow li:not(:last-child)::after{content:"\f0da";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font:900 18px/1 "Font Awesome 6 Free";color:var(--green)}
 .TopFlow__step{display:block;font-family:var(--en);font-size:24px;font-weight:500;letter-spacing:.06em;color:var(--green)}
 .TopFlow h3{font-size:15px;font-weight:700;line-height:1.55;margin:6px 0 8px;color:var(--head)}
-.TopFlow p{font-size:12.5px;line-height:1.75;text-align:left}
+.TopFlow p{font-size:14px;line-height:1.8;text-align:left}
 .TopFlow__photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
 .TopFlow__photos img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px}
 .TopFlow__photos figcaption{font-size:13px;color:var(--mute);margin-top:6px}
@@ -282,6 +282,7 @@ ul,ol{padding:0;list-style:none}
   .TopFeature__body{padding:24px 20px 0}
   .TopPrice__plans,.TopFlow,.TopPrice__photos,.TopFlow__photos{grid-template-columns:1fr}
   .TopPrice__common th,.TopPrice__common td{display:block;width:auto;border-top:0}
+  .TopPrice__common td b{display:block;margin-right:0}
   .TopGreet,.TopAccess,.TopReserve{grid-template-columns:1fr;gap:28px}
   .TopRisk__group{padding:22px 16px}
   .TopRisk__group li{grid-template-columns:1fr;gap:2px}
@@ -351,10 +352,9 @@ h1,h2,h3{text-wrap:balance}
 <div class="TopNews">
   <h2><span>NEWS</span>お知らせ</h2>
   <ul class="fade">
-    <li><time datetime="2026-08-17">2026.08.17</time><em>休診</em><p><span class="nw">9月14日</span>（月）は休診します。</p></li>
     <li><time datetime="2026-07-30">2026.07.30</time><em>設備</em><p>口腔内<span class="nw">スキャナー</span>を導入しました。精密検査で行う歯列の<span class="nw">スキャン</span>に、この機器を使います。</p></li>
     <li><time datetime="2026-07-02">2026.07.02</time><em>休診</em><p><span class="nw">8月13日</span>（木）から<span class="nw">8月16日</span>（日）まで休診します。</p></li>
-    <li><time datetime="2026-06-10">2026.06.10</time><em>診療</em><p>平日の夕方にも初診相談の枠を設けました。</p></li>
+    <li><time datetime="2026-06-10">2026.06.10</time><em>診療</em><p>月・火・水・金の夕方にも初診相談の枠を設けました。</p></li>
   </ul>
 </div>
 
@@ -376,7 +376,7 @@ h1,h2,h3{text-wrap:balance}
       </div>
       <div class="TopInfo__map">
         <p class="TopInfo__mapAlt">広島電鉄・袋町電停から徒歩<span class="nw">6分</span></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3917492749156!2d132.45181708885497!3d34.3913874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa21273dbe56b%3A0x762c82653c8756de!2z6KKL55S66aeF!5e0!3m2!1sja!2sjp!4v1790602644900!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="袋町電停周辺の地図"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3917492749156!2d132.45181708885497!3d34.3913874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa21273dbe56b%3A0x762c82653c8756de!2z6KKL55S66aeF!5e0!3m2!1sja!2sjp!4v1790602644900!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" title="袋町電停周辺の地図"></iframe>
       </div>
     </div>
   </div>
@@ -402,7 +402,7 @@ h1,h2,h3{text-wrap:balance}
   <div class="TopFeature">
     <div class="TopFeature__item fade">
       <figure class="TopFeature__photo"><img src="img/counsel.jpg" alt="クリップボードの白紙とペン" loading="lazy"></figure>
-      <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>01</b></span><h3>総額と<br>治療期間のご提示</h3><p>装置代、調整料、装置を外したあとの保定にかかる費用まで含めた総額をお伝えします。書面には、ご相談の内容から考えられる治療方法ごとの総額と、治療期間・通院回数の目安を記載します。</p></div>
+      <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>01</b></span><h3>総額と<br>治療期間のご提示</h3><p>初診相談と精密検査の費用、装置代、調整料、装置を外したあとの保定にかかる費用まで含めた総額をお伝えします。書面には、ご相談の内容から考えられる治療方法ごとの総額と、治療期間・通院回数の目安を記載します。</p></div>
     </div>
     <div class="TopFeature__item fade">
       <figure class="TopFeature__photo"><img src="img/scan.jpg" alt="装置をつけた歯列の口腔内スキャン" loading="lazy"></figure>
@@ -413,7 +413,7 @@ h1,h2,h3{text-wrap:balance}
       <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>03</b></span><h3>目立ちにくい<br>装置</h3><p>表側の装置には、透明な<span class="nw">ブラケット</span>を使用しています。歯の裏側につける装置は、会話中や笑顔のときでも見えにくいのが特徴です。<span class="nw">マウスピース</span>型は透明で、取り外しもできます。</p></div>
     </div>
     <div class="TopFeature__item fade">
-      <figure class="TopFeature__photo"><img src="img/clinic.jpg" alt="個室の診療室" loading="lazy"></figure>
+      <figure class="TopFeature__photo"><img src="img/clinic.jpg" alt="診療台の無影灯を調整する歯科医師" loading="lazy"></figure>
       <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>04</b></span><h3>治療中と保定期間中の<br>定期的な<span class="nw">チェック</span></h3><p>治療中は、通院のたびに歯が計画どおりに動いているか確認します。装置を外したあとの保定期間中も、<span class="nw">3〜6か月</span>に<span class="nw">1度</span>の通院で、歯並びに変化がないか確認します。</p></div>
     </div>
   </div>
@@ -441,11 +441,11 @@ h1,h2,h3{text-wrap:balance}
     <div class="TopPrice__common fade">
       <h3>装置代以外の費用</h3>
       <table>
-        <tr><th scope="row">初診相談</th><td><b><span class="nw">3,300円</span></b>／<span class="nw">60分</span>。口腔内の確認と写真の撮影を行います。</td></tr>
-        <tr><th scope="row">精密検査・診断</th><td><b><span class="nw">44,000円</span></b>／<span class="nw">1回</span>。<span class="nw">パノラマ</span>X線写真・<span class="nw">セファロ</span>・口腔内写真の撮影と歯列の<span class="nw">スキャン</span>を行い、治療計画をご説明します。</td></tr>
-        <tr><th scope="row">調整料</th><td><b><span class="nw">5,500円</span></b>／<span class="nw">1回</span>。装置をつけている間、通院のたびにいただきます。</td></tr>
-        <tr><th scope="row">保定装置</th><td><b><span class="nw">33,000円</span></b>／上下1組。装置を外したあとの後戻りを防ぐために装着していただきます。</td></tr>
-        <tr><th scope="row">保定中の通院</th><td><b><span class="nw">3,300円</span></b>／<span class="nw">1回</span>。通院の間隔は<span class="nw">3〜6か月</span>です。</td></tr>
+        <tr><th scope="row">初診相談</th><td><b><span class="nw">3,300円</span>／<span class="nw">60分</span></b>口腔内の確認と写真の撮影を行います。</td></tr>
+        <tr><th scope="row">精密検査・診断</th><td><b><span class="nw">44,000円</span>／<span class="nw">1回</span></b><span class="nw">パノラマ</span>X線写真・<span class="nw">セファロ</span>・口腔内写真の撮影と歯列の<span class="nw">スキャン</span>を行い、治療計画をご説明します。</td></tr>
+        <tr><th scope="row">調整料</th><td><b><span class="nw">5,500円</span>／<span class="nw">1回</span></b>装置をつけている間、通院のたびにいただきます。</td></tr>
+        <tr><th scope="row">保定装置</th><td><b><span class="nw">33,000円</span>／上下1組</b>装置を外したあとの後戻りを防ぐために装着していただきます。</td></tr>
+        <tr><th scope="row">保定中の通院</th><td><b><span class="nw">3,300円</span>／<span class="nw">1回</span></b>通院の間隔は<span class="nw">3〜6か月</span>です。</td></tr>
       </table>
       <p class="note">総額の目安は、初診相談から保定中の通院までにかかる費用の合計で、保定中の通院<span class="nw">5回</span>分を含みます。保定中の通院の回数は、経過によって変わります。抜歯を行う場合は、連携先の歯科医院での費用が別途かかります。1本あたり<span class="nw">5,500円から11,000円</span>が目安です。</p>
       <p class="note">初診相談の費用はご相談の当日に、精密検査の費用は検査の当日にいただきます。装置代と保定装置の費用はそれぞれの装置をつける日にいただきます。調整料と保定中の通院の費用は、ご来院のたびにいただきます。現金・<span class="nw">クレジットカード</span>・<span class="nw">デンタルローン</span>をご利用いただけます。</p>
@@ -453,8 +453,8 @@ h1,h2,h3{text-wrap:balance}
     </div>
     <div class="TopPrice__photos">
       <figure class="fade"><img src="img/braces.jpg" alt="表側の装置をつけた歯" loading="lazy"><figcaption>表側の装置の<span class="nw">イメージ</span>です（当院の症例写真ではありません）</figcaption></figure>
-      <figure class="fade"><img src="img/aligner_case.jpg" alt="上下のマウスピースとケース" loading="lazy"><figcaption><span class="nw">マウスピース</span>型の装置の<span class="nw">イメージ</span>です（当院の症例写真ではありません）</figcaption></figure>
-      <figure class="fade"><img src="img/counsel_room.jpg" alt="相談室の机といす" loading="lazy"><figcaption>費用のご説明は、診療台とは別の相談室で行います</figcaption></figure>
+      <figure class="fade"><img src="img/aligner_case.jpg" alt="上下のマウスピースとケース" loading="lazy"><figcaption><span class="nw">マウスピース</span>型の装置の<span class="nw">イメージ</span>です（当院で使う装置の写真ではありません）</figcaption></figure>
+      <figure class="fade"><img src="img/counsel_room.jpg" alt="ノートパソコンで説明する歯科医師" loading="lazy"><figcaption>費用のご説明は、診療台とは別の相談室で行います</figcaption></figure>
     </div>
   </div>
 </section>
@@ -468,7 +468,7 @@ h1,h2,h3{text-wrap:balance}
         <h3>はじめまして。<br>院長の三好文恵です。</h3>
         <p>並木町矯正歯科は<span class="nw">2019年</span>に開院しました。</p>
         <p>治療が進むにつれて、歯の位置は少しずつ変わっていきます。その変化を患者さんと一緒に確かめる時間を、この仕事でいちばん大切にしています。</p>
-        <p>何年かあとに「始めてよかった」と思っていただけるよう、保定期間中も、通院のたびに歯の動きを記録し、装置を外したときの記録と見比べています。</p>
+        <p>何年かあとに「始めてよかった」と思っていただけるよう、保定期間中も、通院のたびに歯並びの状態を記録し、装置を外したときの記録と見比べています。</p>
         <p class="TopGreet__name">院長<b>三好 文恵</b></p>
         <dl class="TopGreet__career">
           <div><dt><span class="nw">2008年3月</span></dt><dd>○○大学歯学部を卒業</dd></div>
@@ -487,14 +487,14 @@ h1,h2,h3{text-wrap:balance}
   <div class="inner">
     <h2 class="headLine01"><span>FIRST VISIT</span>初診相談の流れ</h2>
     <ol class="TopFlow">
-      <li class="fade"><b class="TopFlow__step">STEP1</b><h3><span class="nw">カウンセリング</span></h3><p>気になっているところとご希望を伺います。お悩みは遠慮なくお聞かせください。</p></li>
+      <li class="fade"><b class="TopFlow__step">STEP1</b><h3><span class="nw">カウンセリング</span></h3><p>気になっていることや、費用・通院のご希望をお聞かせください。</p></li>
       <li class="fade"><b class="TopFlow__step">STEP2</b><h3>口腔内の確認と写真の撮影</h3><p>いまの歯並びを、正面と側面から撮影します。<span class="nw">セファロ</span>の撮影は精密検査の日に行います。</p></li>
       <li class="fade"><b class="TopFlow__step">STEP3</b><h3>治療方法のご説明</h3><p>確認した歯並びをもとに、考えられる治療方法をご説明します。使用する装置は、精密検査の結果を見てから、ご相談のうえお選びいただけます。</p></li>
-      <li class="fade"><b class="TopFlow__step">STEP4</b><h3>お見積りの書面をお渡し</h3><p>ご相談の当日に書面をお渡しします。抜歯を行う場合にかかる費用の目安も、あわせて記載します。</p></li>
-      <li class="fade"><b class="TopFlow__step">STEP5</b><h3>ご自宅でのご検討</h3><p>ご自宅でご家族とご相談のうえ、ゆっくりご検討ください。治療を始めるときは、お電話またはWEBから精密検査のご予約をお取りください。</p></li>
+      <li class="fade"><b class="TopFlow__step">STEP4</b><h3>書面のお渡し</h3><p>ご相談の当日に、治療方法ごとの総額と期間を記載した書面をお渡しします。抜歯を行う場合にかかる費用の目安も、あわせて記載します。</p></li>
+      <li class="fade"><b class="TopFlow__step">STEP5</b><h3>ご自宅でのご検討</h3><p>書面をお持ち帰りいただき、ご家族ともご相談ください。治療を始めるときは、お電話で精密検査のご予約をお取りください。</p></li>
     </ol>
     <div class="TopFlow__photos">
-      <figure class="fade"><img src="img/cast.jpg" alt="輪ゴムでまとめた石膏の歯列模型" loading="lazy"><figcaption>歯列模型の<span class="nw">イメージ</span>です（当院の症例写真ではありません）</figcaption></figure>
+      <figure class="fade"><img src="img/cast.jpg" alt="口腔内スキャナーの画面で説明する歯科医師" loading="lazy"><figcaption>治療計画は、精密検査後にご説明します</figcaption></figure>
       <figure class="fade"><img src="img/reception.jpg" alt="窓際の待合のいす" loading="lazy"><figcaption>受付を済ませたあと、窓際の待合でお待ちいただきます</figcaption></figure>
     </div>
   </div>
@@ -537,7 +537,7 @@ h1,h2,h3{text-wrap:balance}
       <h3>マウスピース型の装置について</h3>
       <ul>
         <li><b>未承認の医療機器であること</b><p>当院で使う<span class="nw">マウスピース</span>型の矯正装置は、医薬品医療機器等法（薬機法）の承認を受けていない医療機器です。</p></li>
-        <li><b>入手の経路</b><p>国外の製造元の製品を、当院の歯科医師が個人輸入の手続き（輸入確認証の取得）で取り寄せています。個人輸入の注意点は、厚生労働省の<span class="nw">ページ</span>「<a href="https://www.yakubutsu.mhlw.go.jp/individualimport/healthhazard/">個人輸入において注意すべき医薬品等について</a>」に掲載されています。</p></li>
+        <li><b>入手の経路</b><p>国外の製造元の製品を、当院の歯科医師が個人輸入の手続き（輸入確認証の取得）で取り寄せています。個人輸入の注意点は、厚生労働省の<span class="nw">ウェブサイト</span>「<a href="https://www.yakubutsu.mhlw.go.jp/individualimport/healthhazard/">個人輸入において注意すべき医薬品等について</a>」に掲載されています。</p></li>
         <li><b>国内の承認品</b><p>国内にも、<span class="nw">マウスピース</span>型の矯正装置として薬機法の承認を受けているものがあります（独立行政法人医薬品医療機器総合機構の<span class="nw">ウェブサイト</span>で<span class="nw">2026年8月</span>に確認）。ご希望があれば、その装置での費用と期間もお伝えします。</p></li>
         <li><b>国外での承認と安全性</b><p>製造元が公表する添付文書と安全性情報（<span class="nw">2026年8月</span>確認）によると、欧州では<span class="nw">2018年3月</span>にCE<span class="nw">マーク</span>を取得し、米国では<span class="nw">2019年6月</span>に医療機器として販売が認められています。添付文書には、重大な副作用として装置の誤飲と材料に対する過敏症が挙げられています。国外で報告された主な副作用は、歯ぐきの痛みと口内炎です。</p></li>
         <li><b>救済制度の対象外</b><p>この装置による健康被害は、医薬品副作用被害救済制度と生物由来製品感染等被害救済制度（公的な給付を受けられる制度）の対象になりません。</p></li>
@@ -551,12 +551,12 @@ h1,h2,h3{text-wrap:balance}
     <h2 class="headLine01"><span>FAQ</span>よくある質問</h2>
     <div class="TopFaq__list">
       <details class="TopFaq__list__item fade" id="faq-age"><summary class="TopFaq__list__q">矯正治療は何歳まで可能ですか？</summary><p class="TopFaq__list__a">矯正治療に年齢制限はありません。<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>のうち、<span class="nw">40歳</span>以上の方は<span class="nw">29名</span>です。歯ぐきと歯を支える骨の状態を精密検査で確認したうえで、治療方法をご提案します。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">治療を中止した場合、費用はどうなりますか？</summary><p class="TopFaq__list__a">装置をつける前であれば、初診相談と精密検査の費用だけをいただきます。装置をつけたあとに中止する場合は、お支払いいただいた装置代を治療の進行状態に応じて精算し、まだ行っていない分の費用をお返しします。精算の方法は、初診相談でお渡しする書面に記載しています。</p></details>
+      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">治療を中止した場合、費用はどうなりますか？</summary><p class="TopFaq__list__a">装置をつける前であれば、それまでに受けた初診相談と精密検査の費用のほかはいただきません。装置をつけたあとに中止する場合は、お支払いいただいた装置代を治療の進行状態に応じて精算し、まだ行っていない分の費用をお返しします。精算の方法は、初診相談でお渡しする書面に記載しています。</p></details>
       <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">治療中に引っ越すことになったら、治療は続けられますか？</summary><p class="TopFaq__list__a">転居先の矯正歯科をご紹介します。紹介状とこれまでの検査の記録をお送りし、転居先の医院で治療を続けられるよう手続きを行います。装置代は、中止の場合と同じ方法で精算します。</p></details>
       <details class="TopFaq__list__item fade" id="faq-extraction"><summary class="TopFaq__list__q">抜歯はどのような基準で判断しますか？</summary><p class="TopFaq__list__a">歯を並べる<span class="nw">スペース</span>が顎に足りない場合に、抜歯をご提案することがあります。精密検査で歯の大きさと顎の幅を測ってから決めます。<span class="nw">2023年</span>から<span class="nw">2025年</span>に治療を終えた<span class="nw">112名</span>のうち、抜歯をした方は<span class="nw">38名</span>です。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">矯正の費用は、医療費控除の対象になりますか？</summary><p class="TopFaq__list__a">年齢や目的からみて必要と認められる矯正の費用は、医療費控除の対象となります。見た目を整えることが目的の場合は対象になりません。<span class="nw">デンタルローン</span>でお支払いの場合は、信販会社が立替払をした金額が、その立替払をした年の医療費控除の対象になります。金利と手数料は含まれません（国税庁<span class="nw">タックスアンサー</span>No.1128、<span class="nw">2026年4月1日</span>現在の法令による）。控除の対象になるかどうかは、所轄の税務署にご確認ください。</p></details>
+      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">矯正の費用は、医療費控除の対象になりますか？</summary><p class="TopFaq__list__a">年齢や目的からみて必要と認められる矯正の費用は、医療費控除の対象になります。見た目を整えることが目的の場合は対象になりません。<span class="nw">デンタルローン</span>でお支払いの場合は、信販会社が立替払をした金額が、その立替払をした年の医療費控除の対象になります。金利と手数料は含まれません（国税庁<span class="nw">タックスアンサー</span>No.1128、<span class="nw">2026年4月1日</span>現在の法令による）。控除の対象になるかどうかは、所轄の税務署にご確認ください。</p></details>
       <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">分割払いはできますか？</summary><p class="TopFaq__list__a">提携している信販会社の<span class="nw">デンタルローン</span>で、<span class="nw">最大60回</span>の分割払いをご利用いただけます。実質年率は<span class="nw">4.5%</span>で、<span class="nw">ローン</span>の審査があります。たとえば表側の装置代<span class="nw">770,000円</span>を<span class="nw">60回</span>でお支払いの場合、月々<span class="nw">14,356円</span>、支払総額は<span class="nw">861,360円</span>（うち手数料<span class="nw">91,360円</span>）です。手数料の計算方法と遅延損害金の率は、信販会社の契約書面に記載されています。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">矯正中の食事に制限はありますか？</summary><p class="TopFaq__list__a">表側と裏側の装置が歯についている間は、硬いもの（せんべい等の硬いお菓子、<span class="nw">ナッツ</span>類）や装置にからみやすいもの（<span class="nw">キャラメル</span>、ガム等）は、できるだけ避けてください。<span class="nw">マウスピース</span>型の場合は、食事のときに外し、歯を磨いてからつけ直してください。</p></details>
+      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">矯正中の食事に制限はありますか？</summary><p class="TopFaq__list__a">表側と裏側の装置が歯についている間は、硬いもの（せんべい、<span class="nw">ナッツ</span>類など）や装置にからみやすいもの（<span class="nw">キャラメル</span>、ガムなど）は、できるだけ避けてください。<span class="nw">マウスピース</span>型の場合は、食事のときに外し、歯を磨いてからつけ直してください。</p></details>
       <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">装置が外れたときはどうしたらいいですか？</summary><p class="TopFaq__list__a">診療時間内にお電話ください。状況を確認して、ご来院の日時をご案内します。痛みが強い場合は急患としてその日のうちに診察します。外れた部品は、ご来院の際にお持ちください。</p></details>
     </div>
   </div>
@@ -569,7 +569,7 @@ h1,h2,h3{text-wrap:balance}
       <figure class="fade"><img src="img/entrance.jpg" alt="金属枠のガラス張りの入口" loading="lazy"><figcaption><span class="nw">1階</span>の<span class="nw">ガラス</span>戸が入口です</figcaption></figure>
       <dl class="fade">
         <div><dt>所在地</dt><dd>広島市中区○○町0-0-0 ○○ビル1階（架空の住所です）</dd></div>
-        <div><dt>電車</dt><dd>広島電鉄・袋町電停から徒歩<span class="nw">6分</span>です。当院の向かいは青い看板の薬局です。</dd></div>
+        <div><dt>路面電車</dt><dd>広島電鉄・袋町電停から徒歩<span class="nw">6分</span>です。当院の向かいは青い看板の薬局です。</dd></div>
         <div><dt>駐車場</dt><dd>提携の「○○<span class="nw">パーキング</span>」をご利用いただいた場合、<span class="nw">1時間</span>の無料<span class="nw">サービス</span>券をお渡しします。</dd></div>
         <div><dt>設備</dt><dd>診療台<span class="nw">3台</span>・<span class="nw">パノラマ</span>・<span class="nw">セファロ</span>の撮影装置・口腔内<span class="nw">スキャナー</span></dd></div>
         <div><dt>お電話</dt><dd>082-000-0000（診療時間内）</dd></div>
@@ -592,16 +592,16 @@ h1,h2,h3{text-wrap:balance}
         <fieldset>
           <legend>ご希望の時間帯</legend>
           <div class="TopReserve__radio">
-            <label><input type="radio" name="slot" checked>平日の午前</label>
-            <label><input type="radio" name="slot">平日の午後</label>
-            <label><input type="radio" name="slot">平日の夕方</label>
+            <label><input type="radio" name="slot" checked>月・火・水・金の午前</label>
+            <label><input type="radio" name="slot">月・火・水・金の午後</label>
+            <label><input type="radio" name="slot">月・火・水・金の夕方</label>
             <label><input type="radio" name="slot">土曜（午前・午後）</label>
           </div>
         </fieldset>
         <label for="r-note">ご相談内容（任意）</label>
         <textarea id="r-note"></textarea>
         <button class="comBtn" type="submit">申し込む</button>
-        <p class="TopReserve__note">空き状況を確認のうえ、確定のご連絡をします。日時の変更・取り消しをご希望の場合は、お電話でお知らせください。この<span class="nw">ページ</span>は見本のため、お申し込みは届きません。</p>
+        <p class="TopReserve__note">木曜・日曜・祝日は休診です。空き状況を確認のうえ、確定のご連絡をします。日時の変更・取り消しをご希望の場合は、お電話でお知らせください。この<span class="nw">ページ</span>は見本のため、お申し込みは届きません。</p>
         <p class="TopReserve__note">お名前・ご連絡先・ご相談内容は、初診相談のお申し込みの確認と連絡にのみ使用します。ご本人の同意なく第三者へ提供することはありません。ご記入いただいた内容の確認・訂正・削除のご希望は、お電話（082-000-0000）で承ります。</p>
       </form>
       <div class="TopReserve__side fade">
@@ -654,6 +654,9 @@ h1,h2,h3{text-wrap:balance}
     btn.setAttribute('aria-expanded',open);
   });
   nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open');btn.setAttribute('aria-expanded','false');});});
+  function openFaq(id){var d=document.getElementById(id);if(d&&d.tagName==='DETAILS')d.open=true;}
+  document.querySelectorAll('a[href^="#faq-"]').forEach(function(a){a.addEventListener('click',function(){openFaq(a.getAttribute('href').slice(1));});});
+  if(location.hash)openFaq(location.hash.slice(1));
   document.getElementById('reserve-form').addEventListener('submit',function(e){
     e.preventDefault();
     this.innerHTML='<p>お申し込みを受け付けました。空き状況を確認のうえ、ご連絡します。（見本のため送信されていません）</p>';
