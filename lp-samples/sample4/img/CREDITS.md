@@ -32,7 +32,7 @@ CC BYは表示が条件なので、実案件で流用する時は下の表示を
 | support.jpg | 選ばれる理由の03（モニター前の打ち合わせ） | Unsplash | Mimi Thian | Unsplash License | https://unsplash.com/photos/90u9nnhZwts |
 | care.jpg | 導入事例2（小道でスマートフォンを操作する女性） | Unsplash | cal gao | Unsplash License | https://unsplash.com/photos/RpRH161AWcI |
 | clock.jpg | 選ばれる理由の02（USB接続のICカードリーダー） | ウィキメディア・コモンズ | RuinDig/Yuki Uchida | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:PaSoRi_RC-S380_sony.jpg |
-| office.jpg | 導入事例1（パソコン作業中の男性） | Unsplash | phyo min | Unsplash License | https://unsplash.com/photos/03TT9QfihTo |
+| office.jpg | 導入事例1（作業着姿の年配の男性） | Unsplash | Jesse Plum | Unsplash License | https://unsplash.com/photos/cSJ1frlz5EM |
 
 `pickup.jpg`・`team.jpg`・`care.jpg`・`office.jpg` の4枚は、枠の縦横比（4:3）に合わせて切り出してから縮小しました。`support.jpg` と `clock.jpg` は切り出していません。
 
