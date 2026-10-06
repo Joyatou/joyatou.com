@@ -10,8 +10,8 @@
 | ファイル | 使用箇所 | 取得元 | 作者 | ライセンス | 写真のページ |
 |---|---|---|---|---|---|
 | night.jpg | 最初の画面（木の棚の前でノートパソコンに向かう人たち） | Unsplash | Nasik Lababan | Unsplash License | https://unsplash.com/photos/pKbePv-7V10 |
-| room.jpg | 4つの特徴の1つ目（木の棚の部屋で机を囲む人たち。`night.jpg` と同じ部屋） | Unsplash | Nasik Lababan | Unsplash License | https://unsplash.com/photos/1vsqeq3EAMg |
-| class.jpg | 4つの特徴の2つ目（Ruby on Railsのコードとフォルダの一覧を映した画面） | Pexels | Digital Buggu | Pexels License | https://www.pexels.com/photo/monitor-displaying-computer-application-374559/ |
+| room.jpg | 4つの特徴の1つ目（コンクリートの壁の部屋で、モニターの横に立つ女性の話を、ノートパソコンを開いた人たちが聞く） | Unsplash | Product School | Unsplash License | https://unsplash.com/photos/XZkk5xT8Xrk |
+| class.jpg | 4つの特徴の2つ目（CSSのコードを映したノートパソコンと、キーボードに置いた手） | Pexels | Lukas Blazek | Pexels License | https://www.pexels.com/photo/person-using-macbook-pro-574077/ |
 | pair.jpg | 4つの特徴の3つ目（パソコンを指さして話す男性と、あごに手を当てて見る女性） | Unsplash | AN LY | Unsplash License | https://unsplash.com/photos/QooESgXRg8w |
 | target.jpg | 4つの特徴の4つ目（スマートフォンを両手で持つ手もと） | Unsplash | Priscilla Du Preez | Unsplash License | https://unsplash.com/photos/BjhUu6BpUZA |
 | street.jpg | こんな方にヨルゼミがおすすめ（赤れんがの高架と夜の電車。撮影地は千代田区鍛冶町二丁目） | Unsplash | ayumi kubo | Unsplash License | https://unsplash.com/photos/0f3wNpAzMZ4 |
@@ -27,7 +27,7 @@
 講師紹介と受講生の声の5枚（`teacher_a.jpg`・`teacher_b.jpg`・`voice_a.jpg`・`voice_b.jpg`・`voice_c.jpg`）に写っているのは、講師や受講生ではありません。
 Unsplashの利用規約（5条）は、写真に写っている人の肖像をライセンスに含めていません。実案件では、講師と受講生ご本人の写真（載せる同意を取ったもの）に差し替えてください。
 
-`night.jpg`・`room.jpg`・`pair.jpg` に写っている人も、講師や受講生ではありません。
+`night.jpg`・`room.jpg`・`class.jpg`・`pair.jpg` に写っている人も、講師や受講生ではありません。
 
 ## 借りたアイコン・部品と地図
 
@@ -44,4 +44,4 @@ Unsplashの利用規約（5条）は、写真に写っている人の肖像を�
 | ファイル | 使用箇所 | 元のファイル |
 |---|---|---|
 | login.png | ヨルゼミのカリキュラム（2か月目に作るログイン画面） | `作業/画面素材/login.html` |
-| stock.png | ヨルゼミのカリキュラム（13期生が作った棚卸しのアプリ） | `作業/画面素材/stock.html` |
+| stock.png | ヨルゼミのカリキュラム（受講生の声のS・Nさんが作った棚卸しのアプリ） | `作業/画面素材/stock.html` |
