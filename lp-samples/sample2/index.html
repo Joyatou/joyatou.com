@@ -5,19 +5,19 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>御菓子司 玉水｜松江・明治三十二年創業の和菓子 通販</title>
-<meta name="description" content="松江・白潟本町で明治三十二年から茶席に菓子を納めてきた御菓子司 玉水。上生菓子と羊羹、半生菓子の詰合せを全国へお届けします。のし・名入れは無料、詰合せは2,916円から。">
+<meta name="description" content="松江・白潟本町で明治三十二年から茶席に菓子を納めてきた御菓子司 玉水。上生菓子と羊羹、半生菓子の詰合せを全国へお届けします。のし紙・掛け紙と名入れは無料、詰合せは2,916円から。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="御菓子司 玉水">
 <meta property="og:title" content="御菓子司 玉水｜松江・明治三十二年創業の和菓子 通販">
-<meta property="og:description" content="茶席に納めてきた上生菓子と羊羹、半生菓子の詰合せ。のし・名入れは無料で承ります。">
+<meta property="og:description" content="茶席に納めてきた上生菓子と羊羹、半生菓子の詰合せ。のし紙・掛け紙と名入れは無料で承ります。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/droplet.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.13.2/jquery-ui.min.css" integrity="sha384-l1kDk0p6IL5xF2Si2lJ43sizHk9pvbZmtScevg9CUi44uF4VApJM3+7WveNz9QTh" crossorigin="anonymous">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Store","name":"御菓子司 玉水","foundingDate":"1899","address":{"@type":"PostalAddress","addressRegion":"島根県","addressLocality":"松江市","addressCountry":"JP"},"telephone":"0852-00-0000","openingHours":"Mo,Tu,Th,Fr,Sa,Su 09:00-18:00"}
 </script>
 <style>
-/* 字と余白は、老舗和菓子の実在105件の実測と、手本にした店の数値から採った。
-   本文は明朝15px・行間1.8・字間.04em、節の題は28px・細字で字間.25em、下に英字16px。
+/* 本文は明朝15px・行間1.8・字間.04em、節の題は28px・細字で字間.25em、下に英字14px。
    節の上下は80px、外枠は1200px、ボタンは角丸6px。 */
 :root{
   --text:#333;--mute:#777;--line:#e5e2dd;--base:#fff;--beige:#f4f1ec;--circle:#f3f0ea;
@@ -25,7 +25,7 @@
   --mincho:"游明朝",YuMincho,"Yu Mincho","ヒラギノ明朝 ProN","Hiragino Mincho ProN","HGS明朝E","MS P明朝",serif;
 }
 *,::before,::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:120px}
+html{scroll-padding-top:120px}
 body{margin:0;font-family:var(--mincho);font-size:15px;line-height:1.8;letter-spacing:.04em;color:var(--text);background:var(--base);
   -webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;vertical-align:middle}
@@ -34,267 +34,274 @@ h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}
 ul,ol{padding:0;list-style:none}
 .page-width{max-width:1240px;margin:0 auto;padding:0 20px}
 .visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.section-template{padding:80px 0}
-.section-template--beige{background:var(--beige)}
+.section{padding:80px 0}
+.color-scheme-3{background:var(--beige)}
 :focus-visible{outline:2px solid var(--beni);outline-offset:3px}
 
 /* 節の題。左右に罫を引き、下に英字を添える */
 .title-wrapper{text-align:center;margin-bottom:44px}
 .title{display:inline-flex;align-items:center;gap:22px;font-size:28px;font-weight:400;letter-spacing:.25em;line-height:1.4;color:#222}
 .title::before,.title::after{content:"";width:48px;border-top:1px solid #444}
-.title__en{display:block;font-size:14px;letter-spacing:.12em;color:var(--mute);margin-top:6px;font-family:"Times New Roman",Georgia,serif}
-.link-more{display:inline-block;margin-top:34px;padding-bottom:2px;border-bottom:1px solid #333;font-size:14px}
+.sub-title{display:block;font-size:14px;letter-spacing:.12em;color:var(--mute);margin-top:6px;font-family:"Times New Roman",Georgia,serif}
 
 .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 34px;border-radius:6px;
   background:var(--beni);color:#fff;font-size:15px;letter-spacing:.12em;transition:background .3s}
 .button:hover{background:var(--beni-d)}
-.button--quiet{background:var(--beige);color:var(--text)}
-.button--quiet:hover{background:#e9e4dc}
+.drawer__close{background:var(--beige);color:var(--text)}
+.drawer__close:hover{background:#e9e4dc}
 
 /* 上端のお知らせ帯 */
-.announcement-bar{background:var(--beni);color:#fff;font-size:13px;letter-spacing:.1em;text-align:center;padding:9px 16px}
-.announcement-bar a{margin-left:1em;border-bottom:1px solid rgba(255,255,255,.6);font-size:12px}
+.header__notice{background:var(--beni);color:#fff;font-size:13px;letter-spacing:.1em;text-align:center;padding:9px 16px}
+.header__notice a{margin-left:1em;border-bottom:1px solid rgba(255,255,255,.6);font-size:12px}
 
 /* ヘッダー。屋号を左に、ご注文の窓口を右に、ナビを下の段に */
 .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
-.header__top{display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto;padding:16px 20px 8px}
+.header__inner{display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto;padding:16px 20px 8px}
 .header__heading{font-size:24px;font-weight:600;letter-spacing:.2em;line-height:1.2;color:#222}
 .header__heading small{display:block;font-size:11px;font-weight:400;letter-spacing:.16em;color:var(--mute);margin-bottom:4px}
 .header__icons{display:flex;align-items:center;gap:22px;font-size:13px}
-.header__tel b{display:block;font-size:19px;letter-spacing:.06em;font-weight:500;line-height:1.3}
-.header__tel span{font-size:11px;color:var(--mute)}
+.header__icons .tel b{display:block;font-size:19px;letter-spacing:.06em;font-weight:500;line-height:1.3}
+.header__icons .tel span{font-size:11px;color:var(--mute)}
 .header__icons .button{min-height:44px;padding:0 26px;font-size:14px}
-.header__menu{display:flex;justify-content:center;gap:4px;padding-bottom:6px}
+.bottom-ul{display:flex;justify-content:center;gap:4px;padding-bottom:6px}
 .list-menu__item{display:block;padding:8px 18px;font-size:14px;letter-spacing:.14em}
 .list-menu__item:hover{color:var(--beni)}
-.menu-drawer__toggle{display:none}
+.hamburger{display:none}
 
 /* メインビジュアル。左に品の札、右に写真 */
 .banner{background:var(--beige)}
-.banner__slide{display:grid;grid-template-columns:40% 60%;min-height:560px}
-.banner__text{display:flex;flex-direction:column;justify-content:center;padding:48px 44px 48px max(20px,calc((100vw - 1240px)/2 + 20px))}
-.banner__catch{font-size:15px;letter-spacing:.14em;color:var(--mute)}
-.banner__name{font-size:26px;font-weight:600;letter-spacing:.1em;line-height:1.5;color:#222;margin:14px 0 6px}
-.banner__price{font-size:16px;letter-spacing:.08em}
+.slideshow__slide{display:grid;grid-template-columns:40% 60%;min-height:560px}
+.banner__content{display:flex;flex-direction:column;justify-content:center;padding:48px 44px 48px max(20px,calc((100vw - 1240px)/2 + 20px))}
+.banner__text{font-size:15px;letter-spacing:.14em;color:var(--mute)}
+.banner__heading{font-size:26px;font-weight:600;letter-spacing:.1em;line-height:1.5;color:#222;margin:14px 0 6px}
+.banner__content .price{font-size:16px;letter-spacing:.08em}
 .price-item{margin:0 .15em 0 .35em}
-.banner__price .price-item{font-size:22px}
-.banner__link{display:flex;justify-content:space-between;align-items:center;margin-top:30px;padding:12px 18px;background:#5b4f4a;color:#fff;font-size:13px;letter-spacing:.12em}
+.banner__content .price .price-item{font-size:22px}
+.btn-wrapper{display:flex;justify-content:space-between;align-items:center;margin-top:30px;padding:12px 18px;background:#5b4f4a;color:#fff;font-size:13px;letter-spacing:.12em}
 .banner__media img{width:100%;height:100%;object-fit:cover}
 /* 季のほかの2品は、下の節で使っていない写真で案内する */
-.banner__others-title{margin-top:30px;font-size:12px;letter-spacing:.12em;color:var(--mute)}
-.banner__others li{margin-top:10px}
-.banner__others a{display:flex;align-items:center;gap:14px;font-size:14px;letter-spacing:.08em}
-.banner__others a:hover{color:var(--beni)}
-.banner__others img{width:56px;height:56px;object-fit:cover;flex:none}
+.sub-ttl{margin-top:30px;font-size:12px;letter-spacing:.12em;color:var(--mute)}
+.banner__content ul li{margin-top:10px}
+.banner__content ul a{display:flex;align-items:center;gap:14px;font-size:14px;letter-spacing:.08em}
+.banner__content ul a:hover{color:var(--beni)}
+.banner__content ul img{width:56px;height:56px;object-fit:cover;flex:none}
 
 /* お知らせ。細い罫で区切った一覧 */
-.news-list{max-width:800px;margin:0 auto;border-top:1px solid var(--line)}
-.news-list li{padding:20px 8px;border-bottom:1px solid var(--line)}
-.news-list time{display:block;font-size:12px;color:var(--mute)}
-.news-list p{font-size:14px;margin-top:2px}
-.news-list a{border-bottom:1px solid var(--gray)}
+.blog__posts{max-width:800px;margin:0 auto;border-top:1px solid var(--line)}
+.blog__posts li{padding:20px 8px;border-bottom:1px solid var(--line)}
+.blog__posts time{display:block;font-size:12px;color:var(--mute)}
+.blog__posts p{font-size:14px;margin-top:2px}
+.blog__posts a{border-bottom:1px solid var(--gray)}
 
 /* 写真に題を重ねるカード */
 .grid{display:grid;gap:4px}
-.grid--4{grid-template-columns:repeat(4,1fr)}
-.grid--3{grid-template-columns:repeat(3,1fr);gap:24px}
-.card-photo{position:relative;overflow:hidden;color:#fff}
-.card-photo img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .6s}
-.card-photo:hover img{transform:scale(1.04)}
+.grid--4-col-desktop{grid-template-columns:repeat(4,1fr)}
+.grid--3-col-desktop{grid-template-columns:repeat(3,1fr);gap:24px}
+.multicolumn-card{position:relative;overflow:hidden;color:#fff}
+.multicolumn-card img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .6s}
+.multicolumn-card:hover img{transform:scale(1.04)}
 /* 札の下の小さな字は明るい写真に沈むので、帯を濃くし、字は白のまま置く */
-.card-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 14px;font-size:14px;letter-spacing:.1em;
+.multicolumn-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 14px;font-size:14px;letter-spacing:.1em;
   background:linear-gradient(transparent,rgba(0,0,0,.28) 34%,rgba(0,0,0,.72))}
-.card-photo figcaption span{display:block;font-size:12px}
-.lead{max-width:760px;margin:36px auto 0;font-size:14px;text-align:center}
-.season-buy{margin:22px auto 0;text-align:center;font-size:15px}
-.season-buy .price-item{font-size:22px}
-.season-buy .button{margin-left:18px}
+.multicolumn-card figcaption span{display:block;font-size:12px}
+.rte-width{max-width:760px;margin:36px auto 0;font-size:14px;text-align:center}
+.center{margin:22px auto 0;text-align:center;font-size:15px}
+.center .price-item{font-size:22px}
+.center .button{margin-left:18px}
 
 /* お品書き。写真と札を二列に並べる */
-.product-list{display:grid;gap:48px}
-.product{display:grid;grid-template-columns:44% 1fr;gap:40px;align-items:start}
-.product__media{background:var(--circle);border-radius:50%;overflow:hidden;aspect-ratio:1;max-width:420px;width:100%;justify-self:center}
-.product__media img{width:100%;height:100%;object-fit:cover}
-.product__name{font-size:22px;font-weight:600;letter-spacing:.14em;color:#222}
-.product__name small{display:block;font-size:12px;font-weight:400;letter-spacing:.3em;color:var(--mute);margin-top:2px;font-family:"Times New Roman",Georgia,serif}
-.product__kind{display:inline-block;margin:14px 0 10px;padding:2px 12px;border:1px solid #bbb;font-size:12px;letter-spacing:.1em}
-.product__price{font-size:15px;margin-bottom:12px}
-.product__price .price-item{font-size:26px;letter-spacing:.04em}
-.product__desc{font-size:14px}
-.product__spec{margin-top:16px;border-top:1px solid var(--line);font-size:13px}
-.product__spec div{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
-.product__spec dt{color:var(--mute)}
-.product-note{margin-top:36px;font-size:13px;text-align:center;color:var(--mute)}
+.product-grid{display:grid;gap:48px}
+.card{display:grid;grid-template-columns:44% 1fr;gap:40px;align-items:start}
+.card__media{background:var(--circle);border-radius:50%;overflow:hidden;aspect-ratio:1;max-width:420px;width:100%;justify-self:center}
+.card__media img{width:100%;height:100%;object-fit:cover}
+.card__heading{font-size:22px;font-weight:600;letter-spacing:.14em;color:#222}
+.card__heading small{display:block;font-size:12px;font-weight:400;letter-spacing:.3em;color:var(--mute);margin-top:2px;font-family:"Times New Roman",Georgia,serif}
+.card__badge{display:inline-block;margin:14px 0 10px;padding:2px 12px;border:1px solid #bbb;font-size:12px;letter-spacing:.1em}
+.card .price{font-size:15px;margin-bottom:12px}
+.card .price .price-item{font-size:26px;letter-spacing:.04em}
+.rte{font-size:14px}
+.card__content dl{margin-top:16px;border-top:1px solid var(--line);font-size:13px}
+.card__content dl div{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.card__content dl dt{color:var(--mute)}
+#products .caption{margin-top:36px;font-size:13px;text-align:center;color:var(--mute)}
 
 /* 贈り物とのし */
-.gift{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.gift__photos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.gift__photos img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.gift__photos figcaption{font-size:12px;color:var(--mute);margin-top:6px}
-.gift h3{font-size:19px;font-weight:600;letter-spacing:.1em;margin-bottom:14px;color:#222}
-.gift p{font-size:14px}
-.gift p+p{margin-top:1em}
-.gift__col h3{margin-top:30px}
-.box-sizes{border-top:1px solid var(--line);font-size:13px}
-.box-sizes li{display:grid;grid-template-columns:110px 1fr;padding:8px 0;border-bottom:1px solid var(--line)}
-.gift .voice{margin-top:24px;padding:18px 22px;background:var(--beige);font-size:14px}
-.gift .voice cite{display:block;font-size:12px;color:var(--mute);font-style:normal;margin-top:6px}
+.image-with-text__grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.image-with-text__media{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.image-with-text__media img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.image-with-text__media figcaption{font-size:12px;color:var(--mute);margin-top:6px}
+.image-with-text__grid h3{font-size:19px;font-weight:600;letter-spacing:.1em;margin-bottom:14px;color:#222}
+.image-with-text__grid p{font-size:14px}
+.image-with-text__grid p+p{margin-top:1em}
+.image-with-text__media-item h3{margin-top:30px}
+.image-with-text__media-item ul{border-top:1px solid var(--line);font-size:13px}
+.image-with-text__media-item ul li{display:grid;grid-template-columns:110px 1fr;padding:8px 0;border-bottom:1px solid var(--line)}
+.image-with-text__grid p:has(>cite){margin-top:24px;padding:18px 22px;background:var(--beige);font-size:14px}
+.image-with-text__grid p:has(>cite) cite{display:block;font-size:12px;color:var(--mute);font-style:normal;margin-top:6px}
 
 /* こだわり。写真の左上に縦書きの札を重ねる */
-.commit__card img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.commit__media{position:relative}
-.commit__label{position:absolute;left:0;top:0;padding:14px 10px;background:rgba(94,86,80,.88);color:#fff;writing-mode:vertical-rl;font-size:15px;letter-spacing:.3em}
-.commit__card p{font-size:14px;margin-top:16px}
+.grid__item img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.img-wrapper{position:relative}
+.num{position:absolute;left:0;top:0;padding:14px 10px;background:rgba(94,86,80,.88);color:#fff;writing-mode:vertical-rl;font-size:15px;letter-spacing:.3em}
+.grid__item p{font-size:14px;margin-top:16px}
 .history{max-width:860px;margin:64px auto 0;padding:34px 40px;background:#fff}
 .history h3{font-size:18px;font-weight:600;letter-spacing:.14em;text-align:center;margin-bottom:18px}
 .history li{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:11px 0;border-bottom:1px dotted #ccc;font-size:14px}
 .history b{font-weight:600;color:var(--beni)}
 
 /* 送料の表 */
-.shipping-table{width:100%;border-collapse:collapse;font-size:14px;text-align:center;font-variant-numeric:tabular-nums;background:#fff}
-.shipping-table th,.shipping-table td{border:1px solid #cfcac2;padding:12px 8px}
-.shipping-table thead th{background:#ece8e1;font-weight:600}
-.shipping-table tbody th{background:#f5f1ea;font-weight:600;white-space:nowrap}
-.table-wrap{overflow-x:auto}
-.notes{margin-top:18px;font-size:13px}
-.notes li{position:relative;padding-left:1.2em}
-.notes li::before{content:"※";position:absolute;left:0}
-.keep{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
-.keep div{padding:24px 26px;background:#fff}
-.keep h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:.1em}
-.keep p{font-size:14px}
+.shipFee table{width:100%;border-collapse:collapse;font-size:14px;text-align:center;font-variant-numeric:tabular-nums;background:#fff}
+.shipFee th,.shipFee td{border:1px solid #cfcac2;padding:12px 8px}
+.shipFee thead th{background:#ece8e1;font-weight:600}
+.shipFee tbody th{background:#f5f1ea;font-weight:600;white-space:nowrap}
+.shipFee{overflow-x:auto}
+.smaller{margin-top:18px;font-size:13px}
+.smaller li{position:relative;padding-left:1.2em}
+.smaller li::before{content:"※";position:absolute;left:0}
+.f_guide{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.f_guide div{padding:24px 26px;background:#fff}
+.f_guide h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:.1em}
+.f_guide p{font-size:14px}
 
 /* よくあるご質問。左に色の帯をつけた問い */
-.qa{max-width:900px;margin:0 auto}
-.qa__item+.qa__item{margin-top:28px}
-.qa__q{padding:4px 0 4px 14px;border-left:4px solid var(--beni);font-size:17px;font-weight:600;letter-spacing:.06em;color:#222}
-.qa__a{margin-top:10px;font-size:14px}
+.sysContent{max-width:900px;margin:0 auto}
+.txtBlock+.txtBlock{margin-top:28px}
+.pattern01{padding:4px 0 4px 14px;border-left:4px solid var(--beni);font-size:17px;font-weight:600;letter-spacing:.06em;color:#222}
+.txtBlock p{margin-top:10px;font-size:14px}
 
 /* ご注文。左はフォームより短いので、貼り付けて最後まで手順が見えるようにする */
-.order{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
-.order__aside{position:sticky;top:132px}
+.grid--2-col-tablet{grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.side_navi{position:sticky;top:132px}
 .steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}
 .steps b{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--beni);color:#fff;font-weight:400}
-.order__tel{margin-top:28px;padding:24px;background:var(--beige);text-align:center}
-.order__tel p{font-size:13px}
-.order__tel b{display:block;font-size:30px;font-weight:500;letter-spacing:.08em;color:#222}
-.form{padding:32px 34px;background:var(--beige)}
-.form label,.form legend{display:block;font-size:14px;font-weight:600;margin:16px 0 6px;padding:0}
-.req{margin-left:.6em;padding:1px 7px;border-radius:3px;background:var(--beni);color:#fff;font-size:11px;font-weight:400;letter-spacing:.06em;vertical-align:1px}
-.req--any{background:#fff;color:var(--mute);box-shadow:inset 0 0 0 1px #cfc8bd}
-.form-lead{font-size:12px;color:var(--mute);margin-bottom:14px}
-.form input,.form select,.form textarea{width:100%;padding:10px 12px;border:1px solid #cfc8bd;border-radius:4px;background:#fff;font:inherit;font-size:16px}
-.form textarea{min-height:100px}
+.side_navi .tel{margin-top:28px;padding:24px;background:var(--beige);text-align:center}
+.side_navi .tel p{font-size:13px}
+.side_navi .tel b{display:block;font-size:30px;font-weight:500;letter-spacing:.08em;color:#222}
+/* のしは先に掛け方を選び、選ぶと用途と名入れの欄を出す。
+   必須の印の地は紅。#e25555 は白い字と 3.71 で、小さな字に要る 4.5 に届かない */
+.product-form,.drawer__inner{padding:32px 34px;background:var(--beige)}
+.product-form label,.product-form legend{display:block;font-size:14px;font-weight:600;margin:16px 0 6px;padding:0}
+.noshi-required,.light{margin-left:6px;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.06em;vertical-align:middle}
+.noshi-required{background:var(--beni);color:#fff}
+.light{background:#fff;color:var(--mute);box-shadow:inset 0 0 0 1px #aba696}
+.product-form input,.product-form select,.product-form textarea{width:100%;padding:10px 20px;border:1px solid #aba696;border-radius:0;background:#fff;font:inherit;font-size:16px}
+.product-form textarea{min-height:100px}
 /* legend に付けた margin-top は効かないので、区切りの間は fieldset で空ける */
-.form fieldset{border:0;margin:26px 0 0;padding:0}
-.form .radio{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}
-.form .radio label{display:flex;align-items:center;gap:6px;margin:0;font-weight:400}
-.form .radio input{width:auto}
-.form button{margin-top:24px;width:100%;border:0;cursor:pointer;font-family:inherit}
-.form-note{font-size:12px;color:var(--mute);margin-top:10px}
-.form-note a{text-decoration:underline}
-.form-hint{font-size:12px;color:var(--mute);margin-top:6px}
-.form legend{font-size:15px;margin-top:0;padding-bottom:4px;border-bottom:1px solid #d9d1c4;width:100%}
-.form__row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
-.form__other{margin-top:4px}
-.form__item{display:grid;grid-template-columns:1fr 5em;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid #e3dccf}
-.form .form__item label{margin:0;font-weight:400}
-.confirm h3{font-size:17px;margin-bottom:14px}
-.confirm dl{display:grid;grid-template-columns:9em 1fr;gap:10px 16px;font-size:14px;margin:0}
-.confirm dt{font-weight:600}
-.confirm dd{margin:0}
-.confirm .confirm__total{font-size:18px;font-weight:600;color:var(--beni)}
-.confirm__btns{display:flex;gap:12px;margin-top:24px}
-.confirm__btns .button{flex:1;margin-top:0}
+.product-form fieldset{border:0;margin:26px 0 0;padding:0}
+.product-form__input{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}
+.product-form .product-form__input label{display:flex;align-items:center;gap:6px;margin:0;font-weight:400}
+.product-form .product-form__input input{width:auto}
+.product-form button,.drawer__inner button{margin-top:24px;width:100%;border:0;cursor:pointer;font-family:inherit}
+.instructions{font-size:13px;color:var(--mute);margin-top:6px}
+.product-form>.instructions:first-child{margin:0 0 14px}
+.product-form>.instructions:last-child{margin-top:10px}
+.instructions a{text-decoration:underline}
+.product-form legend{font-size:15px;margin-top:0;padding-bottom:4px;border-bottom:1px solid #d9d1c4;width:100%}
+.grid--2-col{grid-template-columns:1fr 1fr;gap:0 14px}
+#o-other{margin-top:4px}
+.product-form__quantity-selector{display:grid;grid-template-columns:1fr 5em;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid #e3dccf}
+.product-form .product-form__quantity-label{margin:0;font-weight:400}
+.product-form .product-form__quantity-input{padding:10px 5px;text-align:center}
+#date{cursor:pointer}
+.noshi-area{margin:0;padding:10px 5px;background:#fff5ea}
+.product-form fieldset+.noshi-area{margin-top:26px}
+.noshi-area .noshi-title{margin:0 0 6px;font-weight:700}
+.noshi-details,.noshi-name-area{display:none}
+.drawer__inner h3{font-size:17px;margin-bottom:14px}
+.drawer__inner dl{display:grid;grid-template-columns:9em 1fr;gap:10px 16px;font-size:14px;margin:0}
+.drawer__inner dt{font-weight:600}
+.drawer__inner dd{margin:0}
+.drawer__inner .totals__total-value{font-size:18px;font-weight:600;color:var(--beni)}
+.cart__ctas{display:flex;gap:12px;margin-top:24px}
+.cart__ctas .button{flex:1;margin-top:0}
 
 /* 店舗のご案内 */
 .shop{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
 .shop img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.shop__map{display:inline-block;margin-top:16px;padding-bottom:2px;border-bottom:1px solid var(--beni);color:var(--beni);font-size:14px}
-.note-ref{font-size:.82em;vertical-align:super;border-bottom:1px dotted currentColor}
+.shop .button{margin-top:24px}
+.link{font-size:.82em;vertical-align:super;border-bottom:1px dotted currentColor}
 .shop dl{border-top:1px solid var(--line);font-size:14px}
 .shop dl div{display:grid;grid-template-columns:100px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
 .shop dt{color:var(--mute)}
 
 /* フッター */
 .footer{background:var(--foot);padding:64px 0 36px;font-size:13px}
-.footer__blocks{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:40px;max-width:1080px;margin:0 auto;padding:0 20px}
-.footer__blocks li{margin-bottom:8px}
-.footer__tel{text-align:center}
-.footer__tel b{display:block;font-size:26px;font-weight:500;letter-spacing:.08em;margin:4px 0}
-.footer__tel p{font-size:12px;color:var(--mute)}
-.footer__logo{text-align:center;margin:54px 0 30px;font-size:24px;font-weight:600;letter-spacing:.24em;line-height:1.3}
-.footer__logo small{display:block;font-size:11px;font-weight:400;letter-spacing:.16em;color:var(--mute)}
+.footer__blocks-wrapper{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:40px;max-width:1080px;margin:0 auto;padding:0 20px}
+.footer__blocks-wrapper li{margin-bottom:8px}
+.footer .tel{text-align:center}
+.footer .tel b{display:block;font-size:26px;font-weight:500;letter-spacing:.08em;margin:4px 0}
+.footer .tel p{font-size:12px;color:var(--mute)}
+.logo-footer{text-align:center;margin:54px 0 30px;font-size:24px;font-weight:600;letter-spacing:.24em;line-height:1.3}
+.logo-footer small{display:block;font-size:11px;font-weight:400;letter-spacing:.16em;color:var(--mute)}
 .legal{max-width:900px;margin:0 auto;padding:0 20px}
 .legal+.legal{margin-top:12px}
 .legal summary{cursor:pointer;text-align:center;font-size:13px;padding:10px;border:1px solid #d8d3cb;background:#fff}
 .legal dl{margin-top:14px;font-size:12px;line-height:1.7}
 .legal dl div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid #e3dfd8}
-.footer__note{max-width:900px;margin:22px auto 0;padding:0 20px;font-size:11px;color:var(--mute);text-align:center}
-.footer__note a{text-decoration:underline}
-.copyright{text-align:center;font-size:11px;letter-spacing:.1em;margin-top:18px;color:var(--mute);font-family:"Times New Roman",Georgia,serif}
+.footer .caption{max-width:900px;margin:22px auto 0;padding:0 20px;font-size:11px;color:var(--mute);text-align:center}
+.footer .caption a{text-decoration:underline}
+.footer__copyright{text-align:center;font-size:11px;letter-spacing:.1em;margin-top:18px;color:var(--mute);font-family:"Times New Roman",Georgia,serif}
 
 /* 動き */
-[data-rise]{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
-[data-rise].is-in{opacity:1;transform:none}
+.ani-block{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
+.ani-block.fade-in{opacity:1;transform:none}
 
 /* スマートフォン */
-.sp-cta{display:none}
+.sp-show{display:none}
 @media (max-width:900px){
-  .order,.shop,.gift{grid-template-columns:1fr}
-  .footer__blocks{grid-template-columns:1fr 1fr}
-  .footer__tel{grid-column:1/-1}
+  .grid--2-col-tablet,.shop,.image-with-text__grid{grid-template-columns:1fr}
+  .footer__blocks-wrapper{grid-template-columns:1fr 1fr}
+  .footer .tel{grid-column:1/-1}
 }
 @media (max-width:767px){
   /* 上端の帯とヘッダーが1段に畳まれるぶん、飛び先の手前に空く余白を詰める */
   html{scroll-padding-top:64px}
   body{font-size:14px}
-  .order__aside{position:static}
-  .section-template{padding:56px 0}
+  .side_navi{position:static}
+  .section{padding:56px 0}
   .title{font-size:21px;gap:12px;letter-spacing:.16em}
   .title::before,.title::after{width:24px}
-  .announcement-bar{font-size:11px}
-  .header__top{padding:12px 16px}
+  .header__notice{font-size:11px}
+  .header__inner{padding:12px 16px}
   .header__heading{font-size:19px}
-  .header__tel,.header__icons .button{display:none}
-  .menu-drawer__toggle{display:block;width:44px;height:44px;padding:0;border:0;background:var(--gray);color:#fff;font:inherit;font-size:10px;line-height:44px;letter-spacing:.1em;cursor:pointer}
-  .header__menu{display:none;flex-direction:column;align-items:stretch;padding:0 0 12px;background:#fff}
-  .is-open .header__menu{display:flex}
+  .header__icons .tel,.header__icons .button{display:none}
+  .hamburger{display:block;width:44px;height:44px;padding:0;border:0;background:var(--gray);color:#fff;font:inherit;font-size:10px;line-height:44px;letter-spacing:.1em;cursor:pointer}
+  .bottom-ul{display:none;flex-direction:column;align-items:stretch;padding:0 0 12px;background:#fff}
+  .bottom-ul.active{display:flex}
   .list-menu__item{padding:12px 20px;border-top:1px solid var(--line)}
-  .banner__slide{grid-template-columns:1fr;min-height:0}
+  .slideshow__slide{grid-template-columns:1fr;min-height:0}
   .banner__media{order:-1}
   .banner__media img{aspect-ratio:4/3}
-  .banner__text{padding:26px 18px 44px}
-  .banner__name{font-size:21px}
-  .grid--4{grid-template-columns:1fr 1fr}
-  .grid--3{grid-template-columns:1fr}
-  .product{grid-template-columns:1fr;gap:20px}
-  .product__media{max-width:280px}
-  .season-buy .button{display:flex;width:fit-content;margin:14px auto 0}
-  .gift h3{font-size:17px;letter-spacing:.06em}
-  .keep{grid-template-columns:1fr}
+  .banner__content{padding:26px 18px 44px}
+  .banner__heading{font-size:21px}
+  .grid--4-col-desktop{grid-template-columns:1fr 1fr}
+  .grid--3-col-desktop{grid-template-columns:1fr}
+  .card{grid-template-columns:1fr;gap:20px}
+  .card__media{max-width:280px}
+  .center .button{display:flex;width:fit-content;margin:14px auto 0}
+  .image-with-text__grid h3{font-size:17px;letter-spacing:.06em}
+  .f_guide{grid-template-columns:1fr}
   .history{padding:24px 18px}
   .history li{grid-template-columns:1fr;gap:2px}
-  .form{padding:22px 18px}
-  .form__row,.confirm dl{grid-template-columns:1fr}
-  .confirm dl{gap:2px}
-  .confirm dd{margin-bottom:8px}
-  .footer__blocks{grid-template-columns:1fr}
+  .product-form,.drawer__inner{padding:22px 18px}
+  .grid--2-col,.drawer__inner dl{grid-template-columns:1fr}
+  .drawer__inner dl{gap:2px}
+  .drawer__inner dd{margin-bottom:8px}
+  .footer__blocks-wrapper{grid-template-columns:1fr}
   .legal dl div{grid-template-columns:1fr;gap:2px}
-  .sp-cta{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40}
-  .sp-cta a{display:flex;align-items:center;justify-content:center;height:52px;color:#fff;font-size:14px;letter-spacing:.1em}
-  .sp-cta a:first-child{background:var(--beni)}
-  .sp-cta a:last-child{background:#5b4f4a}
+  .sp-show{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40}
+  .sp-show a{display:flex;align-items:center;justify-content:center;height:52px;color:#fff;font-size:14px;letter-spacing:.1em}
+  .sp-show a:first-child{background:var(--beni)}
+  .sp-show a:last-child{background:#5b4f4a}
   .footer{padding-bottom:80px}
 }
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  [data-rise]{opacity:1;transform:none;transition:none}
+  .ani-block{opacity:1;transform:none;transition:none}
 }
 @media print{
-  [data-rise]{opacity:1!important;transform:none!important}
+  .ani-block{opacity:1!important;transform:none!important}
   .header{position:static}
-  .sp-cta,.announcement-bar{display:none!important}
+  .sp-show,.header__notice{display:none!important}
   .legal dl{display:block}
 }
 /* 和文の折り返し。数字と単位の間は pretty でも割れるので .nw で括る */
@@ -303,29 +310,29 @@ p,li,dd,dt,th,td,figcaption,summary,blockquote{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 .nw{white-space:nowrap}
 </style>
-<noscript><style>[data-rise]{opacity:1;transform:none}</style></noscript>
+<noscript><style>.ani-block{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
-<div class="announcement-bar">「初霜」「川霧」は、税込8,640円以上のご注文で送料無料です<a href="#shipping">送料と日持ち</a></div>
+<div class="header__notice">「初霜」「川霧」は、税込8,640円以上のご注文で送料無料です<a href="#shipping">送料と保存方法</a></div>
 
 <header class="header">
-  <div class="header__top">
+  <div class="header__inner">
     <h1 class="header__heading"><small>松江・明治三十二年創業</small><a href="#top">御菓子司 玉水</a></h1>
     <div class="header__icons">
-      <p class="header__tel"><span>お電話でのご注文</span><b><a href="tel:0852000000">0852-00-0000</a></b></p>
+      <p class="tel"><span>お電話でのご注文</span><b><a href="tel:0852000000">0852-00-0000</a></b></p>
       <a class="button" href="#order">ご注文</a>
-      <button class="menu-drawer__toggle" type="button" aria-expanded="false" aria-controls="menu">MENU</button>
+      <button class="hamburger" type="button" aria-expanded="false" aria-controls="menu">MENU</button>
     </div>
   </div>
   <nav id="menu" aria-label="ページ内の案内">
-    <ul class="header__menu">
+    <ul class="bottom-ul">
       <li><a class="list-menu__item" href="#news">お知らせ</a></li>
       <li><a class="list-menu__item" href="#season">季節の和菓子</a></li>
       <li><a class="list-menu__item" href="#products">お品書き</a></li>
       <li><a class="list-menu__item" href="#gift">贈り物とのし</a></li>
       <li><a class="list-menu__item" href="#about">玉水のこだわり</a></li>
-      <li><a class="list-menu__item" href="#shipping">送料と日持ち</a></li>
+      <li><a class="list-menu__item" href="#shipping">送料と保存方法</a></li>
       <li><a class="list-menu__item" href="#faq">よくあるご質問</a></li>
       <li><a class="list-menu__item" href="#shop">店舗のご案内</a></li>
     </ul>
@@ -334,14 +341,14 @@ h1,h2,h3{text-wrap:balance}
 
 <main id="top">
 <section class="banner" aria-label="おすすめの詰合せ">
-  <div class="banner__slide">
-    <div class="banner__text">
-      <p class="banner__catch">松江の茶席に納めてきた上生菓子</p>
-      <p class="banner__name">上生菓子詰合せ「季」</p>
-      <p class="banner__price"><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）</p>
-      <a class="banner__link" href="#toki">詳しく見る<span>→</span></a>
-      <p class="banner__others-title">ほかの詰合せ</p>
-      <ul class="banner__others">
+  <div class="slideshow__slide">
+    <div class="banner__content">
+      <p class="banner__text">松江の茶席に納めてきた上生菓子</p>
+      <p class="banner__heading">上生菓子詰合せ「季」</p>
+      <p class="price"><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）</p>
+      <a class="btn-wrapper" href="#toki">詳しく見る<span>→</span></a>
+      <p class="sub-ttl">ほかの詰合せ</p>
+      <ul>
         <li><a href="#hatsushimo"><img src="img/yokan_cut.jpg" alt="染付皿にのせた練羊羹">羊羹詰合せ「初霜」</a></li>
         <li><a href="#kawagiri"><img src="img/monaka.jpg" alt="俵形の最中と、その割り口">半生菓子詰合せ「川霧」</a></li>
       </ul>
@@ -350,145 +357,145 @@ h1,h2,h3{text-wrap:balance}
   </div>
 </section>
 
-<section class="section-template" id="news">
+<section class="section" id="news">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">お知らせ</h2><span class="title__en">INFORMATION</span></div>
-    <ul class="news-list" data-rise>
-      <li><time datetime="2026-08-25"><span class="nw">2026年8月25日</span></time><p>敬老の日のご進物のご予約を承っております。表書きは「敬老の日」「寿」からお選びいただけます。</p></li>
-      <li><time datetime="2026-08-01"><span class="nw">2026年8月1日</span></time><p>長月の上生菓子の販売が<span class="nw">9月1日</span>よりはじまります。詳しくは、<a href="#season">季節の和菓子</a>をご覧ください。</p></li>
-      <li><time datetime="2026-07-10"><span class="nw">2026年7月10日</span></time><p>7〜9月は、「初霜」「川霧」もクール便でお送りします。詳しくは、<a href="#shipping">送料と日持ち</a>をご覧ください。</p></li>
+    <div class="title-wrapper ani-block"><h2 class="title">お知らせ</h2><span class="sub-title">INFORMATION</span></div>
+    <ul class="blog__posts ani-block">
+      <li><time datetime="2026-08-25"><span class="nw">2026年8月25日</span></time><p>今年の敬老の日は<span class="nw">9月21日</span>です。敬老の日にお届けするご注文は、<span class="nw">9月16日</span>までにお願いいたします。</p></li>
+      <li><time datetime="2026-08-01"><span class="nw">2026年8月1日</span></time><p>長月の上生菓子の販売開始は<span class="nw">9月1日</span>です。詳しくは、<a href="#season">季節の和菓子</a>をご覧ください。</p></li>
+      <li><time datetime="2026-07-10"><span class="nw">2026年7月10日</span></time><p>7〜9月は、「初霜」「川霧」も<span class="nw">クール</span>便でお送りします。<a href="#shipping">送料と保存方法</a>をご覧ください。</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section-template section-template--beige" id="season">
+<section class="section color-scheme-3" id="season">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">季節の和菓子</h2><span class="title__en">SEASON</span></div>
-    <div class="grid grid--4" data-rise>
-      <figure class="card-photo"><img src="img/tsukimi.jpg" alt="黒い皿にのせた白い薯蕷饅頭" loading="lazy"><figcaption><span>薯蕷饅頭</span>月見</figcaption></figure>
-      <figure class="card-photo"><img src="img/kikyo.jpg" alt="紫の花の練り切り" loading="lazy"><figcaption><span>練り切り</span>桔梗</figcaption></figure>
-      <figure class="card-photo"><img src="img/kurinoko.jpg" alt="茶巾絞りの栗きんとん" loading="lazy"><figcaption><span>栗きんとん</span>栗の子</figcaption></figure>
-      <figure class="card-photo"><img src="img/hatsukari.jpg" alt="白い布に広げた青と紫の琥珀糖" loading="lazy"><figcaption><span>琥珀糖</span>初雁</figcaption></figure>
+    <div class="title-wrapper ani-block"><h2 class="title">季節の和菓子</h2><span class="sub-title">SEASON</span></div>
+    <div class="grid grid--4-col-desktop ani-block">
+      <figure class="multicolumn-card"><img src="img/tsukimi.jpg" alt="黒い皿にのせた白い薯蕷饅頭" loading="lazy"><figcaption><span>薯蕷饅頭</span>月見</figcaption></figure>
+      <figure class="multicolumn-card"><img src="img/kikyo.jpg" alt="紫の花の練り切り" loading="lazy"><figcaption><span>練り切り</span>桔梗</figcaption></figure>
+      <figure class="multicolumn-card"><img src="img/kurinoko.jpg" alt="茶巾絞りの栗きんとん" loading="lazy"><figcaption><span>栗きんとん</span>栗の子</figcaption></figure>
+      <figure class="multicolumn-card"><img src="img/hatsukari.jpg" alt="白い布に広げた青と紫の琥珀糖" loading="lazy"><figcaption><span>琥珀糖</span>初雁</figcaption></figure>
     </div>
-    <p class="lead" data-rise>長月の上生菓子は「月見」「桔梗」「栗の子」です。琥珀糖の「初雁」は、店頭のみの販売となります。</p>
-    <p class="season-buy" data-rise>上生菓子詰合せ「季」<br><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）<a class="button" href="#order">ご注文</a></p>
+    <p class="rte-width ani-block">長月の上生菓子は月見・桔梗・栗の子です。琥珀糖の初雁は、店頭販売の商品です。</p>
+    <p class="center ani-block">季（上生菓子詰合せ）<br><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）<a class="button" href="#order">ご注文</a></p>
   </div>
 </section>
 
-<section class="section-template" id="products">
+<section class="section" id="products">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">お品書き</h2><span class="title__en">PRODUCTS</span></div>
-    <div class="product-list">
-      <article class="product" id="toki" data-rise>
-        <div class="product__media"><img src="img/toki.jpg" alt="葉の形の青磁皿にのせた上生菓子三つとフォーク" loading="lazy"></div>
-        <div class="product__info">
-          <h3 class="product__name">季<small>TOKI</small></h3>
-          <span class="product__kind">上生菓子詰合せ・冷蔵</span>
-          <p class="product__price"><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）</p>
-          <p class="product__desc">その月の上生菓子<span class="nw">3種類</span>を、<span class="nw">2個</span>ずつお詰めいたします。</p>
-          <dl class="product__spec">
+    <div class="title-wrapper ani-block"><h2 class="title">お品書き</h2><span class="sub-title">PRODUCTS</span></div>
+    <div class="product-grid">
+      <article class="card ani-block" id="toki">
+        <div class="card__media"><img src="img/toki.jpg" alt="葉の形の青磁皿にのせた上生菓子三つとフォーク" loading="lazy"></div>
+        <div class="card__content">
+          <h3 class="card__heading">季<small>TOKI</small></h3>
+          <span class="card__badge">上生菓子詰合せ・冷蔵</span>
+          <p class="price"><span class="nw">6個</span>入<span class="price-item">4,320円</span>（税込）</p>
+          <p class="rte">その月の上生菓子<span class="nw">3種類</span>を、<span class="nw">2個</span>ずつお詰めいたします。写真は一例です。</p>
+          <dl>
             <div><dt>原材料名</dt><dd>白いんげん豆（手亡豆）、砂糖、小豆、栗、やまいも、米粉／着色料（<span class="nw">紅麹</span>、<span class="nw">クチナシ</span>）</dd></div>
-            <div><dt>アレルゲン</dt><dd>特定原材料（表示が義務づけられた<span class="nw">9品目</span>）は使用しておりません。薯蕷饅頭にやまいも（表示が推奨される品目）を使用しております。同じ工房で、小麦と卵を使用する菓子も製造しております。</dd></div>
+            <div><dt>アレルゲン</dt><dd>特定原材料は使用しておりません。特定原材料に準ずるもののうち、やまいもを薯蕷饅頭に使用しております。本品の製造所では、小麦・卵を含む菓子も製造しております。</dd></div>
             <div><dt>消費期限</dt><dd>製造日から<span class="nw">4日</span>（要冷蔵）。お届け時点での日持ちは<span class="nw">2日</span>以上です。</dd></div>
           </dl>
         </div>
       </article>
-      <article class="product" id="hatsushimo" data-rise>
-        <div class="product__media"><img src="img/yokan2.jpg" alt="練羊羹の一切れと葛饅頭" loading="lazy"></div>
-        <div class="product__info">
-          <h3 class="product__name">初霜<small>HATSUSHIMO</small></h3>
-          <span class="product__kind">羊羹詰合せ・常温</span>
-          <p class="product__price">2棹入<span class="price-item">2,916円</span>（税込）<br>4棹入<span class="nw">5,400円</span>（税込）</p>
-          <p class="product__desc">本練と小倉の詰合せです。第<span class="nw">27回</span>全国菓子大博覧会にて名誉総裁賞<a class="note-ref" href="#note">※</a>を受賞いたしました。</p>
-          <dl class="product__spec">
+      <article class="card ani-block" id="hatsushimo">
+        <div class="card__media"><img src="img/yokan2.jpg" alt="練羊羹の一切れと葛饅頭" loading="lazy"></div>
+        <div class="card__content">
+          <h3 class="card__heading">初霜<small>HATSUSHIMO</small></h3>
+          <span class="card__badge">羊羹詰合せ・常温</span>
+          <p class="price"><span class="nw">2棹</span>入<span class="price-item">2,916円</span>（税込）<br><span class="nw">4棹</span>入<span class="nw">5,400円</span>（税込）</p>
+          <p class="rte">本練と小倉の詰合せです。本練は、全国菓子大博覧会名誉総裁賞<a class="link" href="#note">※</a>の受賞品です。</p>
+          <dl>
             <div><dt>原材料名</dt><dd>小豆、砂糖（白双糖）、寒天</dd></div>
-            <div><dt>アレルゲン</dt><dd>特定原材料（表示が義務づけられた<span class="nw">9品目</span>）も、表示が推奨される品目も使用しておりません。同じ工房で、小麦と卵を使用する菓子も製造しております。</dd></div>
+            <div><dt>アレルゲン</dt><dd>特定原材料も、特定原材料に準ずるものも使用しておりません。本品の製造所では、小麦・卵を含む菓子も製造しております。</dd></div>
             <div><dt>賞味期限</dt><dd>製造日から<span class="nw">90日</span>（常温）。お届け時点での日持ちは<span class="nw">60日</span>以上です。</dd></div>
           </dl>
         </div>
       </article>
-      <article class="product" id="kawagiri" data-rise>
-        <div class="product__media"><img src="img/kawagiri.jpg" alt="どら焼き・焼き菓子・シュークリームを詰めた白い菓子箱" loading="lazy"></div>
-        <div class="product__info">
-          <h3 class="product__name">川霧<small>KAWAGIRI</small></h3>
-          <span class="product__kind">半生菓子詰合せ・常温</span>
-          <p class="product__price"><span class="nw">8個</span>入<span class="price-item"><span class="nw">3,780円</span></span>（税込）<br><span class="nw">16個</span>入<span class="nw">7,020円</span>（税込）</p>
-          <p class="product__desc">最中<span class="nw">2種</span>・一口栗羊羹・桃山の<span class="nw">4種類</span>を、<span class="nw">8個</span>入は<span class="nw">2個</span>ずつ、<span class="nw">16個</span>入は<span class="nw">4個</span>ずつお詰めいたします。</p>
-          <dl class="product__spec">
+      <article class="card ani-block" id="kawagiri">
+        <div class="card__media"><img src="img/kawagiri.jpg" alt="どら焼き・焼き菓子・シュークリームを詰めた白い菓子箱" loading="lazy"></div>
+        <div class="card__content">
+          <h3 class="card__heading">川霧<small>KAWAGIRI</small></h3>
+          <span class="card__badge">半生菓子詰合せ・常温</span>
+          <p class="price"><span class="nw">8個</span>入<span class="price-item"><span class="nw">3,780円</span></span>（税込）<br><span class="nw">16個</span>入<span class="nw">7,020円</span>（税込）</p>
+          <p class="rte">最中<span class="nw">2種</span>・一口栗羊羹・桃山の<span class="nw">4種類</span>を、<span class="nw">8個</span>入は<span class="nw">2個</span>ずつ、<span class="nw">16個</span>入は<span class="nw">4個</span>ずつお詰めいたします。</p>
+          <dl>
             <div><dt>原材料名</dt><dd>小豆、砂糖（和三盆糖、白双糖）、もち米、鶏卵、白いんげん豆（手亡豆）、栗、寒天</dd></div>
-            <div><dt>アレルゲン</dt><dd>桃山に卵を使用しております。表示が推奨される品目は使用しておりません。同じ工房で、小麦を使用する菓子も製造しております。</dd></div>
+            <div><dt>アレルゲン</dt><dd>特定原材料のうち、卵を桃山に使用しております。特定原材料に準ずるものは使用しておりません。本品の製造所では、小麦を含む菓子も製造しております。</dd></div>
             <div><dt>賞味期限</dt><dd>製造日から<span class="nw">30日</span>（常温）。お届け時点での日持ちは<span class="nw">20日</span>以上です。</dd></div>
           </dl>
         </div>
       </article>
     </div>
-    <p class="product-note" data-rise>お届けする箱に、名称・原材料名・添加物・内容量・期限・保存方法・製造者を表示しております。</p>
+    <p class="caption ani-block">商品の箱に名称・原材料名・添加物・内容量・期限・保存方法・製造者を表示しております。</p>
   </div>
 </section>
 
-<section class="section-template section-template--beige" id="gift">
+<section class="section color-scheme-3" id="gift">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">贈り物とのし</h2><span class="title__en">GIFT</span></div>
-    <div class="gift">
-      <div class="gift__col" data-rise>
-        <div class="gift__photos">
+    <div class="title-wrapper ani-block"><h2 class="title">贈り物とのし</h2><span class="sub-title">GIFT</span></div>
+    <div class="image-with-text__grid">
+      <div class="image-with-text__media-item ani-block">
+        <div class="image-with-text__media">
           <figure><img src="img/noshi.jpg" alt="蝶結びの水引を刷ったのし紙を掛けた菓子箱と、包装した箱" loading="lazy"><figcaption>蝶結びののし紙</figcaption></figure>
           <figure><img src="img/gift.jpg" alt="御礼ののし紙" loading="lazy"><figcaption>表書き「御礼」ののし紙</figcaption></figure>
         </div>
         <h3>箱の大きさ</h3>
-        <ul class="box-sizes">
-          <li><b>季</b>6個入（18×12×6cm）</li>
-          <li><b>川霧</b>8個入（18×14×6cm）・16個入（27×18×6cm）</li>
-          <li><b>初霜</b>2棹入（26×12×6cm）・4棹入（26×26×6cm）</li>
+        <ul>
+          <li><b>季</b><span><span class="nw">6個</span>入（18×12×6cm）</span></li>
+          <li><b>初霜</b><span><span class="nw">2棹</span>入（26×12×6cm）・<span class="nw">4棹</span>入（26×26×6cm）</span></li>
+          <li><b>川霧</b><span><span class="nw">8個</span>入（18×14×6cm）・<span class="nw">16個</span>入（27×18×6cm）</span></li>
         </ul>
       </div>
-      <div data-rise>
+      <div class="ani-block">
         <h3>のし紙・掛け紙と名入れは無料です</h3>
-        <p>ご用途とお名前は、ご注文<span class="nw">フォーム</span>の「のし・掛け紙の用途」と「のし・掛け紙の名入れ」にご記入ください。表書きはご用途に合わせて、当店でお入れいたします。</p>
-        <p>内のしは、箱に直接のし紙を掛け、その上から包装紙でお包みいたします。外のしは、包装紙でお包みした上から、のし紙をお掛けいたします。どちらも承ります。お送りする場合は内のし、お手渡しの場合は外のしをおすすめしております。</p>
-        <p>弔事には、黒白または黄白の結び切りの掛け紙をご用意しております。「御供」「志」「粗供養」の表書きも承ります。掛け紙の様式は地域により異なる場合がございますので、ご用途とお届け先の地域をお知らせください。</p>
-        <p>お中元、お歳暮、お盆とお彼岸のご進物も承ります。</p>
-        <p class="voice">「法要の返礼に選びました。掛け紙の表書きをお店に相談したところ、私の住む地域の慣習まで教えていただけました」<cite><span class="nw">2025年3月</span>・50代のお客様</cite></p>
+        <p>ご用途と名入れのご希望をお知らせください。表書きはご用途に合わせて、当店でお書きいたします。</p>
+        <p>内のしは、箱に直接のし紙を掛け、その上から包装紙で包む方法です。外のしは、箱を包装紙で包んだ上から、のし紙を掛ける方法です。どちらも承ります。お送りする場合は内のしをおすすめしております。お手渡しの場合は外のしが一般的です。</p>
+        <p>また弔事用の掛け紙もご用意しております。水引は黒白・黄白の結び切りです。表書きは「御供」「志」「粗供養」などをお書きいたします。お盆・お彼岸のお供えも承ります。水引の色は地域により異なる場合がございます。ご用途とお届け先の地域をお知らせください。</p>
+        <p>お中元・お歳暮のご進物も承ります。</p>
+        <p>「法要の返礼に選びました。掛け紙の表書きをお店に相談したところ、私の住む地域の慣習まで教えていただきました」<cite><span class="nw">2025年3月</span>・50代のお客様</cite></p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-template" id="about">
+<section class="section" id="about">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">玉水のこだわり</h2><span class="title__en">ABOUT</span></div>
-    <div class="grid grid--3">
-      <article class="commit__card" data-rise>
-        <div class="commit__media"><img src="img/hands.jpg" alt="職人の手と練り切り" loading="lazy"><span class="commit__label">茶席の菓子</span></div>
-        <p>松江には、松江藩七代藩主・松平治郷（不昧公）が広めた茶の湯が、いまも受け継がれています。玉水は城下の菓子屋として、茶席の菓子を納めてまいりました。</p>
+    <div class="title-wrapper ani-block"><h2 class="title">玉水のこだわり</h2><span class="sub-title">ABOUT</span></div>
+    <div class="grid grid--3-col-desktop">
+      <article class="grid__item ani-block">
+        <div class="img-wrapper"><img src="img/hands.jpg" alt="職人の手と練り切り" loading="lazy"><span class="num">茶席の菓子</span></div>
+        <p>松江には、江戸時代に松江藩七代藩主・松平治郷（不昧公）が広めた茶の湯が、いまも受け継がれています。明治期に創業した当店は、城下の菓子屋として歩んでまいりました。上生菓子は、代々松江の茶席に納めております。</p>
       </article>
-      <article class="commit__card" data-rise>
-        <div class="commit__media"><img src="img/anko.jpg" alt="両手ですくった小豆" loading="lazy"><span class="commit__label">十勝の小豆</span></div>
+      <article class="grid__item ani-block">
+        <div class="img-wrapper"><img src="img/anko.jpg" alt="両手ですくった小豆" loading="lazy"><span class="num">餡と砂糖</span></div>
         <p>北海道十勝産の小豆と、白餡用の手亡豆を使い、毎朝<span class="nw">5時</span>から銅鍋で餡を炊いております。砂糖はそれぞれの菓子に合わせて、和三盆糖と白双糖を使い分けております。</p>
       </article>
-      <article class="commit__card" data-rise>
-        <div class="commit__media"><img src="img/tsumeawase.jpg" alt="黒塗りの盆にのせた上生菓子三つ（紫陽花・白い花・青葉にてんとう虫）" loading="lazy"><span class="commit__label">お稽古と法要</span></div>
-        <p>お稽古やご法要の菓子のご注文も承っております。当日の朝に仕上げた品を、松江市内の会場までお届けいたします。</p>
+      <article class="grid__item ani-block">
+        <div class="img-wrapper"><img src="img/tsumeawase.jpg" alt="黒塗りの盆にのせた上生菓子三つ（紫陽花・白い花・青葉にてんとう虫）" loading="lazy"><span class="num">お稽古と法要</span></div>
+        <p>お稽古やご法要の菓子は、当日の朝に仕上げ、松江市内のお稽古場やお寺までお届けいたします。</p>
       </article>
     </div>
-    <div class="history" data-rise>
+    <div class="history ani-block">
       <h3>玉水のあゆみ</h3>
       <ol>
-        <li><b>明治三十二年</b><span>初代が松江・白潟に店を開く。近隣の茶席へ菓子を納める</span></li>
+        <li><b>明治三十二年</b><span>初代が松江・白潟に店を開き、茶席に菓子を納める</span></li>
         <li><b>昭和二十七年</b><span>砂糖の統制が解け、戦中から休んでいた店を二代目が再開</span></li>
         <li><b>昭和四十八年</b><span>三代目が継ぎ、上生菓子の銘を月替わりにする</span></li>
         <li><b>平成二十年</b><span>四代目（当代）が継ぐ。遠方へ移ったお客様から「同じものを送ってほしい」と頼まれ、通販を始める</span></li>
-        <li><b>平成二十九年</b><span>第二十七回全国菓子大博覧会（三重）で、「初霜」が名誉総裁賞<a class="note-ref" href="#note">※</a>を受ける</span></li>
+        <li><b>平成二十九年</b><span>第二十七回全国菓子大博覧会（三重）で、「初霜」の本練が名誉総裁賞<a class="link" href="#note">※</a>を受ける</span></li>
       </ol>
     </div>
   </div>
 </section>
 
-<section class="section-template section-template--beige" id="shipping">
+<section class="section color-scheme-3" id="shipping">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">送料と日持ち</h2><span class="title__en">SHIPPING</span></div>
-    <div class="table-wrap" data-rise>
-      <table class="shipping-table">
+    <div class="title-wrapper ani-block"><h2 class="title">送料と保存方法</h2><span class="sub-title">SHIPPING</span></div>
+    <div class="shipFee ani-block">
+      <table>
         <caption class="visually-hidden">お届け先ごとの送料（税込）</caption>
         <thead><tr><th scope="col">お届け先</th><th scope="col">常温便</th><th scope="col"><span class="nw">クール便</span><span class="nw">（冷蔵）</span></th></tr></thead>
         <tbody>
@@ -499,151 +506,160 @@ h1,h2,h3{text-wrap:balance}
         </tbody>
       </table>
     </div>
-    <ul class="notes" data-rise>
-      <li>「初霜」「川霧」は、税込8,640円以上のご注文で送料が無料になります。お届け先が複数の場合は、<span class="nw">1件</span>ごとのご注文額が対象です。「季」の代金は、送料無料の計算には含まれませんので、ご了承ください。</li>
-      <li>「季」と「初霜」「川霧」を一緒にご注文の場合は、クール便と常温便に分けてお送りするため、「季」の送料を別途いただきます。</li>
-      <li>代金引換の手数料<span class="nw">330円</span>はお客様のご負担となります。</li>
+    <ul class="smaller ani-block">
+      <li>「初霜」「川霧」は、税込8,640円以上のご注文で送料が無料になります。送料無料はお届け先ごとに判定されます。</li>
+      <li>「季」は<span class="nw">クール</span>便で、「初霜」「川霧」とは分けてお送りします。「季」の送料は無料にならず、代金も送料無料の対象金額には含まれません。</li>
+      <li>代金引換手数料は一律<span class="nw">330円</span>です。</li>
       <li>7〜9月は「初霜」「川霧」も<span class="nw">クール</span>便でお送りします。送料は常温便の額のままです。</li>
-      <li>お届けは<span class="nw">ヤマト</span>運輸の宅急便です。発送のご連絡の際に、お問い合わせ番号をお知らせいたします。</li>
+      <li><span class="nw">ヤマト</span>運輸でお届けします。発送後、お問い合わせ番号のご案内をいたします。</li>
     </ul>
-    <div class="keep" data-rise>
+    <div class="f_guide ani-block">
       <div>
         <h3>「季」の保存方法</h3>
         <p>冷蔵庫で保存してください。召し上がる<span class="nw">30分</span>ほど前に冷蔵庫から出しておくと、餡のやわらかさが戻ります。</p>
       </div>
       <div>
-        <h3>「初霜」「川霧」の保存方法</h3>
-        <p>直射日光と高温多湿を避け、常温で保存してください。7〜9月に<span class="nw">クール</span>便でお届けした品も、お受け取りのあとは常温で保存してください。冷蔵庫に入れられますと、固くなる場合がございます。開封後はお早めにお召し上がりください。</p>
+        <h3>「初霜」と「川霧」の保存方法</h3>
+        <p>直射日光、高温多湿の場所を避け、常温での保存をお願いいたします。7〜9月に<span class="nw">クール</span>便でお届けした品も同様です。冷蔵庫に入れると、固くなる場合がございます。開封後はお早めにお召し上がりください。</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-template" id="faq">
+<section class="section" id="faq">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">よくあるご質問</h2><span class="title__en">QUESTIONS</span></div>
-    <div class="qa">
-      <div class="qa__item" data-rise><h3 class="qa__q">1．お届け日と時間帯を指定できますか？</h3><p class="qa__a">ご注文<span class="nw">フォーム</span>でお選びいただけます。お届け日は、ご注文より<span class="nw">5日</span>後からご指定いただけます。</p></div>
-      <div class="qa__item" data-rise><h3 class="qa__q">2．上生菓子詰合せ「季」の中身は選べますか？</h3><p class="qa__a">「季」は、その月の上生菓子<span class="nw">3種類</span>をお詰めしております。中身のご指定は承っておりません。召し上がれない原材料がございましたら、ご注文の前にお電話でご相談ください。</p></div>
-      <div class="qa__item" data-rise><h3 class="qa__q">3．領収書をお願いできますか？</h3><p class="qa__a">ご注文者様へのお届けの場合は、品物に同封いたします。ご注文者様とお届け先が異なる場合は、品物には同封せず、別途ご注文者様宛に郵送いたします。宛名とただし書きは、ご注文<span class="nw">フォーム</span>の備考にお書き添えください。領収書には、適格請求書発行事業者の登録番号を記載いたします。</p></div>
-      <div class="qa__item" data-rise><h3 class="qa__q">4．複数のお届け先へ送れますか？</h3><p class="qa__a">承っております。お手数ですが、お届け先ごとにご注文いただくか、お電話でご相談ください。送料はお届け先<span class="nw">1件</span>ごとにかかります。</p></div>
-      <div class="qa__item" data-rise><h3 class="qa__q">5．手提げ袋を付けていただけますか？</h3><p class="qa__a">ご注文の箱の数だけ、無料でお付けいたします。箱の数と異なる枚数をご希望の場合は、ご注文<span class="nw">フォーム</span>の備考にお書き添えください。</p></div>
+    <div class="title-wrapper ani-block"><h2 class="title">よくあるご質問</h2><span class="sub-title">QUESTIONS</span></div>
+    <div class="sysContent">
+      <div class="txtBlock ani-block"><h3 class="pattern01">1．お届け日と時間帯を指定できますか？</h3><p>ご注文<span class="nw">フォーム</span>でお選びいただけます。お届け日はご注文日の<span class="nw">5日</span>後からご指定いただけます。</p></div>
+      <div class="txtBlock ani-block"><h3 class="pattern01">2．上生菓子詰合せの中身は？</h3><p>その月の上生菓子3種類を、<span class="nw">2個</span>ずつお詰めしております。中身のご指定は承っておりません。召し上がれない原材料がございましたら、ご注文の前にお電話でご相談ください。</p></div>
+      <div class="txtBlock ani-block"><h3 class="pattern01">3．領収書は発行できますか？</h3><p>ご注文者様へのお届けの場合は、領収書を品物に同封いたします。ご注文者様とお届け先のご住所が異なる場合、領収書は同封せず、別途ご注文者様宛に郵送いたします。領収書がご入用の場合は、ご注文<span class="nw">フォーム</span>の備考欄に宛名とただし書きをご記入ください。発行される領収書には、適格請求書発行事業者登録番号が記載されます。</p></div>
+      <div class="txtBlock ani-block"><h3 class="pattern01">4．複数のお届け先に送ることはできますか？</h3><p>承っております。お届け先ごとにご注文ください。お電話でもご相談いただけます。送料はお届け先ごとに計算されます。</p></div>
+      <div class="txtBlock ani-block"><h3 class="pattern01">5．手提げ袋のご用意はありますか？</h3><p>箱の数だけ、無料でお付けいたします。追加をご希望の場合はご注文時に備考欄にて袋の枚数をお書き添えください。</p></div>
     </div>
   </div>
 </section>
 
-<section class="section-template section-template--beige" id="order">
+<section class="section color-scheme-3" id="order">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">ご注文</h2><span class="title__en">ORDER</span></div>
-    <div class="order">
-      <div class="order__aside" data-rise>
+    <div class="title-wrapper ani-block"><h2 class="title">ご注文</h2><span class="sub-title">ORDER</span></div>
+    <div class="grid grid--2-col-tablet">
+      <div class="side_navi ani-block">
         <ol class="steps">
-          <li><b>一</b><span>詰合せと数量、お届け日をお選びください。</span></li>
-          <li><b>二</b><span>ご注文者とお届け先をご記入ください。のし紙・掛け紙をご希望の方は、用途と名入れもご記入ください。</span></li>
-          <li><b>三</b><span>お支払い方法をお選びいただき、確認画面で合計額をお確かめのうえ、ご注文を確定してください。</span></li>
+          <li><b>一</b><span>詰合せの数量をご指定ください。ご希望のお届け日をお選びください。</span></li>
+          <li><b>二</b><span>ご注文者様・お届け先の情報をご記入ください。のし紙・掛け紙をご希望の方は、用途と名入れもご記入ください。</span></li>
+          <li><b>三</b><span>お支払いの方法をご指定ください。ご注文内容をご確認のうえ、ご注文を確定してください。</span></li>
         </ol>
-        <div class="order__tel">
+        <div class="tel">
           <p>お電話でのご注文・お問い合わせ</p>
           <b><a href="tel:0852000000">0852-00-0000</a></b>
           <p>受付9:00〜18:00</p>
           <p>水曜定休</p>
         </div>
       </div>
-      <form class="form" id="order-form" data-rise>
-        <p class="form-lead"><span class="req">必須</span>の印がある欄にご記入のうえ、確認画面へお進みください。</p>
+      <form class="product-form ani-block" id="order-form">
+        <p class="instructions"><span class="noshi-required">必須</span>項目をご記入のうえ、確認画面までお進みください。</p>
         <fieldset>
-          <legend>詰合せと数量<span class="req">必須</span></legend>
-          <div class="form__item"><label for="q-toki">季　上生菓子<span class="nw">6個</span>入　<span class="nw">4,320円</span></label><select id="q-toki" name="q-toki" data-price="4320" data-cool="1"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-          <div class="form__item"><label for="q-hatsushimo2">初霜　羊羹2棹入　<span class="nw">2,916円</span></label><select id="q-hatsushimo2" name="q-hatsushimo2" data-price="2916"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-          <div class="form__item"><label for="q-hatsushimo4">初霜　羊羹4棹入　<span class="nw">5,400円</span></label><select id="q-hatsushimo4" name="q-hatsushimo4" data-price="5400"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-          <div class="form__item"><label for="q-kawagiri8">川霧　半生菓子<span class="nw">8個</span>入　<span class="nw">3,780円</span></label><select id="q-kawagiri8" name="q-kawagiri8" data-price="3780"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-          <div class="form__item"><label for="q-kawagiri16">川霧　半生菓子<span class="nw">16個</span>入　<span class="nw">7,020円</span></label><select id="q-kawagiri16" name="q-kawagiri16" data-price="7020"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+          <legend>詰合せと数量<span class="noshi-required">必須</span></legend>
+          <div class="product-form__item product-form__quantity-selector"><label class="product-form__quantity-label" for="q-toki">季　上生菓子6個入　4,320円</label><input class="product-form__quantity-input" type="number" id="q-toki" name="quantity" value="0" min="0" max="9" pattern="[0-9]*" data-price="4320" data-cool="1"></div>
+          <div class="product-form__item product-form__quantity-selector"><label class="product-form__quantity-label" for="q-hatsushimo2">初霜　羊羹2棹入　2,916円</label><input class="product-form__quantity-input" type="number" id="q-hatsushimo2" name="quantity" value="0" min="0" max="9" pattern="[0-9]*" data-price="2916"></div>
+          <div class="product-form__item product-form__quantity-selector"><label class="product-form__quantity-label" for="q-hatsushimo4">初霜　羊羹4棹入　5,400円</label><input class="product-form__quantity-input" type="number" id="q-hatsushimo4" name="quantity" value="0" min="0" max="9" pattern="[0-9]*" data-price="5400"></div>
+          <div class="product-form__item product-form__quantity-selector"><label class="product-form__quantity-label" for="q-kawagiri8">川霧　半生菓子8個入　3,780円</label><input class="product-form__quantity-input" type="number" id="q-kawagiri8" name="quantity" value="0" min="0" max="9" pattern="[0-9]*" data-price="3780"></div>
+          <div class="product-form__item product-form__quantity-selector"><label class="product-form__quantity-label" for="q-kawagiri16">川霧　半生菓子16個入　7,020円</label><input class="product-form__quantity-input" type="number" id="q-kawagiri16" name="quantity" value="0" min="0" max="9" pattern="[0-9]*" data-price="7020"></div>
         </fieldset>
-        <p class="form-hint"><span class="nw">1種類</span>につき<span class="nw">10箱</span>以上のご注文は、お電話にて承ります。</p>
-        <div class="form__row">
-          <div><label for="o-date">お届け日<span class="req">必須</span></label><input id="o-date" name="o-date" type="date" required></div>
-          <div><label for="o-time">時間帯<span class="req req--any">任意</span></label><select id="o-time" name="o-time"><option>指定なし</option><option>午前中</option><option>14〜16時</option><option>16〜18時</option><option>18〜20時</option><option>19〜21時</option></select></div>
+        <p class="instructions"><span class="nw">1種類</span>につき<span class="nw">10箱</span>以上のご注文は、お電話にて承ります。</p>
+        <div class="grid grid--2-col">
+          <div class="cart-top-date"><label for="date">お届け日<span class="noshi-required">必須</span></label><input id="date" type="text" name="attributes[配送希望日]" value="" readonly required></div>
+          <div class="cart-top-time"><p class="cart-attribute__field"><label for="o-time">時間帯<span class="light">任意</span></label><select id="o-time" name="attributes[配送時間帯]"><option value="指定なし">指定なし</option><option value="0812">午前中</option><option value="1416">14〜16時</option><option value="1618">16〜18時</option><option value="1820">18〜20時</option><option value="1921">19〜21時</option></select></p></div>
         </div>
         <fieldset>
           <legend>ご注文者</legend>
-          <label for="o-name">お名前<span class="req">必須</span></label>
+          <label for="o-name">お名前<span class="noshi-required">必須</span></label>
           <input id="o-name" name="o-name" type="text" autocomplete="name" required>
-          <div class="form__row">
-            <div><label for="o-tel">お電話番号<span class="req">必須</span></label><input id="o-tel" name="o-tel" type="tel" autocomplete="tel" required></div>
-            <div><label for="o-mail">メールアドレス<span class="req">必須</span></label><input id="o-mail" name="o-mail" type="email" autocomplete="email" required></div>
+          <div class="grid grid--2-col">
+            <div><label for="o-tel">お電話番号<span class="noshi-required">必須</span></label><input id="o-tel" name="o-tel" type="tel" autocomplete="tel" required></div>
+            <div><label for="o-mail">メールアドレス<span class="noshi-required">必須</span></label><input id="o-mail" name="o-mail" type="email" autocomplete="email" required></div>
           </div>
-          <div class="form__row">
-            <div><label for="o-zip">郵便番号<span class="req">必須</span></label><input id="o-zip" name="o-zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="例）690-0000" required></div>
-            <div><label for="o-pref">都道府県<span class="req">必須</span></label><select id="o-pref" name="o-pref" autocomplete="address-level1" required><option value="">選んでください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select></div>
+          <div class="grid grid--2-col">
+            <div><label for="o-zip">郵便番号<span class="noshi-required">必須</span></label><input id="o-zip" name="o-zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="例）690-0000" required></div>
+            <div><label for="o-pref">都道府県<span class="noshi-required">必須</span></label><select id="o-pref" name="o-pref" autocomplete="address-level1" required><option value="">お選びください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select></div>
           </div>
-          <label for="o-addr">市区町村・番地・建物名<span class="req">必須</span></label>
+          <label for="o-addr">市区町村・番地・建物名<span class="noshi-required">必須</span></label>
           <input id="o-addr" name="o-addr" type="text" autocomplete="address-line1" required>
         </fieldset>
         <fieldset>
           <legend>お届け先</legend>
-          <div class="radio">
+          <div class="product-form__input">
             <label><input type="radio" name="o-dest" value="self" checked>ご注文者と同じ</label>
             <label><input type="radio" name="o-dest" value="other">別の住所へ</label>
           </div>
-          <div class="form__other" id="o-other" hidden>
-            <label for="o-name2">お届け先のお名前<span class="req">必須</span></label>
+          <div id="o-other" hidden>
+            <label for="o-name2">お届け先のお名前<span class="noshi-required">必須</span></label>
             <input id="o-name2" name="o-name2" type="text">
-            <div class="form__row">
-              <div><label for="o-tel2">お電話番号<span class="req">必須</span></label><input id="o-tel2" name="o-tel2" type="tel"></div>
-              <div><label for="o-zip2">郵便番号<span class="req">必須</span></label><input id="o-zip2" name="o-zip2" type="text" inputmode="numeric"></div>
+            <div class="grid grid--2-col">
+              <div><label for="o-tel2">お電話番号<span class="noshi-required">必須</span></label><input id="o-tel2" name="o-tel2" type="tel"></div>
+              <div><label for="o-zip2">郵便番号<span class="noshi-required">必須</span></label><input id="o-zip2" name="o-zip2" type="text" inputmode="numeric"></div>
             </div>
-            <label for="o-pref2">都道府県<span class="req">必須</span></label><select id="o-pref2" name="o-pref2" autocomplete="address-level1"><option value="">選んでください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select>
-            <label for="o-addr2">市区町村・番地・建物名<span class="req">必須</span></label>
+            <label for="o-pref2">都道府県<span class="noshi-required">必須</span></label><select id="o-pref2" name="o-pref2" autocomplete="address-level1"><option value="">お選びください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select>
+            <label for="o-addr2">市区町村・番地・建物名<span class="noshi-required">必須</span></label>
             <input id="o-addr2" name="o-addr2" type="text">
           </div>
         </fieldset>
-        <label for="o-noshi">のし・掛け紙の用途<span class="req req--any">任意</span></label>
-        <input id="o-noshi" name="o-noshi" type="text" placeholder="例）お中元、内祝い、法要">
-        <label for="o-name3">のし・掛け紙の名入れ<span class="req req--any">任意</span></label>
-        <input id="o-name3" name="o-name3" type="text" placeholder="例）山田 太郎、山田家">
-        <p class="form-hint">連名は「・」で区切ってご記入ください。</p>
-        <fieldset>
-          <legend>のし紙・掛け紙の掛け方</legend>
-          <div class="radio">
-            <label><input type="radio" name="o-way" value="おまかせ" checked>おまかせ</label>
-            <label><input type="radio" name="o-way" value="内のし">内のし</label>
-            <label><input type="radio" name="o-way" value="外のし">外のし</label>
+        <div class="line-item-property__field noshi-area">
+          <label class="noshi-title" for="noshi-select">のし紙・掛け紙の掛け方</label>
+          <select id="noshi-select" name="properties[のし紙・掛け紙の掛け方]">
+            <option value="" selected>なし</option>
+            <option value="おまかせ">当店におまかせ</option>
+            <option value="内のし">内のし</option>
+            <option value="外のし">外のし</option>
+          </select>
+        </div>
+        <div class="noshi-details">
+          <div class="line-item-property__field noshi-area">
+            <label class="noshi-title" for="noshi-type">のし紙・掛け紙の用途<span class="light">任意</span></label>
+            <input id="noshi-type" type="text" name="properties[のし紙・掛け紙の用途]" placeholder="例）お中元、内祝い、法要">
           </div>
-        </fieldset>
+        </div>
+        <div class="noshi-area noshi-name-area">
+          <p class="line-item-property__field">
+            <label class="noshi-title" for="noshi-name">のし紙・掛け紙の名入れ<span class="light">任意</span></label>
+            <input id="noshi-name" type="text" name="properties[のし紙・掛け紙の名入れ]" placeholder="例）山田 太郎、山田家">
+          </p>
+          <p class="instructions">連名は「・」で区切ってご記入ください。</p>
+        </div>
         <fieldset>
           <legend>お支払い方法</legend>
-          <div class="radio">
+          <div class="product-form__input">
             <label><input type="radio" name="o-pay" value="クレジットカード" checked>クレジットカード</label>
             <label><input type="radio" name="o-pay" value="銀行振込">銀行振込</label>
-            <label><input type="radio" name="o-pay" value="代金引換">代金引換（手数料330円）</label>
+            <label><input type="radio" name="o-pay" value="代金引換">代金引換（手数料330円加算）</label>
           </div>
         </fieldset>
-        <label for="o-note">備考（ご質問・領収書の宛名など）<span class="req req--any">任意</span></label>
+        <label for="o-note">備考（ご質問・領収書の宛名とただし書きなど）<span class="light">任意</span></label>
         <textarea id="o-note" name="o-note"></textarea>
         <button class="button" type="submit">ご注文内容の確認へ</button>
-        <p class="form-note">お預かりした内容は、ご注文の確認、品物の発送、お届けに関するご連絡にのみ使用いたします。詳しくは<a href="#privacy">個人情報の取り扱い</a>をご覧ください。この<span class="nw">フォーム</span>は見本のため、送信しても届きません。</p>
+        <p class="instructions">お預かりした個人情報は、ご注文の確認、品物の発送、お届けに関するご連絡にのみ利用いたします。詳しくは<a href="#privacy">個人情報の取り扱い</a>をご覧ください。この<span class="nw">フォーム</span>は見本です。送信しても、ご注文は届きません。</p>
       </form>
-      <div class="form confirm" id="order-confirm" hidden></div>
+      <div class="drawer__inner" id="order-confirm" hidden></div>
     </div>
   </div>
 </section>
 
-<section class="section-template" id="shop">
+<section class="section" id="shop">
   <div class="page-width">
-    <div class="title-wrapper" data-rise><h2 class="title">店舗のご案内</h2><span class="title__en">SHOP</span></div>
+    <div class="title-wrapper ani-block"><h2 class="title">店舗のご案内</h2><span class="sub-title">SHOP</span></div>
     <div class="shop">
-      <img src="img/shop.jpg" alt="生成りの暖簾を掛けた格子戸の店構え" loading="lazy" data-rise>
-      <div data-rise>
+      <img src="img/shop.jpg" alt="生成りの暖簾を掛けた格子戸の店構え" loading="lazy" class="ani-block">
+      <div class="ani-block">
       <dl>
         <div><dt>屋号</dt><dd>御菓子司 玉水</dd></div>
         <div><dt>所在地</dt><dd>島根県松江市白潟本町0-0（架空の住所です）</dd></div>
         <div><dt>営業時間</dt><dd>9:00〜18:00</dd></div>
         <div><dt>定休日</dt><dd>水曜（<span class="nw">1月1日</span>・<span class="nw">2日</span>は休業）</dd></div>
         <div><dt>電話</dt><dd>0852-00-0000</dd></div>
-        <div><dt>交通</dt><dd>松江駅から徒歩<span class="nw">12分</span>です。店の前にお車を<span class="nw">2台</span>までお停めいただけます。</dd></div>
-        <div><dt>店頭</dt><dd>上生菓子は店頭でもお求めいただけます。ご予約は、お受け取りの<span class="nw">3日</span>前までにお申しつけください。</dd></div>
+        <div><dt>交通</dt><dd>松江駅から徒歩<span class="nw">12分</span>。店舗前に駐車場（<span class="nw">2台</span>）がございます。</dd></div>
+        <div><dt>店頭</dt><dd>上生菓子は店頭でも販売しております。お取り置きをご希望の場合は、お受け取りの<span class="nw">3日</span>前までにお電話でお申しつけください。</dd></div>
       </dl>
-      <a class="shop__map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E6%B1%9F%E5%B8%82%E7%99%BD%E6%BD%9F%E6%9C%AC%E7%94%BA" target="_blank" rel="noopener">地図を見る</a>
+      <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E6%B1%9F%E5%B8%82%E7%99%BD%E6%BD%9F%E6%9C%AC%E7%94%BA" target="_blank" rel="noopener">地図を見る</a>
       </div>
     </div>
   </div>
@@ -651,7 +667,7 @@ h1,h2,h3{text-wrap:balance}
 </main>
 
 <footer class="footer">
-  <div class="footer__blocks">
+  <div class="footer__blocks-wrapper">
     <ul>
       <li><a href="#season">季節の和菓子</a></li>
       <li><a href="#products">お品書き</a></li>
@@ -659,19 +675,19 @@ h1,h2,h3{text-wrap:balance}
       <li><a href="#about">玉水のこだわり</a></li>
     </ul>
     <ul>
-      <li><a href="#shipping">送料と日持ち</a></li>
+      <li><a href="#shipping">送料と保存方法</a></li>
       <li><a href="#faq">よくあるご質問</a></li>
       <li><a href="#order">ご注文</a></li>
       <li><a href="#shop">店舗のご案内</a></li>
     </ul>
-    <div class="footer__tel">
-      <p>〈 お電話でのご注文 〉</p>
+    <div class="tel">
+      <p>お電話でのご注文</p>
       <b><a href="tel:0852000000">0852-00-0000</a></b>
       <p>受付9:00〜18:00</p>
       <p>水曜定休</p>
     </div>
   </div>
-  <p class="footer__logo"><small>松江・明治三十二年創業</small>御菓子司 玉水</p>
+  <p class="logo-footer"><small>松江・明治三十二年創業</small>御菓子司 玉水</p>
   <details class="legal" id="law" open>
     <summary>特定商取引法に基づく表記</summary>
     <dl>
@@ -679,56 +695,146 @@ h1,h2,h3{text-wrap:balance}
       <div><dt>運営責任者</dt><dd>代表取締役 玉水 慎一</dd></div>
       <div><dt>所在地</dt><dd>島根県松江市白潟本町0-0（架空の住所です）</dd></div>
       <div><dt>電話・<span class="nw">メール</span></dt><dd>0852-00-0000（9:00〜18:00・水曜定休）／order@example.jp</dd></div>
-      <div><dt>販売価格</dt><dd>季　<span class="nw">6個</span>入4,320円、初霜　2棹入2,916円・4棹入<span class="nw">5,400円</span>、川霧　<span class="nw">8個</span>入<span class="nw">3,780円</span>・<span class="nw">16個</span>入<span class="nw">7,020円</span>（いずれも税込）</dd></div>
-      <div><dt>商品代金以外の費用</dt><dd>送料（「送料と日持ち」の表のとおり）、代金引換の手数料<span class="nw">330円</span>、銀行振込の振込手数料</dd></div>
+      <div><dt>販売価格</dt><dd>季　<span class="nw">6個</span>入4,320円、初霜　<span class="nw">2棹</span>入2,916円・<span class="nw">4棹</span>入<span class="nw">5,400円</span>、川霧　<span class="nw">8個</span>入<span class="nw">3,780円</span>・<span class="nw">16個</span>入<span class="nw">7,020円</span>（いずれも税込）</dd></div>
+      <div><dt>商品代金以外の費用</dt><dd>送料（「送料と保存方法」の表のとおり）、代金引換の手数料<span class="nw">330円</span>、銀行振込の振込手数料</dd></div>
       <div><dt>販売数量の制限</dt><dd>ご注文<span class="nw">フォーム</span>では、<span class="nw">1種類</span>につき<span class="nw">9箱</span>までお選びいただけます。<span class="nw">10箱</span>以上のご注文は、お電話にて承ります</dd></div>
       <div><dt>お申し込みの有効期限</dt><dd>銀行振込の場合、ご注文から<span class="nw">3日</span>以内にご入金がないときは、ご注文を取り消しとさせていただきます</dd></div>
       <div><dt>お支払いの時期と方法</dt><dd><span class="nw">クレジットカード</span>はご注文時、銀行振込はご注文から<span class="nw">3日</span>以内、代金引換はお受け取り時</dd></div>
-      <div><dt>お届けの時期</dt><dd><span class="nw">クレジットカード</span>は決済の確認後、銀行振込はご入金の確認後、代金引換はご注文の確認後に発送します。「初霜」「川霧」は、お届け日のご指定がない場合、これらの確認から<span class="nw">3営業日</span>以内に発送します。「季」はお届けの前日（遠方は前々日）にお作りし、その日のうちに発送いたします。お届け日は、いずれの品もご注文より<span class="nw">5日</span>後からご指定いただけます。銀行振込の場合、ご入金の確認が遅れますと、ご指定の日にお届けできない場合がございます</dd></div>
-      <div><dt>ご注文の取り消し</dt><dd>「季」は製造の前日まで、「初霜」「川霧」は発送の前日まで、お電話で承ります</dd></div>
+      <div><dt>お届けの時期</dt><dd><span class="nw">クレジットカード</span>の場合は決済の確認後、銀行振込の場合はご入金の確認後、代金引換の場合はご注文の確認後に発送します。お届け日はいずれの品もご注文日の<span class="nw">5日</span>後からご指定いただけます。「季」はお届けの前日（東北・北海道・沖縄は前々日）にお作りし、その日のうちに発送いたします。「初霜」「川霧」は、ご指定のお届け日に合わせて発送いたします。銀行振込の場合、ご入金の確認が遅れますと、ご指定の日にお届けできない場合がございます</dd></div>
+      <div><dt>ご注文の取り消し</dt><dd>「季」はお届け日の<span class="nw">2日</span>前（東北・北海道・沖縄は<span class="nw">3日</span>前）まで、「初霜」「川霧」は発送の前日まで、お電話で承ります</dd></div>
       <div><dt>返品について</dt><dd>食品のため、お客様のご都合による返品はお受けできません。傷み・破損があった場合は、お届けから<span class="nw">2日</span>以内にご連絡ください。代わりの品をお送りし、その送料は当店が負担いたします</dd></div>
     </dl>
   </details>
   <details class="legal" id="privacy">
     <summary>個人情報の取り扱い</summary>
     <dl>
-      <div><dt>利用の目的</dt><dd>ご注文の確認、品物の発送、お届けに関するご連絡に使用いたします。上記以外の目的には利用いたしません</dd></div>
+      <div><dt>利用の目的</dt><dd>ご注文の確認、品物の発送、お届けに関するご連絡に利用いたします。上記以外の目的には利用いたしません</dd></div>
       <div><dt>第三者への提供</dt><dd>お届け先のお名前・ご住所・お電話番号を、配送のために配送業者へ提供いたします。法令に基づく場合を除き、ご本人の同意なく第三者へ提供することはございません</dd></div>
       <div><dt>管理</dt><dd>お預かりした個人情報は、管理責任者を定め、適切に管理しております</dd></div>
-      <div><dt>開示・訂正・削除</dt><dd>ご本人からのご依頼は、0852-00-0000（9:00〜18:00・水曜定休）で承ります</dd></div>
+      <div><dt>開示・訂正・削除</dt><dd>ご本人からのご依頼は、お電話（0852-00-0000・9:00〜18:00・水曜定休）で承ります</dd></div>
     </dl>
   </details>
-  <p class="footer__note">食品衛生法に基づく営業許可 菓子製造業（松江保健所 第00-000号・架空）</p>
-  <p class="footer__note" id="note">御菓子司 玉水は架空の店で、この<span class="nw">ページ</span>は通販<span class="nw">ページ</span>制作の見本です。電話番号と<span class="nw">メールアドレス</span>、お客様の声も架空です。全国菓子大博覧会は実在しますが、※を付けた受賞は架空の設定です。掲載している画像は、素材サイトとウィキメディア・コモンズの写真で、写っている菓子と箱は玉水の品ではありません。一覧は<a href="img/CREDITS.md">img/CREDITS.md</a>にあります（制作：常夜燈）。<br>次の写真は、作者名とライセンスの表示を条件に利用しています。職人の手と練り切り＝Mcyjerry氏「<a href="https://commons.wikimedia.org/wiki/File:Sankakubou_Wagashi.jpg">Sankakubou Wagashi</a>」（<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>・切り出し）、月見＝7'o'7氏「<a href="https://commons.wikimedia.org/wiki/File:Jyouyo_manjyu.jpg">Jyouyo manjyu</a>」（<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ja">CC BY-SA 3.0</a>・切り出し／切り出した画像も同じ条件で公開）、季＝Rachelle Haun氏「<a href="https://commons.wikimedia.org/wiki/File:Japan-35_(49164328596).jpg">Japan-35</a>」（<a href="https://creativecommons.org/licenses/by/2.0/deed.ja">CC BY 2.0</a>・切り出し）、蝶結びののし紙＝James Gochenouer氏「<a href="https://commons.wikimedia.org/wiki/File:%E3%82%AE%E3%83%95%E3%83%88_(17950768822).jpg">ギフト</a>」（<a href="https://creativecommons.org/licenses/by/2.0/deed.ja">CC BY 2.0</a>・縮小のみ）</p>
-  <p class="copyright">© TAMAMIZU All Rights Reserved.</p>
+  <p class="caption">食品衛生法に基づく営業許可 菓子製造業（松江保健所 第00-000号・架空）</p>
+  <p class="caption" id="note">御菓子司 玉水は架空の店です。この<span class="nw">ページ</span>は通販<span class="nw">ページ</span>制作の見本です。電話番号・<span class="nw">メールアドレス</span>・お客様の声は架空です。全国菓子大博覧会は実在の催しです。※印の受賞は架空の設定です。写真は素材<span class="nw">サイト</span>と<span class="nw">ウィキメディア</span>・<span class="nw">コモンズ</span>のものです。出典の一覧は<a href="img/CREDITS.md">img/CREDITS.md</a>にあります。写真の品物は、玉水の商品ではありません。<span class="nw">ページ</span>の制作は常夜燈です。<br>次の写真は、作者名と<span class="nw">ライセンス</span>を表示する条件で使っています。職人の手と練り切り＝Mcyjerry氏「<a href="https://commons.wikimedia.org/wiki/File:Sankakubou_Wagashi.jpg">Sankakubou Wagashi</a>」（<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>・切り出し）、月見＝7'o'7氏「<a href="https://commons.wikimedia.org/wiki/File:Jyouyo_manjyu.jpg">Jyouyo manjyu</a>」（<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ja">CC BY-SA 3.0</a>・切り出し／切り出した画像も同じ条件で公開）、季＝Rachelle Haun氏「<a href="https://commons.wikimedia.org/wiki/File:Japan-35_(49164328596).jpg">Japan-35</a>」（<a href="https://creativecommons.org/licenses/by/2.0/deed.ja">CC BY 2.0</a>・切り出し）、蝶結びののし紙＝James Gochenouer氏「<a href="https://commons.wikimedia.org/wiki/File:%E3%82%AE%E3%83%95%E3%83%88_(17950768822).jpg">ギフト</a>」（<a href="https://creativecommons.org/licenses/by/2.0/deed.ja">CC BY 2.0</a>・縮小のみ）</p>
+  <p class="footer__copyright">© TAMAMIZU All Rights Reserved.</p>
 </footer>
 
-<div class="sp-cta"><a href="#order">ご注文</a><a href="tel:0852000000">お電話</a></div>
+<div class="sp-show"><a href="#order">ご注文</a><a href="tel:0852000000">お電話でのご注文</a></div>
 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.13.2/jquery-ui.min.js" integrity="sha384-4D3G3GikQs6hLlLZGdz5wLFzuqE9v4yVGAcOH86y23JqBDPzj9viv0EqyfIa6YUL" crossorigin="anonymous"></script>
 <script>
-// 動きは外部の読み込みに頼らない。ライブラリが届かなくても本文は出る
-(function(){
-  var els=document.querySelectorAll('[data-rise]');
-  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
-    els.forEach(function(e){e.classList.add('is-in')});return;
-  }
-  var io=new IntersectionObserver(function(es){es.forEach(function(en){
-    if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}
-  })},{rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(e){io.observe(e)});
-  addEventListener('scroll',function(){
-    if(innerHeight+scrollY<document.body.scrollHeight-4)return;
-    els.forEach(function(e){e.classList.add('is-in')});
-  },{passive:true});
+// 読み込み先から jQuery が届かない時に、現れる部品が透明のまま残らないようにする
+if(!window.jQuery)document.querySelectorAll('.ani-block').forEach(function(e){e.classList.add('fade-in')});
+window.jQuery&&jQuery(function($){
+  // メニューを先に閉じる。開いたまま着地を測ると、閉じた分だけ行き過ぎる
+  $('.hamburger').click(function() {
+    $('.bottom-ul').toggleClass('active');
+    $(this).attr('aria-expanded', $('.bottom-ul').hasClass('active'));
+  });
+  $('.list-menu__item').click(function() {
+    $('.bottom-ul').removeClass('active');
+    $('.hamburger').attr('aria-expanded', 'false');
+  });
 
-  var header=document.querySelector('.header'),toggle=document.querySelector('.menu-drawer__toggle');
-  toggle.addEventListener('click',function(){
-    var open=header.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded',open);
+  const rootFontSize = parseFloat($('html').css('font-size'));
+
+  // 着地は scroll-padding-top と同じ120px（携帯は64px）上。ハッシュ付きで開いた時と同じ位置に止める
+  function smoothScrollTo(targetSelector) {
+    let target = $(targetSelector.length ? targetSelector : '[name=' + targetSelector.slice(1) + ']');
+    if (target.length) {
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      const adjustment = isDesktop ? -7.5 * rootFontSize : -4 * rootFontSize;
+      const speed = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1000;
+      $('html, body').animate({
+        scrollTop: target.offset().top + adjustment
+      }, speed);
+    }
+  }
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+      smoothScrollTo(this.hash);
+      return false;
+    }
   });
-  document.querySelectorAll('.list-menu__item').forEach(function(a){
-    a.addEventListener('click',function(){header.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');});
+
+  // 最初の画面に入っている部品も、送る前に出す
+  $(window).scroll(function(){
+    const wHeight=$(window).height(),wScroll=$(window).scrollTop();
+    $('.ani-block').each(function(){
+      const bPosition=$(this).offset().top;
+      wScroll>bPosition-wHeight+200&&$(this).addClass('fade-in');
+    });
+  }).trigger('scroll');
+});
+</script>
+<script>
+// 日付の欄は jQuery UI の datepicker で選ぶ
+function initDatepicker() {
+  if (window.jQuery && window.jQuery.datepicker) {
+    let $ = window.jQuery;
+    $("#date").datepicker({
+      dateFormat: 'yy/mm/dd',
+      minDate: 5
+    });
+
+    $.datepicker.setDefaults({
+      closeText: "閉じる",
+      prevText: "<先月",
+      nextText: "来月>",
+      currentText: "今月",
+      monthNames: [ "１月","２月","３月","４月","５月","６月",
+      "７月","８月","９月","１０月","１１月","１２月" ],
+      monthNamesShort: [ "１月","２月","３月","４月","５月","６月",
+      "７月","８月","９月","１０月","１１月","１２月" ],
+      dayNames: [ "日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日" ],
+      dayNamesShort: [ "日","月","火","水","木","金","土" ],
+      dayNamesMin: [ "日","月","火","水","木","金","土"],
+      weekHeader: "週",
+      firstDay: 1,
+      isRTL: false,
+      showMonthAfterYear: true,
+      yearSuffix: "年"
+    });
+  } else {
+    // 読み込み先から jQuery UI が届かない時は、ブラウザの日付の欄に戻す
+    var date = document.getElementById('date'), d = new Date();
+    d.setDate(d.getDate() + 5);
+    date.type = 'date';
+    date.readOnly = false;
+    date.min = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+  }
+}
+initDatepicker();
+
+document.addEventListener('DOMContentLoaded', function () {
+  var productForms = document.querySelectorAll('.product-form');
+  if (!productForms.length) return;
+  function toggleNoshiFields(form) {
+    var noshiSelect = form.querySelector('#noshi-select'),
+      noshiType = form.querySelector('#noshi-type'),
+      noshiName = form.querySelector('#noshi-name'),
+      detailsArea = form.querySelector('.noshi-details'),
+      nameArea = form.querySelector('.noshi-name-area');
+    if (!noshiSelect || !detailsArea || !nameArea) return;
+    var hasNoshi = noshiSelect.value !== '';
+    detailsArea.style.display = hasNoshi ? 'block' : 'none';
+    nameArea.style.display = hasNoshi ? 'block' : 'none';
+    if (!hasNoshi) {
+      noshiType.value = '';
+      noshiName.value = '';
+    }
+    noshiType.disabled = noshiName.disabled = !hasNoshi;
+  }
+  productForms.forEach(function (form) {
+    var noshiSelect = form.querySelector('#noshi-select');
+    if (!noshiSelect) return;
+    toggleNoshiFields(form);
+    noshiSelect.addEventListener('change', function () { toggleNoshiFields(form); });
   });
+});
+
+(function(){
   document.querySelectorAll('a[href="#privacy"]').forEach(function(a){
     a.addEventListener('click',function(){document.getElementById('privacy').open=true});
   });
@@ -740,8 +846,8 @@ h1,h2,h3{text-wrap:balance}
   var PAY={'クレジットカード':'ご注文の確定時にお支払い','銀行振込':'ご注文から3日以内にお振り込み、ご入金の確認後に発送','代金引換':'お受け取りの時にお支払い'};
   var yen=function(n){return n.toLocaleString('ja-JP')+'円'};
   var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
-  var d=new Date();d.setDate(d.getDate()+5);
-  form['o-date'].min=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+  var date=document.getElementById('date'),time=document.getElementById('o-time');
+  var noshi=document.getElementById('noshi-select'),noshiType=document.getElementById('noshi-type'),noshiName=document.getElementById('noshi-name');
   form.querySelectorAll('[name="o-dest"]').forEach(function(r){
     r.addEventListener('change',function(){
       var other=form['o-dest'].value==='other';
@@ -750,13 +856,17 @@ h1,h2,h3{text-wrap:balance}
     });
   });
   // 数量はどれも0から始まるので、1つも選ばないまま確認の画面へ進ませない
-  var items=form.querySelectorAll('.form__item select');
+  var items=form.querySelectorAll('.product-form__quantity-input');
   var pick=function(){
     var n=0;items.forEach(function(s){n+=+s.value});
     items[0].setCustomValidity(n?'':'詰合せの数量をお選びください。');
   };
-  items.forEach(function(s){s.addEventListener('change',pick)});
+  items.forEach(function(s){s.addEventListener('input',pick)});
   pick();
+  // readonly の欄は required が効かないので、お届け日が空のまま送ろうとした時だけ外して検証に掛ける
+  form.querySelector('[type="submit"]').addEventListener('click',function(){
+    if(date.readOnly&&!date.value){date.readOnly=false;setTimeout(function(){date.readOnly=true});}
+  });
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var lines=[],cool=0,normal=0;
@@ -771,7 +881,7 @@ h1,h2,h3{text-wrap:balance}
     // 季と常温の詰合せは別の梱包で送る。常温の送料無料は、常温の詰合せの代金だけで数える
     var shipCool=cool?FEE.cool[zone]:0,shipNormal=normal&&normal<8640?FEE.normal[zone]:0;
     // 7〜9月は常温の詰合せもクール便で送るが、送料は常温便の額のまま
-    var summer=/^\d+-0[789]-/.test(form['o-date'].value);
+    var summer=/^\d+[-\/]0[789][-\/]/.test(date.value);
     var fee=[];
     if(cool)fee.push((normal?'「季」':'')+yen(shipCool)+'（クール便）');
     if(normal)fee.push((cool?'「初霜」「川霧」':'')+(shipNormal?yen(shipNormal):'無料')+(summer?'（クール便）':'（常温便）'));
@@ -782,15 +892,15 @@ h1,h2,h3{text-wrap:balance}
       '<dt>商品代金</dt><dd>'+yen(sub)+'</dd>'+
       '<dt>送料</dt><dd>'+fee.join('<br>')+'</dd>'+
       (cod?'<dt>代金引換手数料</dt><dd>330円</dd>':'')+
-      '<dt>お支払いの合計</dt><dd class="confirm__total">'+yen(sub+shipCool+shipNormal+cod)+'（税込）</dd>'+
+      '<dt>お支払いの合計</dt><dd class="totals__total-value">'+yen(sub+shipCool+shipNormal+cod)+'（税込）</dd>'+
       '<dt>お支払い</dt><dd>'+pay+'（'+PAY[pay]+'）</dd>'+
-      '<dt>お届け日</dt><dd>'+form['o-date'].value.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$1年$2月$3日')+'　'+esc(form['o-time'].value)+'</dd>'+
+      '<dt>お届け日</dt><dd>'+date.value.replace(/^(\d+)[-\/]0?(\d+)[-\/]0?(\d+)$/,'$1年$2月$3日')+'　'+esc(time.options[time.selectedIndex].text)+'</dd>'+
       '<dt>お届け先</dt><dd>'+to+'</dd>'+
-      '<dt>のし・掛け紙</dt><dd>'+(form['o-noshi'].value||form['o-name3'].value
-        ?'用途：'+(esc(form['o-noshi'].value)||'記入なし')+'／名入れ：'+(esc(form['o-name3'].value)||'なし')+'／掛け方：'+form['o-way'].value
+      '<dt>のし紙・掛け紙</dt><dd>'+(noshi.value
+        ?'用途：'+(esc(noshiType.value)||'記入なし')+'／名入れ：'+(esc(noshiName.value)||'なし')+'／掛け方：'+noshi.value
         :'なし')+'</dd>'+
-      '<dt>取り消し</dt><dd>「季」は製造の前日まで、「初霜」「川霧」は発送の前日まで、お電話で取り消しを承ります。食品のため、お届け後の返品はお受けできません</dd>'+
-      '</dl><div class="confirm__btns"><button class="button button--quiet" type="button" data-back>入力に戻る</button><button class="button" type="button" data-done>ご注文を確定する</button></div>';
+      '<dt>取り消し</dt><dd>「季」はお届け日の2日前（東北・北海道・沖縄は3日前）まで、「初霜」「川霧」は発送の前日まで、お電話で取り消しを承ります。食品のため、お客様のご都合による返品はお受けできません。傷み・破損があった場合は、代わりの品をお送りいたします</dd>'+
+      '</dl><div class="cart__ctas"><button class="button drawer__close" type="button" data-back>入力に戻る</button><button class="button" type="button" data-done>ご注文を確定する</button></div>';
     form.hidden=true;box.hidden=false;box.scrollIntoView({block:'start'});
   });
   box.addEventListener('click',function(e){

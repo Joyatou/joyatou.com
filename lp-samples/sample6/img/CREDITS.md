@@ -11,7 +11,7 @@
 | ファイル | 使用箇所 | 取得元 | 作者 | ライセンス | 写真のページ |
 |---|---|---|---|---|---|
 | factory.jpg | 最初の画面の1枚目（NC旋盤の操作盤に向かう社員） | Pexels | Mehmet Turgut Kirkgoz | Pexels License | https://www.pexels.com/photo/a-man-operating-an-industrial-machinery-11765538/ |
-| tray.jpg | 最初の画面の2枚目（つば付きの段付きピン） | Unsplash | Hans Westbeek | Unsplash License | https://unsplash.com/photos/fimoFLchbuk |
+| tray.jpg | 最初の画面の2枚目（つばのある段付きピン） | Unsplash | Hans Westbeek | Unsplash License | https://unsplash.com/photos/fimoFLchbuk |
 | boss.jpg | Message（代表） | Unsplash | Jesse Plum | Unsplash License | https://unsplash.com/photos/T_G3K6lDmtA |
 | parts.jpg | Company（めねじを加工した鋼のブッシュ） | Unsplash | alerkiv | Unsplash License | https://unsplash.com/photos/C2S_2gmmQlw |
 | work.jpg | Work（NC旋盤で加工する段付き軸） | Unsplash | Sven Daniel | Unsplash License | https://unsplash.com/photos/DbZ3XIjqVxc |

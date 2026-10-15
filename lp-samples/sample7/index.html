@@ -20,179 +20,181 @@
 {"@context":"https://schema.org","@type":"Dentist","name":"並木町矯正歯科","medicalSpecialty":"Orthodontic","address":{"@type":"PostalAddress","addressRegion":"広島県","addressLocality":"広島市中区","addressCountry":"JP"},"telephone":"082-000-0000","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Friday"],"opens":"10:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Friday"],"opens":"14:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"14:30","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Sunday","PublicHolidays"],"opens":"00:00","closes":"00:00"}]}
 </script>
 <style>
-/* 字と余白は、矯正歯科の実在113件の実測と、手本にした医院の数値から採った。
-   本文はゴシック16px・行間1.9、節の題は明朝33px・細字で下に英字、特徴は写真を大きく左右に振る。
-   上部に診療時間の表と案内図の札を置き、初診相談のお申し込みは緑の四角いボタン。 */
+/* 本文はゴシック16px・行間1.9、節の題は明朝33px・細字で下に英字、特徴は写真を大きく左右に振る。
+   上部に診療時間の表と案内図を並べた囲みを置き、初診相談のお申し込みは濃い緑の丸いボタン。 */
 :root{
-  --text:#3a3232;--head:#493f3f;--mute:#766c6c;--line:#e1e6e3;--bg:#fff;--mint:#eef6f2;--mint-d:#dcefe6;
-  --green:#2a8c6e;--green-d:#1f6d55;--gold:#b69a5a;
+  --text:#3a3232;--head:#493f3f;--mute:#766c6c;--line:#e1e6e3;--bg:#fff;--mint:#188f3b1a;--mint-d:rgba(130,208,154,.4);
+  --green:#188f3b;--green-d:#3e8153;--gold:#b69a5a;--shade:rgba(0,0,0,.15);
   --sans:"游ゴシック体",YuGothic,"游ゴシック Medium","Yu Gothic Medium","Hiragino Kaku Gothic ProN","Hiragino Sans","メイリオ",Meiryo,sans-serif;
   --mincho:"游明朝",YuMincho,"Yu Mincho","ヒラギノ明朝 ProN","Hiragino Mincho ProN",serif;
   --en:"Cormorant Garamond","Times New Roman",serif;
 }
 *,::before,::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
+html{scroll-padding-top:100px}
 /* Cormorant Garamond の既定は旧字形の数字で、1,100,000 が I,IOO,OOO に見える */
 body{margin:0;font-family:var(--sans);font-size:16px;font-weight:500;line-height:1.9;color:var(--text);background:var(--bg);font-feature-settings:"palt";font-variant-numeric:lining-nums}
 img{max-width:100%;height:auto;vertical-align:middle}
 a{color:inherit}
 h1,h2,h3,p,dl,dd,ul,ol,figure,table{margin:0}
 ul,ol{padding:0;list-style:none}
-.inner{max-width:1100px;margin:0 auto;padding:0 20px}
-.sec{padding:100px 0}
-.sec--mint{background:var(--mint)}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.section{padding:100px 0}
+.has-bg-main-lighter{background:var(--mint)}
 .headLine01{text-align:center;margin-bottom:56px;font-family:var(--mincho);font-size:33px;font-weight:400;line-height:1.5;color:var(--head);letter-spacing:.08em}
 /* 節名の中の .nw まで英字ラベルの指定を浴びると、33pxの大見出しが出なくなる */
-.headLine01>span:first-child{display:block;font-family:var(--en);font-size:17px;letter-spacing:.2em;color:var(--green)}
+.headLine01>span:first-child{display:block;font-family:var(--en);font-size:17px;letter-spacing:.2em;color:var(--green-d)}
+/* 淡い緑と生成りの地では濃い緑も4.5に届かないので、見出しの字の色にそろえる */
+.has-bg-main-lighter .headLine01>span:first-child,.risk .headLine01>span:first-child{color:var(--head)}
 .nw{white-space:nowrap}
 :focus-visible{outline:2px solid var(--green);outline-offset:3px}
 
-.comBtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:240px;padding:16px 30px;border-radius:40px;background:var(--green);color:#fff;
+.comBtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:240px;padding:16px 30px;border-radius:40px;background:var(--green-d);color:#fff;
   font-size:16px;font-weight:700;letter-spacing:.08em;text-decoration:none;line-height:1.4;transition:background .25s;white-space:nowrap}
-.comBtn:hover{background:var(--green-d)}
-.comBtn--line{background:#fff;color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
-.comBtn--line:hover{background:var(--mint)}
+.comBtn:hover{background:linear-gradient(var(--shade),var(--shade)) var(--green-d)}
+.comBtn02{background:#fff;color:var(--green-d);box-shadow:inset 0 0 0 1px var(--green-d)}
+.comBtn02:hover{background:var(--green-d);color:#fff}
 
 /* ヘッダー */
-.header{position:fixed;left:0;right:0;top:0;z-index:50;background:rgba(255,255,255,.97);box-shadow:0 1px 0 var(--line)}
-.header__inner{display:flex;align-items:center;gap:22px;max-width:1280px;height:86px;margin:0 auto;padding:0 20px}
-.header__logo{flex:none;text-decoration:none}
-.header__logo small{display:block;font-size:11px;color:var(--mute);letter-spacing:.06em}
-.header__logo b{display:flex;align-items:center;gap:8px;font-family:var(--mincho);font-size:23px;font-weight:600;color:var(--green-d);letter-spacing:.08em;line-height:1.3}
-.header__logo b .fa-solid{font-size:24px;color:var(--green)}
-.header__nav{display:flex;gap:2px;margin-left:auto}
-.header__nav a{padding:8px 10px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
-.header__nav a:hover{color:var(--green)}
-.header__tel{flex:none;text-align:right;font-size:11px;line-height:1.4;white-space:nowrap}
-.header__tel b{display:block;font-size:22px;color:var(--green-d);letter-spacing:.04em}
-.header__tel a{text-decoration:none}
-.header__webBtn{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:86px;height:64px;border-radius:6px;background:var(--green);color:#fff;font-size:13px;font-weight:700;text-decoration:none;line-height:1.3}
-.header__webBtn .fa-regular{font-size:20px;margin-bottom:4px}
-.header__menuBtn{display:none}
+.Header{position:fixed;left:0;right:0;top:0;z-index:50;background:rgba(255,255,255,.97);box-shadow:0 1px 0 var(--line)}
+.Header__cont{display:flex;align-items:center;gap:22px;max-width:1280px;height:86px;margin:0 auto;padding:0 20px}
+.Header__logo{flex:none;text-decoration:none}
+.Header__logo small{display:block;font-size:11px;color:var(--mute);letter-spacing:.06em}
+.Header__logo b{display:flex;align-items:center;gap:8px;font-family:var(--mincho);font-size:23px;font-weight:600;color:var(--green-d);letter-spacing:.08em;line-height:1.3}
+.Header__logo b .fa-solid{font-size:24px;color:var(--green)}
+.omt-header-nav{display:flex;gap:2px;margin-left:auto}
+.omt-header-nav a{padding:8px 10px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.omt-header-nav a:hover{color:var(--green-d)}
+.Header__right__contact{flex:none;text-align:right;font-size:11px;line-height:1.4;white-space:nowrap}
+.Header__right__contact b{display:block;font-size:22px;color:var(--green-d);letter-spacing:.04em}
+.Header__right__contact a{text-decoration:none}
+.reservedBtn{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:86px;height:64px;border-radius:6px;background:var(--green-d);color:#fff;font-size:13px;font-weight:700;text-decoration:none;line-height:1.3}
+.reservedBtn .fa-regular{font-size:20px;margin-bottom:4px}
+.omt-hamburger{display:none}
 
-/* メインビジュアル。写真の下辺をゆるく曲げ、左に見出しの札 */
-.TopMv{position:relative;margin-top:86px;height:640px;overflow:hidden;border-radius:0 0 50% 50%/0 0 70px 70px;background:var(--mint)}
-.TopMv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
-.TopMv__box{position:absolute;left:max(20px,calc((100vw - 1100px)/2 + 20px));top:90px;width:470px;padding:40px 42px 38px;background:rgba(255,255,255,.93);border-radius:12px}
-.TopMv__tag{display:inline-block;padding:2px 12px;border-left:3px solid var(--green);font-size:14px;font-weight:700;color:var(--green-d)}
-.TopMv h1{margin:16px 0 14px;font-family:var(--mincho);font-size:40px;font-weight:600;line-height:1.45;color:var(--head);letter-spacing:.06em}
-.TopMv__lead{font-size:15px;line-height:1.9}
-.TopMv__btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.TopMv__btns .comBtn{min-width:0;padding:14px 22px;font-size:15px}
-.TopMv__badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
-.TopMv__badges li{padding:2px 10px;background:var(--mint);font-size:12px;font-weight:700;color:var(--green-d)}
+/* メインビジュアル。写真の下辺をゆるく曲げ、左に見出しの囲み */
+.omt-fv{position:relative;margin-top:86px;height:640px;overflow:hidden;border-radius:0 0 50% 50%/0 0 70px 70px;background:var(--mint)}
+.omt-fv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
+.omt-fv-inner{position:absolute;left:max(20px,calc((100vw - 1100px)/2 + 20px));top:90px;width:470px;padding:40px 42px 38px;background:rgba(255,255,255,.93);border-radius:12px}
+.omt-fv-tag{display:inline-block;padding:2px 12px;border-left:3px solid var(--green);font-size:14px;font-weight:700;color:var(--green-d)}
+.omt-fv h1{margin:16px 0 14px;font-family:var(--mincho);font-size:40px;font-weight:600;line-height:1.45;color:var(--head);letter-spacing:.06em}
+.omt-fv-sub{font-size:15px;line-height:1.9}
+.omt-fv-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.omt-fv-btns .comBtn{min-width:0;padding:14px 22px;font-size:15px}
+.omt-footer-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.omt-footer-tags li{padding:2px 10px;background:var(--mint);font-size:12px;font-weight:700;color:var(--text)}
 
 /* お知らせの帯 */
-.TopNews{max-width:900px;margin:40px auto 0;padding:0 20px}
-.TopNews ul{border-top:1px solid var(--line)}
-.TopNews li{display:grid;grid-template-columns:110px 64px 1fr;gap:14px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line);font-size:14.5px}
-.TopNews time{font-family:var(--en);font-size:17px;color:var(--mute)}
-.TopNews em{font-style:normal;font-size:12px;text-align:center;border:1px solid var(--green);color:var(--green);line-height:1.8}
-.TopNews h2{font-family:var(--mincho);font-size:20px;font-weight:400;letter-spacing:.08em;color:var(--head);margin-bottom:10px}
-.TopNews h2 span{font-family:var(--en);font-size:17px;letter-spacing:.2em;color:var(--green);margin-right:14px}
+.News{max-width:900px;margin:40px auto 0;padding:0 20px}
+.News ul{border-top:1px solid var(--line)}
+.News li{display:grid;grid-template-columns:110px 64px 1fr;gap:14px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line);font-size:14.5px}
+.News time{font-family:var(--en);font-size:17px;color:var(--mute)}
+.News em{font-style:normal;font-size:12px;text-align:center;border:1px solid var(--green-d);color:var(--green-d);line-height:1.8}
+.News h2{font-family:var(--mincho);font-size:20px;font-weight:400;letter-spacing:.08em;color:var(--head);margin-bottom:10px}
+.News h2 span{font-family:var(--en);font-size:17px;letter-spacing:.2em;color:var(--green-d);margin-right:14px}
 
-/* 診療時間と案内図の札 */
-.TopInfo{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1060px;margin:0 auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(40,90,70,.08)}
-.TopInfo__body{padding:40px 44px}
-.TopInfo__body h2{font-family:var(--mincho);font-size:22px;font-weight:400;color:var(--green-d);margin-bottom:14px;letter-spacing:.08em}
-.TopInfo__hours{width:100%;border-collapse:collapse;text-align:center;font-size:14px}
-.TopInfo__hours th,.TopInfo__hours td{padding:10px 4px;border-bottom:1px solid var(--line)}
-.TopInfo__hours thead th{font-weight:700;color:var(--head)}
-.TopInfo__hours tbody th{text-align:left;font-weight:500;white-space:nowrap}
-.TopInfo__hours .on{color:var(--green);font-size:15px}
-.TopInfo__hours .off{color:#b9b3b3}
-.TopInfo__note{font-size:13px;color:var(--mute);margin-top:10px;line-height:1.8}
-.TopInfo__tel{display:flex;align-items:center;gap:14px;margin-top:18px}
-.TopInfo__tel b{font-size:26px;letter-spacing:.04em;color:var(--head)}
-.TopInfo__tel a{text-decoration:none}
-.TopInfo__btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
-.TopInfo__btns .comBtn{min-width:0;padding:12px 10px;font-size:14px;border-radius:30px}
+/* 診療時間と案内図の囲み */
+.ClinicInfo{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1060px;margin:0 auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(40,90,70,.08)}
+.Schedule{padding:40px 44px}
+.Schedule h2{font-family:var(--mincho);font-size:22px;font-weight:400;color:var(--green-d);margin-bottom:14px;letter-spacing:.08em}
+.Schedul__table{width:100%;border-collapse:collapse;text-align:center;font-size:14px}
+.Schedul__table th,.Schedul__table td{padding:10px 4px;border-bottom:1px solid var(--line)}
+.Schedul__table thead th{font-weight:700;color:var(--head)}
+.Schedul__table tbody th{text-align:left;font-weight:500;white-space:nowrap}
+.Schedul__table .c-table-access-on{color:var(--green-d);font-size:15px}
+.Schedul__table .c-table-access-off{color:#b9b3b3}
+.Schedul__notes{font-size:13px;color:var(--mute);margin-top:10px;line-height:1.8}
+.tel{display:flex;align-items:center;gap:14px;margin-top:18px}
+.tel b{font-size:26px;letter-spacing:.04em;color:var(--head)}
+.tel a{text-decoration:none}
+.BtnCont{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.BtnCont .comBtn{min-width:0;padding:12px 10px;font-size:14px;border-radius:30px}
 /* 地図が読み込まれない時に灰色の箱だけが残らないよう、iframeの下に最寄りの電停を敷く */
-.TopInfo__map{position:relative;min-height:360px;background:#e9efec}
-.TopInfo__map iframe{position:absolute;inset:0;display:block;width:100%;height:100%}
-.TopInfo__mapAlt{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);padding:0 20px;text-align:center;font-size:14px;color:var(--mute)}
+.Gmap{position:relative;min-height:360px;background:#e9efec}
+.Gmap iframe{position:absolute;inset:0;display:block;width:100%;height:100%}
+.mapTxt{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);padding:0 20px;text-align:center;font-size:14px;color:var(--mute)}
 
 /* お悩み */
-.TopWorry__list{display:grid;grid-template-columns:1fr 1fr;gap:12px 30px;max-width:900px;margin:0 auto}
-.TopWorry__list li{position:relative;background:#fff;border-radius:8px;font-weight:700}
-.TopWorry__list a{display:block;padding:14px 44px 14px 50px;text-decoration:none}
-.TopWorry__list a:hover{color:var(--green-d)}
-.TopWorry__list a::after{content:"\f054";position:absolute;right:20px;top:50%;transform:translateY(-50%);font:900 12px/1 "Font Awesome 6 Free";color:var(--green)}
-.TopWorry__list li::before{content:"\f059";position:absolute;left:18px;top:19px;font:900 18px/1 "Font Awesome 6 Free";color:var(--green)}
-.TopWorry__end{text-align:center;margin-top:30px;font-family:var(--mincho);font-size:22px;color:var(--head)}
+.txtUl{display:grid;grid-template-columns:1fr 1fr;gap:12px 30px;max-width:900px;margin:0 auto}
+.txtUl li{position:relative;background:#fff;border-radius:8px;font-weight:700}
+.txtUl a{display:flex;align-items:center;height:100%;padding:14px 44px 14px 50px;text-decoration:none}
+.txtUl a:hover{color:var(--green-d)}
+.txtUl a::after{content:"\f054";position:absolute;right:20px;top:50%;transform:translateY(-50%);font:900 12px/1 "Font Awesome 6 Free";color:var(--green)}
+.txtUl li::before{content:"\f059";position:absolute;left:18px;top:53%;transform:translateY(-50%);font:900 18px/1 "Font Awesome 6 Free";color:var(--green)}
+.comText{text-align:center;margin-top:30px;font-family:var(--mincho);font-size:22px;color:var(--head)}
 
 /* 当院の特徴。写真を大きく左右に振る */
-.TopFeature__item{position:relative;display:grid;grid-template-columns:58% 1fr;align-items:center;margin-bottom:90px}
-.TopFeature__item:nth-child(even){grid-template-columns:1fr 58%}
-.TopFeature__item:nth-child(even) .TopFeature__photo{order:2}
-.TopFeature__photo{position:relative}
-.TopFeature__photo img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:0 24px 24px 0}
-.TopFeature__item:nth-child(even) .TopFeature__photo img{border-radius:24px 0 0 24px}
-.TopFeature__photo::after{content:"";position:absolute;left:30px;right:-30px;top:30px;bottom:-30px;z-index:-1;background:var(--mint-d);border-radius:0 24px 24px 0}
-.TopFeature__item:nth-child(even) .TopFeature__photo::after{left:-30px;right:30px;border-radius:24px 0 0 24px}
-.TopFeature__body{padding:0 50px}
-.TopFeature__no{display:block;font-family:var(--en);font-size:18px;letter-spacing:.2em;color:var(--gold)}
-.TopFeature__no b{font-size:64px;font-weight:500;line-height:1;color:var(--mint-d);margin-left:6px}
-.TopFeature__body h3{font-family:var(--mincho);font-size:25px;font-weight:600;line-height:1.55;color:var(--green-d);margin:4px 0 16px;letter-spacing:.06em}
-.TopFeature__body p{font-size:15px}
+.Feature__blc{position:relative;display:grid;grid-template-columns:58% 1fr;align-items:center;margin-bottom:90px}
+.Feature__blc:nth-child(even){grid-template-columns:1fr 58%}
+.Feature__blc:nth-child(even) .Feature__blc__img{order:2}
+.Feature__blc__img{position:relative}
+.Feature__blc__img img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:0 24px 24px 0}
+.Feature__blc:nth-child(even) .Feature__blc__img img{border-radius:24px 0 0 24px}
+.Feature__blc__img::after{content:"";position:absolute;left:30px;right:-30px;top:30px;bottom:-30px;z-index:-1;background:var(--mint-d);border-radius:0 24px 24px 0}
+.Feature__blc:nth-child(even) .Feature__blc__img::after{left:-30px;right:30px;border-radius:24px 0 0 24px}
+.Feature__blc__cont{padding:0 50px}
+.Feature__blc__num{display:block;font-family:var(--en);font-size:18px;letter-spacing:.2em;color:var(--gold)}
+.Feature__blc__num b{font-size:64px;font-weight:500;line-height:1;color:var(--mint-d);margin-left:6px}
+.Feature__blc__cont h3{font-family:var(--mincho);font-size:25px;font-weight:600;line-height:1.55;color:var(--green-d);margin:4px 0 16px;letter-spacing:.06em}
+.Feature__blc__cont p{font-size:15px}
 
 /* 費用と期間。治療の方法を4列に */
-.TopPrice__intro{max-width:880px;margin:0 auto 36px;text-align:center;font-size:15px}
-.TopPrice__insure{display:inline-block;margin:12px 0;padding-left:1.4em;list-style:decimal;text-align:left;font-size:14px;line-height:1.8}
-.TopPrice__plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.TopPrice__plan{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
-.TopPrice__head{padding:16px 14px;background:var(--green);color:#fff;text-align:center}
-.TopPrice__head h3{font-size:17px;font-weight:700;line-height:1.5}
-.TopPrice__head p{font-size:12px;line-height:1.6;margin-top:4px;opacity:.9}
-.TopPrice__body{padding:18px 16px;flex:1;text-align:center}
-.TopPrice__label{font-size:12px;color:var(--mute)}
-.TopPrice__price{font-family:var(--en);font-size:34px;font-weight:500;line-height:1.2;color:var(--head)}
-.TopPrice__price small{font-family:var(--sans);font-size:14px}
-.TopPrice__plan dl{margin-top:12px;border-top:1px dashed var(--line);font-size:13px;text-align:left}
-.TopPrice__plan dl div{display:grid;grid-template-columns:62px 1fr;gap:6px;padding:7px 0;border-bottom:1px dashed var(--line)}
-.TopPrice__plan dt{color:var(--mute)}
-.TopPrice__total{margin-top:12px;padding:10px;background:var(--mint);border-radius:6px;font-size:12px}
-.TopPrice__total b{display:block;font-size:15px;color:var(--green-d)}
-.TopPrice__common{margin-top:44px}
-.TopPrice__common h3{font-family:var(--mincho);font-size:21px;font-weight:600;color:var(--head);margin-bottom:12px;text-align:center}
-.TopPrice__common table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}
-.TopPrice__common th,.TopPrice__common td{padding:14px 16px;border:1px solid var(--line);text-align:left}
-.TopPrice__common th{width:22%;background:var(--mint)}
-.TopPrice__common td b{margin-right:1em;color:var(--head)}
+.txtBox{max-width:880px;margin:0 auto 36px;text-align:center;font-size:15px}
+.txtBox ol{display:inline-block;margin:12px 0;padding-left:1.4em;list-style:decimal;text-align:left;font-size:14px;line-height:1.8}
+.omt-fee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.omt-fee-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.omt-fee-plan-label{padding:16px 14px;background:var(--green-d);color:#fff;text-align:center}
+.omt-fee-plan-label h3{font-size:17px;font-weight:700;line-height:1.5}
+.omt-fee-plan-label p{font-size:12px;line-height:1.6;margin-top:4px;opacity:.9}
+.fee-box{padding:18px 16px;flex:1;text-align:center}
+.label{font-size:12px;color:var(--mute)}
+.omt-fee-price{font-family:var(--en);font-size:34px;font-weight:500;line-height:1.2;color:var(--head)}
+.omt-fee-price small{font-family:var(--sans);font-size:14px}
+.omt-fee-card dl{margin-top:12px;border-top:1px dashed var(--line);font-size:13px;text-align:left}
+.omt-fee-card dl div{display:grid;grid-template-columns:62px 1fr;gap:6px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.omt-fee-card dt{color:var(--mute)}
+.fee-box>p:last-child{margin-top:12px;padding:10px;background:var(--mint);border-radius:6px;font-size:12px}
+.fee-box>p:last-child b{display:block;font-size:15px;color:var(--head)}
+.price{margin-top:44px}
+.price h3{font-family:var(--mincho);font-size:21px;font-weight:600;color:var(--head);margin-bottom:12px;text-align:center}
+.price table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}
+.price th,.price td{padding:14px 16px;border:1px solid var(--line);text-align:left}
+.price th{width:22%;background:var(--mint)}
+.price td b{margin-right:1em;color:var(--head)}
 .note{font-size:13px;line-height:1.85;margin-top:12px;color:var(--mute)}
-.TopPrice__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-.TopPrice__photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
-.TopPrice__photos figcaption{font-size:13px;color:var(--mute);margin-top:6px}
+.has-bg-main-lighter .note{color:var(--text)}
+#price .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+#price .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+#price .gallery figcaption{font-size:13px;color:var(--text);margin-top:6px}
 
 /* 院長あいさつ */
-.TopGreet{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:start}
-.TopGreet img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
-.TopGreet h3{font-family:var(--mincho);font-size:24px;font-weight:600;color:var(--head);margin-bottom:16px;letter-spacing:.06em}
-.TopGreet p:not([class])+p:not([class]){margin-top:1em}
-.TopGreet__name{margin-top:24px;font-family:var(--mincho);font-size:15px}
-.TopGreet__name b{font-size:24px;letter-spacing:.14em;margin-left:10px}
-.TopGreet__career{margin-top:22px;border-top:1px solid var(--line);font-size:14px}
-.TopGreet__career div{display:grid;grid-template-columns:120px 1fr;padding:9px 0;border-bottom:1px solid var(--line)}
-.TopGreet__career dt{color:var(--green-d);font-weight:700}
+.Greeting__inner{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:start}
+.Greeting__inner img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+.Greeting__inner h3{font-family:var(--mincho);font-size:24px;font-weight:600;color:var(--head);margin-bottom:16px;letter-spacing:.06em}
+.Greeting__inner p:not([class])+p:not([class]){margin-top:1em}
+.name{margin-top:24px;font-family:var(--mincho);font-size:15px}
+.name b{font-size:24px;letter-spacing:.14em;margin-left:10px}
+.doctor-history__list{margin-top:22px;border-top:1px solid var(--line);font-size:14px}
+.doctor-history__list div{display:grid;grid-template-columns:120px 1fr;padding:9px 0;border-bottom:1px solid var(--line)}
+.doctor-history__list dt{color:var(--green-d);font-weight:700}
 
 /* 初診相談の流れ */
-.TopFlow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.TopFlow li{position:relative;padding:22px 16px 20px;background:#fff;border-radius:10px;text-align:center}
-.TopFlow li:not(:last-child)::after{content:"\f0da";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font:900 18px/1 "Font Awesome 6 Free";color:var(--green)}
-.TopFlow__step{display:block;font-family:var(--en);font-size:24px;font-weight:500;letter-spacing:.06em;color:var(--green)}
-.TopFlow h3{font-size:15px;font-weight:700;line-height:1.55;margin:6px 0 8px;color:var(--head)}
-.TopFlow p{font-size:14px;line-height:1.8;text-align:left}
-.TopFlow__photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
-.TopFlow__photos img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px}
-.TopFlow__photos figcaption{font-size:13px;color:var(--mute);margin-top:6px}
+.omt-flow-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.omt-flow-cards li{position:relative;padding:22px 16px 20px;background:#fff;border-radius:10px;text-align:center}
+.omt-flow-cards li:not(:last-child)::after{content:"\f0da";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font:900 18px/1 "Font Awesome 6 Free";color:var(--green)}
+.omt-flow-dot-circle{display:block;font-family:var(--en);font-size:24px;font-weight:500;letter-spacing:.06em;color:var(--green)}
+.omt-flow-cards h3{font-size:15px;font-weight:700;line-height:1.55;margin:6px 0 8px;color:var(--head)}
+.omt-flow-cards p{font-size:14px;line-height:1.8;text-align:left}
+#flow .gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+#flow .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px}
+#flow .gallery figcaption{font-size:13px;color:var(--text);margin-top:6px}
 
 /* リスクと副作用 */
-.TopRisk{background:#f8f6f2}
-.TopRisk__group{max-width:980px;margin:0 auto 30px;padding:28px 32px;background:#fff;border:1px solid var(--line);border-radius:10px}
-.TopRisk__group h3{font-size:17px;font-weight:700;color:var(--head);padding-bottom:10px;margin-bottom:6px;border-bottom:2px solid var(--mint-d)}
-.TopRisk__group li{display:grid;grid-template-columns:190px 1fr;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.8}
-.TopRisk__group li b{color:var(--green-d)}
-.TopRisk__pmda{border-color:#e7d8b5;background:#fffcf4}
+.risk{background:#f8f6f2}
+.risk .container>div{max-width:980px;margin:0 auto 30px;padding:28px 32px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.risk .container>div h3{font-size:17px;font-weight:700;color:var(--head);padding-bottom:10px;margin-bottom:6px;border-bottom:2px solid var(--mint-d)}
+.risk .container>div li{display:grid;grid-template-columns:190px 1fr;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.8}
+.risk .container>div li b{color:var(--green-d)}
+#pmda{border-color:#e7d8b5;background:#fffcf4}
 
 /* よくある質問 */
 .TopFaq__list{max-width:940px;margin:0 auto}
@@ -205,124 +207,123 @@ ul,ol{padding:0;list-style:none}
 .TopFaq__list__a{padding:0 26px 22px 58px;font-size:15px}
 
 /* アクセスと予約 */
-.TopAccess{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.TopAccess img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px}
-.TopAccess figcaption{font-size:13px;color:var(--mute);margin-top:6px}
-.TopAccess dl{border-top:1px solid var(--line);font-size:15px}
-.TopAccess dl div{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.TopAccess dt{font-weight:700;color:var(--green-d)}
-.TopReserve{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:start}
-.TopReserve__form{padding:34px 36px;background:#fff;border-radius:12px}
-.TopReserve__form label,.TopReserve__form legend{display:block;font-size:14px;font-weight:700;margin:16px 0 6px;padding:0}
-.TopReserve__form label:first-child{margin-top:0}
-.TopReserve__form input,.TopReserve__form textarea{width:100%;padding:12px;border:1px solid #cfd8d3;border-radius:6px;font:inherit;font-size:16px;background:#fff}
-.TopReserve__form textarea{min-height:100px}
-.TopReserve__form fieldset{border:0;margin:0;padding:0}
-.TopReserve__form .TopReserve__radio{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:14px}
-.TopReserve__form .TopReserve__radio label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
-.TopReserve__form .TopReserve__radio input{width:auto}
-.TopReserve__form button{display:flex;width:100%;margin-top:22px;border:0;cursor:pointer;font-family:inherit}
-.TopReserve__note{font-size:12.5px;color:var(--mute);margin-top:10px;line-height:1.8}
-.TopReserve__side{padding:30px;background:#fff;border-radius:12px;text-align:center}
-.TopReserve__side b{display:block;font-size:28px;letter-spacing:.04em;color:var(--head);margin:6px 0}
-.TopReserve__side a{text-decoration:none}
-.TopReserve__side p{font-size:13.5px;line-height:1.8}
+.omt-access-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.omt-access-wrap img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px}
+.omt-access-wrap figcaption{font-size:13px;color:var(--mute);margin-top:6px}
+.omt-access-wrap dl{border-top:1px solid var(--line);font-size:15px}
+.omt-access-wrap dl div{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.omt-access-wrap dt{font-weight:700;color:var(--green-d)}
+.d-flex-pc{display:grid;grid-template-columns:1.25fr 1fr;gap:40px}
+form.flex-col{padding:34px 36px;background:#fff;border-radius:12px}
+form.flex-col label,form.flex-col legend{display:block;font-size:14px;font-weight:700;margin:16px 0 6px;padding:0}
+form.flex-col label:first-child{margin-top:0}
+form.flex-col input,form.flex-col textarea{width:100%;padding:12px;border:1px solid #cfd8d3;border-radius:6px;font:inherit;font-size:16px;background:#fff}
+form.flex-col textarea{min-height:100px}
+form.flex-col fieldset{border:0;margin:0;padding:0}
+form.flex-col fieldset>div{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:14px}
+form.flex-col fieldset>div label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
+form.flex-col fieldset>div input{width:auto}
+form.flex-col button{display:flex;width:100%;margin-top:22px;border:0;cursor:pointer;font-family:inherit}
+.text-muted{font-size:12.5px;color:var(--mute);margin-top:10px;line-height:1.8}
+div.flex-col{display:flex;flex-direction:column;justify-content:center;padding:30px;background:#fff;border-radius:12px;text-align:center}
+div.flex-col b{display:block;font-size:28px;letter-spacing:.04em;color:var(--head);margin:6px 0}
+div.flex-col a{text-decoration:none}
+div.flex-col p{font-size:13.5px;line-height:1.8}
 
 /* フッター */
-.footer{background:var(--green-d);color:#e6f1ec;font-size:13px;line-height:1.9}
-.footer__inner{display:flex;justify-content:space-between;gap:30px;max-width:1100px;margin:0 auto;padding:50px 20px 30px}
-.footer__logo{font-family:var(--mincho);font-size:22px;font-weight:600;color:#fff;letter-spacing:.1em;margin-bottom:8px}
-.footer nav{display:grid;grid-template-columns:repeat(2,auto);gap:6px 30px}
-.footer nav a{text-decoration:none}
-.footer__note{max-width:1100px;margin:0 auto;padding:0 20px 20px;font-size:11px;opacity:.85}
-.footer__note a{color:#fff}
-.footer__copyright{padding:12px;text-align:center;background:#17523f;font-family:var(--en);font-size:12px;letter-spacing:.1em}
+.omt-footer{background:var(--green-d);color:#fff;font-size:13px;line-height:1.9}
+.omt-footer-inner{display:flex;justify-content:space-between;gap:30px;max-width:1100px;margin:0 auto;padding:50px 20px 30px}
+.omt-footer-logo{font-family:var(--mincho);font-size:22px;font-weight:600;color:#fff;letter-spacing:.1em;margin-bottom:8px}
+.omt-footer nav{display:grid;grid-template-columns:repeat(2,auto);gap:6px 30px}
+.omt-footer nav a{text-decoration:none}
+.notes{max-width:1100px;margin:0 auto;padding:0 20px 20px;font-size:11px}
+.notes a{color:#fff}
+.omt-footer-copy{padding:12px;text-align:center;background:var(--shade);font-family:var(--en);font-size:12px;letter-spacing:.1em}
 
 /* 動き */
-.fade{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
-.fade.is-in{opacity:1;transform:none}
+.fadeInUp{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.fadeInUp.on{opacity:1;transform:none}
 
-.spFixBar{display:none}
+.Fix__TabBar{display:none}
 @media (max-width:1120px){
-  .header__nav{display:none}
-  .header__tel{margin-left:auto}
-  .header__menuBtn{display:block;width:44px;height:44px;padding:0;border:0;background:none;line-height:44px;cursor:pointer}
-  .header__menuBtn .fa-solid{font-size:24px;line-height:44px;color:var(--green-d)}
-  .header__nav.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:86px;margin:0;padding:10px 20px 18px;background:#fff;box-shadow:0 10px 16px rgba(0,0,0,.08)}
-  .TopPrice__plans{grid-template-columns:1fr 1fr}
-  .TopFlow{grid-template-columns:1fr 1fr}
-  .TopFlow li:not(:last-child)::after{display:none}
+  .omt-header-nav{display:none}
+  .Header__right__contact{margin-left:auto}
+  .omt-hamburger{display:block;width:44px;height:44px;padding:0;border:0;background:none;line-height:44px;cursor:pointer}
+  .omt-hamburger .fa-solid{font-size:24px;line-height:44px;color:var(--green-d)}
+  .omt-header-nav.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:86px;margin:0;padding:10px 20px 18px;background:#fff;box-shadow:0 10px 16px rgba(0,0,0,.08)}
+  .omt-fee-grid{grid-template-columns:1fr 1fr}
+  .omt-flow-cards{grid-template-columns:1fr 1fr}
+  .omt-flow-cards li:not(:last-child)::after{display:none}
 }
 @media (max-width:767px){
   body{font-size:15px}
-  .sec{padding:64px 0}
+  .section{padding:64px 0}
   .headLine01{font-size:25px;margin-bottom:36px}
-  .header__inner{height:66px;gap:10px}
-  .header__logo small{display:none}
-  .header__logo b{font-size:18px}
-  .header__tel{display:none}
-  .header__webBtn{margin-left:auto;width:64px;height:48px;font-size:11px}
-  .header__nav.is-open{top:66px}
-  .TopMv{margin-top:66px;height:auto;border-radius:0 0 50% 50%/0 0 30px 30px;padding-top:62vw}
-  .TopMv img{height:66vw}
-  .TopMv__box{position:relative;left:auto;top:auto;width:auto;margin:-40px 14px 30px;padding:26px 20px}
-  .TopMv h1{font-size:28px}
-  .TopNews li{grid-template-columns:96px 1fr;gap:4px 10px}
-  /* 札は見出しの列に入ると1fr いっぱいまで伸びるので、中身の幅で止める */
-  .TopNews em{justify-self:start;padding:0 10px}
-  .TopNews li p{grid-column:1/-1}
-  .TopInfo{grid-template-columns:1fr}
-  .TopInfo__body{padding:28px 18px}
-  .TopInfo__btns{grid-template-columns:1fr}
-  .TopWorry__list{grid-template-columns:1fr}
-  .TopFeature__item,.TopFeature__item:nth-child(even){grid-template-columns:1fr;margin-bottom:60px}
-  .TopFeature__item:nth-child(even) .TopFeature__photo{order:0}
-  .TopFeature__photo::after{display:none}
-  .TopFeature__photo img,.TopFeature__item:nth-child(even) .TopFeature__photo img{border-radius:16px}
-  .TopFeature__body{padding:24px 20px 0}
-  .TopPrice__plans,.TopFlow,.TopPrice__photos,.TopFlow__photos{grid-template-columns:1fr}
-  .TopPrice__common th,.TopPrice__common td{display:block;width:auto;border-top:0}
-  .TopPrice__common td b{display:block;margin-right:0}
-  .TopGreet,.TopAccess,.TopReserve{grid-template-columns:1fr;gap:28px}
-  .TopRisk__group{padding:22px 16px}
-  .TopRisk__group li{grid-template-columns:1fr;gap:2px}
-  .TopReserve__form{padding:24px 18px}
-  .TopReserve__form .TopReserve__radio{grid-template-columns:1fr}
-  .footer__inner{flex-direction:column}
-  .spFixBar{display:grid;grid-template-columns:repeat(2,1fr);position:fixed;left:0;right:0;bottom:0;z-index:40}
-  .spFixBar a{display:flex;align-items:center;justify-content:center;height:54px;color:#fff;font-size:14px;font-weight:700;text-decoration:none}
-  .spFixBar a:nth-child(1){background:#4d6660}
-  .spFixBar a:nth-child(2){background:var(--green)}
-  .footer{padding-bottom:54px}
+  .Header__cont{height:66px;gap:10px}
+  .Header__logo small{display:none}
+  .Header__logo b{font-size:18px}
+  .Header__right__contact{display:none}
+  .reservedBtn{margin-left:auto;width:64px;height:48px;font-size:11px}
+  .omt-header-nav.open{top:66px}
+  .omt-fv{margin-top:66px;height:auto;border-radius:0 0 50% 50%/0 0 30px 30px;padding-top:62vw}
+  .omt-fv img{height:66vw}
+  .omt-fv-inner{position:relative;left:auto;top:auto;width:auto;margin:-40px 14px 30px;padding:26px 20px}
+  .omt-fv h1{font-size:28px}
+  .News li{grid-template-columns:96px 1fr;gap:4px 10px}
+  /* ラベルは見出しの列に入ると1fr いっぱいまで伸びるので、中身の幅で止める */
+  .News em{justify-self:start;padding:0 10px}
+  .News li p{grid-column:1/-1}
+  .ClinicInfo{grid-template-columns:1fr}
+  .Schedule{padding:28px 18px}
+  .BtnCont{grid-template-columns:1fr}
+  .txtUl{grid-template-columns:1fr}
+  .Feature__blc,.Feature__blc:nth-child(even){grid-template-columns:1fr;margin-bottom:60px}
+  .Feature__blc:nth-child(even) .Feature__blc__img{order:0}
+  .Feature__blc__img::after{display:none}
+  .Feature__blc__img img,.Feature__blc:nth-child(even) .Feature__blc__img img{border-radius:16px}
+  .Feature__blc__cont{padding:24px 20px 0}
+  .omt-fee-grid,.omt-flow-cards,#price .gallery,#flow .gallery{grid-template-columns:1fr}
+  .price th,.price td{display:block;width:auto;border-top:0}
+  .price td b{display:block;margin-right:0}
+  .Greeting__inner,.omt-access-wrap,.d-flex-pc{grid-template-columns:1fr;gap:28px}
+  .risk .container>div{padding:22px 16px}
+  .risk .container>div li{grid-template-columns:1fr;gap:2px}
+  form.flex-col{padding:24px 18px}
+  form.flex-col fieldset>div{grid-template-columns:1fr}
+  .omt-footer-inner{flex-direction:column}
+  .Fix__TabBar{display:grid;grid-template-columns:repeat(2,1fr);position:fixed;left:0;right:0;bottom:0;z-index:40}
+  .Fix__TabBar a{display:flex;align-items:center;justify-content:center;height:54px;color:#fff;font-size:14px;font-weight:700;text-decoration:none}
+  .Fix__TabBar a:nth-child(1){background:#4d6660}
+  .Fix__TabBar a:nth-child(2){background:var(--green-d)}
+  .omt-footer{padding-bottom:54px}
 }
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .fade{opacity:1;transform:none;transition:none}
+  .fadeInUp{opacity:1;transform:none;transition:none}
 }
 @media print{
-  .fade{opacity:1!important;transform:none!important}
-  .header{position:static}
-  .TopMv{margin-top:0}
-  .spFixBar,.header__menuBtn{display:none!important}
+  .fadeInUp{opacity:1!important;transform:none!important}
+  .Header{position:static}
+  .omt-fv{margin-top:0}
+  .Fix__TabBar,.omt-hamburger{display:none!important}
 }
 /* 和文の折り返し。数字と単位の間は pretty でも割れるので .nw で括る */
 body{line-break:strict}
 p,li,dd,dt,th,td,figcaption,summary,blockquote{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 .nw{white-space:nowrap}
-/* 短い文と札は pretty のままだと「初診｜相談」「必要があ｜ります」と語の中で割れ、最終行に「ます。」だけが残る */
-.TopMv__lead,.TopWorry__list a,.TopWorry__end,.TopPrice__insure li,.TopGreet__career dd,.TopAccess dd{word-break:auto-phrase;text-wrap:balance}
+/* 短い文とラベルは pretty のままだと「初診｜相談」「必要があ｜ります」と語の中で割れ、最終行に「ます。」だけが残る */
+.omt-fv-sub,.txtUl a,.comText,.txtBox ol li,.doctor-history__list dd,.omt-access-wrap dd{word-break:auto-phrase;text-wrap:balance}
 /* 長い段落まで balance にすると、1280pxで「地方｜厚生」と割れる */
-.TopPrice__intro p{word-break:auto-phrase}
+.txtBox p{word-break:auto-phrase}
 </style>
-<noscript><style>.fade{opacity:1;transform:none}</style></noscript>
+<noscript><style>.fadeInUp{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
-<header class="header">
-  <div class="header__inner">
-    <a class="header__logo" href="#top"><small>広島市中区・並木通り｜袋町電停 徒歩6分</small><b><i class="fa-solid fa-tooth" aria-hidden="true"></i>並木町矯正歯科</b></a>
-    <nav class="header__nav" id="gnav" aria-label="ページ内の案内">
+<header class="Header">
+  <div class="Header__cont">
+    <a class="Header__logo" href="#top"><small>広島市中区・並木通り｜袋町電停 徒歩6分</small><b><i class="fa-solid fa-tooth" aria-hidden="true"></i>並木町矯正歯科</b></a>
+    <nav class="omt-header-nav" id="gnav" aria-label="ページ内の案内">
       <a href="#feature">当院の特徴</a>
       <a href="#price">費用と期間</a>
       <a href="#greeting">院長あいさつ</a>
@@ -331,146 +332,146 @@ h1,h2,h3{text-wrap:balance}
       <a href="#faq">よくある質問</a>
       <a href="#access">アクセス</a>
     </nav>
-    <p class="header__tel">お電話でのご予約<b><a href="tel:0820000000">082-000-0000</a></b></p>
-    <a class="header__webBtn" href="#reserve"><i class="fa-regular fa-calendar" aria-hidden="true"></i>お申し込み</a>
-    <button class="header__menuBtn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <p class="Header__right__contact">お電話でのご予約<b><a href="tel:0820000000">082-000-0000</a></b></p>
+    <a class="reservedBtn" href="#reserve"><i class="fa-regular fa-calendar" aria-hidden="true"></i>お申し込み</a>
+    <button class="omt-hamburger" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
   </div>
 </header>
 
 <main id="top">
-<section class="TopMv">
+<section class="omt-fv">
   <img src="img/hero_smile.jpg" alt="診療台の患者さんと歯科医師" fetchpriority="high">
-  <div class="TopMv__box">
-    <p class="TopMv__tag">広島市中区・並木通りの矯正歯科</p>
+  <div class="omt-fv-inner">
+    <p class="omt-fv-tag">広島市中区・並木通りの矯正歯科</p>
     <h1>費用も期間も、<br>初診でお伝えします</h1>
-    <p class="TopMv__lead">当院は大人の矯正治療を中心に行っています。<span class="nw">60分</span>の初診相談で、治療方法ごとの総額と期間を書面にしてお渡しします。</p>
-    <div class="TopMv__btns"><a class="comBtn" href="#reserve">初診相談のお申し込み</a><a class="comBtn comBtn--line" href="#price">詳しい費用を見る</a></div>
-    <ul class="TopMv__badges"><li>初診相談3,300円（税込）</li><li>月・火・水・金は19時まで診療</li><li>土曜も診療</li></ul>
+    <p class="omt-fv-sub">当院は大人の矯正治療を中心に行っています。初診相談時に、治療方法ごとの総額・治療期間・通院回数の目安を書面にしてお渡しします。</p>
+    <div class="omt-fv-btns"><a class="comBtn" href="#reserve">初診相談のお申し込み</a><a class="comBtn comBtn02" href="#price">詳しい費用を見る</a></div>
+    <ul class="omt-footer-tags"><li>初診相談<span class="nw">3,300円</span>（税込）</li><li>月・火・水・金は19時まで診療</li><li>土曜も診療</li></ul>
   </div>
 </section>
 
-<div class="TopNews">
+<div class="News">
   <h2><span>NEWS</span>お知らせ</h2>
-  <ul class="fade">
-    <li><time datetime="2026-07-30">2026.07.30</time><em>設備</em><p>口腔内<span class="nw">スキャナー</span>を導入しました。精密検査で行う歯列の<span class="nw">スキャン</span>に、この機器を使います。</p></li>
-    <li><time datetime="2026-07-02">2026.07.02</time><em>休診</em><p><span class="nw">8月13日</span>（木）から<span class="nw">8月16日</span>（日）まで休診します。</p></li>
-    <li><time datetime="2026-06-10">2026.06.10</time><em>診療</em><p>月・火・水・金の夕方にも初診相談の枠を設けました。</p></li>
+  <ul class="fadeInUp">
+    <li><time datetime="2026-10-01">2026.10.01</time><em>休診</em><p><span class="nw">12月29日</span>（火）から<span class="nw">1月3日</span>（日）まで休診します。</p></li>
+    <li><time datetime="2026-07-30">2026.07.30</time><em>設備</em><p>口腔内<span class="nw">スキャナー</span>を導入しました。精密検査で行う歯列の<span class="nw">スキャン</span>に使います。</p></li>
+    <li><time datetime="2026-06-10">2026.06.10</time><em>診療</em><p>月・火・水・金の夕方の初診相談枠を新設しました。</p></li>
   </ul>
 </div>
 
-<section class="sec" id="info">
-  <div class="inner">
-    <div class="TopInfo fade">
-      <div class="TopInfo__body">
+<section class="section" id="info">
+  <div class="container">
+    <div class="ClinicInfo fadeInUp">
+      <div class="Schedule">
         <h2>診療時間のご案内</h2>
-        <table class="TopInfo__hours">
+        <table class="Schedul__table">
           <thead><tr><th scope="col">診療時間</th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr></thead>
           <tbody>
-            <tr><th scope="row">10:00〜13:00</th><td class="on">●</td><td class="on">●</td><td class="on">●</td><td class="off">―</td><td class="on">●</td><td class="on">●</td><td class="off">―</td></tr>
-            <tr><th scope="row">14:30〜19:00</th><td class="on">●</td><td class="on">●</td><td class="on">●</td><td class="off">―</td><td class="on">●</td><td class="on">〜17:00</td><td class="off">―</td></tr>
+            <tr><th scope="row">10:00〜13:00</th><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td></tr>
+            <tr><th scope="row">14:30〜19:00</th><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td><td class="c-table-access-on">●</td><td class="c-table-access-on">〜17:00</td><td class="c-table-access-off">―</td></tr>
           </tbody>
         </table>
-        <p class="TopInfo__note">最終受付は診療終了の<span class="nw">30分</span>前（初診相談は<span class="nw">1時間</span>前）です。</p>
-        <p class="TopInfo__tel"><span>お電話</span><b><a href="tel:0820000000">082-000-0000</a></b></p>
-        <div class="TopInfo__btns"><a class="comBtn" href="#reserve">初診相談のお申し込み</a><a class="comBtn comBtn--line" href="#access">アクセス</a></div>
+        <p class="Schedul__notes">最終受付は診療終了の<span class="nw">30分</span>前（初診相談は<span class="nw">1時間</span>前）です。</p>
+        <p class="tel"><span>お電話</span><b><a href="tel:0820000000">082-000-0000</a></b></p>
+        <div class="BtnCont"><a class="comBtn" href="#reserve">初診相談のお申し込み</a><a class="comBtn comBtn02" href="#access">アクセス</a></div>
       </div>
-      <div class="TopInfo__map">
-        <p class="TopInfo__mapAlt">広島電鉄・袋町電停から徒歩<span class="nw">6分</span></p>
+      <div class="Gmap">
+        <p class="mapTxt">広島電鉄・袋町電停から徒歩<span class="nw">6分</span>。</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.3917492749156!2d132.45181708885497!3d34.3913874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa21273dbe56b%3A0x762c82653c8756de!2z6KKL55S66aeF!5e0!3m2!1sja!2sjp!4v1790602644900!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" title="袋町電停周辺の地図"></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec sec--mint" id="worry">
-  <div class="inner">
+<section class="section has-bg-main-lighter" id="worry">
+  <div class="container">
     <h2 class="headLine01"><span>WORRY</span>矯正治療のお悩みとご質問</h2>
-    <ul class="TopWorry__list fade">
+    <ul class="txtUl fadeInUp">
       <li><a href="#price">矯正の費用はいくらかかりますか？</a></li>
-      <li><a href="#appliance">矯正装置は目立ちますか？</a></li>
+      <li><a href="#appliance">目立たない矯正装置はありますか？</a></li>
       <li><a href="#price">治療期間はどのくらいかかりますか？</a></li>
-      <li><a href="#faq-age">年齢の上限はありますか？</a></li>
+      <li><a href="#faq-age">矯正治療は何歳まで可能ですか？</a></li>
       <li><a href="#faq-extraction">抜歯は必要ですか？</a></li>
-      <li><a href="#flow">相談した当日に治療を決める必要がありますか？</a></li>
+      <li><a href="#flow">初診相談の当日に治療方法や開始時期を決定する必要はありますか？</a></li>
     </ul>
-    <p class="TopWorry__end fade">費用や期間、装置の見え方など、気になっていることは初診相談でお聞かせください。</p>
+    <p class="comText fadeInUp">費用、期間など、気になることはどうぞお気軽にご相談ください。</p>
   </div>
 </section>
 
-<section class="sec" id="feature">
+<section class="section" id="feature">
   <h2 class="headLine01"><span>FEATURES</span>当院の4つの特徴</h2>
-  <div class="TopFeature">
-    <div class="TopFeature__item fade">
-      <figure class="TopFeature__photo"><img src="img/counsel.jpg" alt="クリップボードの白紙とペン" loading="lazy"></figure>
-      <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>01</b></span><h3>総額と<br>治療期間のご提示</h3><p>初診相談と精密検査の費用、装置代、調整料、装置を外したあとの保定にかかる費用まで含めた総額をお伝えします。書面には、ご相談の内容から考えられる治療方法ごとの総額と、治療期間・通院回数の目安を記載します。</p></div>
+  <div class="Feature__cont">
+    <div class="Feature__blc fadeInUp">
+      <figure class="Feature__blc__img"><img src="img/counsel.jpg" alt="クリップボードの白紙とペン" loading="lazy"></figure>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>01</b></span><h3>総額と<br>治療期間のご提示</h3><p>当院では、初診相談時に治療費用の総額をお伝えしています。総額には、初診相談から保定中の通院までの費用が含まれます。抜歯費用は含みません。書面には、総額・治療期間・通院回数の目安を記載します。</p></div>
     </div>
-    <div class="TopFeature__item fade">
-      <figure class="TopFeature__photo"><img src="img/scan.jpg" alt="装置をつけた歯列の口腔内スキャン" loading="lazy"></figure>
-      <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>02</b></span><h3>精密検査と<br>診断</h3><p><span class="nw">パノラマ</span>X線写真、頭部X線規格写真（<span class="nw">セファロ</span>）、口腔内写真の撮影と歯列の<span class="nw">スキャン</span>を行い、顎の骨格と歯の傾きを調べます。検査の結果をもとに、抜歯の必要性も含めて治療計画を立てます。</p></div>
+    <div class="Feature__blc fadeInUp">
+      <figure class="Feature__blc__img"><img src="img/scan.jpg" alt="装置をつけた歯列のスキャン画像" loading="lazy"></figure>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>02</b></span><h3>精密検査と<br>診断</h3><p><span class="nw">パノラマ</span>X線写真・頭部X線規格写真（<span class="nw">セファロ</span>）・口腔内写真の撮影と、歯列の<span class="nw">スキャン</span>を行います。その後骨格の分析と歯軸の計測を行い、検査結果をもとに診断・治療計画を立てます。抜歯が必要かどうかも、このときに判断します。</p></div>
     </div>
-    <div class="TopFeature__item fade" id="appliance">
-      <figure class="TopFeature__photo"><img src="img/aligner.jpg" alt="マウスピース型の矯正装置の装着" loading="lazy"></figure>
-      <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>03</b></span><h3>目立ちにくい<br>装置</h3><p>表側の装置には、透明な<span class="nw">ブラケット</span>を使用しています。歯の裏側につける装置は、会話中や笑顔のときでも見えにくいのが特徴です。<span class="nw">マウスピース</span>型は透明で、取り外しもできます。</p></div>
+    <div class="Feature__blc fadeInUp" id="appliance">
+      <figure class="Feature__blc__img"><img src="img/aligner.jpg" alt="マウスピース型の矯正装置の装着" loading="lazy"></figure>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>03</b></span><h3>目立ちにくい<br>装置</h3><p>表側の装置には、透明な<span class="nw">ブラケット</span>を使います。裏側の装置は、会話中や笑顔のときでも見えにくいのが特徴です。<span class="nw">マウスピース</span>型の装置は透明で、ご自身で取り外しができます。</p></div>
     </div>
-    <div class="TopFeature__item fade">
-      <figure class="TopFeature__photo"><img src="img/clinic.jpg" alt="診療台の無影灯を調整する歯科医師" loading="lazy"></figure>
-      <div class="TopFeature__body"><span class="TopFeature__no">POINT<b>04</b></span><h3>治療中と保定期間中の<br>定期的な<span class="nw">チェック</span></h3><p>治療中は、通院のたびに歯が計画どおりに動いているか確認します。装置を外したあとの保定期間中も、<span class="nw">3〜6か月</span>に<span class="nw">1度</span>の通院で、歯並びに変化がないか確認します。</p></div>
+    <div class="Feature__blc fadeInUp">
+      <figure class="Feature__blc__img"><img src="img/clinic.jpg" alt="診療台の無影灯を調整する歯科医師" loading="lazy"></figure>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>04</b></span><h3>治療中と保定期間中の<br>定期的な<span class="nw">チェック</span></h3><p>通院日には、歯が順調に動いているか<span class="nw">チェック</span>し、必要な調整を行います。保定期間中は<span class="nw">3〜6か月</span>に1度通院していただき、歯並びの状態を確認していきます。</p></div>
     </div>
   </div>
 </section>
 
-<section class="sec sec--mint" id="price">
-  <div class="inner">
+<section class="section has-bg-main-lighter" id="price">
+  <div class="container">
     <h2 class="headLine01"><span>PRICE</span>費用と期間</h2>
-    <div class="TopPrice__intro">
-      <p>矯正治療は、原則として自由診療になります。金額はすべて税込です。公的医療保険の対象となるのは、次のいずれかに当てはまる場合です。</p>
-      <ol class="TopPrice__insure">
+    <div class="txtBox">
+      <p>金額はすべて税込です。矯正治療は原則的には自由診療ですが、下記の場合に限り保険診療の対象となります。</p>
+      <ol>
         <li>厚生労働大臣が定める疾患に起因した咬合異常</li>
         <li>前歯及び小臼歯の永久歯のうち3歯以上の萌出不全に起因した咬合異常（埋伏歯開窓術を必要とするものに限る）</li>
         <li>連続した3歯以上の先天性欠如歯に起因した咬合異常（<span class="nw">18歳</span>未満に限る）</li>
         <li>顎変形症（顎離断等の手術を必要とするものに限る）</li>
       </ol>
-      <p>保険が適用される矯正治療を行えるのは、地方厚生（支）局長に届け出た保険医療機関に限られます。当院はこの届出をしていません。保険の対象になる場合は初診相談でお伝えし、届出をした医療機関をご紹介します。</p>
+      <p>なお、保険適用される矯正歯科治療を行える医療機関は、厚生労働大臣が定める施設基準に適合しているものとして地方厚生（支）局長に届け出た保険医療機関に限られます。当院はこの届出をしていません。保険の対象になる場合は初診相談でお伝えし、届出をした医療機関をご紹介します。</p>
     </div>
-    <div class="TopPrice__plans">
-      <div class="TopPrice__plan fade"><div class="TopPrice__head"><h3>全体矯正（表側）</h3><p>歯の表面に小さな装置（<span class="nw">ブラケット</span>）と<span class="nw">ワイヤー</span>をつけます</p></div><div class="TopPrice__body"><p class="TopPrice__label">装置代</p><p class="TopPrice__price">770,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p class="TopPrice__total">総額の目安<b><span class="nw">998,800〜1,064,800円</span></b></p></div></div>
-      <div class="TopPrice__plan fade"><div class="TopPrice__head"><h3>全体矯正（裏側）</h3><p>歯の裏側につけるため、装置が正面から見えにくくなります</p></div><div class="TopPrice__body"><p class="TopPrice__label">装置代</p><p class="TopPrice__price">1,100,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p class="TopPrice__total">総額の目安<b><span class="nw">1,328,800〜1,394,800円</span></b></p></div></div>
-      <div class="TopPrice__plan fade"><div class="TopPrice__head"><h3><span class="nw">マウスピース</span>型（全体）</h3><p>取り外せる透明な装置です（<a href="#pmda" style="color:#fff">薬機法の承認を受けていません</a>）</p></div><div class="TopPrice__body"><p class="TopPrice__label">装置代</p><p class="TopPrice__price">660,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">5か月</span>〜<span class="nw">3年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>6〜8週に<span class="nw">1回</span>・<span class="nw">12〜20回</span></dd></div></dl><p class="TopPrice__total">総額の目安<b><span class="nw">822,800〜866,800円</span></b></p></div></div>
-      <div class="TopPrice__plan fade"><div class="TopPrice__head"><h3>部分矯正（前歯）</h3><p>一部の歯だけを整える治療方法です（適応かどうかは精密検査で判断します）</p></div><div class="TopPrice__body"><p class="TopPrice__label">装置代</p><p class="TopPrice__price">330,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">6か月</span>〜<span class="nw">1年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">6〜14回</span></dd></div></dl><p class="TopPrice__total">総額の目安<b><span class="nw">459,800〜503,800円</span></b></p></div></div>
+    <div class="omt-fee-grid">
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>全体矯正（表側）</h3><p>歯の表面に<span class="nw">ブラケット</span>を装着し、<span class="nw">ワイヤー</span>の力を利用して歯を動かす矯正方法です。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">770,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p>総額の目安<b><span class="nw">998,800〜1,064,800円</span></b></p></div></div>
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>全体矯正（裏側）</h3><p>歯の裏側に装置を装着するため、正面からは目立ちにくい矯正方法です。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">1,100,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p>総額の目安<b><span class="nw">1,328,800〜1,394,800円</span></b></p></div></div>
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3><span class="nw">マウスピース</span>型（全体）</h3><p>取り外しができる透明な<span class="nw">マウスピース</span>型の装置を使った矯正方法です。装置は<a href="#pmda" style="color:#fff">薬機法上の承認を得ていません</a>。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">660,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">5か月</span>〜<span class="nw">3年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>6〜8週に<span class="nw">1回</span>・<span class="nw">12〜20回</span></dd></div></dl><p>総額の目安<b><span class="nw">822,800〜866,800円</span></b></p></div></div>
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>部分矯正（前歯）</h3><p>前歯の歯並びだけを整える矯正方法です。部分矯正ができるかどうかは、歯科医師がX線撮影などの精密検査をした上で診断します。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">330,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">6か月</span>〜<span class="nw">1年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">6〜14回</span></dd></div></dl><p>総額の目安<b><span class="nw">459,800〜503,800円</span></b></p></div></div>
     </div>
-    <div class="TopPrice__common fade">
+    <div class="price fadeInUp">
       <h3>装置代以外の費用</h3>
       <table>
         <tr><th scope="row">初診相談</th><td><b><span class="nw">3,300円</span>／<span class="nw">60分</span></b>口腔内の確認と写真の撮影を行います。</td></tr>
-        <tr><th scope="row">精密検査・診断</th><td><b><span class="nw">44,000円</span>／<span class="nw">1回</span></b><span class="nw">パノラマ</span>X線写真・<span class="nw">セファロ</span>・口腔内写真の撮影と歯列の<span class="nw">スキャン</span>を行い、治療計画をご説明します。</td></tr>
+        <tr><th scope="row">精密検査・診断</th><td><b><span class="nw">44,000円</span>／<span class="nw">1回</span></b><span class="nw">パノラマ</span>X線写真・<span class="nw">セファロ</span>・口腔内写真の撮影と歯列の<span class="nw">スキャン</span>を行います。検査結果をもとに治療計画をご説明します。</td></tr>
         <tr><th scope="row">調整料</th><td><b><span class="nw">5,500円</span>／<span class="nw">1回</span></b>装置をつけている間、通院のたびにいただきます。</td></tr>
         <tr><th scope="row">保定装置</th><td><b><span class="nw">33,000円</span>／上下1組</b>装置を外したあとの後戻りを防ぐために装着していただきます。</td></tr>
         <tr><th scope="row">保定中の通院</th><td><b><span class="nw">3,300円</span>／<span class="nw">1回</span></b>通院の間隔は<span class="nw">3〜6か月</span>です。</td></tr>
       </table>
-      <p class="note">総額の目安は、初診相談から保定中の通院までにかかる費用の合計で、保定中の通院<span class="nw">5回</span>分を含みます。保定中の通院の回数は、経過によって変わります。抜歯を行う場合は、連携先の歯科医院での費用が別途かかります。1本あたり<span class="nw">5,500円から11,000円</span>が目安です。</p>
-      <p class="note">初診相談の費用はご相談の当日に、精密検査の費用は検査の当日にいただきます。装置代と保定装置の費用はそれぞれの装置をつける日にいただきます。調整料と保定中の通院の費用は、ご来院のたびにいただきます。現金・<span class="nw">クレジットカード</span>・<span class="nw">デンタルローン</span>をご利用いただけます。</p>
+      <p class="note">総額の目安は、初診相談から保定中の通院までにかかる費用の合計です（保定中の通院<span class="nw">5回</span>分を含みます）。保定中の通院の回数は経過によって異なります。抜歯の処置は連携歯科医院で行います。抜歯費用は総額の目安に含みません。1本あたり<span class="nw">5,500円</span>から<span class="nw">11,000円</span>が目安です。</p>
+      <p class="note">初診相談料・精密検査料は受診当日にいただきます。装置代・保定装置代の会計は装着の当日に行います。調整料は来院時にいただきます。保定中の通院費も同様です。現金・<span class="nw">クレジットカード</span>・<span class="nw">デンタルローン</span>をご利用いただけます。</p>
       <p class="note">期間と通院回数は、<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>（表側と裏側<span class="nw">64名</span>／<span class="nw">マウスピース</span>型<span class="nw">31名</span>／部分矯正<span class="nw">17名</span>）の実績に基づく範囲です。<span class="nw">8割</span>の方が、この範囲で治療を終えました。治療の効果には個人差があります。記載の期間や回数を保証するものではありません。</p>
     </div>
-    <div class="TopPrice__photos">
-      <figure class="fade"><img src="img/braces.jpg" alt="表側の装置をつけた歯" loading="lazy"><figcaption>表側の装置の<span class="nw">イメージ</span>です（当院の症例写真ではありません）</figcaption></figure>
-      <figure class="fade"><img src="img/aligner_case.jpg" alt="上下のマウスピースとケース" loading="lazy"><figcaption><span class="nw">マウスピース</span>型の装置の<span class="nw">イメージ</span>です（当院で使う装置の写真ではありません）</figcaption></figure>
-      <figure class="fade"><img src="img/counsel_room.jpg" alt="ノートパソコンで説明する歯科医師" loading="lazy"><figcaption>費用のご説明は、診療台とは別の相談室で行います</figcaption></figure>
+    <div class="gallery">
+      <figure class="fadeInUp"><img src="img/braces.jpg" alt="表側の装置をつけた歯" loading="lazy"><figcaption>表側の装置の写真は<span class="nw">イメージ</span>です。当院の症例を紹介するものではありません。</figcaption></figure>
+      <figure class="fadeInUp"><img src="img/aligner_case.jpg" alt="上下のマウスピースとケース" loading="lazy"><figcaption><span class="nw">マウスピース</span>型の装置の写真は<span class="nw">イメージ</span>です。当院の装置とは異なります。</figcaption></figure>
+      <figure class="fadeInUp"><img src="img/counsel_room.jpg" alt="ノートパソコンで説明する歯科医師" loading="lazy"><figcaption>費用のご説明は相談室で行います。</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="sec" id="greeting">
-  <div class="inner">
+<section class="section" id="greeting">
+  <div class="container">
     <h2 class="headLine01"><span>GREETING</span>院長あいさつ</h2>
-    <div class="TopGreet">
-      <img class="fade" src="img/director.jpg" alt="歯列模型につけた表側の装置と、マウスピース型の装置" loading="lazy">
-      <div class="fade">
+    <div class="Greeting__inner">
+      <img class="fadeInUp" src="img/director.jpg" alt="歯列模型につけた表側の装置と、マウスピース型の装置" loading="lazy">
+      <div class="fadeInUp">
         <h3>はじめまして。<br>院長の三好文恵です。</h3>
-        <p>並木町矯正歯科は<span class="nw">2019年</span>に開院しました。</p>
+        <p><span class="nw">2019年</span>に並木町矯正歯科を開院しました。</p>
         <p>治療が進むにつれて、歯の位置は少しずつ変わっていきます。その変化を患者さんと一緒に確かめる時間を、この仕事でいちばん大切にしています。</p>
         <p>何年かあとに「始めてよかった」と思っていただけるよう、保定期間中も、通院のたびに歯並びの状態を記録し、装置を外したときの記録と見比べています。</p>
-        <p class="TopGreet__name">院長<b>三好 文恵</b></p>
-        <dl class="TopGreet__career">
+        <p class="name">院長<b>三好 文恵</b></p>
+        <dl class="doctor-history__list">
           <div><dt><span class="nw">2008年3月</span></dt><dd>○○大学歯学部を卒業</dd></div>
           <div><dt><span class="nw">2009年3月</span></dt><dd>○○大学病院で歯科医師臨床研修を修了</dd></div>
           <div><dt><span class="nw">2009年4月</span></dt><dd>○○大学病院の矯正歯科に入局</dd></div>
@@ -483,106 +484,106 @@ h1,h2,h3{text-wrap:balance}
   </div>
 </section>
 
-<section class="sec sec--mint" id="flow">
-  <div class="inner">
+<section class="section has-bg-main-lighter" id="flow">
+  <div class="container">
     <h2 class="headLine01"><span>FIRST VISIT</span>初診相談の流れ</h2>
-    <ol class="TopFlow">
-      <li class="fade"><b class="TopFlow__step">STEP1</b><h3><span class="nw">カウンセリング</span></h3><p>気になっていることや、費用・通院のご希望をお聞かせください。</p></li>
-      <li class="fade"><b class="TopFlow__step">STEP2</b><h3>口腔内の確認と写真の撮影</h3><p>いまの歯並びを、正面と側面から撮影します。<span class="nw">セファロ</span>の撮影は精密検査の日に行います。</p></li>
-      <li class="fade"><b class="TopFlow__step">STEP3</b><h3>治療方法のご説明</h3><p>確認した歯並びをもとに、考えられる治療方法をご説明します。使用する装置は、精密検査の結果を見てから、ご相談のうえお選びいただけます。</p></li>
-      <li class="fade"><b class="TopFlow__step">STEP4</b><h3>書面のお渡し</h3><p>ご相談の当日に、治療方法ごとの総額と期間を記載した書面をお渡しします。抜歯を行う場合にかかる費用の目安も、あわせて記載します。</p></li>
-      <li class="fade"><b class="TopFlow__step">STEP5</b><h3>ご自宅でのご検討</h3><p>書面をお持ち帰りいただき、ご家族ともご相談ください。治療を始めるときは、お電話で精密検査のご予約をお取りください。</p></li>
+    <ol class="omt-flow-cards">
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP1</b><h3><span class="nw">カウンセリング</span></h3><p>ご相談では、患者さんご自身が気になっていることや、費用・通院についてのご希望をお聞かせください。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP2</b><h3>口腔内の確認と写真の撮影</h3><p>お口の中を確認し、歯並びを正面と側面から撮影します。X線写真の撮影は精密検査の日に行います。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP3</b><h3>治療方法のご説明</h3><p>確認した歯並びをもとに、考えられる治療方法をご説明します。装置は、精密検査の結果を見てからお選びいただけます。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP4</b><h3>書面のお渡し</h3><p>総額・治療期間・通院回数の目安を記載した書面をお渡しします。抜歯が必要な場合の費用と、治療を中止した場合の精算と返金の方法も記載します。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP5</b><h3>ご自宅でのご検討</h3><p>書面を持ち帰ってご検討いただけます。精密検査の受診をご希望の場合はお電話でのご予約をお願いいたします。</p></li>
     </ol>
-    <div class="TopFlow__photos">
-      <figure class="fade"><img src="img/cast.jpg" alt="口腔内スキャナーの画面で説明する歯科医師" loading="lazy"><figcaption>治療計画は、精密検査後にご説明します</figcaption></figure>
-      <figure class="fade"><img src="img/reception.jpg" alt="窓際の待合のいす" loading="lazy"><figcaption>受付を済ませたあと、窓際の待合でお待ちいただきます</figcaption></figure>
+    <div class="gallery">
+      <figure class="fadeInUp"><img src="img/cast.jpg" alt="口腔内スキャナーの画面で説明する歯科医師" loading="lazy"><figcaption>治療計画は、精密検査後にご説明します。</figcaption></figure>
+      <figure class="fadeInUp"><img src="img/reception.jpg" alt="窓際の待合のいす" loading="lazy"><figcaption>受付を済ませたあと、窓際の待合でお待ちいただきます。</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="sec TopRisk" id="risk">
-  <div class="inner">
+<section class="section risk" id="risk">
+  <div class="container">
     <h2 class="headLine01"><span>RISK</span>矯正治療のリスクと副作用</h2>
-    <div class="TopRisk__group fade">
+    <div class="fadeInUp">
       <h3>治療中の<span class="nw">リスク</span>と副作用</h3>
       <ul>
-        <li><b>痛みと違和感</b><p>歯が動く際の痛みや、装置が当たる違和感が出ることがあります。痛み止めをご希望の方には院内でお渡しします。</p></li>
-        <li><b>虫歯と歯周病</b><p>治療中は、装置がついているため歯が磨きにくくなります。虫歯や歯周病の<span class="nw">リスク</span>が高まります。</p></li>
-        <li><b>噛みにくさと話しにくさ</b><p>装置に慣れるまでの間、食事や会話がしづらくなることがあります。とくに裏側の装置は、表側より発音に影響が出やすくなります。</p></li>
+        <li><b>痛みと違和感</b><p>治療中に痛みや違和感が出る場合があります。症状やご希望に応じて痛み止めを処方します。</p></li>
+        <li><b>虫歯と歯周病</b><p>治療中は、装置で歯が磨きにくくなり、虫歯や歯周病の<span class="nw">リスク</span>が高まります。</p></li>
+        <li><b>食事と発音</b><p>装置の使い始めは、発音や食事がしにくくなることがあります。慣れるまでの期間には個人差があります。裏側の装置は舌が触れやすい位置にあるため、滑舌が悪くなったと感じる可能性があります。</p></li>
         <li><b>金属<span class="nw">アレルギー</span></b><p>治療中に金属<span class="nw">アレルギー</span>の症状が出る場合があります。</p></li>
-        <li><b>誤飲</b><p>歯に接着して使う装置は、部品が外れてしまうことがあります。外れた部品を誤飲する可能性があります。</p></li>
-        <li><b>計画どおりに進まないこと</b><p>歯の動きによっては、治療計画どおりの結果が得られないことがあります。装置の使用状況や通院の間隔によっては、当初の見込みより治療期間が長くなることがあります。</p></li>
+        <li><b>誤飲</b><p>外れた<span class="nw">ブラケット</span>を誤って飲み込んでしまう可能性があります。</p></li>
+        <li><b>治療計画とのずれ</b><p>お口の中の状態によっては、治療計画どおりの結果が得られないことがあります。装置の使用状況、定期的な通院等、患者さんの協力が治療結果や治療期間に影響します。</p></li>
       </ul>
     </div>
-    <div class="TopRisk__group fade">
+    <div class="fadeInUp">
       <h3>歯・歯ぐき・顎に関する<span class="nw">リスク</span></h3>
       <ul>
-        <li><b>歯根吸収</b><p>歯を動かす力で、歯の根が短くなる場合があります。</p></li>
-        <li><b>歯肉退縮</b><p>歯ぐきがやせて下がることがあります。歯と歯の間に三角形の隙間（ブラックトライアングル）ができる場合があります。</p></li>
-        <li><b>歯髄壊死</b><p>ごくまれに、歯の神経が障害を受けて壊死する場合があります。</p></li>
-        <li><b>骨性癒着</b><p>ごくまれに、歯と骨が癒着していることがあります。癒着した歯は動かすことができません。</p></li>
-        <li><b>顎関節の症状</b><p>治療中に顎関節の音や痛みが出ることがあります。</p></li>
-        <li><b>歯やかぶせ物の損傷</b><p>装置を外すときに、歯の表面に小さな亀裂が入る場合があります。かぶせ物の一部が破損する可能性があります。</p></li>
+        <li><b>歯根吸収</b><p>歯を動かすことにより歯根が吸収して短くなることがあります。</p></li>
+        <li><b>歯肉退縮</b><p>歯を移動させた際に、ブラックトライアングル（歯と歯の間の三角形の隙間）や歯肉退縮が起こることがあります。</p></li>
+        <li><b>歯髄壊死</b><p>ごくまれに、歯の移動中に神経が障害を受けて壊死する場合があります。</p></li>
+        <li><b>骨性癒着</b><p>ごくまれに、歯が骨と癒着していて動かないことがあります。</p></li>
+        <li><b>顎関節症</b><p>治療中、顎関節症の症状が出ることがあります。</p></li>
+        <li><b>歯やかぶせ物の損傷</b><p>装置を外すときに、歯の表面に小さな亀裂が入ったり、かぶせ物の一部が破損したりする可能性があります。</p></li>
       </ul>
     </div>
-    <div class="TopRisk__group fade">
+    <div class="fadeInUp">
       <h3>治療後の<span class="nw">リスク</span></h3>
       <ul>
-        <li><b>後戻り</b><p>保定装置を使わないと、歯並びが後戻りすることがあります。保定期間は<span class="nw">2年</span>程度が目安です。</p></li>
-        <li><b>親知らずと顎の成長</b><p>治療後に親知らずが生えてくると、歯並びや噛み合わせが変化することがあります。顎の成長が残っている方は、成長に伴って噛み合わせが変わる場合があります。</p></li>
+        <li><b>後戻り</b><p>矯正治療終了後、保定装置を指示どおりに装着していただけない場合、後戻りが起こることがあります。保定の期間は<span class="nw">2年</span>程度が目安です。</p></li>
+        <li><b>歯並びと噛み合わせの変化</b><p>治療後に、親知らずの影響で歯並びや噛み合わせが変化する可能性があります。顎の成長が残っている方は、成長に伴って噛み合わせが変わる場合があります。</p></li>
         <li><b>元に戻せないこと</b><p>歯を動かし、場合によっては抜歯も行うため、治療前の状態に戻すことはできません。</p></li>
       </ul>
     </div>
-    <div class="TopRisk__group TopRisk__pmda fade" id="pmda">
+    <div class="fadeInUp" id="pmda">
       <h3>マウスピース型の装置について</h3>
       <ul>
-        <li><b>未承認の医療機器であること</b><p>当院で使う<span class="nw">マウスピース</span>型の矯正装置は、医薬品医療機器等法（薬機法）の承認を受けていない医療機器です。</p></li>
-        <li><b>入手の経路</b><p>国外の製造元の製品を、当院の歯科医師が個人輸入の手続き（輸入確認証の取得）で取り寄せています。個人輸入の注意点は、厚生労働省の<span class="nw">ウェブサイト</span>「<a href="https://www.yakubutsu.mhlw.go.jp/individualimport/healthhazard/">個人輸入において注意すべき医薬品等について</a>」に掲載されています。</p></li>
-        <li><b>国内の承認品</b><p>国内にも、<span class="nw">マウスピース</span>型の矯正装置として薬機法の承認を受けているものがあります（独立行政法人医薬品医療機器総合機構の<span class="nw">ウェブサイト</span>で<span class="nw">2026年8月</span>に確認）。ご希望があれば、その装置での費用と期間もお伝えします。</p></li>
-        <li><b>国外での承認と安全性</b><p>製造元が公表する添付文書と安全性情報（<span class="nw">2026年8月</span>確認）によると、欧州では<span class="nw">2018年3月</span>にCE<span class="nw">マーク</span>を取得し、米国では<span class="nw">2019年6月</span>に医療機器として販売が認められています。添付文書には、重大な副作用として装置の誤飲と材料に対する過敏症が挙げられています。国外で報告された主な副作用は、歯ぐきの痛みと口内炎です。</p></li>
-        <li><b>救済制度の対象外</b><p>この装置による健康被害は、医薬品副作用被害救済制度と生物由来製品感染等被害救済制度（公的な給付を受けられる制度）の対象になりません。</p></li>
+        <li><b>未承認の医療機器であること</b><p>当院で使用する<span class="nw">マウスピース</span>型矯正装置は、医薬品医療機器等法（薬機法）の承認を得ていない医療機器です。</p></li>
+        <li><b>入手の経路</b><p>製造元より、個人輸入で入手しています。当院の歯科医師が輸入確認証を取得しています。個人輸入の注意点については、以下の<span class="nw">ページ</span>をご覧ください。<br>厚生労働省「<a href="https://www.yakubutsu.mhlw.go.jp/individualimport/healthhazard/">個人輸入において注意すべき医薬品等について</a>」</p></li>
+        <li><b>国内の承認品</b><p>国内にも、<span class="nw">マウスピース</span>型矯正装置として医薬品医療機器等法（薬機法）の承認を得ているものがあります（独立行政法人医薬品医療機器総合機構の<span class="nw">ウェブサイト</span>で<span class="nw">2026年8月</span>に確認）。ご希望があれば、国内で承認された装置を使う場合の費用と期間もお伝えします。</p></li>
+        <li><b>国外の承認と安全性</b><p>製造元が公表する添付文書と安全性情報（<span class="nw">2026年8月</span>確認）によると、本装置は欧州で<span class="nw">2018年3月</span>にCE<span class="nw">マーク</span>を取得し、米国で<span class="nw">2019年6月</span>に医療機器として販売認可を受けています。添付文書には、重大な副作用として装置の誤飲と材料に対する過敏症が挙げられています。国外で報告された主な副作用は、歯ぐきの痛みと口内炎です。</p></li>
+        <li><b>救済制度の対象外</b><p>本装置による健康被害は、医薬品副作用被害救済制度・生物由来製品感染等被害救済制度の対象外です。</p></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="sec sec--mint" id="faq">
-  <div class="inner">
+<section class="section has-bg-main-lighter" id="faq">
+  <div class="container">
     <h2 class="headLine01"><span>FAQ</span>よくある質問</h2>
     <div class="TopFaq__list">
-      <details class="TopFaq__list__item fade" id="faq-age"><summary class="TopFaq__list__q">矯正治療は何歳まで可能ですか？</summary><p class="TopFaq__list__a">矯正治療に年齢制限はありません。<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>のうち、<span class="nw">40歳</span>以上の方は<span class="nw">29名</span>です。歯ぐきと歯を支える骨の状態を精密検査で確認したうえで、治療方法をご提案します。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">治療を中止した場合、費用はどうなりますか？</summary><p class="TopFaq__list__a">装置をつける前であれば、それまでに受けた初診相談と精密検査の費用のほかはいただきません。装置をつけたあとに中止する場合は、お支払いいただいた装置代を治療の進行状態に応じて精算し、まだ行っていない分の費用をお返しします。精算の方法は、初診相談でお渡しする書面に記載しています。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">治療中に引っ越すことになったら、治療は続けられますか？</summary><p class="TopFaq__list__a">転居先の矯正歯科をご紹介します。紹介状とこれまでの検査の記録をお送りし、転居先の医院で治療を続けられるよう手続きを行います。装置代は、中止の場合と同じ方法で精算します。</p></details>
-      <details class="TopFaq__list__item fade" id="faq-extraction"><summary class="TopFaq__list__q">抜歯はどのような基準で判断しますか？</summary><p class="TopFaq__list__a">歯を並べる<span class="nw">スペース</span>が顎に足りない場合に、抜歯をご提案することがあります。精密検査で歯の大きさと顎の幅を測ってから決めます。<span class="nw">2023年</span>から<span class="nw">2025年</span>に治療を終えた<span class="nw">112名</span>のうち、抜歯をした方は<span class="nw">38名</span>です。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">矯正の費用は、医療費控除の対象になりますか？</summary><p class="TopFaq__list__a">年齢や目的からみて必要と認められる矯正の費用は、医療費控除の対象になります。見た目を整えることが目的の場合は対象になりません。<span class="nw">デンタルローン</span>でお支払いの場合は、信販会社が立替払をした金額が、その立替払をした年の医療費控除の対象になります。金利と手数料は含まれません（国税庁<span class="nw">タックスアンサー</span>No.1128、<span class="nw">2026年4月1日</span>現在の法令による）。控除の対象になるかどうかは、所轄の税務署にご確認ください。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">分割払いはできますか？</summary><p class="TopFaq__list__a">提携している信販会社の<span class="nw">デンタルローン</span>で、<span class="nw">最大60回</span>の分割払いをご利用いただけます。実質年率は<span class="nw">4.5%</span>で、<span class="nw">ローン</span>の審査があります。たとえば表側の装置代<span class="nw">770,000円</span>を<span class="nw">60回</span>でお支払いの場合、月々<span class="nw">14,356円</span>、支払総額は<span class="nw">861,360円</span>（うち手数料<span class="nw">91,360円</span>）です。手数料の計算方法と遅延損害金の率は、信販会社の契約書面に記載されています。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">矯正中の食事に制限はありますか？</summary><p class="TopFaq__list__a">表側と裏側の装置が歯についている間は、硬いもの（せんべい、<span class="nw">ナッツ</span>類など）や装置にからみやすいもの（<span class="nw">キャラメル</span>、ガムなど）は、できるだけ避けてください。<span class="nw">マウスピース</span>型の場合は、食事のときに外し、歯を磨いてからつけ直してください。</p></details>
-      <details class="TopFaq__list__item fade"><summary class="TopFaq__list__q">装置が外れたときはどうしたらいいですか？</summary><p class="TopFaq__list__a">診療時間内にお電話ください。状況を確認して、ご来院の日時をご案内します。痛みが強い場合は急患としてその日のうちに診察します。外れた部品は、ご来院の際にお持ちください。</p></details>
+      <details class="TopFaq__list__item fadeInUp" id="faq-age"><summary class="TopFaq__list__q">矯正治療は何歳まで可能ですか？</summary><p class="TopFaq__list__a">矯正治療に年齢制限はありません。<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>のうち、<span class="nw">40歳</span>以上の方は<span class="nw">29名</span>です。歯ぐきと歯を支える骨の状態を精密検査で確認したうえで、治療方法をご提案します。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">治療を中止した場合、治療費の精算はどうなりますか？</summary><p class="TopFaq__list__a">装置をつける前であれば、それまでに受けた初診相談と精密検査の費用のほかはいただきません。装置をつけたあとに中止する場合は、お支払いいただいた装置代を治療の進行状態に応じて精算し、まだ行っていない治療の費用をお返しします。精算と返金の方法は、初診相談の書面に記載されています。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正治療中に引っ越した場合、治療は続けられますか？</summary><p class="TopFaq__list__a">転居先の矯正歯科をご紹介します。また、紹介状を書いたり、これまでの検査記録を送付したりして、紹介先の医院で治療を続けられるように手続きを行います。装置代は、中止した場合と同じ方法で精算します。</p></details>
+      <details class="TopFaq__list__item fadeInUp" id="faq-extraction"><summary class="TopFaq__list__q">抜歯は必要ですか？</summary><p class="TopFaq__list__a">歯並びや顎の状態によっては、歯を並べる<span class="nw">スペース</span>を確保するために抜歯が必要な<span class="nw">ケース</span>があります。精密検査では、歯の大きさと顎の幅を測定します。抜歯の有無は、精密検査の結果をもとに判断します。<span class="nw">2023年</span>から<span class="nw">2025年</span>に治療を終えた<span class="nw">112名</span>のうち、抜歯をした方は<span class="nw">38名</span>です。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正の費用は、医療費控除の対象になりますか？</summary><p class="TopFaq__list__a">年齢や目的からみて必要と認められる矯正の費用は、医療費控除の対象になります。美容目的の矯正は対象外です。<span class="nw">デンタルローン</span>でお支払いの場合は、信販会社が立替払をした金額が、その立替払をした年の医療費控除の対象になります（国税庁<span class="nw">タックスアンサー</span>No.1128、<span class="nw">2026年4月1日</span>現在の法令による）。ただし、金利、手数料は医療費控除の対象にはなりませんのでご注意ください。控除の対象になるかどうかの最終判断は税務署が行います。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">分割払いはできますか？</summary><p class="TopFaq__list__a">提携の<span class="nw">デンタルローン</span>をご利用いただけます。分割回数は<span class="nw">最大60回</span>、実質年率は<span class="nw">4.5%</span>です。ご利用には信販会社の審査があります。たとえば表側の装置代<span class="nw">770,000円</span>を<span class="nw">60回</span>でお支払いの場合、月々<span class="nw">14,356円</span>、支払総額は<span class="nw">861,360円</span>（うち手数料<span class="nw">91,360円</span>）です。手数料と遅延損害金の率は、信販会社の契約書面に記載されています。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正中の食事に制限はありますか？</summary><p class="TopFaq__list__a"><span class="nw">ブラケット</span>を付けている間は、硬いもの（せんべい、<span class="nw">ナッツ</span>類など）や装置にからみやすいもの（<span class="nw">キャラメル</span>、ガムなど）は、できるだけ避けてください。<span class="nw">マウスピース</span>型の場合は、装置を外して食事していただきます。食後は歯を磨いてから、装置をつけ直していただきます。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">装置が外れたときはどうしたらいいですか？</summary><p class="TopFaq__list__a">診療時間内にお電話ください。状況を確認して、ご来院の日時をご案内します。外れた装置は、捨てずにお持ちください。痛みが強い場合は急患としてその日のうちに診察します。</p></details>
     </div>
   </div>
 </section>
 
-<section class="sec" id="access">
-  <div class="inner">
+<section class="section" id="access">
+  <div class="container">
     <h2 class="headLine01"><span>ACCESS</span><span class="nw">アクセス</span></h2>
-    <div class="TopAccess">
-      <figure class="fade"><img src="img/entrance.jpg" alt="金属枠のガラス張りの入口" loading="lazy"><figcaption><span class="nw">1階</span>の<span class="nw">ガラス</span>戸が入口です</figcaption></figure>
-      <dl class="fade">
+    <div class="omt-access-wrap">
+      <figure class="fadeInUp"><img src="img/entrance.jpg" alt="金属枠のガラス張りの入口" loading="lazy"><figcaption><span class="nw">ガラス</span>戸が入口です。</figcaption></figure>
+      <dl class="fadeInUp">
         <div><dt>所在地</dt><dd>広島市中区○○町0-0-0 ○○ビル1階（架空の住所です）</dd></div>
-        <div><dt>路面電車</dt><dd>広島電鉄・袋町電停から徒歩<span class="nw">6分</span>です。当院の向かいは青い看板の薬局です。</dd></div>
-        <div><dt>駐車場</dt><dd>提携の「○○<span class="nw">パーキング</span>」をご利用いただいた場合、<span class="nw">1時間</span>の無料<span class="nw">サービス</span>券をお渡しします。</dd></div>
-        <div><dt>設備</dt><dd>診療台<span class="nw">3台</span>・<span class="nw">パノラマ</span>・<span class="nw">セファロ</span>の撮影装置・口腔内<span class="nw">スキャナー</span></dd></div>
+        <div><dt>路面電車</dt><dd>広島電鉄・袋町電停から徒歩<span class="nw">6分</span>。当院の向かいは薬局です。</dd></div>
+        <div><dt>駐車場</dt><dd>○○<span class="nw">パーキング</span>ご利用の患者さんには、<span class="nw">1時間</span>無料券をお渡しします。</dd></div>
+        <div><dt>設備</dt><dd>診療台<span class="nw">3台</span>・<span class="nw">パノラマ</span>・<span class="nw">セファロ</span>撮影装置・口腔内<span class="nw">スキャナー</span></dd></div>
         <div><dt>お電話</dt><dd>082-000-0000（診療時間内）</dd></div>
       </dl>
     </div>
   </div>
 </section>
 
-<section class="sec sec--mint" id="reserve">
-  <div class="inner">
+<section class="section has-bg-main-lighter" id="reserve">
+  <div class="container">
     <h2 class="headLine01"><span>RESERVATION</span>初診相談のお申し込み</h2>
-    <div class="TopReserve">
-      <form class="TopReserve__form fade" id="reserve-form">
+    <div class="d-flex-pc">
+      <form class="flex-col fadeInUp" id="reserve-form">
         <label for="r-name">お名前</label>
         <input id="r-name" type="text" autocomplete="name" required>
         <label for="r-contact">ご連絡先（メールアドレス・お電話番号）</label>
@@ -591,20 +592,20 @@ h1,h2,h3{text-wrap:balance}
         <input id="r-date" type="date">
         <fieldset>
           <legend>ご希望の時間帯</legend>
-          <div class="TopReserve__radio">
+          <div>
             <label><input type="radio" name="slot" checked>月・火・水・金の午前</label>
-            <label><input type="radio" name="slot">月・火・水・金の午後</label>
-            <label><input type="radio" name="slot">月・火・水・金の夕方</label>
+            <label><input type="radio" name="slot">月・火・水・金の午後（17時まで）</label>
+            <label><input type="radio" name="slot">月・火・水・金の夕方（17時から）</label>
             <label><input type="radio" name="slot">土曜（午前・午後）</label>
           </div>
         </fieldset>
         <label for="r-note">ご相談内容（任意）</label>
         <textarea id="r-note"></textarea>
         <button class="comBtn" type="submit">申し込む</button>
-        <p class="TopReserve__note">木曜・日曜・祝日は休診です。空き状況を確認のうえ、確定のご連絡をします。日時の変更・取り消しをご希望の場合は、お電話でお知らせください。この<span class="nw">ページ</span>は見本のため、お申し込みは届きません。</p>
-        <p class="TopReserve__note">お名前・ご連絡先・ご相談内容は、初診相談のお申し込みの確認と連絡にのみ使用します。ご本人の同意なく第三者へ提供することはありません。ご記入いただいた内容の確認・訂正・削除のご希望は、お電話（082-000-0000）で承ります。</p>
+        <p class="text-muted">木曜・日曜・祝日は休診です。調整の上、当院より確定日時をご連絡します。日時の変更・取り消しをご希望の場合はお電話でのご連絡をお願いいたします。この<span class="nw">ページ</span>は見本です。実際のお申し込みはできません。</p>
+        <p class="text-muted">お名前・ご連絡先・ご相談内容は、初診相談のお申し込み確認・ご連絡以外には使用いたしません。ご本人の同意なく第三者へ提供することはありません。ご記入いただいた内容の確認・訂正・削除のご希望は、お電話（082-000-0000）で承ります。</p>
       </form>
-      <div class="TopReserve__side fade">
+      <div class="flex-col fadeInUp">
         <p>お電話でのご予約・ご相談</p>
         <b><a href="tel:0820000000">082-000-0000</a></b>
         <p>診療時間内にお電話ください。</p>
@@ -614,10 +615,10 @@ h1,h2,h3{text-wrap:balance}
 </section>
 </main>
 
-<footer class="footer">
-  <div class="footer__inner">
+<footer class="omt-footer">
+  <div class="omt-footer-inner">
     <div>
-      <p class="footer__logo">並木町矯正歯科</p>
+      <p class="omt-footer-logo">並木町矯正歯科</p>
       <p>広島市中区○○町0-0-0 ○○ビル1階（架空の住所です）<br>矯正歯科｜院長 三好文恵｜082-000-0000</p>
     </div>
     <nav aria-label="フッターの案内">
@@ -627,33 +628,22 @@ h1,h2,h3{text-wrap:balance}
       <a href="#faq">よくある質問</a>
     </nav>
   </div>
-  <p class="footer__note">並木町矯正歯科は架空の医院で、この<span class="nw">ページ</span>は医院向けLP制作の見本です。院長名・数字・住所・電話番号はすべて架空で、写真には、出典を明記した実写素材を使っています（出典の<a href="img/CREDITS.md">一覧はこちら</a>、制作：常夜燈）。</p>
-  <p class="footer__copyright">© Namikicho Orthodontic Clinic</p>
+  <p class="notes">並木町矯正歯科は、架空の歯科医院です。この<span class="nw">ページ</span>は医院向けLP制作の見本です。院長名・数字・住所・電話番号はすべて架空です。写真は実写の素材です。出典は<a href="img/CREDITS.md">一覧</a>をご覧ください。制作：常夜燈</p>
+  <p class="omt-footer-copy">© Namikicho Orthodontic Clinic</p>
 </footer>
 
-<div class="spFixBar"><a href="tel:0820000000">電話で予約</a><a href="#reserve">初診相談のお申し込み</a></div>
+<div class="Fix__TabBar"><a href="tel:0820000000">お電話でのご予約</a><a href="#reserve">初診相談のお申し込み</a></div>
 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 (function(){
-  var els=document.querySelectorAll('.fade');
-  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
-    els.forEach(function(e){e.classList.add('is-in')});
-  }else{
-    var io=new IntersectionObserver(function(es){es.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}
-    })},{rootMargin:'0px 0px -8% 0px'});
-    els.forEach(function(e){io.observe(e)});
-    addEventListener('scroll',function(){
-      if(innerHeight+scrollY<document.body.scrollHeight-4)return;
-      els.forEach(function(e){e.classList.add('is-in')});
-    },{passive:true});
-  }
-  var btn=document.querySelector('.header__menuBtn'),nav=document.getElementById('gnav');
-  btn.addEventListener('click',function(){
-    var open=nav.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded',open);
-  });
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open');btn.setAttribute('aria-expanded','false');});});
+  var nav=document.querySelector('.omt-header-nav'),btn=document.querySelector('.omt-hamburger');
+  function closeMenu(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  function openMenu(){nav.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  btn.addEventListener('click',function(e){e.preventDefault();nav.classList.contains('open')?closeMenu():openMenu();});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+  /* 開いたまま幅を広げると、本文の送りが止まったままになる */
+  matchMedia('(min-width:1121px)').addEventListener('change',closeMenu);
   function openFaq(id){var d=document.getElementById(id);if(d&&d.tagName==='DETAILS')d.open=true;}
   document.querySelectorAll('a[href^="#faq-"]').forEach(function(a){a.addEventListener('click',function(){openFaq(a.getAttribute('href').slice(1));});});
   if(location.hash)openFaq(location.hash.slice(1));
@@ -661,7 +651,25 @@ h1,h2,h3{text-wrap:balance}
     e.preventDefault();
     this.innerHTML='<p>お申し込みを受け付けました。空き状況を確認のうえ、ご連絡します。（見本のため送信されていません）</p>';
   });
+  /* 読み込み先から jQuery が届かない時に、現れる部品41個が透明のまま残らないようにする */
+  if(!window.jQuery)document.querySelectorAll('.fadeInUp').forEach(function(e){e.classList.add('on');});
 })();
+window.jQuery&&$(function(){
+  $(window).scroll(function(){
+    $('.fadeInUp').each(function(){
+      if($(window).scrollTop()>$(this).offset().top-$(window).height()+200){$(this).addClass('on');}
+    });
+  }).trigger('scroll');
+  /* 着地は scroll-padding-top と同じ100px上。ハッシュ付きで開いた時と同じ位置に止める */
+  var headerHight=100;
+  $('a[href^="#"]').click(function(){
+    var speed=matchMedia('(prefers-reduced-motion: reduce)').matches?0:700;
+    var href=$(this).attr('href');
+    var target=$(href=='#'||href==''?'html':href);
+    $('html, body').animate({scrollTop:target.offset().top-headerHight},speed,'swing');
+    return false;
+  });
+});
 </script>
 </body>
 </html>

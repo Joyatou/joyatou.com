@@ -12,13 +12,6 @@
 | app_pc.png | 最初の画面と、選ばれる理由の01（管理画面） | `作業/画面素材/app_pc.html`（Tablerで組んだもの）をChromeで2倍に焼いたもの |
 | app_sp.png | 最初の画面・選ばれる理由の04（打刻画面） | `作業/画面素材/app_sp.html`（Tablerで組んだもの）をChromeで3倍に焼いたもの |
 
-焼き直す手順は次のとおりです。
-
-```
-node ~/.claude/skills/jp-writing/scripts/render_at.js 作業/画面素材/app_pc.html --width 1440 --height 900 --dsf 2 --wait 2000 --shot site/img/app_pc.png
-node ~/.claude/skills/jp-writing/scripts/render_at.js 作業/画面素材/app_sp.html --width 390 --height 844 --dsf 3 --wait 2000 --shot site/img/app_sp.png
-```
-
 ## 借りた写真
 
 素材サイトとウィキメディア・コモンズから、転載と商用の利用を許す条件の写真を借りています。

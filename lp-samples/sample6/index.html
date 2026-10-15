@@ -20,271 +20,268 @@
 {"@context":"https://schema.org","@type":"JobPosting","title":"機械加工（旋盤・マシニングセンタ）","description":"建設機械と農業機械の油圧部品を削る機械加工です。旋盤とマシニングセンタで、段取りから加工までを担当します。未経験の方も歓迎、中途採用の正社員。固定残業代なし、転勤はありません。","employmentType":"FULL_TIME","hiringOrganization":{"@type":"Organization","name":"桑水流精機株式会社"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"静岡県","addressLocality":"磐田市","addressCountry":"JP"}},"baseSalary":{"@type":"MonetaryAmount","currency":"JPY","value":{"@type":"QuantitativeValue","minValue":218000,"maxValue":296000,"unitText":"MONTH"}},"datePosted":"2026-08-21","validThrough":"2026-10-31"}
 </script>
 <style>
-/* 字と余白は、町工場の採用サイト（実在121件）の実測と、手本にした採用サイトの数値から採った。
-   本文はゴシック16px・行間2・字間.1em、英字の見出しは PT Serif 80px・青、日本語の見出しは32px・太字、
-   ヘッダーは写真の上に透けて固定、ENTRYは角丸48pxの橙。数字とナビの英字は Montserrat。 */
 :root{
-  --text:#222;--mute:#626b75;--line:#dfe4ea;--bg:#fff;--pale:#e8edf1;--blue:#2366a8;--blue-d:#194e82;--sky:#8ec3e8;--orange:#f08a5d;--navy:#253041;
+  --text:#222;--mute:#626b75;--line:#dfe4ea;--bg:#fff;--pale:#e8edf1;--blue:#2366a8;--sky:#8ec3e8;--orange:#ff8f64;--navy:#253041;--entry:#196eb5;--entry-d:#1864aa;
   --sans:"游ゴシック体",YuGothic,"游ゴシック Medium","Yu Gothic Medium","Hiragino Kaku Gothic ProN","Hiragino Sans","メイリオ",Meiryo,sans-serif;
   --en:Montserrat,"Helvetica Neue",Arial,sans-serif;
   --serif:"PT Serif",Georgia,"Times New Roman",serif;
 }
 *,::before,::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
+html{scroll-padding-top:80px}
 body{margin:0;font-family:var(--sans);font-size:16px;font-weight:500;line-height:2;letter-spacing:.1em;color:var(--text);background:var(--bg);font-feature-settings:"palt"}
 img{max-width:100%;height:auto;vertical-align:middle}
 a{color:inherit}
 h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}
 ul,ol{padding:0;list-style:none}
-.container{max-width:1200px;margin:0 auto;padding:0 40px}
+.inner{max-width:1200px;margin:0 auto;padding:0 40px}
 .mgn-btm32{margin-bottom:32px}
-:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+:focus-visible{outline:2px solid var(--entry);outline-offset:3px}
 
 /* 英字の大見出しと、日本語の見出しを組にする */
-.ttl-en{display:block;font-family:var(--serif);font-size:80px;font-weight:400;line-height:1;color:var(--blue);letter-spacing:0}
-.ttl-ja{display:block;margin-top:22px;font-size:32px;font-weight:700;line-height:1.6;letter-spacing:.12em}
-.ttl-ja::after{content:"";display:block;width:30px;height:2px;margin-top:22px;background:var(--blue)}
-.center{text-align:center}
-.center .ttl-ja::after,.entry-band__box .ttl-ja::after{margin-left:auto;margin-right:auto}
+.decoration_ttl{display:block;font-family:var(--serif);font-size:80px;font-weight:400;line-height:1;color:var(--blue);letter-spacing:0}
+.heading-2{display:block;margin-top:22px;font-size:32px;font-weight:700;line-height:1.6;letter-spacing:.12em}
+.heading-2::after{content:"";display:block;width:30px;height:2px;margin-top:22px;background:var(--blue)}
+.txt-ctr{text-align:center}
+.txt-ctr .heading-2::after,.box .heading-2::after{margin-left:auto;margin-right:auto}
 /* 後半の節は英字を小さな見出し札に落として、大見出しと段を分ける */
-.ttl--sub .ttl-en{font-family:var(--en);font-size:13px;font-weight:700;letter-spacing:.3em}
-.ttl--sub .ttl-ja{margin-top:12px;font-size:26px}
-.ttl--sub .ttl-ja::after{display:none}
+.c-title .decoration_ttl{font-family:var(--en);font-size:13px;font-weight:700;letter-spacing:.3em}
+.c-title__sub{display:block;margin-top:12px;font-size:26px;font-weight:700;line-height:1.6;letter-spacing:.12em}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:200px;padding:14px 34px;border-radius:48px;background:var(--blue);color:#fff;
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:200px;padding:14px 34px;border-radius:48px;color:#fff;
   font-family:var(--en);font-size:14px;font-weight:700;letter-spacing:.2em;text-decoration:none;line-height:1.4;transition:background .25s}
-.btn:hover{background:var(--blue-d)}
-.btn--orange{background:var(--orange)}
-.btn--orange:hover{background:#d8714a}
+.btn-color{background:var(--entry)}
+/* 重ねた時は明るくせず濃くする。明るい水色にすると、白い字とのコントラストが1.7まで落ちる */
+.btn-color:hover{background:var(--entry-d)}
 .btn-line{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);font-size:14px;font-weight:700;color:var(--blue);text-decoration:none}
 .btn-line::after{content:"\f138";font:900 18px/1 "Font Awesome 6 Free";color:var(--blue)}
 
 /* ヘッダー */
 .header{position:fixed;left:0;right:0;top:0;z-index:50;transition:background .3s,box-shadow .3s}
-.header.is-scroll{background:rgba(255,255,255,.96);box-shadow:0 1px 0 var(--line)}
+.header-sm .header{background:rgba(255,255,255,.96);box-shadow:0 1px 0 var(--line)}
 .header::before{content:"";position:absolute;inset:0 0 -40px;z-index:-1;background:linear-gradient(rgba(10,20,35,.55),rgba(10,20,35,0));pointer-events:none;transition:opacity .3s}
-.header.is-scroll::before{opacity:0}
-.header__inner{display:flex;align-items:center;gap:26px;height:84px;padding:0 36px}
-.header__logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;flex:none}
-.is-scroll .header__logo{color:var(--text)}
-.header__logo b{font-size:22px;letter-spacing:.14em;line-height:1.2}
-.header__logo small{display:block;font-family:var(--en);font-size:9px;letter-spacing:.3em}
-.header__logo span{font-family:var(--en);font-size:11px;font-weight:700;letter-spacing:.28em}
+.header-sm .header::before{opacity:0}
+.header .inner{display:flex;align-items:center;gap:26px;height:84px;max-width:none;margin:0;padding:0 36px}
+.header--logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;flex:none}
+.header-sm .header--logo{color:var(--text)}
+.header--logo b{font-size:22px;letter-spacing:.14em;line-height:1.2}
+.header--logo small{display:block;font-family:var(--en);font-size:9px;letter-spacing:.3em}
+.header--logo span{font-family:var(--en);font-size:11px;font-weight:700;letter-spacing:.28em}
 .gnav--menu{display:flex;gap:4px;margin-left:auto}
 .gnav--link{padding:6px 12px;font-family:var(--en);font-size:13px;font-weight:700;letter-spacing:.2em;color:#fff;text-decoration:none}
-.is-scroll .gnav--link{color:var(--blue)}
+.header-sm .gnav--link{color:var(--blue)}
 .header .btn{min-width:0;padding:9px 26px;font-size:13px;flex:none}
-.menu-btn{display:none}
+.gnav_btn{display:none}
 
 /* メインビジュアル */
-.mv{position:relative;height:100vh;min-height:620px;max-height:900px;overflow:hidden;background:#1d2530}
-.mv__slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
-.mv__slide.is-active{opacity:1}
-.mv__slide img{width:100%;height:100%;object-fit:cover}
-.mv::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,22,32,.6) 0%,rgba(15,22,32,.1) 60%)}
-.mv__copy{position:absolute;left:60px;bottom:90px;z-index:2;color:#fff}
-.mv__en{font-family:var(--serif);font-size:120px;line-height:1;color:var(--orange);opacity:.85;letter-spacing:0;margin-bottom:6px}
-.mv h1{position:relative;font-size:44px;font-weight:700;line-height:1.55;letter-spacing:.12em}
-.mv__meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:14px;font-weight:700}
-.mv__meta li{padding:2px 12px;border:1px solid rgba(255,255,255,.7)}
-.mv__dots{position:absolute;right:40px;bottom:40px;z-index:2;display:flex;gap:10px}
-.mv__dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45)}
-.mv__dots span.is-active{background:#fff}
-.topics{display:flex;align-items:center;gap:24px;max-width:1120px;margin:-34px auto 0;position:relative;z-index:3;padding:18px 30px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.08);font-size:14px;line-height:1.6}
-.topics b{font-family:var(--en);font-size:12px;letter-spacing:.3em;color:var(--blue)}
-.topics time{font-family:var(--en);color:var(--mute)}
-.topics a{margin-left:auto;color:var(--blue);font-weight:700;text-decoration:none;white-space:nowrap}
+.hero{position:relative;height:100vh;min-height:620px;max-height:900px;overflow:hidden;background:#1d2530}
+/* 切り替え中の写真には z-index:2 が付く。写真の重なりをここで閉じ、上の暗い膜（.hero::after）より前に出さない */
+.slides{isolation:isolate}
+.slide{display:none;position:absolute;inset:0}
+.slide.is-active{display:block}
+.image-container{height:100%}
+.image-container img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,22,32,.6) 0%,rgba(15,22,32,.1) 60%)}
+.hero-txtwrap{position:absolute;left:60px;bottom:90px;z-index:2;color:#fff}
+.hero--ttl-en{font-family:var(--serif);font-size:120px;line-height:1;color:var(--orange);opacity:.85;letter-spacing:0;margin-bottom:6px}
+.hero h1{position:relative;font-size:44px;font-weight:700;line-height:1.55;letter-spacing:.12em}
+.hero--txt{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:14px;font-weight:700}
+.hero--txt li{padding:2px 12px;border:1px solid rgba(255,255,255,.7)}
+.pagination{position:absolute;right:40px;bottom:40px;z-index:2;display:flex;gap:10px}
+.pagination .item{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45)}
+.pagination .item.is-active{background:#fff}
+.topic_area{display:flex;align-items:center;gap:24px;max-width:1120px;margin:-34px auto 0;position:relative;z-index:3;padding:18px 30px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.08);font-size:14px;line-height:1.6}
+.topic_area b{font-family:var(--en);font-size:12px;letter-spacing:.3em;color:var(--blue)}
+.topic_area time{font-family:var(--en);color:var(--mute)}
+.topic_area a{margin-left:auto;color:var(--blue);font-weight:700;text-decoration:none;white-space:nowrap}
 
 /* メッセージ・会社・仕事。写真と文を左右に */
-.sec{position:relative;padding:130px 0}
-.sec--pale{background:var(--pale)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.split--rev .split__photo{order:2}
-.split__photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.split__photo--wide img{aspect-ratio:4/3}
-.split__body p:not([class]){font-size:15px}
-.split__body p:not([class])+p:not([class]){margin-top:1.2em}
-.sign{margin-top:26px;font-size:14px;line-height:1.8}
-.sign b{display:block;font-size:20px;letter-spacing:.2em}
-.work-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:70px}
-.work-photos img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.work-photos figcaption{font-size:13px;line-height:1.7;margin-top:10px;color:var(--mute)}
-.work-links{margin-top:30px}
+.section_pdg-sm{position:relative;padding:64px 0}
+.bg-light{background:var(--pale)}
+.section_half{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+#company .imgarea{order:2}
+.imgarea img{width:100%;aspect-ratio:4/3;object-fit:cover}
+#message .imgarea img{aspect-ratio:4/5}
+.txtarea p:not([class]){font-size:15px}
+.txtarea p:not([class])+p:not([class]){margin-top:1.2em}
+.message__sign{margin-top:26px;font-size:14px;line-height:1.8}
+.message__sign b{display:block;font-size:20px;letter-spacing:.2em}
+.imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:70px}
+.imgs img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.imgs figcaption{font-size:13px;line-height:1.7;margin-top:10px;color:var(--mute)}
+.related-links{margin-top:30px}
 
 /* 数字 */
-.p-number__list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
-.p-number__item{padding:34px 28px 30px;background:#fff;text-align:center;border-radius:4px}
-.p-number__item .fa-solid{display:block;font-size:40px;line-height:54px;margin-bottom:6px;color:var(--blue)}
-.p-number__title{font-size:15px;font-weight:700;color:var(--mute)}
-.p-number__note{margin-top:20px;font-size:13px;color:var(--mute)}
-.p-number__num{white-space:nowrap;font-family:var(--en);font-size:60px;font-weight:700;line-height:1.15;color:var(--blue);letter-spacing:.02em}
-.p-number__num small{font-family:var(--sans);font-size:17px;color:var(--text);margin-left:4px;letter-spacing:.06em}
-.p-number__item p:not([class]){font-size:13px;line-height:1.7;margin-top:10px}
+.p-number__table{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.number--item{padding:34px 28px 30px;background:#fff;text-align:center;border-radius:4px}
+.number--item .fa-solid{display:block;font-size:40px;line-height:54px;margin-bottom:6px;color:var(--blue)}
+.p-number__table__title{font-size:15px;font-weight:700;color:var(--mute)}
+.stats-note{margin-top:20px;font-size:13px;color:var(--mute)}
+.num{white-space:nowrap;font-family:var(--en);font-size:60px;font-weight:700;line-height:1.15;color:var(--blue);letter-spacing:.02em}
+.num small{font-family:var(--sans);font-size:17px;color:var(--text);margin-left:4px;letter-spacing:.06em}
+.number--item p:not([class]){font-size:13px;line-height:1.7;margin-top:10px}
 
 /* 先輩の声 */
-.people__list{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:60px}
-.people__item img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%}
+.posts-people{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:60px}
+.post-people img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%}
 /* 札は段落として置く。div で囲むと写真と見出しの間に余分な箱が増えるので、p のまま幅を縮める */
-.people__item .people__tag{display:inline-block;margin-top:18px;padding:0 10px;background:var(--blue);color:#fff;font-size:12px;line-height:1.9;letter-spacing:.06em}
-.people__item h3{font-size:18px;font-weight:700;line-height:1.6;margin:12px 0 10px;letter-spacing:.06em}
-.people__item p{font-size:14px;line-height:1.9}
+.post-people .people-info{display:inline-block;margin-top:18px;padding:0 10px;background:var(--blue);color:#fff;font-size:12px;line-height:1.9;letter-spacing:.06em}
+.post-people h3{font-size:18px;font-weight:700;line-height:1.6;margin:12px 0 10px;letter-spacing:.06em}
+.post-people p{font-size:14px;line-height:1.9}
 
 /* 一日の流れ */
-.schedule{max-width:880px;margin:60px auto 0;border-left:3px solid var(--sky)}
-.schedule li{position:relative;display:grid;grid-template-columns:90px 1fr;gap:18px;padding:0 0 26px 28px}
-.schedule li::before{content:"\f111";position:absolute;left:-10px;top:10px;font:400 17px/1 "Font Awesome 6 Free";color:var(--blue);background:#fff;border-radius:50%}
-.schedule time{font-family:var(--en);font-size:22px;font-weight:700;color:var(--blue);line-height:1.6}
-.schedule p{font-size:15px;line-height:1.9}
-.schedule-note{max-width:880px;margin:0 auto;font-size:13px;color:var(--mute)}
+.flow{max-width:640px;margin:60px auto 0;border-left:3px solid var(--sky)}
+.flow li{position:relative;display:grid;grid-template-columns:90px 1fr;gap:18px;padding:0 0 26px 28px}
+.flow li::before{content:"\f111";position:absolute;left:-10px;top:10px;font:400 17px/1 "Font Awesome 6 Free";color:var(--blue);background:#fff;border-radius:50%}
+.flow time{font-family:var(--en);font-size:22px;font-weight:700;color:var(--blue);line-height:1.6}
+.flow p{font-size:15px;line-height:1.9}
+.note{max-width:640px;margin:0 auto;font-size:13px;color:var(--mute)}
 
 /* 福利厚生 */
-.welfare__list{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px}
-.welfare__item{padding:30px 26px;background:#fff;border-radius:4px}
-.welfare__item .fa-solid{display:block;font-size:34px;line-height:48px;margin-bottom:8px;color:var(--blue)}
-.welfare__item h3{font-size:17px;font-weight:700;line-height:1.6;margin-bottom:6px;letter-spacing:.06em}
-.welfare__item p{font-size:13.5px;line-height:1.85}
+.p-welfare__gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px}
+.p-welfare__item{padding:30px 26px;background:#fff;border-radius:4px}
+.p-welfare__item .fa-solid{display:block;font-size:34px;line-height:48px;margin-bottom:8px;color:var(--blue)}
+.p-welfare__item h3{font-size:17px;font-weight:700;line-height:1.6;margin-bottom:6px;letter-spacing:.06em}
+.p-welfare__item p{font-size:13.5px;line-height:1.85}
 
 /* 募集要項 */
-.recruit-table{max-width:960px;margin:60px auto 0;border-top:1px solid var(--line)}
-.recruit-table div{display:grid;grid-template-columns:200px 1fr;gap:26px;padding:22px 10px;border-bottom:1px solid var(--line)}
-.recruit-table dt{font-weight:700;color:var(--blue)}
-.recruit-table dd{font-size:15px;line-height:1.9}
-.recruit-table dd b{display:block;font-size:17px}
-.edu-table{max-width:960px;margin:60px auto 0;border-top:1px solid var(--line)}
-.edu-table div{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:18px 8px;border-bottom:1px solid var(--line)}
-.edu-table dt{font-family:var(--en);font-weight:700;color:var(--blue)}
-.edu-table dd b{display:block;margin-bottom:4px}
-.recruit-sub{max-width:960px;margin:40px auto 0;padding:28px 32px;background:#fff;border:1px solid var(--line)}
-.recruit-sub h3{font-size:17px;font-weight:700;margin-bottom:8px}
-.recruit-sub dl div{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:8px 0;font-size:14px;line-height:1.8}
+.p-information__list{max-width:960px;margin:60px auto 0;border-top:1px solid var(--line)}
+.p-information__list div{display:grid;grid-template-columns:200px 1fr;gap:26px;padding:22px 10px;border-bottom:1px solid var(--line)}
+.p-information__list dt{font-weight:700;color:var(--blue)}
+.p-information__list dd{font-size:15px;line-height:1.9}
+.p-information__list dd b{display:block;font-size:17px}
+.p-training__flowBox{max-width:960px;margin:60px auto 0;border-top:1px solid var(--line)}
+.p-training__flowBox div{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:18px 8px;border-bottom:1px solid var(--line)}
+.p-training__flowBox dt{font-family:var(--en);font-weight:700;color:var(--blue)}
+.p-training__flowBox dd b{display:block;margin-bottom:4px}
+.p-information__flow{max-width:960px;margin:40px auto 0;padding:28px 32px;background:#fff;border:1px solid var(--line)}
+.p-information__flow h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.p-information__flow dl div{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:8px 0;font-size:14px;line-height:1.8}
 
 /* 見学の帯。紺の地に白い箱 */
-.entry-band{position:relative;padding:80px 20px;background:#1d2530}
-.entry-band__box{position:relative;max-width:900px;margin:0 auto;padding:56px 60px 48px;background:#fff;text-align:center}
-.entry-band__box .ttl-en{font-size:56px}
-.entry-band__box > p:not([class]){font-size:15px;margin:16px 0 26px}
-.visit-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:26px;text-align:left}
-.visit-flow li{padding:12px 14px;background:var(--pale);font-size:13px;line-height:1.7}
-.visit-flow time{display:block;font-family:var(--en);font-weight:700;color:var(--blue)}
-.visit-days{display:flex;justify-content:center;gap:12px;margin-bottom:22px}
-.visit-days li{padding:10px 18px;border:1px solid var(--line);font-size:14px;line-height:1.6}
-.visit-days b{display:block;font-family:var(--en);font-size:18px}
-.visit-note{font-size:13px;color:var(--mute);line-height:1.8;margin-top:18px}
+.cta{position:relative;padding:80px 20px;background:#1d2530}
+.box{position:relative;max-width:900px;margin:0 auto;padding:56px 60px 48px;background:#fff;text-align:center}
+.box .decoration_ttl{font-size:56px}
+.box > p:not([class]){font-size:15px;margin:16px 0 26px}
+.p-factory1__time{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:26px;text-align:left}
+.p-factory1__time li{padding:12px 14px;background:var(--pale);font-size:13px;line-height:1.7}
+.p-factory1__time time{display:block;font-family:var(--en);font-weight:700;color:var(--blue)}
+.cta--links{display:flex;justify-content:center;gap:12px;margin-bottom:22px}
+.cta--links li{padding:10px 18px;border:1px solid var(--line);font-size:14px;line-height:1.6}
+.cta--links b{display:block;font-family:var(--en);font-size:18px}
+.cta--txt{font-size:13px;color:var(--mute);line-height:1.8;margin-top:18px}
 
 /* よくある質問 */
-.faq{max-width:960px;margin:60px auto 0}
-.faq__item{border-bottom:1px solid var(--line)}
-.faq__item summary{position:relative;display:block;padding:22px 50px 22px 46px;font-weight:700;letter-spacing:.06em;line-height:1.7;cursor:pointer;list-style:none}
-.faq__item summary::-webkit-details-marker{display:none}
-.faq__item summary::before{content:"Q";position:absolute;left:6px;top:20px;font-family:var(--serif);font-size:24px;color:var(--blue)}
-.faq__item summary::after{content:"\f078";position:absolute;right:14px;top:24px;font:900 14px/1.7 "Font Awesome 6 Free";color:var(--blue);transition:transform .2s}
-.faq__item[open] summary::after{transform:rotate(180deg)}
-.faq__item p{padding:0 20px 24px 46px;font-size:15px;line-height:1.9}
+.p-qa__container{max-width:960px;margin:60px auto 0}
+.p-qa__box{border-bottom:1px solid var(--line)}
+.p-qa__box summary{position:relative;display:block;padding:22px 50px 22px 46px;font-weight:700;letter-spacing:.06em;line-height:1.7;cursor:pointer;list-style:none}
+.p-qa__box summary::-webkit-details-marker{display:none}
+.p-qa__box summary::before{content:"Q";position:absolute;left:6px;top:20px;font-family:var(--serif);font-size:24px;color:var(--blue)}
+.p-qa__box summary::after{content:"\f078";position:absolute;right:14px;top:24px;font:900 14px/1.7 "Font Awesome 6 Free";color:var(--blue);transition:transform .2s}
+.p-qa__box[open] summary::after{transform:rotate(180deg)}
+.p-qa__box p{padding:0 20px 24px 46px;font-size:15px;line-height:1.9}
 
 /* 応募フォーム */
-.form{max-width:760px;margin:50px auto 0;padding:44px 50px;background:#fff}
-.form label,.form legend{display:block;font-size:14px;font-weight:700;margin:18px 0 6px;padding:0;letter-spacing:.06em}
-.form label:first-of-type{margin-top:0}
-.form fieldset{border:0;margin:18px 0 0;padding:0}
-.form .radio{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px}
-.form .radio label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
-.form .radio input{width:auto}
-.form input,.form textarea{width:100%;padding:12px;border:1px solid #c9d1da;font:inherit;font-size:16px;letter-spacing:.04em;background:#fff}
-.form textarea{min-height:110px}
-.form button{display:flex;width:100%;margin-top:26px;border:0;cursor:pointer}
-.form__tel{margin-bottom:22px;font-size:14px;text-align:center;line-height:1.8}
-.form__note{font-size:13px;color:var(--mute);text-align:center;margin-top:12px;line-height:1.8}
+.job-entry-form{max-width:760px;margin:50px auto 0;padding:44px 50px;background:#fff}
+.job-entry-form label,.job-entry-form legend{display:block;font-size:14px;font-weight:700;margin:18px 0 6px;padding:0;letter-spacing:.06em}
+.job-entry-form label:first-of-type{margin-top:0}
+.job-entry-form fieldset{border:0;margin:18px 0 0;padding:0}
+.job-entry-form .em-radio{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px}
+.job-entry-form .em-radio label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
+.job-entry-form .em-radio input{width:auto}
+.job-entry-form input,.job-entry-form textarea{width:100%;padding:12px;border:1px solid #c9d1da;font:inherit;font-size:16px;letter-spacing:.04em;background:#fff}
+.job-entry-form textarea{min-height:110px}
+.job-entry-form button{display:flex;width:100%;margin-top:26px;border:0;cursor:pointer}
+.contact--tel{margin-bottom:22px;font-size:14px;text-align:center;line-height:1.8}
+.privacy-box{font-size:13px;color:var(--mute);text-align:center;margin-top:12px;line-height:1.8}
 
 /* 行き先の札 */
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
-.tiles a{display:flex;flex-direction:column;align-items:center;justify-content:center;height:170px;background:#fff;color:var(--blue);
+.linkarea-links{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.linkarea-links a{display:flex;flex-direction:column;align-items:center;justify-content:center;height:170px;background:#fff;color:var(--blue);
   border-left:1px solid var(--line);text-decoration:none;font-size:18px;font-weight:700;letter-spacing:.12em;transition:background .25s}
-.tiles a:first-child{border-left:0}
-.tiles a:hover{background:var(--pale)}
-.tiles a small{font-family:var(--en);font-size:11px;letter-spacing:.3em;margin-top:6px}
+.linkarea-links a:first-child{border-left:0}
+.linkarea-links a:hover{background:var(--pale)}
+.linkarea-links a small{font-family:var(--en);font-size:11px;letter-spacing:.3em;margin-top:6px}
 
 /* フッター */
 .footer{background:var(--navy);color:#d7dde4;font-size:13px;line-height:1.9;letter-spacing:.06em}
-.footer__inner{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;max-width:1200px;margin:0 auto;padding:60px 40px 40px}
-.footer__logo{font-size:20px;font-weight:700;color:#fff;letter-spacing:.14em;margin-bottom:12px}
-.footer__logo small{display:block;font-family:var(--en);font-size:10px;letter-spacing:.3em;color:#9fb0c2}
+.footer--flex{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;max-width:1200px;margin:0 auto;padding:60px 40px 40px}
+.footer--logo{font-size:20px;font-weight:700;color:#fff;letter-spacing:.14em;margin-bottom:12px}
+.footer--logo small{display:block;font-family:var(--en);font-size:10px;letter-spacing:.3em;color:#9fb0c2}
 .footer dl div{display:grid;grid-template-columns:90px 1fr;gap:12px}
-.footer__nav{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 24px;font-family:var(--en);font-size:12px;letter-spacing:.2em}
-.footer__nav a{text-decoration:none}
-.footer__note{max-width:1200px;margin:0 auto;padding:0 40px 24px;font-size:11px;color:#98a4b3}
-.footer__note a{color:#d7dde4}
+.footer--nav{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 24px;font-family:var(--en);font-size:12px;letter-spacing:.2em}
+.footer--nav a{text-decoration:none}
+.pbl{max-width:1200px;margin:0 auto;padding:0 40px 24px;font-size:11px;color:#98a4b3}
+.pbl a{color:#d7dde4}
 .copyright{padding:14px;text-align:center;font-family:var(--en);font-size:11px;letter-spacing:.2em;background:#1a222f;color:#98a4b3}
 
 /* 動き */
-.inview{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
-.inview.is-in{opacity:1;transform:none}
+.js-scroll.animation{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.js-scroll.inview.animation{opacity:1;transform:none}
 
-.fix-entry{display:none}
+.c-floatLink{display:none}
 @media (max-width:1100px){
   .gnav--menu{display:none}
   .header .btn{margin-left:auto}
-  .menu-btn{display:block;width:44px;height:44px;padding:0;border:0;background:none;line-height:44px;cursor:pointer}
-  .menu-btn .fa-solid{font-size:24px;line-height:44px;color:#fff}
-  .is-scroll .menu-btn .fa-solid,.is-open .menu-btn .fa-solid{color:var(--blue)}
-  .is-open{background:#fff}
-  .is-open .header__logo{color:var(--text)}
-  .gnav--menu.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:84px;margin:0;padding:12px 36px 22px;background:#fff;box-shadow:0 10px 16px rgba(0,0,0,.08)}
-  .gnav--menu.is-open .gnav--link{color:var(--blue)}
+  .gnav_btn{display:block;width:44px;height:44px;padding:0;border:0;background:none;line-height:44px;cursor:pointer}
+  .gnav_btn .fa-solid{font-size:24px;line-height:44px;color:#fff}
+  .header-sm .gnav_btn .fa-solid,.gnav-active .gnav_btn .fa-solid{color:var(--blue)}
+  .gnav-active:not(.header-sm) .header{background:#fff}
+  .gnav-active .header--logo{color:var(--text)}
+  .gnav-active .gnav--menu{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:84px;margin:0;padding:12px 36px 22px;background:#fff;box-shadow:0 10px 16px rgba(0,0,0,.08)}
+  .gnav-active .gnav--menu .gnav--link{color:var(--blue)}
 }
 @media (max-width:767px){
   body{font-size:15px;line-height:1.9;letter-spacing:.06em}
-  .container{padding:0 20px}
-  .header__inner{height:64px;padding:0 16px;gap:10px}
-  .edu-table div{grid-template-columns:1fr;gap:4px}
-  .header__logo span{display:none}
-  .header__logo b{font-size:18px}
+  .inner{padding:0 20px}
+  .header .inner{height:64px;padding:0 16px;gap:10px}
+  .p-training__flowBox div{grid-template-columns:1fr;gap:4px}
+  .header--logo span{display:none}
+  .header--logo b{font-size:18px}
   .header .btn{padding:8px 16px}
-  .gnav--menu.is-open{top:64px}
-  .mv{height:88vh;min-height:520px}
-  .mv__copy{left:20px;right:20px;bottom:70px}
-  .mv__en{font-size:58px;margin-bottom:18px}
-  .mv h1{font-size:27px}
-  .mv__meta{font-size:12px;gap:6px}
-  .topics{flex-wrap:wrap;margin:0;gap:4px 14px;padding:16px 20px}
-  .topics a{margin-left:0}
-  .sec{padding:80px 0}
-  .ttl-en{font-size:52px}
-  .ttl-ja{font-size:22px}
-  .split,.split--rev{grid-template-columns:1fr;gap:34px}
-  .split--rev .split__photo{order:0}
-  .work-photos,.people__list{grid-template-columns:1fr}
-  .p-number__list{grid-template-columns:1fr 1fr;gap:12px}
-  .welfare__list{grid-template-columns:1fr;gap:12px}
-  .p-number__num{font-size:34px}
-  .p-number__item{padding:22px 10px 20px}
-  .schedule li{grid-template-columns:1fr;gap:0}
-  .recruit-table div,.recruit-sub dl div{grid-template-columns:1fr;gap:4px}
-  .recruit-sub{padding:22px 18px}
-  .entry-band{padding:44px 16px}
-  .entry-band__box{padding:40px 20px 34px}
-  .entry-band__box .ttl-en{font-size:42px}
-  .visit-flow{grid-template-columns:1fr 1fr}
-  .visit-days{flex-direction:column;align-items:stretch}
-  .form{padding:28px 20px}
-  .tiles{grid-template-columns:1fr}
-  .tiles a{height:120px}
-  .footer__inner{grid-template-columns:1fr;padding:44px 20px 30px}
-  .footer__note{padding:0 20px 20px}
-  .fix-entry{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40}
-  .fix-entry a{flex:1;display:flex;align-items:center;justify-content:center;height:54px;background:var(--orange);color:#fff;font-weight:700;letter-spacing:.14em;text-decoration:none}
+  .gnav-active .gnav--menu{top:64px}
+  .hero{height:88vh;min-height:520px}
+  .hero-txtwrap{left:20px;right:20px;bottom:70px}
+  .hero--ttl-en{font-size:58px;margin-bottom:18px}
+  .hero h1{font-size:27px}
+  .hero--txt{font-size:12px;gap:6px}
+  .topic_area{flex-wrap:wrap;margin:0;gap:4px 14px;padding:16px 20px}
+  .topic_area a{margin-left:0}
+  .section_pdg-sm{padding:40px 0}
+  .decoration_ttl{font-size:52px}
+  .heading-2{font-size:22px}
+  .section_half{grid-template-columns:1fr;gap:34px}
+  #company .imgarea{order:0}
+  .imgs,.posts-people{grid-template-columns:1fr}
+  .p-number__table{grid-template-columns:1fr 1fr;gap:12px}
+  .p-welfare__gallery{grid-template-columns:1fr;gap:12px}
+  .num{font-size:34px}
+  .number--item{padding:22px 10px 20px}
+  .flow li{grid-template-columns:1fr;gap:0}
+  .p-information__list div,.p-information__flow dl div{grid-template-columns:1fr;gap:4px}
+  .p-information__flow{padding:22px 18px}
+  .cta{padding:44px 16px}
+  .box{padding:40px 20px 34px}
+  .box .decoration_ttl{font-size:42px}
+  .p-factory1__time{grid-template-columns:1fr 1fr}
+  .cta--links{flex-direction:column;align-items:stretch}
+  .job-entry-form{padding:28px 20px}
+  .linkarea-links{grid-template-columns:1fr}
+  .linkarea-links a{height:120px}
+  .footer--flex{grid-template-columns:1fr;padding:44px 20px 30px}
+  .pbl{padding:0 20px 20px}
+  .c-floatLink{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40}
+  .c-floatLink a{flex:1;display:flex;align-items:center;justify-content:center;height:54px;background:var(--entry);color:#fff;font-weight:700;letter-spacing:.14em;text-decoration:none}
   .footer{padding-bottom:54px}
 }
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .inview{opacity:1;transform:none;transition:none}
-  .mv__slide{transition:none}
+  .js-scroll.animation{opacity:1;transform:none;transition:none}
 }
 @media print{
-  .inview{opacity:1!important;transform:none!important}
+  .js-scroll.animation{opacity:1!important;transform:none!important}
   .header{position:static;background:#fff}
-  .mv{height:auto;max-height:none}
-  .mv__slide:not(:first-child),.mv__dots,.fix-entry,.menu-btn{display:none!important}
-  .mv__slide:first-child{position:static;opacity:1}
+  .hero{height:auto;max-height:none}
+  .slide:not(:first-child),.pagination,.c-floatLink,.gnav_btn{display:none!important}
+  .slide:first-child{display:block;position:static}
 }
 /* 和文の折り返し。数字と単位の間は pretty でも割れるので .nw で括る */
 body{line-break:strict}
@@ -292,16 +289,20 @@ p,li,dd,dt,th,td,figcaption,summary,blockquote{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 .nw{white-space:nowrap}
 /* 携帯幅では「生｜産管理」「めが｜ね」と語が割れるため、文節で折る。
+   PCの本文まで文節で折ると、幅の狭い段で行末が大きく空くので、見出しと中央そろえの段のほかは携帯幅に限る。
    auto-phrase を読むのは Chrome だけで、ほかのブラウザは従来どおり折り返す */
-p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
+h1,h2,h3,.box p,.stats-note{word-break:auto-phrase}
+@media (max-width:767px){
+  p,li,dd,dt,figcaption,summary{word-break:auto-phrase}
+}
 </style>
-<noscript><style>.inview{opacity:1;transform:none}.mv__slide:first-child{opacity:1}</style></noscript>
+<noscript><style>.js-scroll.animation{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
 <header class="header" id="header">
-  <div class="header__inner">
-    <a class="header__logo" href="#top"><b>桑水流精機<small>KUWAZURU SEIKI</small></b><span>RECRUITING SITE</span></a>
+  <div class="inner">
+    <a class="header--logo" href="#top"><b>桑水流精機<small>KUWAZURU SEIKI</small></b><span>RECRUITING SITE</span></a>
     <nav class="gnav--menu" id="gnav" aria-label="ページ内の案内">
       <a class="gnav--link" href="#message">MESSAGE</a>
       <a class="gnav--link" href="#work">WORK</a>
@@ -310,46 +311,50 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
       <a class="gnav--link" href="#recruit">RECRUIT</a>
       <a class="gnav--link" href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn--orange" href="#entry-form">ENTRY</a>
-    <button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <a class="btn btn-color" href="#entry-form">ENTRY</a>
+    <button class="gnav_btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
   </div>
 </header>
 
 <main id="top">
-<section class="mv">
-  <div class="mv__slide is-active"><img src="img/factory.jpg" alt="NC旋盤の操作盤に向かう社員" fetchpriority="high"></div>
-  <div class="mv__slide"><img src="img/tray.jpg" alt="つば付きの段付きピン" loading="lazy"></div>
-  <div class="mv__copy">
-    <p class="mv__en" aria-hidden="true">Precision</p>
-    <h1>旋盤工、求む。<br>経験は問いません。</h1>
-    <ul class="mv__meta"><li>静岡県磐田市</li><li>機械加工・正社員</li><li>未経験で入った先輩<span class="nw">9名</span></li><li>月給218,000円〜</li></ul>
+<section class="hero">
+  <div class="slideshow">
+    <div class="slides">
+      <div class="slide is-active"><div class="image-container"><img src="img/factory.jpg" alt="NC旋盤の操作盤に向かう社員" fetchpriority="high"></div></div>
+      <div class="slide"><div class="image-container"><img src="img/tray.jpg" alt="つばのある段付きピン"></div></div>
+    </div>
+    <div class="pagination" aria-hidden="true"><span class="item is-active"></span><span class="item"></span></div>
   </div>
-  <div class="mv__dots" aria-hidden="true"><span class="is-active"></span><span></span></div>
+  <div class="hero-txtwrap">
+    <p class="hero--ttl-en" aria-hidden="true">Precision</p>
+    <h1>旋盤工、求む。<br>経験は問いません。</h1>
+    <ul class="hero--txt"><li>静岡県磐田市</li><li>機械加工・正社員</li><li>未経験からの入社<span class="nw">9名</span></li><li>月給218,000円〜</li></ul>
+  </div>
 </section>
 
-<div class="topics">
+<div class="topic_area">
   <b>TOPICS</b><time datetime="2026-08-21">2026.08.21</time><p>工場見学日のお知らせ</p><a href="#visit">見学のご案内へ →</a>
 </div>
 
-<section class="sec" id="message">
-  <div class="container split">
-    <figure class="split__photo inview"><img src="img/boss.jpg" alt="つなぎ姿の代表取締役、桑水流徹" loading="lazy"></figure>
-    <div class="split__body inview">
-      <h2 class="mgn-btm32"><span class="ttl-en">Message</span><span class="ttl-ja">建設機械と農業機械の<br>動きを支えて<span class="nw">58年</span>。</span></h2>
-      <p>桑水流精機は、磐田で生まれた町工場です。<span class="nw">ピストン</span>や<span class="nw">ブッシュ</span>をはじめ、多くの部品を旋盤で加工しています。その大半は、建設機械の油圧<span class="nw">シリンダー</span>に使われます。これらの部品が無いと、油圧<span class="nw">ショベル</span>の<span class="nw">アーム</span>は動きません。</p>
-      <p>加工の社員は、未経験から始めた人が多いです。少人数の会社ですので、早いうちから責任のある仕事を任されます。自分に合った職場か確かめるために、一度工場見学にお越しください。</p>
-      <p class="sign">代表取締役<b>桑水流 徹</b></p>
+<section class="section_pdg-sm" id="message">
+  <div class="inner section_half">
+    <figure class="imgarea js-scroll animation"><img src="img/boss.jpg" alt="つなぎ姿の代表取締役、桑水流徹" loading="lazy"></figure>
+    <div class="txtarea js-scroll animation">
+      <h2 class="mgn-btm32"><span class="decoration_ttl">Message</span><span class="heading-2">建設機械・農業機械の<br>動きを支えて<span class="nw">58年</span>。</span></h2>
+      <p>桑水流精機は、磐田の町工場です。<span class="nw">ピストン</span>や<span class="nw">ブッシュ</span>をはじめ、多くの部品を旋盤で加工しています。加工品の大半は、建設機械の油圧<span class="nw">シリンダー</span>用です。油圧<span class="nw">シリンダー</span>は、油圧<span class="nw">ショベル</span>をはじめとする重機の動きに欠かせない部品です。</p>
+      <p>加工の社員は、未経験から始めた人が多いです。少人数の会社ですので、早いうちから責任のある仕事を任されます。旋盤が初めてで不安を感じる人もいると思いますが、まずは工場見学をして、現場を見てから決めてみてもいいと思います。</p>
+      <p class="message__sign">代表取締役<b>桑水流 徹</b></p>
     </div>
   </div>
 </section>
 
-<section class="sec sec--pale" id="company">
-  <div class="container split split--rev">
-    <figure class="split__photo split__photo--wide inview"><img src="img/parts.jpg" alt="めねじを加工した鋼のブッシュ" loading="lazy"></figure>
-    <div class="split__body inview">
-      <h2 class="mgn-btm32"><span class="ttl-en">Company</span><span class="ttl-ja">建設機械と農業機械の<br>油圧部品</span></h2>
-      <p>当社は創業以来、静岡県磐田市で油圧部品の加工を続けています。お客様からいただいた図面をもとに、建設機械や農業機械の<span class="nw">シリンダー</span>まわりの部品を削ります。納め先は県内の<span class="nw">3社</span>で、うち<span class="nw">1社</span>とは<span class="nw">1974年</span>から取引が続いています。</p>
-      <div class="work-links">
+<section class="section_pdg-sm bg-light" id="company">
+  <div class="inner section_half">
+    <figure class="imgarea js-scroll animation"><img src="img/parts.jpg" alt="めねじを加工した鋼のブッシュ" loading="lazy"></figure>
+    <div class="txtarea js-scroll animation">
+      <h2 class="mgn-btm32"><span class="decoration_ttl">Company</span><span class="heading-2">建設機械と農業機械の<br>油圧部品</span></h2>
+      <p>静岡県磐田市で油圧部品を切削加工しています。部品は、取引先からいただいた図面をもとに削ります。取引先は県内の<span class="nw">3社</span>で、うち<span class="nw">1社</span>とは<span class="nw">1974年</span>からのお付き合いです。</p>
+      <div class="related-links">
         <a class="btn-line" href="#work">仕事の内容</a>
         <a class="btn-line" href="#company-info">所在地と連絡先</a>
       </div>
@@ -357,120 +362,120 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
   </div>
 </section>
 
-<section class="sec" id="work">
-  <div class="container split">
-    <figure class="split__photo split__photo--wide inview"><img src="img/work.jpg" alt="NC旋盤で加工する段付き軸" loading="lazy"></figure>
-    <div class="split__body inview">
-      <h2 class="mgn-btm32"><span class="ttl-en">Work</span><span class="ttl-ja">多品種・小<span class="nw">ロット</span>の<br>機械加工</span></h2>
-      <p>ひと月に作るのはおよそ4万個（<span class="nw">2025年</span>度の平均）。<span class="nw">1回</span>の段取りで削る数は、多くの品番で<span class="nw">50個</span>から<span class="nw">200個</span>です。次の品番に合わせて刃物と治具を替える段取り替えが、1人あたり<span class="nw">1日</span>に<span class="nw">1〜2回</span>あります。</p>
+<section class="section_pdg-sm" id="work">
+  <div class="inner section_half">
+    <figure class="imgarea js-scroll animation"><img src="img/work.jpg" alt="NC旋盤で加工する段付き軸" loading="lazy"></figure>
+    <div class="txtarea js-scroll animation">
+      <h2 class="mgn-btm32"><span class="decoration_ttl">Work</span><span class="heading-2">多品種・小<span class="nw">ロット</span>の<br>機械加工</span></h2>
+      <p>当社の月産は約4万個。<span class="nw">2025年</span>度の平均です。<span class="nw">1回</span>の段取りで削る数は、多くの品番で<span class="nw">50個</span>から<span class="nw">200個</span>です。次の品番に合わせて刃物と治具を替える段取り替えが、1人あたり<span class="nw">1日</span>に<span class="nw">1〜2回</span>あります。</p>
       <p>慣れれば1人で<span class="nw">3台</span>を受け持ち、<span class="nw">1台</span>が削っている間に別の機械の段取りをします。同じ作業だけで終わる日はありません。</p>
     </div>
   </div>
-  <div class="container work-photos">
-    <figure class="inview"><img src="img/nc.jpg" alt="マシニングセンタのエンドミルが、金属のブロックの上面を削るところ" loading="lazy"><figcaption><span class="nw">マシニングセンタ</span>では、鋼と鋳鉄の<span class="nw">ブロック</span>も削ります</figcaption></figure>
-    <figure class="inview"><img src="img/inspect.jpg" alt="三次元測定機の測定子と、リング状の金属部品" loading="lazy"><figcaption>公差<span class="nw">±0.01mm</span>の部品もあります。出荷の前には、検査室の測定機で抜き取り検査を行います</figcaption></figure>
-    <figure class="inview"><img src="img/coolant.jpg" alt="マシニングセンタのエンドミルと切削油の流れ" loading="lazy"><figcaption>切削油のかけ方で仕上がりが変わります。うまくかかっているかどうかは、削る音でも分かります</figcaption></figure>
+  <div class="inner imgs">
+    <figure class="js-scroll animation"><img src="img/nc.jpg" alt="マシニングセンタのエンドミルが、金属のブロックの上面を削るところ" loading="lazy"><figcaption><span class="nw">マシニングセンタ</span>では、鋼や鋳鉄の<span class="nw">ブロック</span>を削ります。</figcaption></figure>
+    <figure class="js-scroll animation"><img src="img/inspect.jpg" alt="三次元測定機の測定子と、リング状の金属部品" loading="lazy"><figcaption>公差<span class="nw">±0.01mm</span>の部品もあります。出荷前は検査室の測定機で<span class="nw">サンプリング</span>検査を行います。</figcaption></figure>
+    <figure class="js-scroll animation"><img src="img/coolant.jpg" alt="マシニングセンタのエンドミルと切削油の流れ" loading="lazy"><figcaption>切削油のかけ方で、仕上がりが変わります。うまくかかっているかどうかは、削る音でも分かります。</figcaption></figure>
   </div>
 </section>
 
-<section class="sec sec--pale" id="number">
-  <div class="container center">
-    <h2><span class="ttl-en">Number</span><span class="ttl-ja">数字で見る桑水流精機</span></h2>
-    <div class="p-number__list">
-      <div class="p-number__item inview"><i class="fa-solid fa-industry" aria-hidden="true"></i><p class="p-number__title">創業</p><p class="p-number__num">1968<small>年</small></p><p>磐田の同じ土地で<span class="nw">58年</span>。</p></div>
-      <div class="p-number__item inview"><i class="fa-solid fa-users" aria-hidden="true"></i><p class="p-number__title">従業員数</p><p class="p-number__num">34<small>名</small></p><p>加工<span class="nw">14名</span>、検査<span class="nw">6名</span>、生産管理・営業・総務ほか<span class="nw">14名</span>。</p></div>
-      <div class="p-number__item inview"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i><p class="p-number__title">未経験からの入社</p><p class="p-number__num">9<small>名</small></p><p>加工の社員<span class="nw">14名</span>のうちの数です。この<span class="nw">9名</span>の前職は、介護、運送、飲食などです。</p></div>
-      <div class="p-number__item inview"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><p class="p-number__title">年間休日</p><p class="p-number__num">122<small>日</small></p></div>
-      <div class="p-number__item inview"><i class="fa-solid fa-clock" aria-hidden="true"></i><p class="p-number__title">残業</p><p class="p-number__num">11<small>時間／月平均</small></p><p>いちばん多い月でも<span class="nw">25時間</span>でした。</p></div>
-      <div class="p-number__item inview"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><p class="p-number__title">有給取得</p><p class="p-number__num">13.2<small>日／年平均</small></p></div>
+<section class="section_pdg-sm bg-light" id="number">
+  <div class="inner txt-ctr">
+    <h2><span class="decoration_ttl">Number</span><span class="heading-2">数字で見る桑水流精機</span></h2>
+    <div class="p-number__table">
+      <div class="number--item js-scroll animation"><i class="fa-solid fa-industry" aria-hidden="true"></i><p class="p-number__table__title">創業</p><p class="num">1968<small>年</small></p><p>磐田で<span class="nw">58年</span>。</p></div>
+      <div class="number--item js-scroll animation"><i class="fa-solid fa-users" aria-hidden="true"></i><p class="p-number__table__title">従業員数</p><p class="num">34<small>名</small></p><p>加工<span class="nw">14名</span>、検査<span class="nw">6名</span>、生産管理・営業・総務ほか<span class="nw">14名</span>。</p></div>
+      <div class="number--item js-scroll animation"><i class="fa-solid fa-user-plus" aria-hidden="true"></i><p class="p-number__table__title">未経験からの入社</p><p class="num">9<small>名</small></p><p>加工<span class="nw">14名</span>のうちの<span class="nw">9名</span>で、前職は介護、運送、飲食などです。</p></div>
+      <div class="number--item js-scroll animation"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><p class="p-number__table__title">年間休日</p><p class="num">122<small>日</small></p></div>
+      <div class="number--item js-scroll animation"><i class="fa-solid fa-clock" aria-hidden="true"></i><p class="p-number__table__title">残業</p><p class="num">11<small>時間／月平均</small></p><p>いちばん多い月でも<span class="nw">25時間</span>でした。</p></div>
+      <div class="number--item js-scroll animation"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><p class="p-number__table__title">有給取得</p><p class="num">13.2<small>日／年平均</small></p></div>
     </div>
-    <p class="p-number__note">従業員数と未経験からの入社人数は、<span class="nw">2026年8月</span>時点です。年間休日は<span class="nw">2026年</span>度の会社カレンダーの日数で、残業・有給取得は<span class="nw">2025年</span>度の全社員の実績です。</p>
+    <p class="stats-note">人数は<span class="nw">2026年8月</span>時点のものです。年間休日は<span class="nw">2026年</span>度の予定です。残業・有給取得は<span class="nw">2025年</span>度の全社員平均です。</p>
   </div>
 </section>
 
-<section class="sec" id="people">
-  <div class="container center">
-    <h2><span class="ttl-en">People</span><span class="ttl-ja">先輩の声</span></h2>
+<section class="section_pdg-sm" id="people">
+  <div class="inner txt-ctr">
+    <h2><span class="decoration_ttl">People</span><span class="heading-2">先輩の声</span></h2>
   </div>
-  <div class="container people__list">
-    <div class="people__item inview"><img src="img/worker_a.jpg" alt="青いヘルメットとマスクを着けて作業台に向かう社員" loading="lazy"><p class="people__tag">加工｜<span class="nw">2022年</span>入社｜前職／介護</p><h3>機械の音を、聞き分けられるまでに。</h3><p>前の仕事は夜勤のある介護で、生活の<span class="nw">リズム</span>を整えたくて転職しました。最初の<span class="nw">3か月</span>は、機械の音がぜんぶ同じに聞こえていました。隣にはいつも先輩がいて、分からないことはその場で聞けました。いまは刃が欠ける前の音が分かります。</p></div>
-    <div class="people__item inview"><img src="img/worker_b.jpg" alt="ノギスで旋削部品の外径を測る社員" loading="lazy"><p class="people__tag">加工｜<span class="nw">2023年</span>入社｜前職／運送</p><h3>機械を<span class="nw">1台</span>ずつ、自分のものに。</h3><p>運送の仕事で腰を痛めて、重いものを運ばない仕事を探していました。見学で削りたての部品を手に取って、ここに決めました。<span class="nw">2台</span>目を任されたのは、入社して<span class="nw">1年</span>たってから。もっと早く覚えろと急かされると思っていたので、ほっとしました。<span class="nw">4年</span>目のいまは<span class="nw">3台</span>を受け持っています。</p></div>
-    <div class="people__item inview"><img src="img/worker_c.jpg" alt="測定具を薄い板に当てる社員の手元" loading="lazy"><p class="people__tag">検査｜<span class="nw">2021年</span>入社｜前職／組立</p><h3>3交替から、日勤の毎日へ。</h3><p>前の工場では、組立の仕事を3交替でしていました。いまは日勤なので、平日の夜も家族との時間が持てます。入社して検査に配属されたころは、測定具の当て方が安定せず、同じ部品を何度も測り直しました。いまは出荷検査も1人で任されています。</p></div>
+  <div class="inner posts-people">
+    <div class="post-people js-scroll animation"><img src="img/worker_a.jpg" alt="青いヘルメットとマスクを着けて作業台に向かう社員" loading="lazy"><p class="people-info">加工｜<span class="nw">2022年</span>入社｜前職／介護</p><h3>機械の音を、聞き分けられるようになった。</h3><p>前の仕事は夜勤のある介護で、生活の<span class="nw">リズム</span>を整えたくて転職しました。最初の<span class="nw">3か月</span>は、機械の音がぜんぶ同じに聞こえていました。隣にはいつも先輩がいて、分からないことはその場で聞けました。いまは刃が欠ける前の音が分かります。</p></div>
+    <div class="post-people js-scroll animation"><img src="img/worker_b.jpg" alt="ノギスで旋削部品の外径を測る社員" loading="lazy"><p class="people-info">加工｜<span class="nw">2023年</span>入社｜前職／運送</p><h3>急かされずに、<span class="nw">1台</span>ずつ。</h3><p>前職は運送業です。腰を痛めて、重いものを運ばない仕事を探していました。入社の決め手は工場見学でした。削りたての部品を手に取らせてもらいました。<span class="nw">2台</span>目を任されたのは、入社して<span class="nw">1年</span>たってから。もっと早く覚えろと急かされると思っていたので、ほっとしました。<span class="nw">4年</span>目のいまは<span class="nw">3台</span>を受け持っています。</p></div>
+    <div class="post-people js-scroll animation"><img src="img/worker_c.jpg" alt="測定具を薄い板に当てる社員の手元" loading="lazy"><p class="people-info">検査｜<span class="nw">2021年</span>入社｜前職／組立</p><h3>交替勤務から日勤の毎日へ。</h3><p>以前は工場で組立をしていました。勤務は3交替でした。いまは日勤なので、平日の夜も家族との時間が持てます。入社後は検査に配属されました。最初は測定具の当て方が安定せず、同じ部品を何度も測り直しました。いまは出荷検査も1人で任されています。</p></div>
   </div>
 </section>
 
-<section class="sec sec--pale" id="schedule">
-  <div class="container center">
-    <h2 class="ttl--sub"><span class="ttl-en">Schedule</span><span class="ttl-ja">加工担当の一日</span></h2>
+<section class="section_pdg-sm bg-light" id="schedule">
+  <div class="inner txt-ctr">
+    <h2 class="c-title"><span class="decoration_ttl">Schedule</span><span class="c-title__sub">加工担当の一日</span></h2>
   </div>
-  <div class="container">
-    <ol class="schedule">
-      <li class="inview"><time>8:00</time><p>朝礼。その日に流す品番と、注意する寸法を読み合わせます。</p></li>
-      <li class="inview"><time>8:10</time><p>前日から続く品番の段取りを確認して、加工に入ります。</p></li>
-      <li class="inview"><time>12:00</time><p>昼休み<span class="nw">45分</span>。弁当を持ってくる人が多いです。</p></li>
-      <li class="inview"><time>12:45</time><p>午後の加工。段取り替えは、この時間に入ることが多いです。</p></li>
-      <li class="inview"><time>16:40</time><p>片づけと、翌日の刃物の準備をします。</p></li>
-      <li class="inview"><time>17:00</time><p>終業。残業がある日は月に<span class="nw">4日</span>ほどです。</p></li>
+  <div class="inner">
+    <ol class="flow">
+      <li class="js-scroll animation"><time>8:00</time><p>朝礼。その日に流す品番と、気をつける寸法を確かめます。</p></li>
+      <li class="js-scroll animation"><time>8:10</time><p>午前の加工。前日から続く品番の段取りを確認してから削ります。</p></li>
+      <li class="js-scroll animation"><time>12:00</time><p>昼休み<span class="nw">45分</span>。弁当を持ってくる人が多いです。</p></li>
+      <li class="js-scroll animation"><time>12:45</time><p>午後の加工。段取り替えは、この時間に入ることが多いです。</p></li>
+      <li class="js-scroll animation"><time>16:40</time><p>片づけと、翌日の刃物の準備をします。</p></li>
+      <li class="js-scroll animation"><time>17:00</time><p>終業。残業がある日は月に<span class="nw">4日</span>ほどです。</p></li>
     </ol>
-    <p class="schedule-note">10時と15時に<span class="nw">15分</span>ずつ休憩があります。</p>
+    <p class="note">10時と15時に<span class="nw">15分</span>ずつ休憩があります。</p>
   </div>
 </section>
 
-<section class="sec" id="education">
-  <div class="container center">
-    <h2 class="ttl--sub"><span class="ttl-en">Education</span><span class="ttl-ja">入社後の教育</span></h2>
+<section class="section_pdg-sm" id="education">
+  <div class="inner txt-ctr">
+    <h2 class="c-title"><span class="decoration_ttl">Education</span><span class="c-title__sub">入社後の教育</span></h2>
   </div>
-  <div class="container">
-    <dl class="edu-table inview">
-      <div><dt>入社〜<span class="nw">1か月</span></dt><dd><b>安全の決まりと、図面の読み方</b>測定具の使い方もこの期間に覚えます。いつも同じ先輩<span class="nw">1名</span>が付きます。</dd></div>
-      <div><dt>〜<span class="nw">3か月</span></dt><dd><b>先輩と一緒に段取り替え</b>隣で見たあと、刃物と治具を自分で替えます。</dd></div>
-      <div><dt>〜半年</dt><dd><b><span class="nw">1台</span>を受け持つ</b>段取りから、削った部品の測定まで。困ったら機械を止めて先輩を呼びます。</dd></div>
-      <div><dt>〜<span class="nw">1年</span></dt><dd><b><span class="nw">2台</span>を受け持つ</b>NC旋盤の<span class="nw">プログラム</span>の手直しを覚えます。</dd></div>
-      <div><dt>〜<span class="nw">3年</span></dt><dd><b><span class="nw">3台</span>を受け持ち、新人に付く側へ</b>自分が教わったときと同じ順序で、次の人へ教えます。</dd></div>
+  <div class="inner">
+    <dl class="p-training__flowBox js-scroll animation">
+      <div><dt><span class="nw">入社〜1か月</span></dt><dd><b>安全<span class="nw">ルール</span>と、図面の読み方</b>測定具の使い方もこの期間に覚えます。いつも同じ先輩<span class="nw">1名</span>が付きます。</dd></div>
+      <div><dt><span class="nw">〜3か月</span></dt><dd><b>先輩と一緒に段取り替え</b>隣で見たあと、刃物と治具を自分で替えます。</dd></div>
+      <div><dt><span class="nw">〜半年</span></dt><dd><b><span class="nw">1台</span>を受け持つ</b>段取りから、削った部品の測定まで。困ったら機械を止めて先輩を呼びます。</dd></div>
+      <div><dt><span class="nw">〜1年</span></dt><dd><b><span class="nw">2台</span>を受け持つ</b>NC旋盤の<span class="nw">プログラム</span>の手直しを覚えます。</dd></div>
+      <div><dt><span class="nw">〜3年</span></dt><dd><b><span class="nw">3台</span>を受け持ち、新人に付く側へ</b>自分が教わったときと同じ順序で、次の人へ教えます。</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="sec sec--pale" id="welfare">
-  <div class="container center">
-    <h2 class="ttl--sub"><span class="ttl-en">Welfare</span><span class="ttl-ja">福利厚生</span></h2>
+<section class="section_pdg-sm bg-light" id="welfare">
+  <div class="inner txt-ctr">
+    <h2 class="c-title"><span class="decoration_ttl">Welfare</span><span class="c-title__sub">福利厚生</span></h2>
   </div>
-  <div class="container welfare__list">
-    <div class="welfare__item inview"><i class="fa-solid fa-id-card" aria-hidden="true"></i><h3>資格取得費用は会社負担</h3><p><span class="nw">フォークリフト</span>と玉掛けの講習が対象です。</p></div>
-    <div class="welfare__item inview"><i class="fa-solid fa-shirt" aria-hidden="true"></i><h3>作業服・安全靴・保護めがねを貸与</h3><p>作業服は夏用と冬用を2着ずつお貸しします。</p></div>
-    <div class="welfare__item inview"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i><h3>健康診断は年<span class="nw">1回</span></h3><p>勤務時間内に実施し、費用は会社が負担します。</p></div>
+  <div class="inner p-welfare__gallery">
+    <div class="p-welfare__item js-scroll animation"><i class="fa-solid fa-id-card" aria-hidden="true"></i><h3>資格取得費用は会社負担</h3><p>対象は<span class="nw">フォークリフト</span>と玉掛けの技能講習です。</p></div>
+    <div class="p-welfare__item js-scroll animation"><i class="fa-solid fa-shirt" aria-hidden="true"></i><h3>作業服・安全靴・保護めがねを貸与</h3><p>作業服は夏用・冬用を各<span class="nw">2着</span>、安全靴と保護めがねもあわせてお貸しします。</p></div>
+    <div class="p-welfare__item js-scroll animation"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i><h3>年<span class="nw">1回</span>の健康診断</h3><p>勤務時間内に実施します。費用は会社負担です。</p></div>
   </div>
 </section>
 
-<section class="sec" id="recruit">
-  <div class="container center">
-    <h2><span class="ttl-en">Recruit</span><span class="ttl-ja">募集要項</span></h2>
+<section class="section_pdg-sm" id="recruit">
+  <div class="inner txt-ctr">
+    <h2><span class="decoration_ttl">Recruit</span><span class="heading-2">募集要項</span></h2>
   </div>
-  <div class="container">
-    <dl class="recruit-table inview">
-      <div><dt>職種</dt><dd><b>機械加工</b>旋盤と<span class="nw">マシニングセンタ</span>で、段取りから加工までを行います。中途採用、正社員です。</dd></div>
+  <div class="inner">
+    <dl class="p-information__list js-scroll animation">
+      <div><dt>職種</dt><dd><b>機械加工</b>旋盤と<span class="nw">マシニングセンタ</span>で、段取りから加工までを担当します。中途採用、正社員です。</dd></div>
       <div><dt>応募資格</dt><dd><b>学歴・年齢・経験は問いません</b>通勤に車か<span class="nw">バイク</span>を使える方。車の場合、免許はAT限定でも構いません。</dd></div>
-      <div><dt>募集人数</dt><dd><b><span class="nw">2名</span></b><span class="nw">2026年10月31日</span>まで受け付け、決まり次第締め切ります。</dd></div>
-      <div><dt>月給</dt><dd><b>218,000円〜<span class="nw">296,000円</span></b>経験と資格を考慮のうえ決定します。固定残業代は含みません。別途、通勤手当と、残業・休日出勤の割増賃金を支給します。</dd></div>
+      <div><dt>募集人数</dt><dd><b><span class="nw">2名</span></b>応募は<span class="nw">2026年10月31日</span>まで受け付けます。期間内でも定員になり次第締め切ります。</dd></div>
+      <div><dt>月給</dt><dd><b>218,000円〜296,000円</b>経験と資格を考慮のうえ決定します。固定残業代は含みません。別途、通勤手当と、残業・休日出勤の割増賃金を支給します。</dd></div>
       <div><dt>賞与</dt><dd><b>年<span class="nw">2回</span></b>計<span class="nw">4.1か月分</span><span class="nw">（2025年度の実績・全社員平均）</span>。</dd></div>
-      <div><dt>年収の例</dt><dd><b><span class="nw">約380万円</span></b>入社<span class="nw">3年</span>目・月給<span class="nw">236,000円</span>の場合（賞与<span class="nw">4.1か月</span>で計算、残業代は含みません）。賞与は会社の業績によって変わります。</dd></div>
-      <div><dt>勤務時間</dt><dd><b>8:00〜17:00</b>休憩<span class="nw">75分</span>。全員が同じ時間帯で、交替勤務はありません。残業あり（月平均<span class="nw">11時間</span>・<span class="nw">2025年</span>度の実績）。</dd></div>
+      <div><dt>年収の例</dt><dd><b><span class="nw">約380万円</span></b>入社<span class="nw">3年</span>目・月給<span class="nw">236,000円</span>・賞与<span class="nw">4.1か月</span>の場合。残業代は含みません。賞与は、業績により支給額が変わります。</dd></div>
+      <div><dt>勤務時間</dt><dd><b>8:00〜17:00</b>休憩<span class="nw">75分</span>。全員が日勤で、交替勤務はありません。月平均残業時間は、<span class="nw">11時間</span>（<span class="nw">2025年</span>度実績）です。</dd></div>
       <div><dt>休日</dt><dd><b><span class="nw">年間122日</span><span class="nw">（2026年度の会社カレンダー）</span></b>土日休み。祝日は出勤日で、その分をお盆・年末年始などの長期休暇にあてています。有給休暇は半日単位で取得できます。</dd></div>
       <div><dt>試用期間</dt><dd><b><span class="nw">3か月</span></b>期間中の給与と待遇は、本採用と同じです。</dd></div>
       <div><dt>勤務地</dt><dd><b>本社工場のみ</b>静岡県磐田市です。転勤はありません。</dd></div>
-      <div><dt>通勤</dt><dd><b>車・<span class="nw">バイク</span>通勤可（駐車場<span class="nw">45台</span>）</b>駐車場代のご負担はありません。通勤手当は<span class="nw">月30,000円</span>まで実費で支給します。</dd></div>
-      <div><dt>昇給</dt><dd><b>年<span class="nw">1回</span>（4月）</b><span class="nw">2026年4月</span>は全社員の平均で月額<span class="nw">6,200円</span>上がりました。</dd></div>
-      <div><dt>賃金の締切日・支払日</dt><dd><b>毎月末日締め、翌<span class="nw">月25日</span>払い</b>銀行振込。<span class="nw">25日</span>が休日の場合は前営業日。</dd></div>
-      <div><dt>加入保険</dt><dd><b>各種社会保険</b>雇用保険、労災保険、健康保険、厚生年金保険に加入します。</dd></div>
+      <div><dt>通勤</dt><dd><b>車・<span class="nw">バイク</span>通勤可（駐車場<span class="nw">45台</span>）</b>駐車場代のご負担はありません。通勤手当は実費で支給します。上限は<span class="nw">月30,000円</span>です。</dd></div>
+      <div><dt>昇給</dt><dd><b>年<span class="nw">1回</span>（4月）</b><span class="nw">2026年4月</span>の昇給額は、全社員の平均で月額<span class="nw">6,200円</span>でした。</dd></div>
+      <div><dt>賃金の締切日・支払日</dt><dd><b>毎月末日締め、翌<span class="nw">月25日</span>払い</b>銀行振込。支払日が休日の場合は前営業日になります。</dd></div>
+      <div><dt>加入保険</dt><dd><b>各種社会保険</b>雇用保険・労災保険・健康保険・厚生年金保険に加入します。</dd></div>
       <div><dt>退職金</dt><dd><b>退職金制度あり</b><span class="nw">中小企業退職金共済</span>を利用しています。</dd></div>
-      <div><dt>受動喫煙の対策</dt><dd><b>屋内は禁煙</b>喫煙所は屋外に設けています。</dd></div>
-      <div><dt>応募の方法</dt><dd><b>この<span class="nw">ページ</span>の<span class="nw">フォーム</span>か、お電話で</b>番号は<span class="nw">0538-00-0000</span>（採用担当あて）です。履歴書は面接の当日にご持参いただくか、本社工場の採用担当あてにご郵送ください。</dd></div>
-      <div><dt>選考の流れ</dt><dd><b>応募 → 面接<span class="nw">1回</span> → 結果のご連絡</b>履歴書は手書き・印刷のどちらでも構いません（写真は要りません）。希望される方には、工場見学と同じ日に面接を行います。選考結果にかかわらず、面接の日から1週間以内にご連絡します。</dd></div>
+      <div><dt>受動喫煙の対策</dt><dd><b>屋内は禁煙</b>屋外に喫煙所があります。</dd></div>
+      <div><dt>応募の方法</dt><dd><b>この<span class="nw">ページ</span>の<span class="nw">フォーム</span>か、お電話で</b>お電話は採用担当（<span class="nw">0538-00-0000</span>）までお願いします。履歴書は面接の当日にお持ちいただくか、本社工場の採用担当あてにご郵送ください。</dd></div>
+      <div><dt>選考の流れ</dt><dd><b>応募 → 面接<span class="nw">1回</span> → 結果のご連絡</b>履歴書は手書き・印刷のどちらでも構いません（写真は要りません）。見学当日の面接も可能です。面接日から1週間以内にご連絡します。</dd></div>
     </dl>
-    <div class="recruit-sub inview">
+    <div class="p-information__flow js-scroll animation">
       <h3>労働条件の明示</h3>
       <dl>
-        <div><dt>業務の変更範囲</dt><dd>入社時は機械加工。変更の範囲は、検査・生産管理・受注見積を含む会社の定める業務です。</dd></div>
+        <div><dt>業務の変更範囲</dt><dd>入社時は機械加工。変更の範囲は、検査・生産管理・受注・見積を含む会社の定める業務です。</dd></div>
         <div><dt>就業場所の変更範囲</dt><dd>磐田市の本社工場のみです。</dd></div>
         <div><dt>雇用の期間</dt><dd>期間の定めはありません。有期契約からの登用ではなく、最初から正社員です。</dd></div>
       </dl>
@@ -478,55 +483,55 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
   </div>
 </section>
 
-<section class="entry-band" id="visit">
-  <div class="entry-band__box inview">
-    <h2><span class="ttl-en">Visit</span><span class="ttl-ja">工場見学のご案内</span></h2>
-    <p>まずは工場を見に来てください。見学は<span class="nw">1回</span><span class="nw">3名</span>までで、時間は<span class="nw">1時間</span><span class="nw">20分</span>ほどです。見学に履歴書は必要ありません。</p>
-    <ol class="visit-flow">
-      <li><time>10:00</time>会社の説明</li>
-      <li><time>10:20</time>工場の中をご案内します。耳栓をお渡しします。</li>
-      <li><time>11:00</time>質問。給与や休みのことも聞けます。</li>
+<section class="cta" id="visit">
+  <div class="box js-scroll animation">
+    <h2><span class="decoration_ttl">Visit</span><span class="heading-2">工場見学のご案内</span></h2>
+    <p>見学の所要時間は<span class="nw">約80分</span>です。各回<span class="nw">3名</span>まで見学可能です。履歴書は必要ありません。給与の額や休日についてもご質問いただけます。</p>
+    <ol class="p-factory1__time">
+      <li><time>10:00</time>会社説明</li>
+      <li><time>10:20</time>工場内見学</li>
+      <li><time>11:00</time>質疑応答</li>
       <li><time>11:20</time>終了</li>
     </ol>
-    <ul class="visit-days">
+    <ul class="cta--links">
       <li><b>10/7（水）</b>10:00〜11:20・残り<span class="nw">2名</span></li>
       <li><b>10/14（水）</b>10:00〜11:20・残り<span class="nw">3名</span></li>
       <li><b>10/21（水）</b>10:00〜11:20・残り<span class="nw">3名</span></li>
     </ul>
-    <a class="btn btn--orange" href="#entry-form">工場見学の申し込み</a>
-    <p class="visit-note">工場が稼働している平日に見学を行います。動きやすい服装でお越しください。保護めがねと安全靴はこちらでお貸しします。削る前の材料と削ったあとの部品を、その場で手に取っていただけます。</p>
-    <p class="visit-note">JR磐田駅から車で<span class="nw">12分</span>の場所にあります。駅までお迎えにあがりますので、ご希望の方はお申し込みのときにお知らせください。</p>
+    <a class="btn btn-color" href="#entry-form">工場見学の申し込み</a>
+    <p class="cta--txt">工場が稼働している平日に見学を行います。動きやすい服装でお越しください。保護めがね・安全靴・耳栓は、当社でご用意します。削る前の材料と削ったあとの部品を、その場で手に取っていただけます。</p>
+    <p class="cta--txt">JR磐田駅から車で<span class="nw">約12分</span>です。駅までお迎えにあがりますので、ご希望の方はお申し込みのときにお知らせください。</p>
   </div>
 </section>
 
-<section class="sec" id="faq">
-  <div class="container center">
-    <h2 class="ttl--sub"><span class="ttl-en">FAQ</span><span class="ttl-ja">よくある質問</span></h2>
+<section class="section_pdg-sm" id="faq">
+  <div class="inner txt-ctr">
+    <h2 class="c-title"><span class="decoration_ttl">FAQ</span><span class="c-title__sub">よくある質問</span></h2>
   </div>
-  <div class="container">
-    <div class="faq">
-      <details class="faq__item inview"><summary>旋盤の経験がありませんが、応募できますか？</summary><p>応募できます。最初は図面の読み方から始めます。機械に触れるのは安全の決まりを覚えてからです。</p></details>
-      <details class="faq__item inview"><summary>年齢制限はありますか？</summary><p>設けていません。入社時の年齢がいちばん高かった方は<span class="nw">48歳</span>です（<span class="nw">2026年8月</span>時点）。</p></details>
-      <details class="faq__item inview"><summary>資格がなくても応募できますか？</summary><p>はい。<span class="nw">フォークリフト</span>と玉掛けの資格は、入社してから取得できます。いま加工にいる社員は、ほとんどが入社後に取っています。</p></details>
-      <details class="faq__item inview"><summary>力仕事ですか？</summary><p>手で持ち上げるのは5キロ以下の部品です。それより重いものは<span class="nw">クレーン</span>で動かします。一日の大半は立ち仕事です。</p></details>
-      <details class="faq__item inview"><summary>見学のとき、工場の写真を撮ってもいいですか？</summary><p>取引先との取り決めがあるため、工場内の撮影はご遠慮ください。</p></details>
+  <div class="inner">
+    <div class="p-qa__container">
+      <details class="p-qa__box js-scroll animation"><summary>未経験でも応募できますか？</summary><p>応募できます。最初は図面の読み方から始めます。機械に触れるのは安全<span class="nw">ルール</span>を覚えてからです。</p></details>
+      <details class="p-qa__box js-scroll animation"><summary>年齢制限はありますか？</summary><p>年齢制限は特に設けていません。実際に、<span class="nw">48歳</span>で入社した方もいます。</p></details>
+      <details class="p-qa__box js-scroll animation"><summary>資格がなくても応募できますか？</summary><p>はい。<span class="nw">フォークリフト</span>と玉掛けの資格は、入社してから技能講習を受けて取得できます。いま加工にいる社員は、ほとんどが入社後に取っています。</p></details>
+      <details class="p-qa__box js-scroll animation"><summary>力仕事ですか？</summary><p>手で運ぶ部品は<span class="nw">5kg</span>以下で、それより重いものは<span class="nw">クレーン</span>で動かします。業務の大半は立ち仕事です。</p></details>
+      <details class="p-qa__box js-scroll animation"><summary>工場見学中の写真撮影は可能ですか？</summary><p>取引先との取り決めがあるため、工場内の撮影はご遠慮ください。</p></details>
     </div>
   </div>
 </section>
 
-<section class="sec sec--pale" id="entry-form">
-  <div class="container center">
-    <h2 class="ttl--sub"><span class="ttl-en">Entry</span><span class="ttl-ja">見学・応募のお申し込み</span></h2>
+<section class="section_pdg-sm bg-light" id="entry-form">
+  <div class="inner txt-ctr">
+    <h2 class="c-title"><span class="decoration_ttl">Entry</span><span class="c-title__sub">見学・応募のお申し込み</span></h2>
   </div>
-  <form class="form inview" id="apply-form">
-    <p class="form__tel">お電話でのお申し込みは、採用担当（<span class="nw">0538-00-0000</span>・平日8:00〜17:00）で受け付けています。</p>
+  <form class="job-entry-form js-scroll animation" id="apply-form">
+    <p class="contact--tel">見学・応募のお電話は採用担当（<span class="nw">0538-00-0000</span>）までお願いします。受付時間：平日8:00〜17:00</p>
     <label for="f-name">お名前</label>
     <input id="f-name" type="text" autocomplete="name" required>
     <label for="f-contact">ご連絡先</label>
     <input id="f-contact" type="text" placeholder="メールアドレスまたは電話番号" required>
     <fieldset>
       <legend>ご用件</legend>
-      <div class="radio">
+      <div class="em-radio">
         <label><input type="radio" name="kind" checked>工場見学</label>
         <label><input type="radio" name="kind">応募</label>
         <label><input type="radio" name="kind">事前の質問</label>
@@ -534,7 +539,7 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
     </fieldset>
     <fieldset>
       <legend>ご希望日（工場見学をお申し込みの方のみ）</legend>
-      <div class="radio">
+      <div class="em-radio">
         <label><input type="radio" name="day">10/7（水）</label>
         <label><input type="radio" name="day">10/14（水）</label>
         <label><input type="radio" name="day">10/21（水）</label>
@@ -542,18 +547,18 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
     </fieldset>
     <fieldset>
       <legend>JR磐田駅までのお迎え</legend>
-      <div class="radio">
+      <div class="em-radio">
         <label><input type="checkbox" name="pickup">希望する</label>
       </div>
     </fieldset>
     <label for="f-note">ご質問・ご要望（任意）</label>
     <textarea id="f-note"></textarea>
-    <button class="btn btn--orange" type="submit">送信する</button>
-    <p class="form__note">いただいた連絡先に、確定した見学日、面接の日程、ご質問への回答をお知らせします。お預かりした内容は、これらのご連絡にだけ使い、第三者には提供しません。採用に至らなかった場合は、選考が終わってから<span class="nw">6か月</span>で消去します。この<span class="nw">フォーム</span>は見本のため、送信しても届きません。</p>
+    <button class="btn btn-color" type="submit">送信する</button>
+    <p class="privacy-box">いただいた連絡先に、確定した見学日、面接の日程、ご質問への回答をお知らせします。お預かりした内容は、これらのご連絡にだけ使い、第三者には提供しません。採用に至らなかった場合は、選考が終わってから<span class="nw">6か月</span>後に、お預かりした内容を消去します。本<span class="nw">ページ</span>の<span class="nw">フォーム</span>は見本のため、実際の送信はできません。</p>
   </form>
 </section>
 
-<nav class="tiles" aria-label="採用情報の案内">
+<nav class="linkarea-links" aria-label="採用情報の案内">
   <a href="#work">仕事の内容<small>WORK</small></a>
   <a href="#recruit">募集要項<small>RECRUIT</small></a>
   <a href="#entry-form">見学・応募<small>ENTRY</small></a>
@@ -561,9 +566,9 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
 </main>
 
 <footer class="footer" id="company-info">
-  <div class="footer__inner">
+  <div class="footer--flex">
     <div>
-      <p class="footer__logo">桑水流精機株式会社<small>KUWAZURU SEIKI RECRUITING SITE</small></p>
+      <p class="footer--logo">桑水流精機株式会社<small>KUWAZURU SEIKI RECRUITING SITE</small></p>
       <dl>
         <div><dt>所在地</dt><dd><span class="nw">静岡県磐田市○○0-0-0（架空の住所です）</span></dd></div>
         <div><dt>電話</dt><dd>0538-00-0000（平日8:00〜17:00）</dd></div>
@@ -573,7 +578,7 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
         <div><dt>採用窓口</dt><dd>この<span class="nw">ページ</span>の見学・応募<span class="nw">フォーム</span>、またはお電話（採用担当あて）</dd></div>
       </dl>
     </div>
-    <nav class="footer__nav" aria-label="フッターの案内">
+    <nav class="footer--nav" aria-label="フッターの案内">
       <a href="#message">MESSAGE</a><a href="#work">WORK</a>
       <a href="#company">COMPANY</a><a href="#number">NUMBER</a>
       <a href="#people">PEOPLE</a><a href="#schedule">SCHEDULE</a>
@@ -581,50 +586,145 @@ p,li,dd,dt,figcaption,summary,h1,h2,h3{word-break:auto-phrase}
       <a href="#recruit">RECRUIT</a><a href="#faq">FAQ</a>
     </nav>
   </div>
-  <p class="footer__note">桑水流精機は、架空の会社です。本<span class="nw">ページ</span>は採用<span class="nw">サイト</span>制作の見本です。住所と電話番号も架空です。写真は出典つきの実写です（一覧は<a href="img/CREDITS.md">img/CREDITS.md</a>、制作：常夜燈）。</p>
+  <p class="pbl">桑水流精機は、架空の会社です。本<span class="nw">ページ</span>は採用<span class="nw">サイト</span>制作の見本です。住所や電話番号も架空です。写真は実写で、出典は<a href="img/CREDITS.md">img/CREDITS.md</a>にまとめています。制作：常夜燈</p>
   <p class="copyright">© KUWAZURU SEIKI Co., Ltd.</p>
 </footer>
 
-<div class="fix-entry"><a href="#entry-form">見学・応募はこちら</a></div>
+<div class="c-floatLink"><a href="#entry-form">見学・応募はこちら</a></div>
 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@1.18.0/src/minified/TweenMax.min.js" integrity="sha256-ABrLsV2caVEMCBfm3eNhv/CYQG+tGCqzw2f4b/Pag0M=" crossorigin="anonymous"></script>
 <script>
-(function(){
-  var els=document.querySelectorAll('.inview');
-  var still=!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(still){els.forEach(function(e){e.classList.add('is-in')});}
-  else{
-    var io=new IntersectionObserver(function(es){es.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}
-    })},{rootMargin:'0px 0px -8% 0px'});
-    els.forEach(function(e){io.observe(e)});
-    addEventListener('scroll',function(){
-      if(innerHeight+scrollY<document.body.scrollHeight-4)return;
-      els.forEach(function(e){e.classList.add('is-in')});
-    },{passive:true});
+const scrollAnimationHook = $elements => {
+  const windowPosY = window.innerHeight + window.scrollY;
+  const buffer = window.innerHeight / 5;
+  document.querySelectorAll($elements).forEach($el => {
+    const targetTop = Number($el.getBoundingClientRect().top + window.scrollY) + buffer;
+    if(windowPosY > targetTop) {
+      $el.classList.add('inview');
+    }
+  })
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  scrollAnimationHook('.js-scroll');})
+window.addEventListener('scroll', () => {
+  scrollAnimationHook('.js-scroll');})
+
+function SmoothScrollAnchor(targetEl = 'a[href^="#"]', options = {}) {
+  const initialSetting = {
+    behavior: 'smooth',
+    buffer: 70,
+    headerEl: '.header',
+    isFixedHeader: true,
+  };
+  const setting = {...initialSetting, ...options};
+  const anchors = document.querySelectorAll(targetEl);
+  const settingHeaderHeight = (setting.isFixedHeader && document.querySelector(setting.headerEl)) ? document.querySelector(setting.headerEl).offsetHeight : 0;
+  for (let i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = anchors[i].getAttribute('href');
+      if (href !== '#') {
+        const target = document.getElementById(href.replace('#', ''));
+        if (!target) return false;
+        const position = window.scrollY + target.getBoundingClientRect().top - settingHeaderHeight - setting.buffer;
+        window.scroll({top: position, behavior: setting.behavior});
+      } else {
+        window.scroll({top: 0, behavior: setting.behavior});
+      }
+    });
   }
-  // メインビジュアルの写真を順に切り替える
-  var slides=document.querySelectorAll('.mv__slide'),dots=document.querySelectorAll('.mv__dots span'),cur=0;
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
-    setInterval(function(){
-      slides[cur].classList.remove('is-active');dots[cur].classList.remove('is-active');
-      cur=(cur+1)%slides.length;
-      slides[cur].classList.add('is-active');dots[cur].classList.add('is-active');
-    },5500);
-  }
-  var header=document.getElementById('header'),mv=document.querySelector('.mv');
-  addEventListener('scroll',function(){header.classList.toggle('is-scroll',scrollY>mv.offsetHeight-90);},{passive:true});
-  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('gnav');
-  btn.addEventListener('click',function(){
-    var open=nav.classList.toggle('is-open');
-    header.classList.toggle('is-open',open);
-    btn.setAttribute('aria-expanded',open);
+}
+// 着地はヘッダーのすぐ下。既定の70pxを足すと、節の上の余白と重なって空きが広すぎる
+const smoothScrollAnchor = SmoothScrollAnchor('a[href^="#"]', {
+  buffer: 0,
+  behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+});
+
+document.getElementById('apply-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.innerHTML='<p>（見本のため送信されていません）実際のページでは、お申し込みを受け付けた旨をここに表示します。</p>';
+});
+
+var slideshowDuration=3900;
+function slideshowSwitch(slideshow,index,auto){
+  if(slideshow.data('wait')) return;
+  var slides=slideshow.find('.slide');
+  var activeSlide=slides.filter('.is-active');
+  var newSlide=slides.eq(index);
+  var newSlideImage=newSlide.find('.image-container');
+  if(newSlide.is(activeSlide))return;
+  var timeout=slideshow.data('timeout');
+  clearTimeout(timeout);
+  slideshow.data('wait',true);
+  newSlide.css({
+    display:'block',
+    zIndex:2
   });
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open');header.classList.remove('is-open');btn.setAttribute('aria-expanded','false');});});
-  document.getElementById('apply-form').addEventListener('submit',function(e){
-    e.preventDefault();
-    this.innerHTML='<p>（見本のため送信されていません）実際のページでは、見学の日程をお知らせする旨をここに表示します。</p>';
+  newSlideImage.css({
+    opacity:0
   });
-})();
+  TweenMax.to(newSlideImage,1.6,{
+    alpha:1,
+    onComplete:function(){
+      newSlide.addClass('is-active');
+      activeSlide.removeClass('is-active');
+      newSlide.css({display:'',zIndex:''});
+      newSlideImage.css({opacity:''});
+      slideshow.find('.pagination').trigger('check');
+      slideshow.data('wait',false);
+      if(auto){
+        timeout=setTimeout(function(){
+          slideshowNext(slideshow,true);
+        },slideshowDuration);
+        slideshow.data('timeout',timeout);}}});
+}
+function slideshowNext(slideshow,auto){
+  var slides=slideshow.find('.slide');
+  var activeSlide=slides.filter('.is-active');
+  var newSlide=activeSlide.next('.slide');
+  if(newSlide.length==0)
+    newSlide=slides.filter('.slide').first();
+  slideshowSwitch(slideshow,newSlide.index(),auto);
+}
+if(window.jQuery){
+  $(function(){
+    var slideshow=$('.slideshow');
+    $('.slideshow .pagination').on('check',function(){
+      var slideshow=$(this).closest('.slideshow');
+      var pages=$(this).find('.item');
+      var index=slideshow.find('.slides .is-active').index();
+      pages.removeClass('is-active');
+      pages.eq(index).addClass('is-active');
+    });
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      // 初回だけ切り替えの1.6秒を足し、2回目以降と同じ5.5秒の間隔にそろえる
+      var timeout=setTimeout(function(){
+        slideshowNext(slideshow,true);
+      },slideshowDuration+1600);
+      slideshow.data('timeout',timeout);
+    }
+    $(window).on('scroll', function() {
+      if ($(this).scrollTop() > $('.hero').outerHeight() - 90)
+      {
+        $('body').addClass('header-sm');
+      } else {
+        $('body').removeClass('header-sm');
+      }
+    });
+    $('.gnav_btn').on('click',function(){
+      $(this).closest('body').toggleClass('gnav-active');
+      $(this).attr('aria-expanded',String($('body').hasClass('gnav-active')));
+    });
+    $('.gnav--link').on('click',function(){
+      $('body').removeClass('gnav-active');
+      $('.gnav_btn').attr('aria-expanded','false');
+    });
+  });
+}else{
+  // jQuery が届かない時は、写真の上の白いナビが白い節に重なって読めなくならないよう、最初から白地にする
+  document.body.classList.add('header-sm');
+}
 </script>
 </body>
 </html>
