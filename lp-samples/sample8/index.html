@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>法人・高圧の電気代を無料で試算｜雲雀谷エネルギー診断</title>
-<meta name="description" content="法人・高圧／特別高圧の電気代を、12か月分の検針票から月ごとに試算します。提携先のうち6〜10社を同じ形式で比べ、切替後に上がる月も同じ表に載せます。試算は無料、検針票のご送付から10営業日。東京・中部・関西エリア。">
+<title>法人・高圧の電気代を無料で診断｜雲雀谷エネルギー診断</title>
+<meta name="description" content="法人・高圧／特別高圧の電気代を、12か月分の検針票から月ごとに試算します。提携先のうち6〜10社を同じ形式で比べ、切替後に電気代が上がる月も同じ表に載せます。診断は無料で、比較表は検針票のご送付から10営業日以内にお届けします。東京・中部・関西エリア。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="雲雀谷エネルギー診断">
-<meta property="og:title" content="法人・高圧の電気代を無料で試算｜雲雀谷エネルギー診断">
+<meta property="og:title" content="法人・高圧の電気代を無料で診断｜雲雀谷エネルギー診断">
 <meta property="og:description" content="12か月分の検針票から、切替後の電気代を月ごとに試算します。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/bolt.svg" type="image/svg+xml">
@@ -76,7 +76,8 @@ button,input,select,textarea{font:inherit}
 /* 最初の画面 */
 .mv{position:relative;margin-top:68px;padding:46px 20px 70px;color:#fff;background:var(--navy-d)}
 .pic{position:absolute;inset:0 0 150px;overflow:hidden}
-.pic img{width:100%;height:100%;object-fit:cover;object-position:70% 40%}
+/* 実績の数字と注記を顔にかけないよう、写真を左へ寄せたうえで広げて顔を右の外側へ逃がす */
+.pic img{width:100%;height:100%;object-fit:cover;object-position:0% 40%;transform:scale(1.2);transform-origin:0 40%}
 .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(19,40,66,.66),rgba(19,40,66,.74))}
 .mv-inner{position:relative;z-index:1;max-width:1000px;margin:0 auto;text-align:center}
 .catch{display:inline-block;padding:6px 44px;background:var(--orange);font-size:19px;font-weight:700;line-height:1.5;
@@ -88,8 +89,8 @@ button,input,select,textarea{font:inherit}
 .mv-rewards li{display:flex;align-items:center;gap:4px}
 .mv-rewards p{min-width:130px;font-size:15px;font-weight:700;line-height:1.3}
 .mv-rewards b{display:block;font-family:var(--num);font-size:44px;line-height:1.1;color:var(--gold)}
-.mv-rewards b small{font-family:var(--sans);font-size:17px;margin-left:2px}
-.mv-notice{margin-top:10px;font-size:12px;color:#d3dbe6}
+.mv-rewards b small{font-family:var(--sans);font-size:17px;margin-left:2px;color:#fff}
+.mv-notice{max-width:820px;margin:10px auto 0;font-size:12px;color:#d3dbe6}
 
 /* 申し込みの札 */
 .mv-form,.mv-form-contact{position:relative;z-index:1;max-width:940px;margin:30px auto 0;border-radius:4px;background:#fff;color:var(--text);text-align:left;box-shadow:0 10px 28px rgba(10,20,40,.22)}
@@ -103,6 +104,7 @@ button,input,select,textarea{font:inherit}
 .required-label,.optional-label{margin-left:8px;padding:1px 6px;border-radius:3px;background:var(--orange);color:#fff;font-size:11px;vertical-align:1px}
 .optional-label{background:#8d939c}
 .formKv-item-wrap input[type="text"],.formKv-item-wrap input[type="email"],.formKv-item-wrap input[type="tel"],.formKv-item-wrap select{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:4px;background:#f7f7f7;font-size:16px}
+.formKv-item-wrap fieldset{grid-column:span 2}
 .formKv-radio{display:flex;flex-wrap:wrap;gap:4px 18px;padding-top:8px;font-size:15px}
 .formKv-radio label{display:flex;align-items:center;gap:6px;cursor:pointer}
 .formKv-btn{margin-top:24px;text-align:center}
@@ -149,22 +151,23 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 .topPage-cta{padding:60px 20px;background:linear-gradient(120deg,#f08a3e,var(--orange) 60%,#e2641c)}
 .topPage-cta-content{position:relative;max-width:840px;margin:0 auto;padding:44px 30px 30px;border-radius:4px;background:#fff;text-align:center}
 .topPage-cta-contentLabel{position:absolute;left:50%;top:-20px;transform:translateX(-50%);padding:6px 26px;border-radius:40px;background:var(--navy);color:#fff;font-size:16px;font-weight:700;white-space:nowrap}
-.topPage-cta-contentLabel b{font-family:var(--num);font-size:20px;color:var(--gold);margin-left:6px}
+.topPage-cta-contentLabel b{font-size:20px;color:var(--gold);margin:0 2px}
 .topPage-cta-title{font-size:28px;font-weight:700;line-height:1.5}
 .topPage-cta-btnLabel{margin:6px 0 22px;font-size:15px;color:var(--mute)}
 .topPage-cta-info{margin-top:18px;font-size:13px;color:var(--mute)}
-.topPage-cta-info a{margin-right:10px;font-family:var(--num);font-size:26px;font-weight:700;color:var(--navy);text-decoration:none;vertical-align:-2px}
+.topPage-cta-info a{margin-right:10px;white-space:nowrap;font-family:var(--num);font-size:26px;font-weight:700;color:var(--navy);text-decoration:none;vertical-align:-2px}
 
 /* 業種別の試算の例 */
 .topPage-case-contents-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
 .topPage-case-contents{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:4px;background:#fff;overflow:hidden}
 .topPage-case-contents-img img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.topPage-case-contents-info{flex:1;display:flex;flex-direction:column;padding:16px 18px 18px}
+.topPage-case-contents-info{position:relative;flex:1;display:flex;flex-direction:column;padding:16px 18px 18px}
 .topPage-case-contents-infoLabel{align-self:flex-start;padding:0 10px;border-radius:3px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;line-height:1.8}
 .topPage-case-contents-info-title{margin:8px 0 10px;font-size:17px;font-weight:700;line-height:1.5}
 .topPage-case-contents-info-des{margin-bottom:10px;font-size:14px;font-weight:700;color:var(--orange-t)}
 .topPage-case-contents-info-des b{font-family:var(--num);font-size:34px;line-height:1.1;margin:0 2px}
-.topPage-case-contents-info>a{align-self:flex-start;margin:-2px 0 12px;font-size:14px;font-weight:700;color:var(--navy)}
+/* 製造業の札にだけ行が増えると、1段目だけ金額と切替前後の箱の間が空き、段の高さもそろわない */
+.topPage-case-contents-info>a{position:absolute;right:18px;top:16px;font-size:14px;font-weight:700;line-height:1.5;color:var(--navy)}
 .topPage-case-contents-info>a::after{content:"\f078";margin-left:8px;font:900 11px/1 "Font Awesome 6 Free"}
 .topPage-case-contents-info-compare{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:auto;font-size:13px;line-height:1.5}
 .topPage-case-contents-info-compare-before,.topPage-case-contents-info-compare-after{padding:6px 8px;border-radius:3px;background:var(--pale)}
@@ -182,28 +185,27 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 .lineGraphArea{padding:22px 20px 16px;border:1px solid var(--line);border-radius:4px;background:#fff}
 .p-index-simulation__section h3{font-size:18px;font-weight:700;line-height:1.5}
 .text-grey{font-size:13px;color:var(--mute);line-height:1.7}
-/* 棒の長さは style の幅で、差の絶対値を目盛りの幅（−24万円から+6万円の30万円）で割った割合。0の線は左から80% */
-.graphWrap{position:relative;max-width:760px;margin:8px auto 0;padding:0 36px 36px 0}
+/* 棒の長さは style の幅で、差の絶対値を目盛りの幅（−18万円から+6万円の24万円）で割った割合。0の線は左から75% */
+.graphWrap{--ttl:40px;--pad:36px;position:relative;margin:8px auto 0;padding:0 var(--pad) 36px 0}
 .lineGraphItems{position:relative}
-.graphItem{display:grid;grid-template-columns:40px minmax(0,1fr);align-items:center}
-.graphTtl{padding-right:8px;text-align:right;font-size:12px;line-height:1}
+.graphItem{display:grid;grid-template-columns:var(--ttl) minmax(0,1fr);align-items:center}
+.graphTtl{padding-right:8px;text-align:right;font-size:12px;line-height:1;white-space:nowrap}
 .chartWrap{display:flex;align-items:center;height:27px;border-right:1px solid var(--line);
-  background:linear-gradient(90deg,transparent 80%,#8d939c 80% calc(80% + 1px),transparent calc(80% + 1px)),repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 20%)}
+  background:linear-gradient(90deg,transparent 75%,#8d939c 75% calc(75% + 1px),transparent calc(75% + 1px)),repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 25%)}
 .chart{flex:none;height:20px;border-radius:2px}
 .graphItem.is-left>.chartWrap{flex-direction:row-reverse}
-.graphItem.is-left .chart{margin-right:20%;background:var(--navy)}
-.graphItem.is-right .chart{margin-left:80%;background:var(--orange)}
-.count{padding:0 4px;font-size:13px;line-height:1;white-space:nowrap}
+.graphItem.is-left .chart{margin-right:25%;background:var(--navy)}
+.graphItem.is-right .chart{margin-left:75%;background:var(--orange)}
+.count{padding:0 4px;font-family:var(--num);font-size:13px;line-height:1;white-space:nowrap}
 .graphItem:last-child,.graphItem:last-child .chartWrap{position:relative}
-.lineGraphItems::before,.lineGraphItems::after,.graphItem:last-child::before,.graphItem:last-child::after,.graphItem:last-child .chartWrap::before,.graphItem:last-child .chartWrap::after,.graphWrap::after{
-  position:absolute;top:calc(100% + 6px);transform:translateX(-50%);font-size:12px;line-height:1;color:var(--mute)}
-.lineGraphItems::before{content:"−24";left:40px}
-.graphItem:last-child::before{content:"−18";left:calc(40px + (100% - 40px)*.2)}
-.graphItem:last-child .chartWrap::before{content:"−12";left:40%}
-.graphItem:last-child::after{content:"−6";left:calc(40px + (100% - 40px)*.6)}
-.graphItem:last-child .chartWrap::after{content:"0";left:80%}
+.lineGraphItems::before,.lineGraphItems::after,.graphItem:last-child::before,.graphItem:last-child .chartWrap::before,.graphItem:last-child .chartWrap::after,.graphWrap::after{
+  position:absolute;top:calc(100% + 6px);transform:translateX(-50%);font-family:var(--num);font-size:12px;line-height:1;color:var(--mute)}
+.lineGraphItems::before{content:"−18";left:var(--ttl)}
+.graphItem:last-child::before{content:"−12";left:calc(var(--ttl) + (100% - var(--ttl))*.25)}
+.graphItem:last-child .chartWrap::before{content:"−6";left:50%}
+.graphItem:last-child .chartWrap::after{content:"0";left:75%}
 .lineGraphItems::after{content:"+6";left:100%}
-.graphWrap::after{content:"万円";top:auto;bottom:0;left:calc(40px + (100% - 76px)/2)}
+.graphWrap::after{content:"万円";font-family:var(--sans);top:auto;bottom:0;left:calc(var(--ttl) + (100% - var(--ttl) - var(--pad))/2)}
 .lineGraphArea details{margin-top:12px;font-size:14px}
 .lineGraphArea summary{cursor:pointer;font-weight:700;color:var(--navy)}
 .lineGraphArea table{width:100%;max-width:360px;margin-top:8px;border-collapse:collapse;font-variant-numeric:tabular-nums}
@@ -212,6 +214,7 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 .graphWrap+p>span.is-right::before{background:var(--orange)}
 .parts>div{overflow-x:auto;margin-top:10px}
 .tablenum{width:100%;min-width:480px;border-collapse:collapse;background:#fff;font-size:14px;font-variant-numeric:tabular-nums}
+.tablenum td,.lineGraphArea table td{font-family:Roboto,var(--sans)}
 .tablenum th,.tablenum td,.lineGraphArea table th,.lineGraphArea table td{padding:10px 12px;border:1px solid var(--line);text-align:right;white-space:nowrap}
 .tablenum thead th,.lineGraphArea table thead th{background:var(--navy);color:#fff;text-align:center;font-weight:700}
 .tablenum tbody th,.lineGraphArea table tbody th{text-align:left;background:var(--pale);font-weight:700}
@@ -222,11 +225,11 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 .list-disc li{position:relative;padding-left:1em}
 .list-disc li::before{content:"・";position:absolute;left:0}
 .fine{margin-top:10px;font-size:13px;color:var(--mute);line-height:1.8}
-/* 携帯では会社を列に並べ替えた表に差し替える。6列のまま縦の箱に崩すと、会社どうしを横に見比べられない */
+/* 携帯では万円の数字だけの表に差し替える。縦の箱に崩すと、切替前後や会社どうしを横に見比べられない */
 .pcnone caption{padding-bottom:4px;text-align:left;font-size:12px;color:var(--mute)}
 
 /* 手数料 */
-.system .callout-wrap{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:start}
+.system .callout-wrap{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:center}
 .system .step-block{max-width:none;min-height:0;margin:0;padding:24px 16px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--navy)}
 .system .step-block .step-block__cont{grid-template-columns:minmax(0,1fr) 84px minmax(0,1fr);grid-template-areas:"customer deal power" "explain . commission" "agent agent agent";gap:14px 6px}
 .system .step-block__cont__item--arrow-item{font-size:13px}
@@ -238,7 +241,7 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 .system .step-block__cont>:nth-child(5){grid-area:commission;color:var(--orange-t)}
 .system .step-block__cont>:nth-child(6){grid-area:agent}
 .system dl{border-top:2px solid var(--navy);background:#fff}
-.system dl div{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line)}
+.system dl div{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid var(--line)}
 .system dt{padding:14px 16px;background:var(--pale);font-weight:700}
 .system dd{padding:14px 16px}
 
@@ -250,12 +253,12 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 .topPage-flow-contents>.fa-solid{display:block;margin:0 auto 14px;font-size:50px;line-height:64px;color:var(--navy)}
 .topPage-flow-contents+.topPage-flow-contents::before{content:"\f054";position:absolute;left:-21px;top:50%;margin-top:-8px;font:900 16px/1 "Font Awesome 6 Free";color:var(--orange)}
 .topPage-flow-contents-title{text-align:center;font-size:19px;font-weight:700;line-height:1.5;margin-bottom:10px}
-.topPage-flow-contents-des{font-size:15px}
+.topPage-flow-contents-des{margin-bottom:14px;font-size:15px}
 /* 本文の長さが3枚で違うため、余りを橙の箱の上に集めて下辺をそろえる */
 .topPage-flow-contents-point{margin-top:auto;padding:12px 14px;border-radius:4px;background:#fdf0e7;font-size:13px;line-height:1.7}
 .topPage-flow-contents-point-item{position:relative;padding-left:1em}
 .topPage-flow-contents-point-item::before{content:"・";position:absolute;left:0}
-.topPage-flow dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 40px;max-width:900px;margin:34px auto 0}
+.topPage-flow dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 40px;margin-top:34px}
 .topPage-flow dl dt{margin-bottom:2px;font-weight:700}
 .topPage-flow dl dd{font-size:15px}
 
@@ -291,7 +294,7 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 .footer-sitemap{display:flex;flex-wrap:wrap;gap:4px 26px;max-width:1040px;margin:0 auto;padding:0 20px 22px;font-weight:700}
 .footer-sitemap a{text-decoration:none}
 .note{max-width:1040px;margin:0 auto;padding:0 20px 18px;font-size:11px;color:var(--mute);line-height:1.7}
-.copyright{padding:12px;text-align:center;font-family:var(--num);font-size:11px;background:var(--navy-d);color:#c5cfdb}
+.copyright{padding:12px;text-align:center;font-size:11px;background:var(--navy-d);color:#c5cfdb}
 
 /* 動き。ウィザーズプラスの animate.css を丸ごと読まず、使う fadeInUp だけを写す */
 .animated{animation-duration:.8s;animation-fill-mode:both}
@@ -313,6 +316,7 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 @media (max-width:960px){
   .mv h1{font-size:44px}
   .formKv-item-wrap{grid-template-columns:1fr 1fr}
+  .formKv-item-wrap fieldset{grid-column:auto}
   .topPage-reason-contents{grid-template-columns:1fr 1fr;gap:30px}
   .topPage-case-contents-wrap{grid-template-columns:1fr 1fr}
   .system .callout-wrap{grid-template-columns:1fr}
@@ -335,14 +339,15 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
   .header-nav{top:60px}
   html{scroll-padding-top:60px}
   .mv{margin-top:60px;padding:30px 16px 44px}
-  .pic{bottom:auto;height:440px}
+  .pic{bottom:auto;height:515px}
+  .pic img{transform:none}
   .catch{padding:5px 26px;font-size:14px}
   .mv h1{font-size:34px}
   .lead{text-align:left;font-size:14px}
   /* 3つを横に並べると見出しが隙間なく続き、どの数字の見出しか読み分けられない */
   .mv-rewards{display:block;max-width:330px;margin:16px auto 0}
   .mv-rewards li{padding:5px 0;border-bottom:1px solid rgba(255,255,255,.22)}
-  .mv-rewards p{display:flex;align-items:baseline;justify-content:space-between;gap:12px;min-width:0;font-size:13px;text-align:left}
+  .mv-rewards p{flex:1;display:flex;align-items:baseline;justify-content:space-between;gap:12px;min-width:0;font-size:13px;text-align:left}
   .mv-rewards b{display:inline;font-size:27px}
   .mv-rewards b small{font-size:12px}
   .mv-notice{text-align:left;font-size:11px}
@@ -364,34 +369,28 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
   .topPage-cta-content{padding:40px 16px 24px}
   .topPage-cta-title{font-size:20px}
   .topPage-cta-contentLabel{font-size:13px;padding:6px 16px}
+  .topPage-case-contents-img img{aspect-ratio:2/1}
   .topPage-flow-contents-wrap{gap:40px}
   .topPage-flow-contents+.topPage-flow-contents::before{content:none}
   .topPage-flow dl{grid-template-columns:1fr;gap:20px;margin-top:30px}
-  .graphWrap{padding-bottom:40px}
+  .lineGraphArea{padding:18px 12px 14px}
+  .graphWrap{--ttl:34px;--pad:24px;padding-bottom:40px}
+  .graphTtl{padding-right:6px}
+  .count{padding:0 2px;font-size:12px}
   .chartWrap{height:30px}
   .chart{height:22px}
   .is-right .step-block .step-block__cont{grid-template-columns:minmax(0,.75fr) 50px minmax(0,1.3fr) 16px minmax(0,1fr)}
   ul.step-block__cont__item{padding:8px 2px}
   .tablenum{min-width:0}
-  .tablenum,.tablenum tbody,.tablenum tr,.tablenum th,.tablenum td{display:block}
-  .tablenum thead{display:none}
-  .tablenum tr{margin-bottom:10px;border:1px solid var(--line);background:#fff}
-  .tablenum tbody th{border:0;border-bottom:1px solid var(--line);padding:8px 12px}
-  .tablenum td{text-align:right;border:0;padding:6px 12px;white-space:normal}
-  .tablenum td::before{content:attr(data-label);float:left;margin-right:12px;color:var(--mute);font-size:13px;font-weight:400;text-align:left}
   .tablenum.smanone{display:none}
   .tablenum.pcnone{display:table;font-size:13px}
-  .pcnone thead{display:table-header-group}
-  .pcnone tbody{display:table-row-group}
-  .pcnone tr{display:table-row}
-  .pcnone th,.pcnone td{display:table-cell;padding:8px 5px;border:1px solid var(--line);white-space:nowrap}
-  .pcnone td{text-align:right}
-  .pcnone td::before{content:none}
-  .pcnone tbody th{padding:8px 6px;white-space:normal}
+  .tablenum.pcnone th,.tablenum.pcnone td{padding:8px 5px}
+  .tablenum.pcnone tbody th{padding:8px 6px;white-space:normal}
   .system dl div,.company dl div{grid-template-columns:1fr;gap:0}
   .system dt{padding:10px 14px}
   .company dl div{padding:12px 4px}
   .toggle_title{font-size:15px;padding:16px 42px 16px 44px}
+  .faq_text{margin:0 12px 16px;padding:14px 0 0 28px}
   .toggle_title::before{left:14px;top:16px}
   .footer-inner{flex-direction:column;align-items:flex-start}
   .footer-contact{text-align:left}
@@ -411,14 +410,18 @@ ul.step-block__cont__item li+li{border-top:1px solid var(--line)}
 body{line-break:strict}
 p,li,dd,dt,th,td,figcaption,summary,blockquote{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
+/* 語の途中で折らない。1行が35字を超える段落まで文節で折ると行末が空くので、広い幅の長い段落には掛けない */
+h1,h2,h3,p,li,dt,dd,summary{word-break:auto-phrase}
+@media (min-width:768px){.faq_text,.callout p,.fine,.list-disc li{word-break:normal}}
 .nw{white-space:nowrap}
+@media(max-width:359px){.header-inner{gap:6px;padding:0 6px 0 12px}.header-logo b{font-size:15px}}
 </style>
 </head>
 <body>
 
 <header class="header">
   <div class="header-inner">
-    <a class="header-logo" href="#top"><b>雲雀谷エネルギー診断</b><small class="smanone">法人・高圧の電気代<br>無料試算と比較</small></a>
+    <a class="header-logo" href="#top"><b>雲雀谷エネルギー診断</b><small class="smanone">法人・高圧の電気代<br>無料診断と比較</small></a>
     <nav class="header-nav" id="gnav" aria-label="ページ内の案内">
       <a href="#reason">選ばれる理由</a>
       <a href="#case">試算の例</a>
@@ -427,8 +430,8 @@ h1,h2,h3{text-wrap:balance}
       <a href="#flow">ご利用の流れ</a>
       <a href="#faq">よくあるご質問</a>
     </nav>
-    <p class="header-tel"><a href="tel:0300000000">03-0000-0000</a><small>受付時間：平日9:30〜18:00</small></p>
-    <a class="btn-basic" href="#contact"><span class="btn-basic-free">無料</span>試算を申し込む</a>
+    <p class="header-tel"><a href="tel:0300000000">03-0000-0000</a><small>受付時間：平日<span class="nw">9:30〜18:00</span></small></p>
+    <a class="btn-basic" href="#contact"><span class="btn-basic-free">無料</span>診断を申し込む</a>
     <button id="switchBtn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
   </div>
 </header>
@@ -437,18 +440,18 @@ h1,h2,h3{text-wrap:balance}
 <section class="mv">
   <div class="pic"><img src="img/hero.jpg" alt="付箋と資料を広げた机でノートパソコンに向かう女性" fetchpriority="high"></div>
   <div class="mv-inner">
-    <p class="catch">お申し込み後は検針票<span class="nw">12か月</span>分を送るだけ</p>
-    <h1>法人・高圧の<br><span class="text-line">電気代の無料試算</span></h1>
+    <p class="catch">検針票<span class="nw">12か月</span>分から、月ごとに試算します</p>
+    <h1>法人・高圧の<br><span class="text-line">電気代を無料で診断</span></h1>
     <p class="lead">東京・中部・関西<span class="nw">エリア</span>の高圧・特別高圧に対応。<br class="smanone">検針票のご送付から<span class="nw">10営業日</span>以内に、試算の比較表をお届けします。<br class="smanone">切替後に電気代が上がる月があれば、その月と増える額も同じ表に載せます。</p>
     <ul class="mv-rewards">
-      <li><p>試算企業数<b>312<small>社</small></b></p></li>
-      <li><p>削減案の提示率<b>78<small>%</small></b></p></li>
+      <li><p>診断実績<b>312<small>社※</small></b></p></li>
+      <li><p>削減案が出た企業<b>78<small>%※</small></b></p></li>
       <li><p>年間削減額の中央値<b>41<small>万円※</small></b></p></li>
     </ul>
-    <p class="mv-notice">※<span class="nw">2024年1月</span>〜<span class="nw">2026年6月</span>に当社が試算した<span class="nw">312社</span>の集計。削減額は、削減案をお示しした企業の試算額の中央値で、切替後の実績ではありません。試算の結果、いまの契約を続けるほうが安いこともあります。</p>
+    <p class="mv-notice">※<span class="nw">2024年1月</span>〜<span class="nw">2026年6月</span>に当社が試算した<span class="nw">312社</span>の集計です。年間削減額の中央値は、削減案が出た企業についての試算をもとにした値で、切替後の実績ではありません。試算の結果、いまのご契約を続けるほうが安いこともあります。</p>
   </div>
   <form class="mv-form" id="form-mv">
-    <p class="mv-form-title">電気代の無料試算<span class="nw">フォーム</span><span><b>6〜10</b>社を比較</span></p>
+    <p class="mv-form-title">電気代の無料診断<span class="nw">フォーム</span><span><b>6〜10</b>社を比較</span></p>
     <div class="mv-form-contents">
       <div class="formKv-item-wrap">
         <div class="formKv-item"><label class="formKv-label" for="mv-area">事業所のあるエリア<span class="required-label">必須</span></label>
@@ -468,7 +471,7 @@ h1,h2,h3{text-wrap:balance}
         <fieldset class="formKv-item"><legend class="formKv-label">契約種別<span class="required-label">必須</span></legend>
           <div class="formKv-radio"><label><input type="radio" name="mv-kind" checked>高圧</label><label><input type="radio" name="mv-kind">特別高圧</label><label><input type="radio" name="mv-kind">わからない</label></div></fieldset>
       </div>
-      <div class="formKv-btn"><button class="button" type="submit"><span class="formKv-btnLabel"><b>無料</b></span>試算を申し込む</button></div>
+      <div class="formKv-btn"><button class="button" type="submit"><span class="formKv-btnLabel"><b>無料</b></span>診断を申し込む</button></div>
       <p class="mv-form-policy">お申し込み後、検針票の送り方を<span class="nw">メール</span>でご案内します。<br><a href="#privacy">個人情報の取り扱い</a>に同意の上、送信してください。<br>この<span class="nw">フォーム</span>は見本のため、送信しても届きません。</p>
     </div>
   </form>
@@ -477,14 +480,14 @@ h1,h2,h3{text-wrap:balance}
 <section class="topPage-about" id="about">
   <div class="section-container">
     <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>雲雀谷エネルギー診断とは？</h2>
-    <p class="topPage-about-sentence">過去の検針票を分析し、法人・高圧の電力契約を診断する会社です。電気料金は電力会社によって異なります。比較表をもとに、貴社の使用状況に合ったご契約先をお選びいただけます。</p>
-    <p class="topPage-about-subTitle wow fadeInUp">電力会社ごとに書式の異なる見積書や料金表を、<br class="pcnone">当社が同じ形式にそろえて比較します。</p>
+    <p class="topPage-about-sentence">過去の検針票を確認し、法人・高圧の電力契約を診断する会社です。お届けする比較表から、貴社の使用状況に合ったご契約先をお選びいただけます。</p>
+    <p class="topPage-about-subTitle wow fadeInUp">電力会社ごとに形式の異なる見積書や料金表を、<br class="pcnone">当社がそろえて比較します。</p>
     <div class="topPage-about-mainContent">
       <div class="topPage-about-mainImg is-left wow fadeInUp">
-        <h3>お客様ご自身での見直し</h3>
-        <div class="step-block" role="img" aria-label="お客様が3社の電力会社へ1社ずつ問い合わせる図">
+        <h3>貴社での見直し</h3>
+        <div class="step-block" role="img" aria-label="貴社が3社の電力会社へ1社ずつ問い合わせる図">
           <div class="step-block__cont">
-            <p class="step-block__cont__item"><i class="fa-solid fa-building" aria-hidden="true"></i>お客様</p>
+            <p class="step-block__cont__item"><i class="fa-solid fa-building" aria-hidden="true"></i>貴社</p>
             <ul>
               <li><i class="fa-solid fa-arrow-right step-block__cont__item__arrow" aria-hidden="true"></i><span class="step-block__cont__item">A社</span></li>
               <li><i class="fa-solid fa-arrow-right step-block__cont__item__arrow" aria-hidden="true"></i><span class="step-block__cont__item">B社</span></li>
@@ -493,20 +496,20 @@ h1,h2,h3{text-wrap:balance}
           </div>
           <p>各社に問い合わせ</p>
         </div>
-        <p>電力会社ごとに問い合わせ、届いた見積書を見比べることになります。形式がそろわないため、比べられるのは年間の合計だけになりがちです。</p>
+        <p>届いた見積書は形式がそろわないため、比べられるのは年間の合計だけになりがちです。</p>
       </div>
       <div class="topPage-about-mainImg is-right wow fadeInUp">
-        <h3>当社の診断</h3>
-        <div class="step-block" role="img" aria-label="お客様が当社へ検針票を送り、当社が6〜10社の試算をそろえる図">
+        <h3>当社の無料診断</h3>
+        <div class="step-block" role="img" aria-label="貴社が当社へ検針票を送り、当社が6〜10社の試算をそろえる図">
           <div class="step-block__cont">
-            <p class="step-block__cont__item"><i class="fa-solid fa-building" aria-hidden="true"></i>お客様</p>
-            <p class="step-block__cont__item--arrow-item"><small><span class="nw">1回</span>だけ</small><i class="fa-solid fa-arrow-right step-block__cont__item__arrow" aria-hidden="true"></i></p>
-            <p class="step-block__cont__item"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>当社<small>検針票から試算</small></p>
+            <p class="step-block__cont__item"><i class="fa-solid fa-building" aria-hidden="true"></i>貴社</p>
+            <p class="step-block__cont__item--arrow-item"><small>送るのは<br><span class="nw">1回</span>だけ</small><i class="fa-solid fa-arrow-right step-block__cont__item__arrow" aria-hidden="true"></i></p>
+            <p class="step-block__cont__item"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>当社 <small>検針票から試算</small></p>
             <p class="step-block__cont__item--arrow-item"><i class="fa-solid fa-arrow-right step-block__cont__item__arrow" aria-hidden="true"></i></p>
             <ul class="step-block__cont__item"><li>A社</li><li>B社</li><li>C社</li><li><small>など<span class="nw">6〜10社</span></small></li></ul>
           </div>
         </div>
-        <p>当社が<span class="nw">6〜10社</span>の試算をまとめ、年間の合計に加えて月ごとの差まで比較表にしてお届けします。</p>
+        <p>当社が<span class="nw">6〜10社</span>の試算をまとめ、年間の合計に加えて月ごとの差まで載せた比較表をお届けします。</p>
       </div>
     </div>
   </div>
@@ -519,7 +522,7 @@ h1,h2,h3{text-wrap:balance}
       <div>
         <p class="topPage-reason-contents-titlePoints">Point<b>01</b></p>
         <h3 class="topPage-reason-contents-title">切替前後の差を月ごとに試算</h3>
-        <p>燃料費調整（燃料の価格の動きを毎月の電気代に反映する仕組み）の影響で、切替後のほうが高くなる月が出ることがあります。比較表には、<span class="nw">12か月</span>それぞれの差を会社ごとに並べています。</p>
+        <p>燃料費調整（燃料の価格の動きを毎月の電気代に反映する仕組み）の影響で、切替後のほうが高くなる月が出ることがあります。比較表には、<span class="nw">12か月</span>それぞれの差を会社ごとに載せます。</p>
       </div>
       <figure><img src="img/explain.jpg" alt="赤ペンで印を付けた数表と、指でさす2人の手元" loading="lazy"></figure>
     </div>
@@ -527,14 +530,14 @@ h1,h2,h3{text-wrap:balance}
       <div>
         <p class="topPage-reason-contents-titlePoints">Point<b>02</b></p>
         <h3 class="topPage-reason-contents-title">手数料率の開示</h3>
-        <p>比較表には、当社の手数料率も記載しています。手数料はご契約先の電力会社が支払うもので、お客様のご負担はありません。</p>
+        <p>比較表には、当社の手数料率も載せます。並びは手数料率の順ではなく、年間の電気代が大きく下がる順です。当社が手数料率の高い会社を上位に置いていないか、貴社の目で確かめられます。手数料はご契約先の電力会社が支払うもので、貴社のご負担はありません。</p>
       </div>
       <figure><img src="img/sheet.jpg" alt="年代別の金利の表をペン先で指す手元と電卓" loading="lazy"></figure>
     </div>
     <div class="topPage-reason-contents wow fadeInUp">
       <div>
         <p class="topPage-reason-contents-titlePoints">Point<b>03</b></p>
-        <h3 class="topPage-reason-contents-title"><span class="nw">デマンド</span>削減の試算</h3>
+        <h3 class="topPage-reason-contents-title"><span class="nw">デマンド</span>対策の試算</h3>
         <p>契約電力<span class="nw">500kW</span>未満の高圧では、その月を含む過去<span class="nw">12か月</span>の<span class="nw">デマンド</span>（<span class="nw">30分</span>ごとの平均使用電力）のうち、最も大きな値が契約電力になります。この最大<span class="nw">デマンド</span>を抑えられれば、その分だけ基本料金が下がります。比較表には、切替後の金額に加えて、<span class="nw">デマンド</span>を抑えた場合の金額も載せます。</p>
       </div>
       <figure><img src="img/meter.jpg" alt="棚の下に並べたデジタルの周波数計・電圧計・電流計" loading="lazy"></figure>
@@ -547,75 +550,75 @@ h1,h2,h3{text-wrap:balance}
     <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>業種別の試算の例</h2>
     <ul class="topPage-case-contents-wrap">
       <li class="topPage-case-contents wow fadeInUp">
-        <figure class="topPage-case-contents-img"><img src="img/case_factory.jpg" alt="波板の鉄骨の工場棟と青い集じん機" loading="lazy"></figure>
+        <figure class="topPage-case-contents-img"><img src="img/case_factory.jpg" alt="波板張りの工場棟と青い集じん機" loading="lazy"></figure>
         <div class="topPage-case-contents-info"><span class="topPage-case-contents-infoLabel">製造業</span>
           <h3 class="topPage-case-contents-info-title">契約電力<span class="nw">180kW</span>の工場</h3>
           <p class="topPage-case-contents-info-des">年間<b>74.0</b>万円減の見込み</p>
           <a href="#simulation">月ごとの内訳を見る</a>
-          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>1,337.9</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>1,263.9</b>万円</div></div><p>年間使用量 <span class="nw">約30万kWh</span></p></div>
+          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>2,029.7</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>1,955.7</b>万円</div></div><p>年間使用量 <span class="nw">約70万kWh</span></p></div>
       </li>
       <li class="topPage-case-contents wow fadeInUp">
         <figure class="topPage-case-contents-img"><img src="img/case_warehouse.jpg" alt="事務所兼倉庫の前に並ぶトラック" loading="lazy"></figure>
         <div class="topPage-case-contents-info"><span class="topPage-case-contents-infoLabel">物流・倉庫</span>
           <h3 class="topPage-case-contents-info-title">契約電力<span class="nw">120kW</span>の倉庫</h3>
           <p class="topPage-case-contents-info-des">年間<b>38.6</b>万円減の見込み</p>
-          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>804.2</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>765.6</b>万円</div></div><p>年間使用量 <span class="nw">約20万kWh</span></p></div>
+          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>1,233.4</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>1,194.8</b>万円</div></div><p>年間使用量 <span class="nw">約42万kWh</span></p></div>
       </li>
       <li class="topPage-case-contents wow fadeInUp">
         <figure class="topPage-case-contents-img"><img src="img/case_care.jpg" alt="ベランダの並ぶ介護施設" loading="lazy"></figure>
         <div class="topPage-case-contents-info"><span class="topPage-case-contents-infoLabel">医療・介護</span>
           <h3 class="topPage-case-contents-info-title">契約電力<span class="nw">95kW</span>の介護施設</h3>
           <p class="topPage-case-contents-info-des">年間<b>29.4</b>万円減の見込み</p>
-          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>498.3</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>468.9</b>万円</div></div><p>年間使用量 <span class="nw">約14万kWh</span></p></div>
+          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>1,205.3</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>1,175.9</b>万円</div></div><p>年間使用量 <span class="nw">約43万kWh</span></p></div>
       </li>
       <li class="topPage-case-contents wow fadeInUp">
         <figure class="topPage-case-contents-img"><img src="img/case_super.jpg" alt="平屋の店舗と駐車場" loading="lazy"></figure>
         <div class="topPage-case-contents-info"><span class="topPage-case-contents-infoLabel"><span class="nw">スーパー</span>・小売</span>
           <h3 class="topPage-case-contents-info-title">契約電力<span class="nw">260kW</span>の店舗</h3>
           <p class="topPage-case-contents-info-des">年間<b>112.3</b>万円減の見込み</p>
-          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>1,811.3</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>1,699.0</b>万円</div></div><p>年間使用量 <span class="nw">約48万kWh</span></p></div>
+          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>2,961.4</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>2,849.1</b>万円</div></div><p>年間使用量 <span class="nw">約103万kWh</span></p></div>
       </li>
       <li class="topPage-case-contents wow fadeInUp">
-        <figure class="topPage-case-contents-img"><img src="img/case_hotel.jpg" alt="ヤシの木の奥に建つ、曲面のバルコニーが重なる建物" loading="lazy"></figure>
+        <figure class="topPage-case-contents-img"><img src="img/case_hotel.jpg" alt="ヤシの木の奥に建つ、曲面のバルコニーが重なるホテル" loading="lazy"></figure>
         <div class="topPage-case-contents-info"><span class="topPage-case-contents-infoLabel"><span class="nw">ホテル</span>・旅館</span>
           <h3 class="topPage-case-contents-info-title">契約電力<span class="nw">450kW</span>の宿泊施設</h3>
           <p class="topPage-case-contents-info-des">年間<b>123.9</b>万円減の見込み</p>
-          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>3,021.0</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>2,897.1</b>万円</div></div><p>年間使用量 <span class="nw">約81万kWh</span></p></div>
+          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>6,002.4</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>5,878.5</b>万円</div></div><p>年間使用量 <span class="nw">約217万kWh</span></p></div>
       </li>
       <li class="topPage-case-contents wow fadeInUp">
         <figure class="topPage-case-contents-img"><img src="img/case_office.jpg" alt="銀杏並木の奥に建つガラス張りのオフィスビル" loading="lazy"></figure>
         <div class="topPage-case-contents-info"><span class="topPage-case-contents-infoLabel"><span class="nw">オフィスビル</span></span>
-          <h3 class="topPage-case-contents-info-title">契約電力<span class="nw">330kW</span>の<span class="nw">オフィスビル</span></h3>
+          <h3 class="topPage-case-contents-info-title">契約電力<span class="nw">330kW</span>のビル</h3>
           <p class="topPage-case-contents-info-des">年間<b>96.5</b>万円減の見込み</p>
-          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>1,930.0</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>1,833.5</b>万円</div></div><p>年間使用量 <span class="nw">約44万kWh</span></p></div>
+          <div class="topPage-case-contents-info-compare"><div class="topPage-case-contents-info-compare-before"><span class="topPage-case-contents-info-compare-label">切替前</span><b>3,668.7</b>万円</div><div class="topPage-case-contents-info-compare-after"><span class="topPage-case-contents-info-compare-label">切替後</span><b>3,572.2</b>万円</div></div><p>年間使用量 <span class="nw">約127万kWh</span></p></div>
       </li>
     </ul>
-    <p class="text-grey">いずれも架空の事業所をもとに試算した例です。試算の金額は、<span class="nw">2026年8月</span>時点の各社の単価にもとづきます。金額は税込です。燃料価格や再エネ賦課金の単価は、今後変わる可能性があります。各例の金額を保証するものではありません。掲載した6例は、いずれも試算で削減案が出た事業所のものです。</p>
+    <p class="text-grey">掲載した6例は、削減案が出た事例です。いずれも当社の試算をもとに一般化した<span class="nw">モデルケース</span>です。試算の金額は、<span class="nw">2026年8月</span>時点の各社の単価にもとづきます。金額は税込です。燃料価格や再エネ賦課金（再生可能<span class="nw">エネルギー</span>の費用を利用者全員で負担する項目）の単価は、今後変わる可能性があります。各例の金額を保証するものではありません。</p>
   </div>
 </section>
 
 <section class="p-index-simulation__section" id="simulation">
   <div class="section-container">
-    <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>月ごとの試算の内訳</h2>
-    <p class="ttl-h3">製造業の例では、切替後の電気代は年間では下がりますが、切替前を上回る月が<span class="nw">3か月</span>あります。</p>
+    <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>試算の内訳</h2>
+    <p class="ttl-h3">製造業の例では、切替後の電気代は年間では下がりますが、切替前を上回る月が<span class="nw">3か月</span>あります。金額はすべて税込です。</p>
     <div class="callout-wrap">
       <div class="lineGraphArea wow fadeInUp">
-        <h3 class="lineGraphTtl">切替前後の月ごとの差（試算の例）</h3>
-        <p class="text-grey">従業員<span class="nw">42名</span>の製造業の工場で、契約電力は<span class="nw">180kW</span>です。金額はすべて税込です。</p>
+        <h3 class="lineGraphTtl">切替前後の月ごとの差</h3>
+        <p class="text-grey">製造業の例は契約電力<span class="nw">180kW</span>の工場です。</p>
         <div class="graphWrap" role="img" aria-label="切替後の月ごとの差を示す棒グラフ。9か月は下がり、7月・8月・1月は上がる。年間では74.0万円の減">
           <ul class="lineGraphItems">
-            <li class="graphItem is-left"><span class="graphTtl">4月</span><div class="chartWrap"><div class="chart" style="width:24%"></div><div class="numArea"><p class="count">−7.2</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">5月</span><div class="chartWrap"><div class="chart" style="width:27%"></div><div class="numArea"><p class="count">−8.1</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">6月</span><div class="chartWrap"><div class="chart" style="width:21.33%"></div><div class="numArea"><p class="count">−6.4</p></div></div></li>
-            <li class="graphItem is-right"><span class="graphTtl">7月</span><div class="chartWrap"><div class="chart" style="width:9.33%"></div><div class="numArea"><p class="count">+2.8</p></div></div></li>
-            <li class="graphItem is-right"><span class="graphTtl">8月</span><div class="chartWrap"><div class="chart" style="width:13.67%"></div><div class="numArea"><p class="count">+4.1</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">9月</span><div class="chartWrap"><div class="chart" style="width:16.33%"></div><div class="numArea"><p class="count">−4.9</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">10月</span><div class="chartWrap"><div class="chart" style="width:30%"></div><div class="numArea"><p class="count">−9.0</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">11月</span><div class="chartWrap"><div class="chart" style="width:34.33%"></div><div class="numArea"><p class="count">−10.3</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">12月</span><div class="chartWrap"><div class="chart" style="width:38.67%"></div><div class="numArea"><p class="count">−11.6</p></div></div></li>
-            <li class="graphItem is-right"><span class="graphTtl">1月</span><div class="chartWrap"><div class="chart" style="width:5%"></div><div class="numArea"><p class="count">+1.5</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">2月</span><div class="chartWrap"><div class="chart" style="width:32.67%"></div><div class="numArea"><p class="count">−9.8</p></div></div></li>
-            <li class="graphItem is-left"><span class="graphTtl">3月</span><div class="chartWrap"><div class="chart" style="width:50.33%"></div><div class="numArea"><p class="count">−15.1</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">4月</span><div class="chartWrap"><div class="chart" style="width:30%"></div><div class="numArea"><p class="count">−7.2</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">5月</span><div class="chartWrap"><div class="chart" style="width:33.75%"></div><div class="numArea"><p class="count">−8.1</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">6月</span><div class="chartWrap"><div class="chart" style="width:26.67%"></div><div class="numArea"><p class="count">−6.4</p></div></div></li>
+            <li class="graphItem is-right"><span class="graphTtl">7月</span><div class="chartWrap"><div class="chart" style="width:11.67%"></div><div class="numArea"><p class="count">+2.8</p></div></div></li>
+            <li class="graphItem is-right"><span class="graphTtl">8月</span><div class="chartWrap"><div class="chart" style="width:17.08%"></div><div class="numArea"><p class="count">+4.1</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">9月</span><div class="chartWrap"><div class="chart" style="width:20.42%"></div><div class="numArea"><p class="count">−4.9</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">10月</span><div class="chartWrap"><div class="chart" style="width:37.5%"></div><div class="numArea"><p class="count">−9.0</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">11月</span><div class="chartWrap"><div class="chart" style="width:42.92%"></div><div class="numArea"><p class="count">−10.3</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">12月</span><div class="chartWrap"><div class="chart" style="width:48.33%"></div><div class="numArea"><p class="count">−11.6</p></div></div></li>
+            <li class="graphItem is-right"><span class="graphTtl">1月</span><div class="chartWrap"><div class="chart" style="width:6.25%"></div><div class="numArea"><p class="count">+1.5</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">2月</span><div class="chartWrap"><div class="chart" style="width:40.83%"></div><div class="numArea"><p class="count">−9.8</p></div></div></li>
+            <li class="graphItem is-left"><span class="graphTtl">3月</span><div class="chartWrap"><div class="chart" style="width:62.92%"></div><div class="numArea"><p class="count">−15.1</p></div></div></li>
           </ul>
         </div>
         <p><span>下がる月（<span class="nw">9か月</span>）</span><span class="is-right">上がる月（<span class="nw">3か月</span>）</span></p>
@@ -642,27 +645,38 @@ h1,h2,h3{text-wrap:balance}
       </div>
       <div class="parts wow fadeInUp">
         <h3>項目ごとの年間の差</h3>
-        <p class="text-grey">架空の事業所の<span class="nw">2025年4月</span>から<span class="nw">2026年3月</span>の使用量をもとにした試算（年間使用量は<span class="nw">約30万kWh</span>・金額は税込）</p>
+        <p class="text-grey">同じ工場の<span class="nw">2025年4月</span>から<span class="nw">2026年3月</span>の使用量（年間<span class="nw">約70万kWh</span>）をもとにした試算です。</p>
         <div>
-          <table class="tablenum">
+          <table class="tablenum smanone">
             <thead><tr><th scope="col">項目</th><th scope="col">切替前</th><th scope="col">切替後</th><th scope="col">差</th></tr></thead>
             <tbody>
-              <tr><th scope="row">基本料金（年）</th><td data-label="切替前"><span class="nw">3,542,400円</span></td><td data-label="切替後"><span class="nw">3,110,400円</span></td><td data-label="差" class="text-blue"><span class="nw">−432,000円</span></td></tr>
-              <tr><th scope="row">電力量料金（年）</th><td data-label="切替前"><span class="nw">8,916,300円</span></td><td data-label="切替後"><span class="nw">8,204,700円</span></td><td data-label="差" class="text-blue"><span class="nw">−711,600円</span></td></tr>
-              <tr><th scope="row">燃料費調整（年）</th><td data-label="切替前"><span class="nw">−284,100円</span></td><td data-label="切替後"><span class="nw">+119,400円</span></td><td data-label="差" class="text-red"><span class="nw">+403,500円</span></td></tr>
-              <tr><th scope="row">再エネ賦課金（年）</th><td data-label="切替前"><span class="nw">1,204,800円</span></td><td data-label="切替後"><span class="nw">1,204,800円</span></td><td data-label="差"><span class="nw">0円</span></td></tr>
-              <tr class="strong"><th scope="row">合計（年）</th><td data-label="切替前"><span class="nw">13,379,400円</span></td><td data-label="切替後"><span class="nw">12,639,300円</span></td><td data-label="差" class="text-blue"><span class="nw">−740,100円</span></td></tr>
+              <tr><th scope="row">基本料金（年）</th><td><span class="nw">3,542,400円</span></td><td><span class="nw">3,110,400円</span></td><td class="text-blue"><span class="nw">−432,000円</span></td></tr>
+              <tr><th scope="row">電力量料金（年）</th><td><span class="nw">14,024,800円</span></td><td><span class="nw">13,313,200円</span></td><td class="text-blue"><span class="nw">−711,600円</span></td></tr>
+              <tr><th scope="row">燃料費調整（年）</th><td><span class="nw">−195,900円</span></td><td><span class="nw">+207,600円</span></td><td class="text-red"><span class="nw">+403,500円</span></td></tr>
+              <tr><th scope="row">再エネ賦課金（年）</th><td><span class="nw">2,926,000円</span></td><td><span class="nw">2,926,000円</span></td><td><span class="nw">0円</span></td></tr>
+              <tr class="strong"><th scope="row">合計（年）</th><td><span class="nw">20,297,300円</span></td><td><span class="nw">19,557,200円</span></td><td class="text-blue"><span class="nw">−740,100円</span></td></tr>
+            </tbody>
+          </table>
+          <table class="tablenum pcnone">
+            <caption>金額の単位は万円です。</caption>
+            <thead><tr><th scope="col">項目</th><th scope="col">切替前</th><th scope="col">切替後</th><th scope="col">差</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">基本料金</th><td>354.2</td><td>311.0</td><td class="text-blue">−43.2</td></tr>
+              <tr><th scope="row">電力量料金</th><td>1,402.5</td><td>1,331.3</td><td class="text-blue">−71.2</td></tr>
+              <tr><th scope="row">燃料費調整</th><td>−19.6</td><td>+20.8</td><td class="text-red">+40.4</td></tr>
+              <tr><th scope="row">再エネ賦課金</th><td>292.6</td><td>292.6</td><td>0</td></tr>
+              <tr class="strong"><th scope="row">合計</th><td>2,029.7</td><td>1,955.7</td><td class="text-blue">−74.0</td></tr>
             </tbody>
           </table>
         </div>
         <ul class="list-disc">
-          <li>基本料金：契約電力は<span class="nw">180kW</span>のままで、<span class="nw">1kW</span>あたりの単価（月額・税込）が<span class="nw">1,640円</span>から<span class="nw">1,440円</span>に下がります</li>
+          <li>基本料金：契約電力は<span class="nw">180kW</span>のままで、<span class="nw">1kW</span>あたりの単価（月額）が<span class="nw">1,640円</span>から<span class="nw">1,440円</span>に下がります</li>
           <li>電力量料金：使用量は同じで、単価だけが下がります</li>
           <li>燃料費調整：基準となる燃料価格が会社ごとに違うため、この例では切替後に増えます</li>
-          <li>再エネ賦課金（再生可能<span class="nw">エネルギー</span>の費用を利用者全員で負担する項目）：国が決める単価で、どの電力会社でも同じです</li>
+          <li>再エネ賦課金：国が決める単価で、どの電力会社でも同じです</li>
           <li>合計：年間では<span class="nw">74.0万円</span>下がりますが、7月・8月・1月の電気代は切替前を上回ります</li>
         </ul>
-        <p class="fine">この事業所の力率（電気を効率よく使えているかを示す値）は<span class="nw">85%</span>で、基本料金の割引も割増もありません。</p>
+        <p class="fine">この工場の力率（電気を効率よく使えているかを示す値）は<span class="nw">85%</span>で、基本料金の割引も割増もありません。</p>
       </div>
       <div class="parts wow fadeInUp">
       <h3>試算の比較表（一部）</h3>
@@ -670,10 +684,10 @@ h1,h2,h3{text-wrap:balance}
         <table class="tablenum smanone">
           <thead><tr><th scope="col">会社</th><th scope="col">7月の差</th><th scope="col">8月の差</th><th scope="col">1月の差</th><th scope="col">年間の差</th><th scope="col">当社の手数料率</th></tr></thead>
           <tbody>
-            <tr><th scope="row">A社</th><td data-label="7月の差" class="text-red"><span class="nw">+2.8万円</span></td><td data-label="8月の差" class="text-red"><span class="nw">+4.1万円</span></td><td data-label="1月の差" class="text-red"><span class="nw">+1.5万円</span></td><td data-label="年間の差" class="text-blue"><span class="nw">−74.0万円</span></td><td data-label="当社の手数料率"><span class="nw">1.5%</span></td></tr>
-            <tr><th scope="row">B社</th><td data-label="7月の差" class="text-red"><span class="nw">+1.9万円</span></td><td data-label="8月の差" class="text-red"><span class="nw">+3.2万円</span></td><td data-label="1月の差" class="text-red"><span class="nw">+0.8万円</span></td><td data-label="年間の差" class="text-blue"><span class="nw">−61.3万円</span></td><td data-label="当社の手数料率"><span class="nw">2.0%</span></td></tr>
-            <tr><th scope="row">C社</th><td data-label="7月の差" class="text-red"><span class="nw">+4.6万円</span></td><td data-label="8月の差" class="text-red"><span class="nw">+6.0万円</span></td><td data-label="1月の差" class="text-red"><span class="nw">+2.9万円</span></td><td data-label="年間の差" class="text-blue"><span class="nw">−58.7万円</span></td><td data-label="当社の手数料率"><span class="nw">1.0%</span></td></tr>
-            <tr><th scope="row">D社</th><td data-label="7月の差" class="text-blue"><span class="nw">−0.4万円</span></td><td data-label="8月の差" class="text-red"><span class="nw">+1.2万円</span></td><td data-label="1月の差" class="text-blue"><span class="nw">−0.6万円</span></td><td data-label="年間の差" class="text-blue"><span class="nw">−22.5万円</span></td><td data-label="当社の手数料率"><span class="nw">1.2%</span></td></tr>
+            <tr><th scope="row">A社</th><td class="text-red"><span class="nw">+2.8万円</span></td><td class="text-red"><span class="nw">+4.1万円</span></td><td class="text-red"><span class="nw">+1.5万円</span></td><td class="text-blue"><span class="nw">−74.0万円</span></td><td><span class="nw">1.5%</span></td></tr>
+            <tr><th scope="row">B社</th><td class="text-red"><span class="nw">+1.9万円</span></td><td class="text-red"><span class="nw">+3.2万円</span></td><td class="text-red"><span class="nw">+0.8万円</span></td><td class="text-blue"><span class="nw">−61.3万円</span></td><td><span class="nw">2.0%</span></td></tr>
+            <tr><th scope="row">C社</th><td class="text-red"><span class="nw">+4.6万円</span></td><td class="text-red"><span class="nw">+6.0万円</span></td><td class="text-red"><span class="nw">+2.9万円</span></td><td class="text-blue"><span class="nw">−58.7万円</span></td><td><span class="nw">1.0%</span></td></tr>
+            <tr><th scope="row">D社</th><td class="text-blue"><span class="nw">−0.4万円</span></td><td class="text-red"><span class="nw">+1.2万円</span></td><td class="text-blue"><span class="nw">−0.6万円</span></td><td class="text-blue"><span class="nw">−22.5万円</span></td><td><span class="nw">1.2%</span></td></tr>
           </tbody>
         </table>
         <table class="tablenum pcnone">
@@ -688,7 +702,7 @@ h1,h2,h3{text-wrap:balance}
           </tbody>
         </table>
       </div>
-      <p class="fine">お届けする比較表には、試算した電力会社すべてを、当社の手数料率の高い順ではなく、年間の削減額の大きい順に載せます。上の例では、手数料率がいちばん高いのはB社ですが、先頭に載るのは削減額がいちばん大きいA社です。</p>
+      <p class="fine">お届けする比較表には、試算の対象にした電力会社すべてを載せます。</p>
       </div>
     </div>
   </div>
@@ -696,10 +710,10 @@ h1,h2,h3{text-wrap:balance}
 
 <section class="topPage-cta">
   <div class="topPage-cta-content wow fadeInUp">
-    <p class="topPage-cta-contentLabel"><b>全社分</b>の手数料率も掲載</p>
+    <p class="topPage-cta-contentLabel">比較先<b>全社</b>の手数料率も掲載</p>
     <h2 class="topPage-cta-title">比較表の作成は無料</h2>
-    <p class="topPage-cta-btnLabel">お申し込み後、検針票を写真でお送りいただくだけで、比較表の作成に入ります。</p>
-    <a class="button" href="#contact"><span class="topPage-cta-btnImg"><b>無料</b></span>試算を申し込む</a>
+    <p class="topPage-cta-btnLabel">お申し込み後、検針票をお送りいただければ、比較表の作成に入ります。</p>
+    <a class="button" href="#contact"><span class="topPage-cta-btnImg"><b>無料</b></span>診断を申し込む</a>
     <p class="topPage-cta-info"><a href="tel:0300000000">03-0000-0000</a><span class="nw">受付時間：平日9:30〜18:00</span></p>
   </div>
 </section>
@@ -707,12 +721,12 @@ h1,h2,h3{text-wrap:balance}
 <section class="system" id="fee">
   <div class="section-container">
     <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>手数料について</h2>
-    <p class="ttl-h3">当社はお客様と電力会社の契約を取り持つ「媒介」の立場です。電力会社からの手数料のみで運営しています。</p>
+    <p class="ttl-h3">当社は貴社と電力会社の契約を取り持つ「媒介」の立場です。電力会社からの手数料のみで運営しています。</p>
     <div class="callout-wrap">
       <figure class="wow fadeInUp">
-        <div class="step-block" role="img" aria-label="お客様と電力会社が契約し、当社は媒介として手数料を電力会社から受け取る図">
+        <div class="step-block" role="img" aria-label="貴社と電力会社が契約し、当社は媒介として手数料を電力会社から受け取る図">
           <div class="step-block__cont">
-            <p class="step-block__cont__item"><i class="fa-solid fa-building" aria-hidden="true"></i>お客様</p>
+            <p class="step-block__cont__item"><i class="fa-solid fa-building" aria-hidden="true"></i>貴社</p>
             <p class="step-block__cont__item--arrow-item"><i class="fa-solid fa-handshake" aria-hidden="true"></i>電気の契約</p>
             <p class="step-block__cont__item"><i class="fa-solid fa-plug" aria-hidden="true"></i>電力会社</p>
             <p class="step-block__cont__item--arrow-item"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i>診断・説明</p>
@@ -722,11 +736,11 @@ h1,h2,h3{text-wrap:balance}
         </div>
       </figure>
       <dl class="wow fadeInUp">
-        <div><dt>支払元</dt><dd>ご契約先の電力会社</dd></div>
+        <div><dt>手数料の支払い</dt><dd>ご契約先の電力会社が支払います。</dd></div>
         <div><dt>手数料率</dt><dd>初年度の電力量料金の<span class="nw">1.0〜2.0%</span>（上限は<span class="nw">1件</span>のご契約につき<span class="nw">60万円</span>）</dd></div>
-        <div><dt>期間</dt><dd>手数料は初年度のみです。</dd></div>
-        <div><dt>会社による差</dt><dd>手数料率は会社ごとに異なります。上の試算の例では、A社が<span class="nw">1.5%</span>、B社が<span class="nw">2.0%</span>です。比較表には全社分を載せます。</dd></div>
-        <div><dt>お客様の費用</dt><dd>当社のご利用にあたって費用は一切かかりません。ご利用中の電力会社とのご契約内容によっては違約金が発生する場合があります。</dd></div>
+        <div><dt>手数料の発生期間</dt><dd>手数料は初年度のみです。</dd></div>
+        <div><dt>会社による差</dt><dd>手数料率は会社ごとに異なります。上の試算の例では、A社が<span class="nw">1.5%</span>、B社が<span class="nw">2.0%</span>です。比較表には、比較先全社の手数料率を載せます。</dd></div>
+        <div><dt>貴社の費用</dt><dd>診断・媒介のご利用にあたって費用は一切かかりません。ただし、いまのご契約の解約に違約金がかかる場合があります。</dd></div>
       </dl>
     </div>
   </div>
@@ -744,15 +758,15 @@ h1,h2,h3{text-wrap:balance}
       <li class="topPage-flow-contents wow fadeInUp"><span class="topPage-flow-contents-step">02</span><i class="fa-solid fa-chart-column" aria-hidden="true"></i>
         <h3 class="topPage-flow-contents-title">比較表のお届け</h3>
         <p class="topPage-flow-contents-des">検針票のご送付から<span class="nw">10営業日</span>以内に試算し、比較表をお届けします。</p>
-        <ul class="topPage-flow-contents-point"><li class="topPage-flow-contents-point-item">各社の契約期間と途中解約の条件も記載</li><li class="topPage-flow-contents-point-item">いま結んでいる契約の残りの期間と違約金も同じ表に記載</li></ul></li>
+        <ul class="topPage-flow-contents-point"><li class="topPage-flow-contents-point-item">各社の契約期間と途中解約の条件も載せます</li><li class="topPage-flow-contents-point-item">いまのご契約の残りの期間と違約金も同じ表に載せます</li></ul></li>
       <li class="topPage-flow-contents wow fadeInUp"><span class="topPage-flow-contents-step">03</span><i class="fa-solid fa-right-left" aria-hidden="true"></i>
         <h3 class="topPage-flow-contents-title">切替のお手続き</h3>
         <p class="topPage-flow-contents-des">切替手続きがご負担にならないよう、担当者が<span class="nw">サポート</span>いたします。<span class="nw">サポート</span>範囲については書面でお知らせいたします。</p>
-        <ul class="topPage-flow-contents-point"><li class="topPage-flow-contents-point-item">お手続きから<span class="nw">2か月</span>程度で切替が完了します</li><li class="topPage-flow-contents-point-item">停電・工事なし</li><li class="topPage-flow-contents-point-item">電力会社と直接ご契約いただきます</li></ul></li>
+        <ul class="topPage-flow-contents-point"><li class="topPage-flow-contents-point-item">お手続きから<span class="nw">2か月</span>程度で切替が完了します</li><li class="topPage-flow-contents-point-item">停電や工事はありません</li><li class="topPage-flow-contents-point-item">電力会社と直接ご契約いただきます</li></ul></li>
     </ol>
     <dl class="wow fadeInUp">
-      <div><dt>切替後の請求</dt><dd>切替後の請求書は、ご契約先の電力会社が発行します。お支払い方法は電力会社によって異なりますが、多くの電力会社が口座振替に対応しています。</dd></div>
-      <div><dt>切替後のご相談</dt><dd>切替後も、電力会社とのやり取りや契約の見直しについてご相談いただけます。</dd></div>
+      <div><dt>切替後の請求</dt><dd>切替後の請求書は、ご契約先の電力会社が発行します。<span class="nw">お支払い方法</span>は電力会社<span class="nw">によって</span>異なりますが、多くの電力会社が口座振替に対応しています。</dd></div>
+      <div><dt>切替後のご相談</dt><dd>切替後も、電力会社とのやり取りや契約の見直しのご相談を承ります。</dd></div>
     </dl>
   </div>
 </section>
@@ -761,25 +775,25 @@ h1,h2,h3{text-wrap:balance}
   <div class="section-container">
     <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>よくあるご質問</h2>
     <div class="faq_area">
-      <details class="wow fadeInUp"><summary class="toggle_title">試算の費用はいくらですか？</summary><p class="faq_text">無料です。当社の収入は、電力会社が負担する手数料です。ご契約が成立しない場合、手数料は発生しません。</p></details>
-      <details class="wow fadeInUp"><summary class="toggle_title">提携先の電力会社は？</summary><p class="faq_text">提携先は<span class="nw">2026年8月</span>時点で<span class="nw">12社</span>です。新電力（地域の大手電力会社以外の電力会社）が中心で、大手電力会社も含まれます。このうち、貴社の事業所のあるエリアで電気を販売していて、貴社の契約電力で契約できる会社を比較します。社名と登録番号は、比較表と、契約の前にお渡しする書面に記載します。</p></details>
-      <details class="wow fadeInUp"><summary class="toggle_title">ご希望の会社も比較できますか？</summary><p class="faq_text">当社と提携があり、貴社の事業所のあるエリアで高圧の契約を受け付けている会社であれば、比較に加えることができます。ご希望の会社があれば、検針票をお送りいただく際にお知らせください。提携の有無をお伝えします。</p></details>
-      <details class="wow fadeInUp"><summary class="toggle_title">市場連動型の<span class="nw">リスク</span>は何ですか？</summary><p class="faq_text">市場連動型は、卸電力市場の価格に合わせて電気料金の単価が変わる<span class="nw">プラン</span>です。市場の価格が高騰した月は単価も上がり、電気代が高額になる<span class="nw">リスク</span>があります。操業が深夜と早朝に偏る事業所であれば市場連動型も比較対象に含めますが、夕方に<span class="nw">ピーク</span>が来る事業所では料金の振れ幅が大きくなるため含めません。比較対象に含める場合は、過去に卸電力市場の価格が高騰した月の単価でも計算し、同じ表に載せます。</p></details>
-      <details class="wow fadeInUp"><summary class="toggle_title"><span class="nw">デマンド</span>削減の効果は？</summary><p class="faq_text">電気代に占める基本料金の割合が大きい事業所では、最大<span class="nw">デマンド</span>を下げるだけでも電気代が下がります。上の製造業の例では、切替前の基本料金は契約電力<span class="nw">1kW</span>あたり年間<span class="nw">約2万円</span>です。契約電力を<span class="nw">10kW</span>下げると、基本料金は年間<span class="nw">約20万円</span>下がります。ただし、<span class="nw">30分</span>でも使用電力が跳ね上がると、その値で<span class="nw">1年</span>間の基本料金が決まります。最大<span class="nw">デマンド</span>を抑える運用を<span class="nw">1年</span>続けられるかどうかを見て、切替だけにするか、<span class="nw">デマンド</span>削減も行うかをご判断いただけます。</p></details>
-      <details class="wow fadeInUp"><summary class="toggle_title">契約期間中でも試算できますか？</summary><p class="faq_text">試算できます。検針票と併せて、いま結んでいる契約の期間と解約の条件が分かる書面をお送りください。契約期間の途中で解約すると違約金がかかる契約なら、その額を比較表に載せます。契約が満了する月に合わせて切り替えた場合の金額も、同じ表に入れます。ご利用中の電力会社への解約のお申し出は、お客様ご自身でお願いします。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title">診断の費用はいくらですか？</summary><p class="faq_text">無料です。当社の収入は、電力会社が支払う手数料です。ご契約が成立しない場合、手数料は発生しません。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title">提携先の電力会社はどこですか？</summary><p class="faq_text">提携先は<span class="nw">2026年8月</span>時点で<span class="nw">12社</span>です。新電力（地域の大手電力会社以外の電力会社）が中心で、大手電力会社も含まれます。このうち、貴社の事業所のあるエリアで電気を販売していて、貴社の契約電力で契約できる会社を比較します。社名は比較表でお知らせします。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title">ご希望の会社も比較できますか？</summary><p class="faq_text">当社と提携があり、貴社の事業所のあるエリアで高圧・特別高圧の契約を受け付けている会社であれば、比較に加えることができます。ご希望の会社があれば、検針票をお送りいただく際にお知らせください。提携の有無をお伝えします。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title">市場連動型の<span class="nw">リスク</span>は何ですか？</summary><p class="faq_text">市場連動型は、卸電力市場（電力会社どうしが電気を売買する市場）の価格に合わせて電気の単価が変わる<span class="nw">プラン</span>です。市場の価格が高騰した月は単価も上がり、電気代が高額になる<span class="nw">リスク</span>があります。操業が深夜と早朝に偏る事業所であれば市場連動型も比較対象に含めますが、夕方に<span class="nw">ピーク</span>が来る事業所では電気代の振れ幅が大きくなるため含めません。比較対象に含める場合は、過去に卸電力市場の価格が高騰した月の単価でも計算し、同じ表に載せます。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title"><span class="nw">デマンド</span>対策の効果はどのくらいですか？</summary><p class="faq_text">電気代に占める基本料金の割合が大きい事業所では、最大<span class="nw">デマンド</span>を抑えるだけでも電気代が下がります。試算の例の製造業の工場では、切替前の基本料金は契約電力<span class="nw">1kW</span>あたり年間<span class="nw">約2万円</span>です。契約電力が<span class="nw">10kW</span>下がると、基本料金は年間<span class="nw">約20万円</span>下がります。ただし、<span class="nw">30分</span>でも使用電力が跳ね上がると、その値で<span class="nw">1年</span>間の基本料金が決まります。最大<span class="nw">デマンド</span>を抑える運用を<span class="nw">1年</span>続けられるかどうかで、切替だけにするか、<span class="nw">デマンド</span>対策も行うかをお決めいただけます。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title">契約期間中でも試算できますか？</summary><p class="faq_text">試算できます。検針票と併せて、いまのご契約の期間と解約の条件が分かる書面をお送りください。契約期間の途中で解約すると違約金がかかる契約なら、その額を比較表に載せます。契約が満了する月に合わせて切り替えた場合の金額も、同じ表に入れます。ご利用中の電力会社への解約のお申し出は、貴社からお願いします。</p></details>
       <details class="wow fadeInUp"><summary class="toggle_title">停電の心配はありますか？</summary><p class="faq_text">電力会社を切り替えても、停電が起こりやすくなることはありません。送配電は今までと同様に、地域の一般送配電事業者（電柱や送電線を管理する会社）が行いますので、電気の品質や信頼性は変わりません。</p></details>
-      <details class="wow fadeInUp"><summary class="toggle_title">契約の前後にどんな書面を受け取れますか？</summary><p class="faq_text">契約の締結前と締結後に、料金や契約期間を記した書面をお渡しします。書面のお渡しは、電力会社（小売電気事業者）と、媒介を行う当社の双方に課された義務です（電気事業法第2条の13・第2条の14）。比較表と書面は、経済産業省「電力の小売営業に関する指針」（令和<span class="nw">8年</span><span class="nw">4月9日</span>最終改定）に沿って作っています。</p></details>
-      <details class="wow fadeInUp"><summary class="toggle_title">営業の電話はありますか？</summary><p class="faq_text">電力会社から貴社に営業の電話がかかることはありません。当社からは、お申し込みの翌営業日中に、担当者が<span class="nw">メール</span>でご連絡いたします。貴社名とご連絡先を電力会社に提供するのは、ご契約が決まったあとだけです。提供する内容も、手続きに必要な範囲に限ります。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title">契約の前後にどのような書面を受け取れますか？</summary><p class="faq_text">契約の締結前と締結後に、料金や契約期間を記した書面をお渡しします。書面のお渡しは、電力会社（小売電気事業者）と、媒介を行う当社の双方に課された義務です（電気事業法第2条の13・第2条の14）。比較表と書面は、経済産業省「電力の小売営業に関する指針」（令和<span class="nw">8年</span><span class="nw">4月9日</span>最終改定）に沿って作っています。</p></details>
+      <details class="wow fadeInUp"><summary class="toggle_title">電力会社の営業電話はありますか？</summary><p class="faq_text">電力会社から貴社に営業の電話がかかることはありません。貴社名とご連絡先を電力会社に伝えるのは、ご契約が決まったあとだけです。当社からの最初のご連絡は<span class="nw">メール</span>です。</p></details>
     </div>
   </div>
 </section>
 
 <section class="topPage-contact" id="contact">
   <div class="section-container">
-    <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>無料試算のお申し込み</h2>
+    <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>無料診断のお申し込み</h2>
     <p class="topPage-contact-des">お申し込み後、担当者より翌営業日中に<span class="nw">メール</span>でご連絡いたします。</p>
     <form class="mv-form-contact wow fadeInUp" id="form-contact">
-      <p class="mv-form-title">電気代の無料試算<span class="nw">フォーム</span><span><b>6〜10</b>社を比較</span></p>
+      <p class="mv-form-title">電気代の無料診断<span class="nw">フォーム</span><span><b>6〜10</b>社を比較</span></p>
       <div class="mv-form-contents">
         <div class="formKv-item-wrap">
           <div class="formKv-item"><label class="formKv-label" for="ct-area">事業所のあるエリア<span class="required-label">必須</span></label>
@@ -799,7 +813,7 @@ h1,h2,h3{text-wrap:balance}
           <fieldset class="formKv-item"><legend class="formKv-label">契約種別<span class="required-label">必須</span></legend>
             <div class="formKv-radio"><label><input type="radio" name="ct-kind" checked>高圧</label><label><input type="radio" name="ct-kind">特別高圧</label><label><input type="radio" name="ct-kind">わからない</label></div></fieldset>
         </div>
-        <div class="formKv-btn"><button class="button" type="submit"><span class="formKv-btnLabel"><b>無料</b></span>試算を申し込む</button></div>
+        <div class="formKv-btn"><button class="button" type="submit"><span class="formKv-btnLabel"><b>無料</b></span>診断を申し込む</button></div>
         <p class="mv-form-policy"><a href="#privacy">個人情報の取り扱い</a>に同意の上、送信してください。<br>この<span class="nw">フォーム</span>は見本のため、送信しても届きません。</p>
       </div>
     </form>
@@ -811,17 +825,19 @@ h1,h2,h3{text-wrap:balance}
     <h2 class="title-base"><i class="fa-solid fa-bolt" aria-hidden="true"></i>運営会社</h2>
     <dl class="wow fadeInUp">
       <div><dt>名称</dt><dd>雲雀谷<span class="nw">エネルギー</span>診断株式会社（架空の会社）</dd></div>
-      <div><dt>代表・設立</dt><dd>代表取締役 雲雀谷 修（架空）／<span class="nw">2021年6月</span>設立</dd></div>
-      <div><dt>所在地</dt><dd>東京都千代田区○○0-0-0 ○○ビル4階（架空の住所）</dd></div>
-      <div><dt>電話</dt><dd>03-0000-0000（受付時間：平日9:30〜18:00）</dd></div>
-      <div><dt>資本金・従業員</dt><dd>資本金<span class="nw">1,000万円</span>。従業員<span class="nw">12名</span>。数値は<span class="nw">2026年8月</span>時点のものです。</dd></div>
+      <div><dt>代表者</dt><dd>代表取締役 雲雀谷 修（架空）</dd></div>
+      <div><dt>設立</dt><dd><span class="nw">2021年6月</span></dd></div>
+      <div><dt>所在地</dt><dd>東京都千代田区○○0-0-0 ○○ビル4階<small>（架空の住所）</small></dd></div>
+      <div><dt>電話</dt><dd>03-0000-0000（受付時間：平日<span class="nw">9:30〜18:00</span>）</dd></div>
+      <div><dt>資本金</dt><dd><span class="nw">1,000万円</span>（<span class="nw">2026年8月</span>時点）</dd></div>
+      <div><dt>従業員数</dt><dd><span class="nw">12名</span>（<span class="nw">2026年8月</span>時点）</dd></div>
       <div><dt>対応<span class="nw">エリア</span></dt><dd>東京電力・中部電力・関西電力の3<span class="nw">エリア</span></dd></div>
-      <div><dt>事業内容</dt><dd>法人向け電力契約の診断・媒介<small>当社は電力会社（小売電気事業者）ではなく、契約の名義人にもなりません。</small></dd></div>
+      <div><dt>事業内容</dt><dd>法人向け電力契約の診断・媒介<small>当社は電力会社（小売電気事業者）ではありません。電気のご契約は、貴社と電力会社の間で結んでいただきます。</small></dd></div>
       <div><dt>提携先</dt><dd>電力会社<span class="nw">12社</span>（<span class="nw">2026年8月</span>時点）。<small>社名と登録番号は、比較表と、契約の前にお渡しする書面に記載します。各社との取り決めにより、<span class="nw">ウェブサイト</span>での社名の公表は控えています。</small></dd></div>
     </dl>
     <div class="callout wow fadeInUp" id="privacy">
       <h3>個人情報の取り扱い</h3>
-      <p>貴社名・ご担当者名・ご連絡先と<span class="nw">12か月</span>分の検針票をお預かりし、試算の作成と切替手続きのご連絡に使います。電力会社への単価の問い合わせは、貴社名を伏せて行います。ご契約が決まった電力会社にだけ、契約の手続きに必要な範囲で貴社名とご連絡先を提供します。開示・訂正・削除のご請求は、お電話で承ります。</p>
+      <p>貴社名・ご担当者名・ご連絡先と<span class="nw">12か月</span>分の検針票をお預かりし、試算と切替手続きのご連絡に使います。電力会社への単価の確認は、貴社名を伏せて行います。ご契約が決まった電力会社にだけ、契約の手続きに必要な範囲で貴社名とご連絡先を提供します。開示・訂正・削除のご請求は、お電話で承ります。</p>
     </div>
   </div>
 </section>
@@ -830,16 +846,16 @@ h1,h2,h3{text-wrap:balance}
 <footer class="footer">
   <div class="footer-inner">
     <p class="footer-logo"><b>雲雀谷エネルギー診断</b>法人向け電力契約の診断・媒介</p>
-    <p class="footer-contact">お電話でのお問い合わせ：<a href="tel:0300000000">03-0000-0000</a>（受付時間：平日9:30〜18:00）</p>
+    <p class="footer-contact">お電話でのお問い合わせ：<a href="tel:0300000000">03-0000-0000</a>（受付時間：平日<span class="nw">9:30〜18:00</span>）</p>
   </div>
   <nav class="footer-sitemap" aria-label="フッターの案内">
-    <a href="#top">トップ</a><a href="#reason">選ばれる理由</a><a href="#case">試算の例</a><a href="#simulation">試算の内訳</a><a href="#fee">手数料</a><a href="#flow">ご利用の流れ</a><a href="#faq">よくあるご質問</a><a href="#contact">無料試算のお申し込み</a><a href="#company">運営会社</a><a href="#privacy">個人情報の取り扱い</a>
+    <a href="#top">トップ</a><a href="#reason">選ばれる理由</a><a href="#case">試算の例</a><a href="#simulation">試算の内訳</a><a href="#fee">手数料</a><a href="#flow">ご利用の流れ</a><a href="#faq">よくあるご質問</a><a href="#contact">無料診断のお申し込み</a><a href="#company">運営会社</a><a href="#privacy">個人情報の取り扱い</a>
   </nav>
-  <p class="note">雲雀谷<span class="nw">エネルギー</span>診断は架空の事業者です。この<span class="nw">ページ</span>は法人向けLP制作の見本です。数字・社名・住所・電話番号はすべて架空です。画像の出典は<a href="img/CREDITS.md">img/CREDITS.md</a>をご覧ください。制作：常夜燈</p>
-  <p class="copyright">© HIBARIDANI ENERGY</p>
+  <p class="note">雲雀谷<span class="nw">エネルギー</span>診断は架空の事業者です。この<span class="nw">ページ</span>は法人向けLP制作の見本です。数字・社名・住所・電話番号はすべて架空です。画像の出典は<a href="img/credits.html">一覧</a>に記載しています。制作：常夜燈</p>
+  <p class="copyright">© 雲雀谷<span class="nw">エネルギー</span>診断株式会社</p>
 </footer>
 
-<div class="fixedIcon"><a class="fixedIcon-call" href="tel:0300000000">電話で相談</a><a class="fixedIcon-mail" href="#contact">試算を申し込む</a></div>
+<div class="fixedIcon"><a class="fixedIcon-call" href="tel:0300000000">お電話でのお問い合わせ</a><a class="fixedIcon-mail" href="#contact">無料診断を申し込む</a></div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/wow.js@1.1.2/dist/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
@@ -860,6 +876,8 @@ window.jQuery&&$(function(){
     var speed=matchMedia('(prefers-reduced-motion: reduce)').matches?0:500;
     var href=$(this).attr('href');
     var target=$(href=='#'||href==''?'html':href);
+    /* 主景のフォームを過ぎる前に押された時まで末尾のフォームへ送ると、1万px以上先へ飛んでしまう */
+    if(href=='#contact'&&$('#form-mv').offset().top+$('#form-mv').outerHeight()>$(window).scrollTop())target=$('#form-mv');
     var position=target.offset().top-$('.header').outerHeight();
     $('body,html').animate({scrollTop:position},speed,'swing');
     return false;

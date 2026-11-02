@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>並木町矯正歯科｜広島市中区・並木通り 大人の矯正</title>
-<meta name="description" content="広島市中区・並木通りの矯正歯科。大人の矯正を中心に、初診相談（60分・3,300円）で、治療方法ごとの総額と期間を書面にしてお渡しします。月・火・水・金は19時まで、土曜も診療。袋町電停から徒歩6分。">
+<meta name="description" content="広島市中区・並木通りの矯正歯科。大人の矯正を中心に、初診相談（60分・3,300円）で、治療方法ごとの総額と期間の目安を書面にしてお渡しします。月・火・水・金は19時まで、土曜も診療。袋町電停から徒歩6分。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="並木町矯正歯科">
 <meta property="og:title" content="並木町矯正歯科｜広島市中区・並木通り 大人の矯正">
@@ -24,7 +24,7 @@
    上部に診療時間の表と案内図を並べた囲みを置き、初診相談のお申し込みは濃い緑の丸いボタン。 */
 :root{
   --text:#3a3232;--head:#493f3f;--mute:#766c6c;--line:#e1e6e3;--bg:#fff;--mint:#188f3b1a;--mint-d:rgba(130,208,154,.4);
-  --green:#188f3b;--green-d:#3e8153;--gold:#b69a5a;--shade:rgba(0,0,0,.15);
+  --green:#188f3b;--green-d:#3e8153;--gold:#8a6f2f;--shade:rgba(0,0,0,.15);
   --sans:"游ゴシック体",YuGothic,"游ゴシック Medium","Yu Gothic Medium","Hiragino Kaku Gothic ProN","Hiragino Sans","メイリオ",Meiryo,sans-serif;
   --mincho:"游明朝",YuMincho,"Yu Mincho","ヒラギノ明朝 ProN","Hiragino Mincho ProN",serif;
   --en:"Cormorant Garamond","Times New Roman",serif;
@@ -73,8 +73,8 @@ ul,ol{padding:0;list-style:none}
 
 /* メインビジュアル。写真の下辺をゆるく曲げ、左に見出しの囲み */
 .omt-fv{position:relative;margin-top:86px;height:640px;overflow:hidden;border-radius:0 0 50% 50%/0 0 70px 70px;background:var(--mint)}
-.omt-fv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
-.omt-fv-inner{position:absolute;left:max(20px,calc((100vw - 1100px)/2 + 20px));top:90px;width:470px;padding:40px 42px 38px;background:rgba(255,255,255,.93);border-radius:12px}
+.omt-fv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 62%}
+.omt-fv-inner{position:absolute;left:max(20px,calc((100vw - 1100px)/2 + 20px));top:90px;width:484px;padding:40px 42px 38px;background:#fff;border-radius:12px}
 .omt-fv-tag{display:inline-block;padding:2px 12px;border-left:3px solid var(--green);font-size:14px;font-weight:700;color:var(--green-d)}
 .omt-fv h1{margin:16px 0 14px;font-family:var(--mincho);font-size:40px;font-weight:600;line-height:1.45;color:var(--head);letter-spacing:.06em}
 .omt-fv-sub{font-size:15px;line-height:1.9}
@@ -84,7 +84,7 @@ ul,ol{padding:0;list-style:none}
 .omt-footer-tags li{padding:2px 10px;background:var(--mint);font-size:12px;font-weight:700;color:var(--text)}
 
 /* お知らせの帯 */
-.News{max-width:900px;margin:40px auto 0;padding:0 20px}
+.News{max-width:1100px;margin:40px auto 0;padding:0 20px}
 .News ul{border-top:1px solid var(--line)}
 .News li{display:grid;grid-template-columns:110px 64px 1fr;gap:14px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line);font-size:14.5px}
 .News time{font-family:var(--en);font-size:17px;color:var(--mute)}
@@ -131,59 +131,63 @@ ul,ol{padding:0;list-style:none}
 .Feature__blc:nth-child(even) .Feature__blc__img img{border-radius:24px 0 0 24px}
 .Feature__blc__img::after{content:"";position:absolute;left:30px;right:-30px;top:30px;bottom:-30px;z-index:-1;background:var(--mint-d);border-radius:0 24px 24px 0}
 .Feature__blc:nth-child(even) .Feature__blc__img::after{left:-30px;right:30px;border-radius:24px 0 0 24px}
+.Feature__cont .Feature__blc:last-child{margin-bottom:0}
 .Feature__blc__cont{padding:0 50px}
 .Feature__blc__num{display:block;font-family:var(--en);font-size:18px;letter-spacing:.2em;color:var(--gold)}
-.Feature__blc__num b{font-size:64px;font-weight:500;line-height:1;color:var(--mint-d);margin-left:6px}
-.Feature__blc__cont h3{font-family:var(--mincho);font-size:25px;font-weight:600;line-height:1.55;color:var(--green-d);margin:4px 0 16px;letter-spacing:.06em}
+.Feature__blc__num b{font-size:64px;font-weight:500;line-height:1;color:var(--green);margin-left:6px}
+.Feature__blc__cont h3{font-family:var(--mincho);font-size:25px;font-weight:600;line-height:1.55;color:var(--green-d);margin:4px 0 16px;letter-spacing:.06em;word-break:auto-phrase}
 .Feature__blc__cont p{font-size:15px}
 
 /* 費用と期間。治療の方法を4列に */
-.txtBox{max-width:880px;margin:0 auto 36px;text-align:center;font-size:15px}
-.txtBox ol{display:inline-block;margin:12px 0;padding-left:1.4em;list-style:decimal;text-align:left;font-size:14px;line-height:1.8}
+.fee-lead{margin-bottom:20px;text-align:center;font-size:15px}
+.txtBox{max-width:780px;margin:44px auto 0;font-size:15px}
+.txtBox ol{margin:12px 0;padding-left:1.4em;list-style:decimal;font-size:14px;line-height:1.8}
 .omt-fee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.omt-fee-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.omt-fee-card{display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
 .omt-fee-plan-label{padding:16px 14px;background:var(--green-d);color:#fff;text-align:center}
 .omt-fee-plan-label h3{font-size:17px;font-weight:700;line-height:1.5}
 .omt-fee-plan-label p{font-size:12px;line-height:1.6;margin-top:4px;opacity:.9}
-.fee-box{padding:18px 16px;flex:1;text-align:center}
+.fee-box{display:flex;flex-direction:column;padding:18px 16px;text-align:center}
 .label{font-size:12px;color:var(--mute)}
 .omt-fee-price{font-family:var(--en);font-size:34px;font-weight:500;line-height:1.2;color:var(--head)}
 .omt-fee-price small{font-family:var(--sans);font-size:14px}
-.omt-fee-card dl{margin-top:12px;border-top:1px dashed var(--line);font-size:13px;text-align:left}
+.omt-fee-card dl{margin:12px 0;border-top:1px dashed var(--line);font-size:13px;text-align:left}
 .omt-fee-card dl div{display:grid;grid-template-columns:62px 1fr;gap:6px;padding:7px 0;border-bottom:1px dashed var(--line)}
 .omt-fee-card dt{color:var(--mute)}
-.fee-box>p:last-child{margin-top:12px;padding:10px;background:var(--mint);border-radius:6px;font-size:12px}
+.fee-box>p:last-child{margin-top:auto;padding:10px;background:var(--mint);border-radius:6px;font-size:12px}
 .fee-box>p:last-child b{display:block;font-size:15px;color:var(--head)}
 .price{margin-top:44px}
 .price h3{font-family:var(--mincho);font-size:21px;font-weight:600;color:var(--head);margin-bottom:12px;text-align:center}
 .price table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}
 .price th,.price td{padding:14px 16px;border:1px solid var(--line);text-align:left}
 .price th{width:22%;background:var(--mint)}
-.price td b{margin-right:1em;color:var(--head)}
-.note{font-size:13px;line-height:1.85;margin-top:12px;color:var(--mute)}
+.price td b{color:var(--head)}
+.price td:nth-of-type(1){width:190px;white-space:nowrap}
+.note{max-width:780px;margin:12px auto 0;font-size:14px;line-height:1.85;color:var(--mute)}
+.price table+.note{margin-top:20px}
 .has-bg-main-lighter .note{color:var(--text)}
 #price .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 #price .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
 #price .gallery figcaption{font-size:13px;color:var(--text);margin-top:6px}
 
 /* 院長あいさつ */
-.Greeting__inner{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:start}
-.Greeting__inner img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+.Greeting__inner{display:grid;grid-template-columns:400px 1fr;gap:40px 56px;align-items:start}
+.Greeting__inner img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;border-radius:16px}
 .Greeting__inner h3{font-family:var(--mincho);font-size:24px;font-weight:600;color:var(--head);margin-bottom:16px;letter-spacing:.06em}
 .Greeting__inner p:not([class])+p:not([class]){margin-top:1em}
 .name{margin-top:24px;font-family:var(--mincho);font-size:15px}
 .name b{font-size:24px;letter-spacing:.14em;margin-left:10px}
-.doctor-history__list{margin-top:22px;border-top:1px solid var(--line);font-size:14px}
+.doctor-history__list{grid-column:1/-1;border-top:1px solid var(--line);font-size:14px}
 .doctor-history__list div{display:grid;grid-template-columns:120px 1fr;padding:9px 0;border-bottom:1px solid var(--line)}
 .doctor-history__list dt{color:var(--green-d);font-weight:700}
 
 /* 初診相談の流れ */
-.omt-flow-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.omt-flow-cards li{position:relative;padding:22px 16px 20px;background:#fff;border-radius:10px;text-align:center}
-.omt-flow-cards li:not(:last-child)::after{content:"\f0da";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font:900 18px/1 "Font Awesome 6 Free";color:var(--green)}
-.omt-flow-dot-circle{display:block;font-family:var(--en);font-size:24px;font-weight:500;letter-spacing:.06em;color:var(--green)}
-.omt-flow-cards h3{font-size:15px;font-weight:700;line-height:1.55;margin:6px 0 8px;color:var(--head)}
-.omt-flow-cards p{font-size:14px;line-height:1.8;text-align:left}
+.omt-flow-cards{display:grid;gap:18px}
+.omt-flow-cards li{position:relative;display:grid;grid-template-columns:76px 216px 1fr;gap:0 16px;align-items:center;padding:18px 28px;background:#fff;border-radius:10px}
+.omt-flow-cards li:not(:last-child)::after{content:"\f0d7";position:absolute;left:54px;bottom:-18px;font:900 18px/1 "Font Awesome 6 Free";color:var(--green)}
+.omt-flow-dot-circle{font-family:var(--en);font-size:24px;font-weight:500;letter-spacing:.06em;color:var(--green)}
+.omt-flow-cards h3{font-size:15px;font-weight:700;line-height:1.55;color:var(--head)}
+.omt-flow-cards p{font-size:14px;line-height:1.8}
 #flow .gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
 #flow .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px}
 #flow .gallery figcaption{font-size:13px;color:var(--text);margin-top:6px}
@@ -202,7 +206,7 @@ ul,ol{padding:0;list-style:none}
 .TopFaq__list__q{position:relative;display:block;padding:18px 56px 18px 58px;font-weight:700;cursor:pointer;list-style:none;line-height:1.7}
 .TopFaq__list__q::-webkit-details-marker{display:none}
 .TopFaq__list__q::before{content:"Q";position:absolute;left:20px;top:14px;font-family:var(--en);font-size:28px;line-height:1.2;color:var(--green)}
-.TopFaq__list__q::after{content:"+";position:absolute;right:22px;top:14px;font-size:26px;color:var(--green)}
+.TopFaq__list__q::after{content:"+";position:absolute;right:22px;top:14px;font-size:26px;line-height:1.2;color:var(--green)}
 .TopFaq__list__item[open] .TopFaq__list__q::after{content:"−"}
 .TopFaq__list__a{padding:0 26px 22px 58px;font-size:15px}
 
@@ -213,15 +217,15 @@ ul,ol{padding:0;list-style:none}
 .omt-access-wrap dl{border-top:1px solid var(--line);font-size:15px}
 .omt-access-wrap dl div{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
 .omt-access-wrap dt{font-weight:700;color:var(--green-d)}
-.d-flex-pc{display:grid;grid-template-columns:1.25fr 1fr;gap:40px}
+.d-flex-pc{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:start}
 form.flex-col{padding:34px 36px;background:#fff;border-radius:12px}
 form.flex-col label,form.flex-col legend{display:block;font-size:14px;font-weight:700;margin:16px 0 6px;padding:0}
 form.flex-col label:first-child{margin-top:0}
 form.flex-col input,form.flex-col textarea{width:100%;padding:12px;border:1px solid #cfd8d3;border-radius:6px;font:inherit;font-size:16px;background:#fff}
 form.flex-col textarea{min-height:100px}
-form.flex-col fieldset{border:0;margin:0;padding:0}
+form.flex-col fieldset{border:0;margin:16px 0 0;padding:0}
 form.flex-col fieldset>div{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:14px}
-form.flex-col fieldset>div label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
+form.flex-col fieldset>div label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500;word-break:auto-phrase}
 form.flex-col fieldset>div input{width:auto}
 form.flex-col button{display:flex;width:100%;margin-top:22px;border:0;cursor:pointer;font-family:inherit}
 .text-muted{font-size:12.5px;color:var(--mute);margin-top:10px;line-height:1.8}
@@ -252,8 +256,6 @@ div.flex-col p{font-size:13.5px;line-height:1.8}
   .omt-hamburger .fa-solid{font-size:24px;line-height:44px;color:var(--green-d)}
   .omt-header-nav.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:86px;margin:0;padding:10px 20px 18px;background:#fff;box-shadow:0 10px 16px rgba(0,0,0,.08)}
   .omt-fee-grid{grid-template-columns:1fr 1fr}
-  .omt-flow-cards{grid-template-columns:1fr 1fr}
-  .omt-flow-cards li:not(:last-child)::after{display:none}
 }
 @media (max-width:767px){
   body{font-size:15px}
@@ -268,6 +270,7 @@ div.flex-col p{font-size:13.5px;line-height:1.8}
   .omt-fv{margin-top:66px;height:auto;border-radius:0 0 50% 50%/0 0 30px 30px;padding-top:62vw}
   .omt-fv img{height:66vw}
   .omt-fv-inner{position:relative;left:auto;top:auto;width:auto;margin:-40px 14px 30px;padding:26px 20px}
+  .omt-fv-btns{flex-direction:column}
   .omt-fv h1{font-size:28px}
   .News li{grid-template-columns:96px 1fr;gap:4px 10px}
   /* ラベルは見出しの列に入ると1fr いっぱいまで伸びるので、中身の幅で止める */
@@ -282,12 +285,20 @@ div.flex-col p{font-size:13.5px;line-height:1.8}
   .Feature__blc__img::after{display:none}
   .Feature__blc__img img,.Feature__blc:nth-child(even) .Feature__blc__img img{border-radius:16px}
   .Feature__blc__cont{padding:24px 20px 0}
-  .omt-fee-grid,.omt-flow-cards,#price .gallery,#flow .gallery{grid-template-columns:1fr}
+  .omt-fee-grid,#price .gallery,#flow .gallery{grid-template-columns:1fr}
+  .omt-flow-cards li{display:block;padding:22px 16px 20px;text-align:center}
+  .omt-flow-cards li:not(:last-child)::after{display:none}
+  .omt-flow-dot-circle{display:block}
+  .omt-flow-cards h3{margin:6px 0 8px}
+  .omt-flow-cards p{text-align:left}
   .price th,.price td{display:block;width:auto;border-top:0}
-  .price td b{display:block;margin-right:0}
+  .price tr:first-child th{border-top:1px solid var(--line)}
+  .price td:nth-of-type(1){width:auto;padding-bottom:0;border-bottom:0}
+  .price td:nth-of-type(2){padding-top:4px}
   .Greeting__inner,.omt-access-wrap,.d-flex-pc{grid-template-columns:1fr;gap:28px}
   .risk .container>div{padding:22px 16px}
   .risk .container>div li{grid-template-columns:1fr;gap:2px}
+  .TopFaq__list__a{padding:0 20px 20px}
   form.flex-col{padding:24px 18px}
   form.flex-col fieldset>div{grid-template-columns:1fr}
   .omt-footer-inner{flex-direction:column}
@@ -315,6 +326,12 @@ h1,h2,h3{text-wrap:balance}
 .omt-fv-sub,.txtUl a,.comText,.txtBox ol li,.doctor-history__list dd,.omt-access-wrap dd{word-break:auto-phrase;text-wrap:balance}
 /* 長い段落まで balance にすると、1280pxで「地方｜厚生」と割れる */
 .txtBox p{word-break:auto-phrase}
+/* 短い箱の本文は pretty だけだと語の途中で折れ、最終行に「ます。」だけが残る */
+.risk li p,.omt-flow-cards p,.TopFaq__list__q,.TopFaq__list__a,.omt-fee-plan-label p,.Schedul__notes,.Feature__blc__cont p,.price td,figcaption{word-break:auto-phrase;text-wrap:pretty}
+/* 長い段落でも狭い幅では1行が20字台になり、語の途中で折れると読みにくい */
+@media (max-width:1120px){
+  .note,.notes,.text-muted,.Greeting__inner p,.News p{word-break:auto-phrase}
+}
 </style>
 <noscript><style>.fadeInUp{opacity:1;transform:none}</style></noscript>
 </head>
@@ -332,7 +349,7 @@ h1,h2,h3{text-wrap:balance}
       <a href="#faq">よくある質問</a>
       <a href="#access">アクセス</a>
     </nav>
-    <p class="Header__right__contact">お電話でのご予約<b><a href="tel:0820000000">082-000-0000</a></b></p>
+    <p class="Header__right__contact">お電話でのお申し込み<b><a href="tel:0820000000">082-000-0000</a></b></p>
     <a class="reservedBtn" href="#reserve"><i class="fa-regular fa-calendar" aria-hidden="true"></i>お申し込み</a>
     <button class="omt-hamburger" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="gnav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
   </div>
@@ -344,7 +361,7 @@ h1,h2,h3{text-wrap:balance}
   <div class="omt-fv-inner">
     <p class="omt-fv-tag">広島市中区・並木通りの矯正歯科</p>
     <h1>費用も期間も、<br>初診でお伝えします</h1>
-    <p class="omt-fv-sub">当院は大人の矯正治療を中心に行っています。初診相談時に、治療方法ごとの総額・治療期間・通院回数の目安を書面にしてお渡しします。</p>
+    <p class="omt-fv-sub">当院は大人の矯正治療を中心に行っています。初診相談時に、総額・治療期間・通院回数それぞれの目安を、治療方法ごとに書面にしてお渡しします。</p>
     <div class="omt-fv-btns"><a class="comBtn" href="#reserve">初診相談のお申し込み</a><a class="comBtn comBtn02" href="#price">詳しい費用を見る</a></div>
     <ul class="omt-footer-tags"><li>初診相談<span class="nw">3,300円</span>（税込）</li><li>月・火・水・金は19時まで診療</li><li>土曜も診療</li></ul>
   </div>
@@ -367,11 +384,11 @@ h1,h2,h3{text-wrap:balance}
         <table class="Schedul__table">
           <thead><tr><th scope="col">診療時間</th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr></thead>
           <tbody>
-            <tr><th scope="row">10:00〜13:00</th><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td></tr>
-            <tr><th scope="row">14:30〜19:00</th><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td><td class="c-table-access-on">●</td><td class="c-table-access-on">〜17:00</td><td class="c-table-access-off">―</td></tr>
+            <tr><th scope="row"><span class="nw">10:00〜13:00</span></th><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td></tr>
+            <tr><th scope="row"><span class="nw">14:30〜19:00</span></th><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-on">●</td><td class="c-table-access-off">―</td><td class="c-table-access-on">●</td><td class="c-table-access-on">▲</td><td class="c-table-access-off">―</td></tr>
           </tbody>
         </table>
-        <p class="Schedul__notes">最終受付は診療終了の<span class="nw">30分</span>前（初診相談は<span class="nw">1時間</span>前）です。</p>
+        <p class="Schedul__notes">▲土曜の午後は17時までです。木曜・日曜・祝日は休診です。<br>最終受付は診療終了の<span class="nw">30分</span>前（初診相談は<span class="nw">1時間</span>前）です。</p>
         <p class="tel"><span>お電話</span><b><a href="tel:0820000000">082-000-0000</a></b></p>
         <div class="BtnCont"><a class="comBtn" href="#reserve">初診相談のお申し込み</a><a class="comBtn comBtn02" href="#access">アクセス</a></div>
       </div>
@@ -385,14 +402,14 @@ h1,h2,h3{text-wrap:balance}
 
 <section class="section has-bg-main-lighter" id="worry">
   <div class="container">
-    <h2 class="headLine01"><span>WORRY</span>矯正治療のお悩みとご質問</h2>
+    <h2 class="headLine01"><span>TROUBLE</span>矯正治療のお悩みとご質問</h2>
     <ul class="txtUl fadeInUp">
       <li><a href="#price">矯正の費用はいくらかかりますか？</a></li>
       <li><a href="#appliance">目立たない矯正装置はありますか？</a></li>
       <li><a href="#price">治療期間はどのくらいかかりますか？</a></li>
       <li><a href="#faq-age">矯正治療は何歳まで可能ですか？</a></li>
       <li><a href="#faq-extraction">抜歯は必要ですか？</a></li>
-      <li><a href="#flow">初診相談の当日に治療方法や開始時期を決定する必要はありますか？</a></li>
+      <li><a href="#flow"><span>初診相談の当日に治療<span class="nw">方法</span>や開始時期を決定する必要はありますか？</span></a></li>
     </ul>
     <p class="comText fadeInUp">費用、期間など、気になることはどうぞお気軽にご相談ください。</p>
   </div>
@@ -403,19 +420,19 @@ h1,h2,h3{text-wrap:balance}
   <div class="Feature__cont">
     <div class="Feature__blc fadeInUp">
       <figure class="Feature__blc__img"><img src="img/counsel.jpg" alt="クリップボードの白紙とペン" loading="lazy"></figure>
-      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>01</b></span><h3>総額と<br>治療期間のご提示</h3><p>当院では、初診相談時に治療費用の総額をお伝えしています。総額には、初診相談から保定中の通院までの費用が含まれます。抜歯費用は含みません。書面には、総額・治療期間・通院回数の目安を記載します。</p></div>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>01</b></span><h3>総額と治療期間のご提示</h3><p>当院では、初診相談時に総額の目安をお伝えしています。総額には、初診相談から保定期間中の通院までの費用が含まれます。抜歯費用は含まれません。書面には、総額・治療期間・通院回数それぞれの目安を記載します。</p></div>
     </div>
     <div class="Feature__blc fadeInUp">
-      <figure class="Feature__blc__img"><img src="img/scan.jpg" alt="装置をつけた歯列のスキャン画像" loading="lazy"></figure>
-      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>02</b></span><h3>精密検査と<br>診断</h3><p><span class="nw">パノラマ</span>X線写真・頭部X線規格写真（<span class="nw">セファロ</span>）・口腔内写真の撮影と、歯列の<span class="nw">スキャン</span>を行います。その後骨格の分析と歯軸の計測を行い、検査結果をもとに診断・治療計画を立てます。抜歯が必要かどうかも、このときに判断します。</p></div>
+      <figure class="Feature__blc__img"><img src="img/scan.jpg" alt="装置をつけた歯列を口腔内スキャナーで読み取っているところ" loading="lazy"></figure>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>02</b></span><h3>精密検査と診断</h3><p><span class="nw">パノラマ</span>X線写真・頭部X線規格写真（<span class="nw">セファロ</span>）・口腔内写真の撮影と、歯列の<span class="nw">スキャン</span>を行います。<span class="nw">その後</span>、骨格の分析と歯軸の計測を行います。検査結果をもとに診断し、治療計画を立てます。抜歯が必要かどうかも、このときに判断します。</p></div>
     </div>
     <div class="Feature__blc fadeInUp" id="appliance">
-      <figure class="Feature__blc__img"><img src="img/aligner.jpg" alt="マウスピース型の矯正装置の装着" loading="lazy"></figure>
-      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>03</b></span><h3>目立ちにくい<br>装置</h3><p>表側の装置には、透明な<span class="nw">ブラケット</span>を使います。裏側の装置は、会話中や笑顔のときでも見えにくいのが特徴です。<span class="nw">マウスピース</span>型の装置は透明で、ご自身で取り外しができます。</p></div>
+      <figure class="Feature__blc__img"><img src="img/aligner.jpg" alt="マウスピース型の装置を歯につけているところ" loading="lazy"></figure>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>03</b></span><h3>目立ちにくい装置</h3><p>表側の装置には、透明な<span class="nw">ブラケット</span>を使います。裏側の装置は、会話中や笑顔のときでも目立ちにくいのが特徴です。<span class="nw">マウスピース</span>型の装置は透明で、ご自身で取り外しができます。</p></div>
     </div>
     <div class="Feature__blc fadeInUp">
       <figure class="Feature__blc__img"><img src="img/clinic.jpg" alt="診療台の無影灯を調整する歯科医師" loading="lazy"></figure>
-      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>04</b></span><h3>治療中と保定期間中の<br>定期的な<span class="nw">チェック</span></h3><p>通院日には、歯が順調に動いているか<span class="nw">チェック</span>し、必要な調整を行います。保定期間中は<span class="nw">3〜6か月</span>に1度通院していただき、歯並びの状態を確認していきます。</p></div>
+      <div class="Feature__blc__cont"><span class="Feature__blc__num">POINT<b>04</b></span><h3>治療中と保定期間中の<br>定期的な<span class="nw">チェック</span></h3><p>通院日には、歯が順調に動いているかを確かめ、必要な調整を行います。保定期間中は<span class="nw">3〜6か月</span>に1度通院していただき、歯並びの状態を確認していきます。</p></div>
     </div>
   </div>
 </section>
@@ -423,8 +440,28 @@ h1,h2,h3{text-wrap:balance}
 <section class="section has-bg-main-lighter" id="price">
   <div class="container">
     <h2 class="headLine01"><span>PRICE</span>費用と期間</h2>
+    <p class="fee-lead">金額はすべて税込です。</p>
+    <div class="omt-fee-grid">
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>全体矯正（表側）</h3><p>歯の表面に<span class="nw">ブラケット</span>をつけ、<span class="nw">ワイヤー</span>の力を利用して歯を動かす治療<span class="nw">方法</span>です。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">770,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p>総額の目安<b><span class="nw">998,800〜1,064,800円</span></b></p></div></div>
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>全体矯正（裏側）</h3><p>歯の裏側に装置をつけるため、正面からは目立ちにくい治療<span class="nw">方法</span>です。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">1,100,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p>総額の目安<b><span class="nw">1,328,800〜1,394,800円</span></b></p></div></div>
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>全体矯正（<span class="nw">マウスピース</span>型）</h3><p>取り外しができる透明な<span class="nw">マウスピース</span>型の装置を使った治療<span class="nw">方法</span>です。この装置は<a href="#pmda" style="color:#fff">薬機法の承認を得ていません</a>。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">660,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">5か月</span>〜<span class="nw">3年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>6〜8週に<span class="nw">1回</span>・<span class="nw">12〜20回</span></dd></div></dl><p>総額の目安<b><span class="nw">822,800〜866,800円</span></b></p></div></div>
+      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>部分矯正（前歯）</h3><p>前歯の歯並びだけを整える治療<span class="nw">方法</span>です。部分矯正ができるかどうかは、歯科医師がX線撮影などの精密検査をしたうえで診断します。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">330,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">6か月</span>〜<span class="nw">1年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">6〜14回</span></dd></div></dl><p>総額の目安<b><span class="nw">459,800〜503,800円</span></b></p></div></div>
+    </div>
+    <div class="price fadeInUp">
+      <h3>装置代以外の費用</h3>
+      <table>
+        <tr><th scope="row">初診相談料</th><td><b><span class="nw">3,300円</span>／<span class="nw">60分</span></b></td><td>口腔内の確認と写真の撮影を行います。</td></tr>
+        <tr><th scope="row">精密検査・診断料</th><td><b><span class="nw">44,000円</span>／<span class="nw">1回</span></b></td><td><span class="nw">パノラマ</span>X線写真・<span class="nw">セファロ</span>・口腔内写真の撮影と歯列の<span class="nw">スキャン</span>を行います。検査結果をもとに治療計画をご説明します。</td></tr>
+        <tr><th scope="row">調整料</th><td><b><span class="nw">5,500円</span>／<span class="nw">1回</span></b></td><td>装置をつけている間、通院のたびにいただきます。</td></tr>
+        <tr><th scope="row">保定装置代</th><td><b><span class="nw">33,000円</span>／上下1組</b></td><td>矯正装置を外したあとの後戻りを防ぐために、保定装置をつけていただきます。</td></tr>
+        <tr><th scope="row">保定期間中の通院費</th><td><b><span class="nw">3,300円</span>／<span class="nw">1回</span></b></td><td>通院の間隔は<span class="nw">3〜6か月</span>です。</td></tr>
+      </table>
+      <p class="note">総額の目安は、初診相談から保定期間中の通院までにかかる費用の合計です（保定期間中の通院<span class="nw">5回</span>分を含みます）。保定期間中の通院の回数は経過によって異なります。抜歯の処置は連携歯科医院で行います。抜歯費用は総額の目安に含みません。1本あたり<span class="nw">5,500円</span>から<span class="nw">11,000円</span>が目安です。</p>
+      <p class="note">初診相談料と精密検査・診断料は、受診の当日にいただきます。装置代と保定装置代は装置をつける当日に、調整料と保定期間中の通院費は通院のたびにいただきます。お支払いには、現金・<span class="nw">クレジットカード</span>・<span class="nw">デンタルローン</span>をご利用いただけます。</p>
+      <p class="note">期間と通院回数の範囲は、<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>（表側と裏側<span class="nw">64名</span>／<span class="nw">マウスピース</span>型<span class="nw">31名</span>／<span class="nw">部分矯正</span><span class="nw">17名</span>）の実績に基づきます。<span class="nw">8割</span>の方が、この範囲で治療を終えました。治療の効果には個人差があります。記載の期間や回数を保証するものではありません。</p>
+    </div>
     <div class="txtBox">
-      <p>金額はすべて税込です。矯正治療は原則的には自由診療ですが、下記の場合に限り保険診療の対象となります。</p>
+      <p>矯正治療は原則的には自由診療ですが、下記の場合に限り保険診療の対象となります。</p>
       <ol>
         <li>厚生労働大臣が定める疾患に起因した咬合異常</li>
         <li>前歯及び小臼歯の永久歯のうち3歯以上の萌出不全に起因した咬合異常（埋伏歯開窓術を必要とするものに限る）</li>
@@ -432,25 +469,6 @@ h1,h2,h3{text-wrap:balance}
         <li>顎変形症（顎離断等の手術を必要とするものに限る）</li>
       </ol>
       <p>なお、保険適用される矯正歯科治療を行える医療機関は、厚生労働大臣が定める施設基準に適合しているものとして地方厚生（支）局長に届け出た保険医療機関に限られます。当院はこの届出をしていません。保険の対象になる場合は初診相談でお伝えし、届出をした医療機関をご紹介します。</p>
-    </div>
-    <div class="omt-fee-grid">
-      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>全体矯正（表側）</h3><p>歯の表面に<span class="nw">ブラケット</span>を装着し、<span class="nw">ワイヤー</span>の力を利用して歯を動かす矯正方法です。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">770,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p>総額の目安<b><span class="nw">998,800〜1,064,800円</span></b></p></div></div>
-      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>全体矯正（裏側）</h3><p>歯の裏側に装置を装着するため、正面からは目立ちにくい矯正方法です。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">1,100,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">10か月</span>〜<span class="nw">2年</span><span class="nw">9か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">24〜36回</span></dd></div></dl><p>総額の目安<b><span class="nw">1,328,800〜1,394,800円</span></b></p></div></div>
-      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3><span class="nw">マウスピース</span>型（全体）</h3><p>取り外しができる透明な<span class="nw">マウスピース</span>型の装置を使った矯正方法です。装置は<a href="#pmda" style="color:#fff">薬機法上の承認を得ていません</a>。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">660,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">1年</span><span class="nw">5か月</span>〜<span class="nw">3年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>6〜8週に<span class="nw">1回</span>・<span class="nw">12〜20回</span></dd></div></dl><p>総額の目安<b><span class="nw">822,800〜866,800円</span></b></p></div></div>
-      <div class="omt-fee-card fadeInUp"><div class="omt-fee-plan-label"><h3>部分矯正（前歯）</h3><p>前歯の歯並びだけを整える矯正方法です。部分矯正ができるかどうかは、歯科医師がX線撮影などの精密検査をした上で診断します。</p></div><div class="fee-box"><p class="label">装置代</p><p class="omt-fee-price">330,000<small>円</small></p><dl><div><dt>期間</dt><dd><span class="nw">6か月</span>〜<span class="nw">1年</span><span class="nw">1か月</span></dd></div><div><dt>通院</dt><dd>4週に<span class="nw">1回</span>・<span class="nw">6〜14回</span></dd></div></dl><p>総額の目安<b><span class="nw">459,800〜503,800円</span></b></p></div></div>
-    </div>
-    <div class="price fadeInUp">
-      <h3>装置代以外の費用</h3>
-      <table>
-        <tr><th scope="row">初診相談</th><td><b><span class="nw">3,300円</span>／<span class="nw">60分</span></b>口腔内の確認と写真の撮影を行います。</td></tr>
-        <tr><th scope="row">精密検査・診断</th><td><b><span class="nw">44,000円</span>／<span class="nw">1回</span></b><span class="nw">パノラマ</span>X線写真・<span class="nw">セファロ</span>・口腔内写真の撮影と歯列の<span class="nw">スキャン</span>を行います。検査結果をもとに治療計画をご説明します。</td></tr>
-        <tr><th scope="row">調整料</th><td><b><span class="nw">5,500円</span>／<span class="nw">1回</span></b>装置をつけている間、通院のたびにいただきます。</td></tr>
-        <tr><th scope="row">保定装置</th><td><b><span class="nw">33,000円</span>／上下1組</b>装置を外したあとの後戻りを防ぐために装着していただきます。</td></tr>
-        <tr><th scope="row">保定中の通院</th><td><b><span class="nw">3,300円</span>／<span class="nw">1回</span></b>通院の間隔は<span class="nw">3〜6か月</span>です。</td></tr>
-      </table>
-      <p class="note">総額の目安は、初診相談から保定中の通院までにかかる費用の合計です（保定中の通院<span class="nw">5回</span>分を含みます）。保定中の通院の回数は経過によって異なります。抜歯の処置は連携歯科医院で行います。抜歯費用は総額の目安に含みません。1本あたり<span class="nw">5,500円</span>から<span class="nw">11,000円</span>が目安です。</p>
-      <p class="note">初診相談料・精密検査料は受診当日にいただきます。装置代・保定装置代の会計は装着の当日に行います。調整料は来院時にいただきます。保定中の通院費も同様です。現金・<span class="nw">クレジットカード</span>・<span class="nw">デンタルローン</span>をご利用いただけます。</p>
-      <p class="note">期間と通院回数は、<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>（表側と裏側<span class="nw">64名</span>／<span class="nw">マウスピース</span>型<span class="nw">31名</span>／部分矯正<span class="nw">17名</span>）の実績に基づく範囲です。<span class="nw">8割</span>の方が、この範囲で治療を終えました。治療の効果には個人差があります。記載の期間や回数を保証するものではありません。</p>
     </div>
     <div class="gallery">
       <figure class="fadeInUp"><img src="img/braces.jpg" alt="表側の装置をつけた歯" loading="lazy"><figcaption>表側の装置の写真は<span class="nw">イメージ</span>です。当院の症例を紹介するものではありません。</figcaption></figure>
@@ -471,15 +489,15 @@ h1,h2,h3{text-wrap:balance}
         <p>治療が進むにつれて、歯の位置は少しずつ変わっていきます。その変化を患者さんと一緒に確かめる時間を、この仕事でいちばん大切にしています。</p>
         <p>何年かあとに「始めてよかった」と思っていただけるよう、保定期間中も、通院のたびに歯並びの状態を記録し、装置を外したときの記録と見比べています。</p>
         <p class="name">院長<b>三好 文恵</b></p>
-        <dl class="doctor-history__list">
-          <div><dt><span class="nw">2008年3月</span></dt><dd>○○大学歯学部を卒業</dd></div>
-          <div><dt><span class="nw">2009年3月</span></dt><dd>○○大学病院で歯科医師臨床研修を修了</dd></div>
-          <div><dt><span class="nw">2009年4月</span></dt><dd>○○大学病院の矯正歯科に入局</dd></div>
-          <div><dt><span class="nw">2014年4月</span></dt><dd>広島市内の歯科医院に勤務</dd></div>
-          <div><dt><span class="nw">2019年5月</span></dt><dd>並木町矯正歯科を開院</dd></div>
-          <div><dt><span class="nw">2024年4月</span></dt><dd>日本歯科専門医機構認定　矯正歯科専門医の資格を取得</dd></div>
-        </dl>
       </div>
+      <dl class="doctor-history__list fadeInUp">
+        <div><dt><span class="nw">2008年3月</span></dt><dd>○○大学歯学部を卒業</dd></div>
+        <div><dt><span class="nw">2009年3月</span></dt><dd>○○大学病院で歯科医師臨床研修を修了</dd></div>
+        <div><dt><span class="nw">2009年4月</span></dt><dd>○○大学病院の矯正歯科に入局</dd></div>
+        <div><dt><span class="nw">2014年4月</span></dt><dd>広島市内の歯科医院に勤務</dd></div>
+        <div><dt><span class="nw">2019年5月</span></dt><dd>並木町矯正歯科を開院</dd></div>
+        <div><dt><span class="nw">2025年12月</span></dt><dd>日本歯科専門医機構認定　矯正歯科専門医の資格を取得</dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -488,15 +506,15 @@ h1,h2,h3{text-wrap:balance}
   <div class="container">
     <h2 class="headLine01"><span>FIRST VISIT</span>初診相談の流れ</h2>
     <ol class="omt-flow-cards">
-      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP1</b><h3><span class="nw">カウンセリング</span></h3><p>ご相談では、患者さんご自身が気になっていることや、費用・通院についてのご希望をお聞かせください。</p></li>
-      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP2</b><h3>口腔内の確認と写真の撮影</h3><p>お口の中を確認し、歯並びを正面と側面から撮影します。X線写真の撮影は精密検査の日に行います。</p></li>
-      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP3</b><h3>治療方法のご説明</h3><p>確認した歯並びをもとに、考えられる治療方法をご説明します。装置は、精密検査の結果を見てからお選びいただけます。</p></li>
-      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP4</b><h3>書面のお渡し</h3><p>総額・治療期間・通院回数の目安を記載した書面をお渡しします。抜歯が必要な場合の費用と、治療を中止した場合の精算と返金の方法も記載します。</p></li>
-      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP5</b><h3>ご自宅でのご検討</h3><p>書面を持ち帰ってご検討いただけます。精密検査の受診をご希望の場合はお電話でのご予約をお願いいたします。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP1</b><h3><span class="nw">カウンセリング</span></h3><p>ご自身が気になっていることや、費用と通院についてのご希望をお聞かせください。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP2</b><h3>口腔内の確認と写真の撮影</h3><p>口腔内を確認し、歯並びを正面と側面から撮影します。X線写真の撮影は精密検査の日に行います。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP3</b><h3>治療方法のご説明</h3><p>確認した歯並びをもとに、考えられる治療<span class="nw">方法</span>をご説明します。装置は、精密検査の結果を見てからお選びいただけます。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP4</b><h3>書面のお渡し</h3><p>総額・治療期間・通院回数それぞれの目安を記載した書面をお渡しします。抜歯が必要な場合の費用と、治療を中止した場合の精算と返金の<span class="nw">方法</span>も記載します。</p></li>
+      <li class="fadeInUp"><b class="omt-flow-dot-circle">STEP5</b><h3>ご自宅でのご検討</h3><p>治療<span class="nw">方法</span>や開始時期を当日に決める必要はありません。書面を持ち帰ってご検討いただけます。精密検査の受診をご希望の場合はお電話でのご予約をお願いいたします。</p></li>
     </ol>
     <div class="gallery">
+      <figure class="fadeInUp"><img src="img/reception.jpg" alt="窓際の待合室のいす" loading="lazy"><figcaption>ご来院の際は受付を済ませ、窓際の待合室でお待ちください。</figcaption></figure>
       <figure class="fadeInUp"><img src="img/cast.jpg" alt="口腔内スキャナーの画面で説明する歯科医師" loading="lazy"><figcaption>治療計画は、精密検査後にご説明します。</figcaption></figure>
-      <figure class="fadeInUp"><img src="img/reception.jpg" alt="窓際の待合のいす" loading="lazy"><figcaption>受付を済ませたあと、窓際の待合でお待ちいただきます。</figcaption></figure>
     </div>
   </div>
 </section>
@@ -509,18 +527,18 @@ h1,h2,h3{text-wrap:balance}
       <ul>
         <li><b>痛みと違和感</b><p>治療中に痛みや違和感が出る場合があります。症状やご希望に応じて痛み止めを処方します。</p></li>
         <li><b>虫歯と歯周病</b><p>治療中は、装置で歯が磨きにくくなり、虫歯や歯周病の<span class="nw">リスク</span>が高まります。</p></li>
-        <li><b>食事と発音</b><p>装置の使い始めは、発音や食事がしにくくなることがあります。慣れるまでの期間には個人差があります。裏側の装置は舌が触れやすい位置にあるため、滑舌が悪くなったと感じる可能性があります。</p></li>
+        <li><b>食事と発音</b><p>装置の使い始めは、発音や食事がしにくくなることがあります。慣れるまでの期間には個人差があります。裏側の装置を使う場合は、舌が装置に触れやすく、滑舌が悪くなったと感じることがあります。</p></li>
         <li><b>金属<span class="nw">アレルギー</span></b><p>治療中に金属<span class="nw">アレルギー</span>の症状が出る場合があります。</p></li>
         <li><b>誤飲</b><p>外れた<span class="nw">ブラケット</span>を誤って飲み込んでしまう可能性があります。</p></li>
-        <li><b>治療計画とのずれ</b><p>お口の中の状態によっては、治療計画どおりの結果が得られないことがあります。装置の使用状況、定期的な通院等、患者さんの協力が治療結果や治療期間に影響します。</p></li>
+        <li><b>治療計画とのずれ</b><p>口腔内の状態によっては、治療計画どおりの結果が得られないことがあります。装置の使用状況や定期的な通院など、患者さんのご協力が治療結果や治療期間に影響します。</p></li>
       </ul>
     </div>
     <div class="fadeInUp">
       <h3>歯・歯ぐき・顎に関する<span class="nw">リスク</span></h3>
       <ul>
         <li><b>歯根吸収</b><p>歯を動かすことにより歯根が吸収して短くなることがあります。</p></li>
-        <li><b>歯肉退縮</b><p>歯を移動させた際に、ブラックトライアングル（歯と歯の間の三角形の隙間）や歯肉退縮が起こることがあります。</p></li>
-        <li><b>歯髄壊死</b><p>ごくまれに、歯の移動中に神経が障害を受けて壊死する場合があります。</p></li>
+        <li><b>歯肉退縮</b><p>歯を動かすことにより歯ぐきが下がること（歯肉退縮）があります。歯と歯の間に三角形の隙間（ブラックトライアングル）ができることもあります。</p></li>
+        <li><b>歯髄壊死</b><p>ごくまれに、歯を動かすことにより神経が障害を受けて壊死する場合があります。</p></li>
         <li><b>骨性癒着</b><p>ごくまれに、歯が骨と癒着していて動かないことがあります。</p></li>
         <li><b>顎関節症</b><p>治療中、顎関節症の症状が出ることがあります。</p></li>
         <li><b>歯やかぶせ物の損傷</b><p>装置を外すときに、歯の表面に小さな亀裂が入ったり、かぶせ物の一部が破損したりする可能性があります。</p></li>
@@ -529,7 +547,7 @@ h1,h2,h3{text-wrap:balance}
     <div class="fadeInUp">
       <h3>治療後の<span class="nw">リスク</span></h3>
       <ul>
-        <li><b>後戻り</b><p>矯正治療終了後、保定装置を指示どおりに装着していただけない場合、後戻りが起こることがあります。保定の期間は<span class="nw">2年</span>程度が目安です。</p></li>
+        <li><b>後戻り</b><p>矯正治療終了後、指示どおりに保定装置をつけていただけない場合、<span class="nw">後戻り</span>が起こることがあります。保定期間は<span class="nw">2年</span>程度が目安です。</p></li>
         <li><b>歯並びと噛み合わせの変化</b><p>治療後に、親知らずの影響で歯並びや噛み合わせが変化する可能性があります。顎の成長が残っている方は、成長に伴って噛み合わせが変わる場合があります。</p></li>
         <li><b>元に戻せないこと</b><p>歯を動かし、場合によっては抜歯も行うため、治療前の状態に戻すことはできません。</p></li>
       </ul>
@@ -537,11 +555,11 @@ h1,h2,h3{text-wrap:balance}
     <div class="fadeInUp" id="pmda">
       <h3>マウスピース型の装置について</h3>
       <ul>
-        <li><b>未承認の医療機器であること</b><p>当院で使用する<span class="nw">マウスピース</span>型矯正装置は、医薬品医療機器等法（薬機法）の承認を得ていない医療機器です。</p></li>
-        <li><b>入手の経路</b><p>製造元より、個人輸入で入手しています。当院の歯科医師が輸入確認証を取得しています。個人輸入の注意点については、以下の<span class="nw">ページ</span>をご覧ください。<br>厚生労働省「<a href="https://www.yakubutsu.mhlw.go.jp/individualimport/healthhazard/">個人輸入において注意すべき医薬品等について</a>」</p></li>
-        <li><b>国内の承認品</b><p>国内にも、<span class="nw">マウスピース</span>型矯正装置として医薬品医療機器等法（薬機法）の承認を得ているものがあります（独立行政法人医薬品医療機器総合機構の<span class="nw">ウェブサイト</span>で<span class="nw">2026年8月</span>に確認）。ご希望があれば、国内で承認された装置を使う場合の費用と期間もお伝えします。</p></li>
-        <li><b>国外の承認と安全性</b><p>製造元が公表する添付文書と安全性情報（<span class="nw">2026年8月</span>確認）によると、本装置は欧州で<span class="nw">2018年3月</span>にCE<span class="nw">マーク</span>を取得し、米国で<span class="nw">2019年6月</span>に医療機器として販売認可を受けています。添付文書には、重大な副作用として装置の誤飲と材料に対する過敏症が挙げられています。国外で報告された主な副作用は、歯ぐきの痛みと口内炎です。</p></li>
-        <li><b>救済制度の対象外</b><p>本装置による健康被害は、医薬品副作用被害救済制度・生物由来製品感染等被害救済制度の対象外です。</p></li>
+        <li><b>未承認の医療機器であること</b><p>当院で使用する<span class="nw">マウスピース</span>型の装置は、医薬品医療機器等法（薬機法）の承認を得ていない医療機器です。</p></li>
+        <li><b>入手経路</b><p>当院の歯科医師が製造元から個人輸入し、輸入確認証を取得しています。個人輸入の注意点<span class="nw">について</span>は、以下の<span class="nw">ページ</span>をご覧ください。<br>厚生労働省「<a href="https://www.yakubutsu.mhlw.go.jp/individualimport/health_damage/overseas_report/index.html">個人輸入において注意すべき医薬品等について</a>」</p></li>
+        <li><b>国内の承認品</b><p>国内にも、<span class="nw">マウスピース</span>型の装置として薬機法の承認を得ているものがあります（独立行政法人医薬品医療機器総合機構の<span class="nw">ウェブサイト</span>で<span class="nw">2026年8月</span>に確認）。ご希望があれば、国内で承認された装置を使う場合の費用と期間もお伝えします。</p></li>
+        <li><b>国外の承認と安全性</b><p>製造元が公表する添付文書と安全性情報（<span class="nw">2026年8月</span>確認）によると、この装置は欧州で<span class="nw">2018年3月</span>にCE<span class="nw">マーク</span>を取得し、米国で<span class="nw">2019年6月</span>に医療機器として販売認可を受けています。添付文書には、重大な副作用<span class="nw">として</span>装置の誤飲と材料に対する過敏症が挙げられています。国外で報告された主な副作用は、歯ぐきの痛みと口内炎です。</p></li>
+        <li><b>救済制度の対象外</b><p>この装置による健康被害は、医薬品副作用被害救済制度・生物由来製品感染等被害救済制度の対象外です。</p></li>
       </ul>
     </div>
   </div>
@@ -551,14 +569,14 @@ h1,h2,h3{text-wrap:balance}
   <div class="container">
     <h2 class="headLine01"><span>FAQ</span>よくある質問</h2>
     <div class="TopFaq__list">
-      <details class="TopFaq__list__item fadeInUp" id="faq-age"><summary class="TopFaq__list__q">矯正治療は何歳まで可能ですか？</summary><p class="TopFaq__list__a">矯正治療に年齢制限はありません。<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>のうち、<span class="nw">40歳</span>以上の方は<span class="nw">29名</span>です。歯ぐきと歯を支える骨の状態を精密検査で確認したうえで、治療方法をご提案します。</p></details>
-      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">治療を中止した場合、治療費の精算はどうなりますか？</summary><p class="TopFaq__list__a">装置をつける前であれば、それまでに受けた初診相談と精密検査の費用のほかはいただきません。装置をつけたあとに中止する場合は、お支払いいただいた装置代を治療の進行状態に応じて精算し、まだ行っていない治療の費用をお返しします。精算と返金の方法は、初診相談の書面に記載されています。</p></details>
-      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正治療中に引っ越した場合、治療は続けられますか？</summary><p class="TopFaq__list__a">転居先の矯正歯科をご紹介します。また、紹介状を書いたり、これまでの検査記録を送付したりして、紹介先の医院で治療を続けられるように手続きを行います。装置代は、中止した場合と同じ方法で精算します。</p></details>
+      <details class="TopFaq__list__item fadeInUp" id="faq-age"><summary class="TopFaq__list__q">矯正治療は何歳まで可能ですか？</summary><p class="TopFaq__list__a">矯正治療に年齢制限はありません。<span class="nw">2023年</span>から<span class="nw">2025年</span>に当院で治療を終えた<span class="nw">112名</span>のうち、<span class="nw">40歳</span>以上の方は<span class="nw">29名</span>です。歯を支える骨と歯ぐきの状態を精密検査で確認したうえで、治療<span class="nw">方法</span>をご提案します。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">治療を中止した場合、費用の精算はどうなりますか？</summary><p class="TopFaq__list__a">装置をつける前であれば、初診相談料と精密検査・診断料だけをいただきます。装置をつけたあとに中止する場合は、お支払いいただいた装置代を治療の進行状況に応じて精算し、まだ行っていない治療の費用をお返しします。精算と返金の<span class="nw">方法</span>は、初診相談の書面に記載されています。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正治療中に引っ越した場合、治療は続けられますか？</summary><p class="TopFaq__list__a">続けられます。転居先の矯正歯科をご紹介します。また、紹介状を書いたり、これまでの検査記録を送付したりして、紹介先の医院が治療を引き継げるように手続きを行います。装置代は、中止した場合と同じ<span class="nw">方法</span>で精算します。</p></details>
       <details class="TopFaq__list__item fadeInUp" id="faq-extraction"><summary class="TopFaq__list__q">抜歯は必要ですか？</summary><p class="TopFaq__list__a">歯並びや顎の状態によっては、歯を並べる<span class="nw">スペース</span>を確保するために抜歯が必要な<span class="nw">ケース</span>があります。精密検査では、歯の大きさと顎の幅を測定します。抜歯の有無は、精密検査の結果をもとに判断します。<span class="nw">2023年</span>から<span class="nw">2025年</span>に治療を終えた<span class="nw">112名</span>のうち、抜歯をした方は<span class="nw">38名</span>です。</p></details>
-      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正の費用は、医療費控除の対象になりますか？</summary><p class="TopFaq__list__a">年齢や目的からみて必要と認められる矯正の費用は、医療費控除の対象になります。美容目的の矯正は対象外です。<span class="nw">デンタルローン</span>でお支払いの場合は、信販会社が立替払をした金額が、その立替払をした年の医療費控除の対象になります（国税庁<span class="nw">タックスアンサー</span>No.1128、<span class="nw">2026年4月1日</span>現在の法令による）。ただし、金利、手数料は医療費控除の対象にはなりませんのでご注意ください。控除の対象になるかどうかの最終判断は税務署が行います。</p></details>
-      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">分割払いはできますか？</summary><p class="TopFaq__list__a">提携の<span class="nw">デンタルローン</span>をご利用いただけます。分割回数は<span class="nw">最大60回</span>、実質年率は<span class="nw">4.5%</span>です。ご利用には信販会社の審査があります。たとえば表側の装置代<span class="nw">770,000円</span>を<span class="nw">60回</span>でお支払いの場合、月々<span class="nw">14,356円</span>、支払総額は<span class="nw">861,360円</span>（うち手数料<span class="nw">91,360円</span>）です。手数料と遅延損害金の率は、信販会社の契約書面に記載されています。</p></details>
-      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正中の食事に制限はありますか？</summary><p class="TopFaq__list__a"><span class="nw">ブラケット</span>を付けている間は、硬いもの（せんべい、<span class="nw">ナッツ</span>類など）や装置にからみやすいもの（<span class="nw">キャラメル</span>、ガムなど）は、できるだけ避けてください。<span class="nw">マウスピース</span>型の場合は、装置を外して食事していただきます。食後は歯を磨いてから、装置をつけ直していただきます。</p></details>
-      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">装置が外れたときはどうしたらいいですか？</summary><p class="TopFaq__list__a">診療時間内にお電話ください。状況を確認して、ご来院の日時をご案内します。外れた装置は、捨てずにお持ちください。痛みが強い場合は急患としてその日のうちに診察します。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正の費用は、医療費控除の対象になりますか？</summary><p class="TopFaq__list__a">年齢や目的からみて必要と認められる矯正の費用は、医療費控除の対象になります。美容目的の矯正は対象外です。<span class="nw">デンタルローン</span>でお支払いの場合は、信販会社が立替払をした金額が、その立替払をした年の医療費控除の対象になります（国税庁<span class="nw">タックスアンサー</span>No.1128、<span class="nw">2026年4月1日</span>現在の法令による）。ただし、金利と手数料は対象外です。控除の対象になるかどうかの最終判断は税務署が行います。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">分割払いはできますか？</summary><p class="TopFaq__list__a">提携の<span class="nw">デンタルローン</span>をご利用いただけます。分割回数は<span class="nw">最大60回</span>、実質年率は<span class="nw">4.5%</span>です。ご利用には信販会社の審査があります。<span class="nw">たとえば</span>表側の装置代<span class="nw">770,000円</span>を<span class="nw">60回</span>でお支払いの場合、月々<span class="nw">14,356円</span>、支払総額は<span class="nw">861,360円</span>（うち手数料<span class="nw">91,360円</span>）です。手数料の額と遅延損害金の率は、信販会社の契約書面に記載されています。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">矯正中の食事に制限はありますか？</summary><p class="TopFaq__list__a"><span class="nw">ブラケット</span>をつけている間は、硬いもの（せんべい、<span class="nw">ナッツ</span>類など）や装置にからみやすいもの（<span class="nw">キャラメル</span>、ガムなど）をできるだけ避けてください。<span class="nw">マウスピース</span>型の場合は、装置を外して食事していただきます。食後は歯を磨いてから、装置をつけ直していただきます。</p></details>
+      <details class="TopFaq__list__item fadeInUp"><summary class="TopFaq__list__q">装置が外れたときはどうしたらいいですか？</summary><p class="TopFaq__list__a">診療時間内にお電話ください。状況を確認して、ご来院の日時をご案内します。外れた装置は、捨てずにお持ちください。痛みが強い場合は急患<span class="nw">として</span>その日のうちに診察します。</p></details>
     </div>
   </div>
 </section>
@@ -570,8 +588,8 @@ h1,h2,h3{text-wrap:balance}
       <figure class="fadeInUp"><img src="img/entrance.jpg" alt="金属枠のガラス張りの入口" loading="lazy"><figcaption><span class="nw">ガラス</span>戸が入口です。</figcaption></figure>
       <dl class="fadeInUp">
         <div><dt>所在地</dt><dd>広島市中区○○町0-0-0 ○○ビル1階（架空の住所です）</dd></div>
-        <div><dt>路面電車</dt><dd>広島電鉄・袋町電停から徒歩<span class="nw">6分</span>。当院の向かいは薬局です。</dd></div>
-        <div><dt>駐車場</dt><dd>○○<span class="nw">パーキング</span>ご利用の患者さんには、<span class="nw">1時間</span>無料券をお渡しします。</dd></div>
+        <div><dt>路面電車</dt><dd>広島電鉄・袋町電停から<span class="nw">徒歩6分</span>。当院の向かいは薬局です。</dd></div>
+        <div><dt>駐車場</dt><dd>○○<span class="nw">パーキング</span>ご利用の患者さんには、<span class="nw">1時間無料券</span>をお渡しします。</dd></div>
         <div><dt>設備</dt><dd>診療台<span class="nw">3台</span>・<span class="nw">パノラマ</span>・<span class="nw">セファロ</span>撮影装置・口腔内<span class="nw">スキャナー</span></dd></div>
         <div><dt>お電話</dt><dd>082-000-0000（診療時間内）</dd></div>
       </dl>
@@ -586,27 +604,27 @@ h1,h2,h3{text-wrap:balance}
       <form class="flex-col fadeInUp" id="reserve-form">
         <label for="r-name">お名前</label>
         <input id="r-name" type="text" autocomplete="name" required>
-        <label for="r-contact">ご連絡先（メールアドレス・お電話番号）</label>
+        <label for="r-contact">ご連絡先（メールアドレスまたはお電話番号）</label>
         <input id="r-contact" type="text" required>
         <label for="r-date">ご希望の日</label>
         <input id="r-date" type="date">
+        <p class="text-muted">木曜・日曜・祝日は休診です。</p>
         <fieldset>
           <legend>ご希望の時間帯</legend>
           <div>
-            <label><input type="radio" name="slot" checked>月・火・水・金の午前</label>
-            <label><input type="radio" name="slot">月・火・水・金の午後（17時まで）</label>
-            <label><input type="radio" name="slot">月・火・水・金の夕方（17時から）</label>
-            <label><input type="radio" name="slot">土曜（午前・午後）</label>
+            <label><input type="radio" name="slot" checked>午前</label>
+            <label><input type="radio" name="slot">午後（17時まで）</label>
+            <label><input type="radio" name="slot">夕方（17時から。土曜を除く）</label>
           </div>
         </fieldset>
         <label for="r-note">ご相談内容（任意）</label>
         <textarea id="r-note"></textarea>
         <button class="comBtn" type="submit">申し込む</button>
-        <p class="text-muted">木曜・日曜・祝日は休診です。調整の上、当院より確定日時をご連絡します。日時の変更・取り消しをご希望の場合はお電話でのご連絡をお願いいたします。この<span class="nw">ページ</span>は見本です。実際のお申し込みはできません。</p>
-        <p class="text-muted">お名前・ご連絡先・ご相談内容は、初診相談のお申し込み確認・ご連絡以外には使用いたしません。ご本人の同意なく第三者へ提供することはありません。ご記入いただいた内容の確認・訂正・削除のご希望は、お電話（082-000-0000）で承ります。</p>
+        <p class="text-muted">調整のうえ、当院より確定日時をご連絡します。日時の変更・取り消しをご希望の場合はお電話でのご連絡をお願いいたします。この<span class="nw">ページ</span>は見本です。実際のお申し込みはできません。</p>
+        <p class="text-muted">お名前・ご連絡先・ご相談内容は、お申し込みの確認とそのご連絡のほかには使用いたしません。ご本人の同意なく第三者へ提供することはありません。ご記入いただいた内容の確認・訂正・削除のご希望は、お電話（082-000-0000）で承ります。</p>
       </form>
       <div class="flex-col fadeInUp">
-        <p>お電話でのご予約・ご相談</p>
+        <p>お電話でのお申し込み・ご相談</p>
         <b><a href="tel:0820000000">082-000-0000</a></b>
         <p>診療時間内にお電話ください。</p>
       </div>
@@ -628,11 +646,11 @@ h1,h2,h3{text-wrap:balance}
       <a href="#faq">よくある質問</a>
     </nav>
   </div>
-  <p class="notes">並木町矯正歯科は、架空の歯科医院です。この<span class="nw">ページ</span>は医院向けLP制作の見本です。院長名・数字・住所・電話番号はすべて架空です。写真は実写の素材です。出典は<a href="img/CREDITS.md">一覧</a>をご覧ください。制作：常夜燈</p>
+  <p class="notes">並木町矯正歯科は、架空の歯科医院です。この<span class="nw">ページ</span>は医院向けLP制作の見本です。院長名・数字・住所・電話番号はすべて架空です。写真は実写の素材です。出典は<a href="img/credits.html">一覧</a>に記載しています。制作：常夜燈</p>
   <p class="omt-footer-copy">© Namikicho Orthodontic Clinic</p>
 </footer>
 
-<div class="Fix__TabBar"><a href="tel:0820000000">お電話でのご予約</a><a href="#reserve">初診相談のお申し込み</a></div>
+<div class="Fix__TabBar"><a href="tel:0820000000">お電話でのお申し込み</a><a href="#reserve">初診相談のお申し込み</a></div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
@@ -650,8 +668,10 @@ h1,h2,h3{text-wrap:balance}
   document.getElementById('reserve-form').addEventListener('submit',function(e){
     e.preventDefault();
     this.innerHTML='<p>お申し込みを受け付けました。空き状況を確認のうえ、ご連絡します。（見本のため送信されていません）</p>';
+    /* フォームが縮むと画面が下端へ押され、受付の文が固定ヘッダーの裏に隠れる */
+    this.scrollIntoView();
   });
-  /* 読み込み先から jQuery が届かない時に、現れる部品41個が透明のまま残らないようにする */
+  /* 読み込み先から jQuery が届かない時に、現れる部品が透明のまま残らないようにする */
   if(!window.jQuery)document.querySelectorAll('.fadeInUp').forEach(function(e){e.classList.add('on');});
 })();
 window.jQuery&&$(function(){

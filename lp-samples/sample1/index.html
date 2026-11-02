@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="古民家 穂ノ家">
 <meta property="og:title" content="【公式】古民家 穂ノ家｜信州上田の一日一組限定 一棟貸しの宿">
-<meta property="og:description" content="築80年の茅葺き民家を一日一組限定、一棟貸切でご利用いただけます。囲炉裏端の夕食と檜風呂、上田駅から無料送迎。">
+<meta property="og:description" content="築80年の茅葺き民家を一日一組限定、一棟貸しでご利用いただけます。囲炉裏端の夕食と檜風呂、上田駅から無料送迎。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/solid/house.svg" type="image/svg+xml">
 <script type="application/ld+json">
@@ -26,27 +26,26 @@
 .slick-initialized .slick-slide{display:block}
 .slick-arrow.slick-hidden{display:none}
 
-/* 本文は游明朝16px・行間1.8、節の題は28px・太さ400、節の上下は50px、外枠は1150px、
-   ボタンは幅228px・高さ47px・角丸なし。地は和紙、差し色は弁柄。
-   本文の段は510px（宿泊プランの札の中身と同じ幅）。 */
 :root{
   --ink:#1f1b18;--text:#2b2724;--mute:#6d665e;--line:rgba(31,27,24,.14);
-  --washi:#efece6;--paper:#fff;--bengara:#8b3a32;--bengara-d:#6d2c26;--stone:#8f8a80;
+  --washi:#efece6;--paper:#fff;--bengara:#8b3a32;
   --night:rgba(22,19,17,.88);--foot:#2a2725;
   --mincho:"游明朝",YuMincho,"Yu Mincho","ヒラギノ明朝 ProN","Hiragino Mincho ProN","HGS明朝E","MS P明朝",serif;
 }
 *,::before,::after{box-sizing:border-box}
 html{scroll-padding-top:62px}
 body{margin:0;font-family:var(--mincho);font-size:16px;line-height:1.8;color:var(--text);background:var(--paper);
-  -webkit-font-smoothing:antialiased;font-feature-settings:"palt";letter-spacing:.02em}
+  -webkit-font-smoothing:antialiased;letter-spacing:.02em}
+/* palt は見出しとボタンだけ。本文に掛けると句点のあとが詰まり、文の切れ目が見えにくかった */
+h1,h2,h3,.section-tit__subtit,.bttn,button,.desktop-header a,.reserve,.sp-fixed a{font-feature-settings:"palt"}
 img{max-width:100%;height:auto;vertical-align:middle}
 a{color:inherit}
 h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}
 ul,ol{padding:0;list-style:none}
 .wrapper{max-width:1190px;margin:0 auto;padding:0 20px}
-.container--bg,.simple-textbox,.pm-searchbar{background:var(--washi) url(img/washi.jpg) 0 0/640px auto repeat}
+/* 縮めて敷くと同じ繊維の形が並び、節の両脇で左右対称に見えた。等倍で敷き、繊維が文字の下を横切らないよう白の膜で弱める */
+.container--bg,.simple-textbox,.pm-searchbar{background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),var(--washi) url(img/washi.jpg) 0 0/1280px auto repeat}
 
-/* 見出しの飾り。節の頭に細い罫と菱を置く */
 .separator{display:flex;align-items:center;gap:12px;margin:0 0 24px;color:var(--bengara);font-size:24px;line-height:40px;letter-spacing:0}
 .separator::before,.separator::after{content:"";flex:1;border-top:1px solid var(--line)}
 .container{padding:50px 0}
@@ -63,67 +62,64 @@ ul,ol{padding:0;list-style:none}
 .bttn:hover{background:#fff;color:var(--bengara)}
 .bttn--maroon-ghost{background:#fff;color:var(--bengara)}
 .bttn--maroon-ghost:hover{background:var(--bengara);color:#fff}
-.bttn--grey{background:var(--stone);border-color:var(--stone)}
 .bttn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--bengara);outline-offset:3px}
 
-/* メインビジュアル。写真を切り替え、屋号を中央に白抜きで置く。slick のフェードは表示中の写真に z-index:999 を付けるので、屋号と矢印はその上に置く。
+/* slick のフェードは表示中の写真に z-index:999 を付けるので、屋号と矢印はその上に置く。
    z-index:0 でその重なりをメインビジュアルの中に閉じる。閉じないと、スマホの固定のメニューボタンが写真の下に隠れて押せなかった */
 .hero{position:relative;z-index:0;height:93vh;min-height:560px;max-height:900px;background:#241a12;overflow:hidden}
 .hero__slider,.hero__slider .slick-list,.hero__slider .slick-track,.hero__slide{height:100%}
 .hero__slide img{width:100%;height:100%;object-fit:cover}
 .hero__slide:not(:first-child){display:none}
 .slick-initialized .hero__slide{display:block}
-/* 屋号の帯は左上の隅に小さく置く。中央や幅500pxでは1枚目の茅葺き屋根の裾を、左下では母屋の左端の軒と壁を覆っていた */
+/* 屋号の帯は左上の隅に小さく置く。中央や幅500pxでは1枚目の茅葺き屋根の裾を、左下では母屋の左端の軒と壁を覆っていた。
+   黒を薄くすると、葉の明るい所で1行目の文字がまだらに見えた */
 .hero__title{position:absolute;z-index:1000;left:28px;top:28px;width:min(92%,380px);
-  padding:16px 22px 18px;background:rgba(20,17,14,.52);text-align:center}
+  padding:16px 16px 18px;background:rgba(20,17,14,.62);text-align:center}
 .hero__title h1{color:#fff;font-weight:600;font-size:32px;line-height:1.3;letter-spacing:.16em;white-space:nowrap}
 .hero__title>p:first-child{color:#fff;font-size:14px;letter-spacing:.2em;margin-bottom:6px}
 .hero__title h1 span{display:block;font-size:13px;letter-spacing:.42em;margin-top:6px;font-weight:400}
-.hero__title .price{margin-top:8px;color:#fff;font-size:15px;letter-spacing:.06em}
+.hero__title .price{margin-top:8px;color:#fff;font-size:15px;letter-spacing:.02em}
 .hero__title .price b{font-size:26px;font-weight:600;letter-spacing:.04em;margin:0 .15em}
 .hero__title .bttn{margin-top:10px}
-.hero .slick-dots{position:absolute;z-index:1001;left:0;right:0;bottom:22px;display:flex;justify-content:center;gap:12px}
-.hero .slick-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.5);font-size:0;cursor:pointer}
-.hero .slick-dots .slick-active button{background:#fff}
+.slick-dots{position:absolute;z-index:1;left:0;right:0;bottom:4px;display:flex;justify-content:center}
+.hero .slick-dots{z-index:1001}
+/* 見える点より押せる範囲を広くする。明るい草の上でも見えるよう縁を付ける */
+.slick-dots button{position:relative;width:28px;height:44px;padding:0;border:0;background:none;font-size:0;cursor:pointer}
+.slick-dots button::before{content:"";position:absolute;left:9px;top:17px;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(20,17,14,.5)}
+.slick-dots .slick-active button::before{background:#fff}
 .slick-arrow{position:absolute;top:50%;z-index:1001;width:44px;height:44px;margin-top:-22px;border:0;background:none;font-size:0;cursor:pointer}
 .slick-arrow::before{content:"";position:absolute;left:14px;top:12px;width:16px;height:16px;border-top:2px solid #fff;border-left:2px solid #fff;transform:rotate(-45deg)}
 .slick-prev{left:20px}
 .slick-next{right:20px}
 .slick-next::before{left:10px;transform:rotate(135deg)}
 
-/* メインビジュアルの下に貼り付くナビ。スクロールすると上端で止まる */
 .desktop-header{position:sticky;top:0;z-index:20;background:var(--night)}
 .desktop-header ul{display:flex;justify-content:center;flex-wrap:wrap;max-width:1190px;margin:0 auto}
 .desktop-header a{display:block;padding:19px 13px;color:#fff;font-size:14px;letter-spacing:.08em;text-decoration:none}
 .desktop-header a:hover{opacity:.7}
 .desktop-header .gnavi-bottom__reserve{background:var(--bengara)}
 
-/* 空室の問い合わせ帯 */
 .pm-searchbar{padding:26px 0}
 .pm-searchbar .wrapper{display:flex;align-items:center;gap:28px}
 .pm-form{display:flex;align-items:flex-end;gap:18px;flex:1}
 .pm-form label{display:block;font-size:14px;margin-bottom:4px;color:var(--ink)}
-.pm-form input,.pm-form select{height:40px;padding:0 10px;border:1px solid #bfb8ad;background:#fff;font:inherit;font-size:15px}
+/* iPhone の Safari は16px未満の入力欄に触れると画面を拡大する */
+.pm-form input,.pm-form select{height:44px;padding:0 10px;border:1px solid #bfb8ad;background:#fff;font:inherit;font-size:16px}
 .pm-form .bttn{height:58px;min-width:232px}
 .pm-form__bttnbox{display:flex;flex-direction:column;gap:6px}
-.pm-form__bttnbox a{display:block;width:170px;padding:5px 0;border:1px solid #bfb8ad;background:#fff;font-size:12px;text-align:center;text-decoration:none}
-.pm-searchbar .contact{padding-left:28px;border-left:1px solid #bfb8ad;font-size:13px;line-height:1.6}
+.pm-form__bttnbox a{display:block;width:170px;padding:5px 0;border:1px solid #bfb8ad;background:#fff;font-size:14px;line-height:1.6;text-align:center;text-decoration:none}
+.pm-searchbar .contact{padding-left:28px;border-left:1px solid #bfb8ad;font-size:14px;line-height:1.6}
 .pm-searchbar .contact__tel{display:block;font-size:26px;font-weight:600;letter-spacing:.06em;color:var(--ink)}
 .pm-searchbar .contact a{text-decoration:none}
 
-/* 宿のはじめの一枚。写真を左、和紙の地の文を右に */
 ._intro{display:grid;grid-template-columns:58% 1fr;align-items:stretch;margin-top:48px}
 ._intro>*{min-width:0}
-._intro__slider .slick-dots{display:flex;justify-content:center;gap:10px;padding-top:14px}
-._intro__slider .slick-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#c8c2b8;font-size:0;cursor:pointer}
-._intro__slider .slick-dots .slick-active button{background:var(--ink)}
-._intro__slide img{width:100%;aspect-ratio:3/2;object-fit:cover}
-._intro__cont{display:flex;flex-direction:column;justify-content:center;padding:44px 48px 44px 44px}
-._intro__cont h3{font-size:20px;font-weight:600;color:var(--ink);margin-bottom:22px}
-._intro__cont p{font-size:15px}
+/* 3:2 だと写真の下の点の分だけ下端がずれ、箱の文の上下にも大きく空きが残っていた */
+._intro__slide img{width:100%;aspect-ratio:16/9;object-fit:cover}
+._intro__cont{display:flex;flex-direction:column;justify-content:center;padding:36px 48px 36px 44px}
+._intro__cont h3{font-size:20px;font-weight:600;color:var(--ink);margin-bottom:18px}
 ._intro__cont p+p{margin-top:1em}
 
-/* 4つの魅力。写真と文の箱を左右に振って重ねる */
 .home-charm{padding:50px 0 24px}
 .home-charm__sec{position:relative;display:flex;align-items:center;margin-bottom:64px}
 .home-charm__sec:last-child{margin-bottom:0}
@@ -134,41 +130,37 @@ ul,ol{padding:0;list-style:none}
 .home-charm__sec:nth-child(even) .home-charm__main{margin-left:0;margin-right:-6%}
 .home-charm__num{display:block;font-size:44px;line-height:1;color:var(--bengara);font-weight:400;margin-bottom:10px;letter-spacing:.04em}
 .home-charm__main h3{font-size:22px;font-weight:600;color:var(--ink);margin-bottom:14px;line-height:1.5}
-.home-charm__main p{font-size:15px}
 
-/* お料理と館内。和紙の札に小見出しと大きな題 */
 /* 札は写真と同じ高さにして上端を揃える。札を写真の中ほどに浮かせると、上下に空白が残っていた */
 .gallery-container{display:grid;grid-template-columns:36% 1fr;gap:0;align-items:start}
 .gallery-container .simple-textbox{display:flex;flex-direction:column;justify-content:center;aspect-ratio:1/1;padding:40px}
 .multiitem{position:relative}
 .multiitem img{width:100%;aspect-ratio:16/9;object-fit:cover}
-/* 札は写真の下へずらし、写真の下端に少しだけ掛ける。写真の中ほどに重ねると炭火を覆っていた */
-.multiitem__cont{position:relative;margin:-28px 40px 0 -40px;padding:22px 26px;background:rgba(255,255,255,.95);outline:1px solid var(--line);outline-offset:-6px}
-.multiitem__cont h3{font-size:17px;font-weight:600;color:var(--ink);padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid var(--line)}
-.multiitem__cont p{font-size:14px}
+/* 札は写真の下へずらし、写真の下端に少しだけ掛ける。写真の中ほどに重ねると炭火を覆っていた。
+   幅は文に合わせる。内幅いっぱいに取ると、1行の文の右半分が空いていた */
+.multiitem__cont{position:relative;width:fit-content;max-width:100%;margin:-28px 0 0 -40px;padding:22px 26px;background:rgba(255,255,255,.95);outline:1px solid var(--line);outline-offset:-6px}
+.multiitem__cont h3{font-size:18px;font-weight:600;color:var(--ink);padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid var(--line)}
 .pic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
 .pic-grid figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.pic-grid figcaption{font-size:14px;margin-top:10px;line-height:1.7}
-.pic-grid figcaption b{display:block;font-size:15px;color:var(--ink);font-weight:600}
-.note{max-width:760px;margin:52px auto 0;padding:22px 30px;border:1px solid var(--line);font-size:14px;text-align:center}
+.pic-grid figcaption{margin-top:10px;line-height:1.7}
+.pic-grid figcaption b{display:block;color:var(--ink);font-weight:600}
+.note{max-width:760px;margin:52px auto 0;padding:22px 30px;border:1px solid var(--line);font-size:15px}
 
-/* 一覧は写真より短いので、写真の高さの中ほどに置く。上端で揃えると一覧の下に空きが残っていた */
-.facility01{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:56px;align-items:center}
+/* 一覧の行を写真の高さまで広げる。中ほどに浮かせると、上端がそろわず上下に空きが残っていた */
+.facility01{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:56px;align-items:stretch}
 .facility02 img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.facility02 figcaption{font-size:14px;margin-top:8px}
-.facility02 figcaption b{display:block;font-size:15px;color:var(--ink);font-weight:600}
-dl.facility02{border-top:1px solid var(--line);font-size:14px}
-.facility02 div{display:grid;grid-template-columns:140px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+.facility02 figcaption{margin-top:8px}
+.facility02 figcaption b{display:block;color:var(--ink);font-weight:600}
+dl.facility02{display:grid;grid-auto-rows:1fr;border-top:1px solid var(--line)}
+.facility02 div{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
 .facility02 dt{color:var(--ink);font-weight:600}
 
-/* 過ごし方 */
 .win-slide__wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:44px;background:#fff;box-shadow:0 0 0 1px var(--line)}
 .win-slide__wrap img{width:100%;height:100%;object-fit:cover;min-height:360px}
 .win-slide__cont{padding:36px 40px}
-.win-slide__cont li{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:10px 0;border-bottom:1px dotted #c9c2b7;font-size:14px}
+.win-slide__cont li{display:grid;grid-template-columns:68px 1fr;gap:12px;padding:10px 0;border-bottom:1px dotted #c9c2b7}
 .win-slide__cont time{color:var(--bengara);font-weight:600}
 
-/* 宿泊プラン。札の中身が510pxになる幅と重なり */
 .ghj-yado{display:flex;align-items:center;max-width:1000px;margin:0 auto 48px}
 .ghj-yado:nth-child(even){flex-direction:row-reverse}
 .ghj-yado__img{width:40%}
@@ -176,103 +168,108 @@ dl.facility02{border-top:1px solid var(--line);font-size:14px}
 .ghj-yado__content{width:65%;margin-top:60px;padding:30px 50px;background:#fff;position:relative}
 @media (min-width:768px){
   .ghj-yado:nth-child(odd) .ghj-yado__img{margin-right:-5%}
-  .ghj-yado:nth-child(odd) .ghj-yado__content{padding-left:calc(5% + 40px)}
   .ghj-yado:nth-child(even) .ghj-yado__img{margin-left:-5%}
-  .ghj-yado:nth-child(even) .ghj-yado__content{padding-right:calc(5% + 40px)}
 }
-.ghj-yado__content h3{font-size:17px;font-weight:600;color:var(--bengara);line-height:1.6;margin-bottom:12px}
-.ghj-yado__content p:not([class]){font-size:14px}
+.ghj-yado__content h3{font-size:18px;font-weight:600;color:var(--bengara);line-height:1.6;margin-bottom:12px}
 .ghj-yado__price{text-align:right;color:var(--bengara);font-size:22px;margin-top:10px}
 .ghj-yado__price small{font-size:13px;color:var(--text);margin-left:.4em}
 ._plan-arch-links{display:flex;justify-content:center;gap:16px;margin:10px 0 56px}
-.table{width:100%;max-width:640px;margin:0 auto;border-collapse:collapse;background:#fff;font-size:14px;text-align:center;font-variant-numeric:tabular-nums}
+.table{width:100%;max-width:640px;margin:0 auto;border-collapse:collapse;background:#fff;font-size:15px;text-align:center;font-variant-numeric:tabular-nums}
 .table th,.table td{border:1px solid #d6d0c6;padding:12px 8px}
 .table thead th{background:var(--ink);color:#fff;font-weight:400}
 .table tbody th{background:#f3efe6;font-weight:600;white-space:nowrap}
 .table td{white-space:nowrap}
-.table caption{caption-side:top;text-align:left;font-size:13px;padding-bottom:6px}
+.table caption{caption-side:top;text-align:left;font-size:14px;padding-bottom:6px}
 #price-table{overflow-x:auto}
-.fine{font-size:13px;line-height:1.8;margin-top:10px;color:var(--text)}
+.fine{font-size:14px;line-height:1.8;margin-top:10px;color:var(--text)}
 .fine+.fine{margin-top:4px}
-/* 料金表の下の注は表と同じ幅にそろえる。外枠いっぱいに流すと一行が75字ほどになっていた */
-#plan .fine{max-width:640px;margin-left:auto;margin-right:auto}
+/* 注は表と同じ幅にそろえる。外枠いっぱいに流すと一行が75字を超えた */
+#plan .fine,.trans-meth .fine{max-width:640px}
+#plan .fine{margin-left:auto;margin-right:auto}
+/* 表の題が「平日の」なので、週末の加算は表の真下で目に入るようにする */
+#price-table+.fine{margin-top:14px;font-size:15px;color:var(--ink)}
 
-/* お知らせ。写真のある記事は、日付と文の左端を他の記事と揃えるため、写真を右に置く */
 ._news{max-width:880px}
 ._news__wrap li{padding:16px 0;border-bottom:1px solid var(--line)}
-._news__wrap time{display:block;font-size:13px;color:var(--mute)}
-._news__wrap p{font-size:15px}
+._news__wrap time{display:block;font-size:14px;color:var(--mute)}
+/* 写真のある記事は、日付と文の左端を他の記事と揃えるため、写真を右に置く */
 ._news__wrap .home-news__item{display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:start}
 .home-news__item img{width:100%;aspect-ratio:4/3;object-fit:cover}
 
-/* 交通アクセス。行き方は乗り継ぎを箱と線でつなぐ */
-._access-info{display:grid;grid-template-columns:34% 1fr;gap:28px;align-items:start}
+._access-info{display:grid;grid-template-columns:34% 1fr;gap:28px;align-items:stretch}
 ._access-info__pic img{width:100%;aspect-ratio:4/3;object-fit:cover}
-._access-info__txt{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;margin-top:16px;font-size:13px;line-height:1.7}
+._access-info__txt{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;margin-top:16px;font-size:14px;line-height:1.7}
 ._access-info__txt img{width:110px;aspect-ratio:4/3;object-fit:cover}
 ._access-info__txt b{display:block;font-size:15px;color:var(--ink)}
-._access-info__map{background:#fff;box-shadow:0 0 0 1px var(--line)}
-._access-info__map iframe{display:block;width:100%;height:auto;aspect-ratio:16/10;background:var(--washi)}
-._access-info__map p{padding:14px 18px;border-top:1px solid var(--line);font-size:13px}
+._access-info__map{display:flex;flex-direction:column;background:#fff;box-shadow:0 0 0 1px var(--line)}
+/* 地図の高さは左の列に合わせる。縦横比で決めると左の列の下に空きが残っていた */
+._access-info__map iframe{display:block;flex:1 1 0;width:100%;height:0;min-height:260px;background:var(--washi)}
+._access-info__map p{padding:14px 18px;border-top:1px solid var(--line);font-size:15px}
 ._access-info__map p a{border-bottom:1px solid var(--bengara);color:var(--bengara);text-decoration:none}
 
-/* よくあるご質問 */
 #faq .wrapper>div{max-width:510px;margin:0 auto}
 #faq .wrapper>div>div+div{margin-top:26px}
-#faq h3{padding-left:1.4em;text-indent:-1.4em;font-size:17px;font-weight:600;color:var(--ink);line-height:1.6}
-#faq h3::before{content:"問";margin-right:.6em;color:var(--bengara);font-size:14px}
-.answer{margin-top:8px;padding-left:1.4em;font-size:14px}
+/* 問いと答えの左端を同じ値で決める。em で決めると字の大きさの差だけ左端がずれた */
+#faq h3{padding-left:24px;font-size:17px;font-weight:600;color:var(--ink);line-height:1.6}
+#faq h3::before{content:"問";display:inline-block;width:24px;margin-left:-24px;color:var(--bengara);font-size:14px}
+.answer{margin-top:8px;padding-left:24px}
 .trans-meth{margin-top:56px}
 .trans-meth h3{font-size:18px;font-weight:600;color:var(--ink);padding-bottom:10px;border-bottom:1px solid var(--ink);margin-bottom:24px}
-.trans-meth__scrollbox{display:flex;align-items:center;margin-bottom:18px;font-size:13px}
-/* 乗り継ぎの図は並び順で装うので、箱と線は交互に置く。奇数番目が箱（最初が出発地、最後が当宿）、偶数番目が線。
-   電車の行き方（2つ目の .trans-meth）の最初の線だけ、線路の二重線にする */
-.trans-meth__scrollbox>span:nth-child(odd){flex:none;padding:10px 14px;border:1px solid var(--bengara);background:#fff;color:var(--bengara);text-align:center;line-height:1.4}
-.trans-meth__scrollbox>span:first-child,.trans-meth__scrollbox>span:last-child{flex:none;display:flex;align-items:center;justify-content:center;width:120px;min-height:48px;padding:6px;border:0;background:var(--bengara);color:#fff;letter-spacing:.1em;text-align:center;line-height:1.4}
+/* 図は並び順で装うので、箱と線は交互に置く。奇数番目が箱（最初が出発地、最後が当宿）、偶数番目が線。
+   箱を下端でそろえ、線を下端から箱の半分の高さに固定する。ラベルの下端に結ぶと、行数で線の高さが変わった */
+.trans-meth__scrollbox{display:flex;align-items:flex-end;margin-bottom:18px;font-size:14px}
+.trans-meth__scrollbox>span:nth-child(odd){flex:none;display:flex;align-items:center;justify-content:center;min-height:48px;padding:6px 14px;border:1px solid var(--bengara);background:#fff;color:var(--bengara);text-align:center;line-height:1.4}
+.trans-meth__scrollbox>span:first-child,.trans-meth__scrollbox>span:last-child{width:120px;padding:6px;border:0;background:var(--bengara);color:#fff;letter-spacing:.1em}
 .trans-meth__scrollbox>span:last-child{width:110px}
-.trans-meth__scrollbox>span:nth-child(even){flex:1;min-width:30px;position:relative;text-align:center;padding:0 6px 16px;color:var(--text);font-size:12px;line-height:1.4}
-.trans-meth__scrollbox>span:nth-child(even)::after{content:"";position:absolute;left:0;right:0;bottom:6px;border-top:1px solid #9d968c}
-.trans-meth+.trans-meth .trans-meth__scrollbox>span:nth-child(2)::after{border-top:3px double #555}
+.trans-meth__scrollbox>span:nth-child(even){flex:1 1 auto;min-width:30px;position:relative;text-align:center;padding:0 8px 30px;color:var(--text);line-height:1.4}
+.trans-meth__scrollbox>span:nth-child(even)::after{content:"";position:absolute;left:0;right:0;bottom:24px;border-top:1px solid #9d968c}
+.trans-meth+.trans-meth .trans-meth__scrollbox>span:nth-child(2)::after{bottom:23px;border-top:3px double #555}
 .trans-meth .fine{margin-top:4px}
 
-/* 施設概要。中身を本文の段の510pxにそろえる（左右の余白32px）。個人情報の箱も同じ幅 */
-.datalist{max-width:574px;margin:0 auto;padding:26px 32px;background:#fff;box-shadow:0 0 0 1px var(--line)}
-.datalist dl{font-size:13.5px;line-height:1.75}
-.datalist dl div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.datalist{max-width:640px;margin:0 auto;padding:26px 32px;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.datalist dl{font-size:15px;line-height:1.75}
+.datalist dl div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
 .datalist dl div:last-child{border-bottom:0}
 .datalist dt{font-weight:600;color:var(--ink)}
 
-/* 個人情報の取扱い */
-.privacy-policy{max-width:574px;margin:30px auto 0;padding:26px 32px;background:#fff;box-shadow:0 0 0 1px var(--line);font-size:13.5px;line-height:1.85}
-.privacy-policy h3{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.privacy-policy{padding:26px 34px;background:#fff;box-shadow:0 0 0 1px var(--line);font-size:14px;line-height:1.85}
+.privacy-policy h3{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:6px}
 .privacy-policy p+p{margin-top:8px}
 
-/* ご予約・お問い合わせ */
-.contact_btn_area{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.contact_btn_area{display:grid;grid-template-columns:1fr 1.15fr;gap:30px 56px;align-items:start}
 .contact_tel{padding:30px;background:#fff;box-shadow:0 0 0 1px var(--line);text-align:center}
 .contact_tel b{display:block;font-size:30px;font-weight:600;letter-spacing:.06em;color:var(--ink)}
 .contact_tel b a{text-decoration:none}
-.contact_tel p{font-size:13px}
+.contact_tel p{font-size:14px}
+@media (min-width:901px){
+  /* フォームと個人情報の箱が長く、左の列に大きな空きが残るので、電話の箱を付いて来させる。上端はメニューの下 */
+  .contact_tel{position:sticky;top:79px;grid-row:1/span 2}
+  .privacy-policy{grid-column:2}
+}
 .contact_area form{padding:30px 34px;background:#fff;box-shadow:0 0 0 1px var(--line)}
-.contact_area label{display:block;font-size:14px;font-weight:600;color:var(--ink);margin:14px 0 6px}
+.contact_area label{display:block;font-size:15px;font-weight:600;color:var(--ink);margin:14px 0 6px}
 .contact_area label:first-of-type{margin-top:0}
-.contact_area label span,.lead span{margin-left:.6em;padding:1px 7px;background:var(--bengara);color:#fff;font-size:11px;font-weight:400;letter-spacing:.06em;vertical-align:1px}
+.contact_area label span,.lead span{padding:1px 7px;background:var(--bengara);color:#fff;font-size:12px;font-weight:400;letter-spacing:.06em;vertical-align:1px}
+.contact_area label span{margin-left:.6em}
+.lead span{margin-right:.4em}
 .contact_area label[for="r-note"] span{background:#fff;color:var(--mute);box-shadow:inset 0 0 0 1px #bfb8ad}
-.lead{font-size:13px;color:var(--mute);margin-bottom:14px}
+.lead{font-size:14px;color:var(--mute);margin-bottom:14px}
 .contact_area input,.contact_area select,.contact_area textarea{width:100%;padding:10px 12px;border:1px solid #bfb8ad;border-radius:0;background:#fff;font:inherit;font-size:16px}
 .contact_area textarea{min-height:110px}
 .contact_area button{margin-top:22px;width:100%;height:56px;border:2px solid var(--bengara);background:var(--bengara);color:#fff;font:inherit;font-size:16px;letter-spacing:.12em;cursor:pointer}
 .contact_area button:hover{background:#fff;color:var(--bengara)}
-.attention{font-size:12px;color:var(--mute);margin-top:10px}
-.attention+p{font-size:13px;margin-top:12px}
+.attention{font-size:14px;color:var(--mute);margin-top:10px}
+.attention+p{font-size:14px;margin-top:12px}
 
-/* 画面の右下に残る予約の札 */
 .reserve{position:fixed;right:0;bottom:40px;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;width:120px;height:62px;
   background:#fff;color:var(--bengara);border:2px solid var(--bengara);border-right:0;font-size:14px;text-decoration:none;letter-spacing:.1em;
   opacity:0;pointer-events:none;transition:opacity .3s}
 .reserve.is-show{opacity:1;pointer-events:auto}
+/* 右の余白に収まらない幅では中身に乗る。上端のメニューに同じ行き先の札が常にある */
+@media (max-width:1389px){
+  .reserve{display:none}
+}
 
-/* フッター。三つに割り、下端に格子を敷く */
 .footer-wrap{background:var(--foot);color:#fff;font-size:13px;line-height:1.8}
 .footer-info{display:grid;grid-template-columns:1.2fr 1fr 1.2fr;padding:56px 0 48px}
 .footer-info>div{padding:0 32px;text-align:center}
@@ -292,11 +289,9 @@ dl.facility02{border-top:1px solid var(--line);font-size:14px}
     repeating-linear-gradient(45deg,rgba(255,255,255,.07) 0 2px,transparent 2px 22px),
     repeating-linear-gradient(-45deg,rgba(255,255,255,.07) 0 2px,transparent 2px 22px),#1f1d1b}
 
-/* 動き。節の中身を下から出す */
 .fadein{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .scroll.is-show.fadein{opacity:1;transform:none}
 
-/* スマートフォン */
 .menu-btn{display:none}
 .sp-fixed{display:none}
 @media (max-width:900px){
@@ -304,8 +299,9 @@ dl.facility02{border-top:1px solid var(--line);font-size:14px}
   .pm-searchbar .contact{border-left:0;padding-left:0;text-align:center}
   .contact_btn_area,._access-info,.facility01,.gallery-container{grid-template-columns:1fr}
   .gallery-container .simple-textbox{aspect-ratio:auto;padding:40px 32px 34px}
-  .multiitem{margin-top:0}
-  .multiitem__cont{margin:0;outline-offset:-5px}
+  .multiitem__cont{width:auto;margin:0;outline-offset:-5px}
+  dl.facility02{grid-auto-rows:auto}
+  ._access-info__map iframe{flex:none;height:auto;min-height:0;aspect-ratio:16/10}
   .footer-info{grid-template-columns:1fr;gap:32px}
   .footer-info>div+div{border-left:0;border-top:1px solid rgba(255,255,255,.22);padding-top:28px}
 }
@@ -314,12 +310,14 @@ dl.facility02{border-top:1px solid var(--line);font-size:14px}
   .section-tit{font-size:22px;margin-bottom:28px}
   .section-tit.section-tit--bg{font-size:21px;margin-bottom:0}
   .hero{height:78vh;min-height:480px}
-  .hero__title{left:50%;top:auto;bottom:44px;transform:translateX(-50%);padding:22px 18px 24px}
-  .hero__title h1{font-size:32px}
-  .hero__title>p:first-child{font-size:12px}
-  .hero__title .price{margin-top:14px;font-size:13px}
+  /* 下の帯に同じボタンがある。ボタンを置き、箱を中ほどに浮かせると、主景の4割を占めて家の入口を覆っていた */
+  .hero__title{left:0;top:auto;bottom:0;width:100%;padding:12px 18px 14px}
+  .hero__title .bttn{display:none}
+  .hero__title>p:first-child{font-size:12px;margin-bottom:2px}
+  .hero__title h1 span{margin-top:2px}
+  .hero__title .price{margin-top:6px;font-size:13px;line-height:1.5}
   .hero__title .price b{font-size:22px}
-  .hero__title .bttn{min-width:0;width:100%}
+  .hero .slick-dots{bottom:150px}
   ._access-info__map{margin:0 -20px}
   ._access-info__map iframe{aspect-ratio:4/3}
   .facility02 div{grid-template-columns:1fr;gap:2px}
@@ -332,47 +330,66 @@ dl.facility02{border-top:1px solid var(--line);font-size:14px}
   .menu-btn.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .menu-btn.is-open span:nth-child(2){opacity:0}
   .menu-btn.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .desktop-header{position:fixed;inset:0;z-index:35;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+  /* 幕を透かすと裏の屋号とボタンが項目の文字に重なって見えた */
+  .desktop-header{position:fixed;inset:0;z-index:35;display:flex;align-items:center;justify-content:center;background:#161311;opacity:0;pointer-events:none;transition:opacity .3s}
   .menu-btn.is-open~.desktop-header{opacity:1;pointer-events:auto}
   .desktop-header ul{flex-direction:column;text-align:center}
   .desktop-header a{font-size:17px;padding:12px}
+  .pm-searchbar .contact{display:none}
   .pm-form{flex-wrap:wrap}
   .pm-form>div{flex:1 1 40%}
   .pm-form input,.pm-form select{width:100%}
   .pm-form .bttn{flex:1 1 100%;min-width:0}
   .pm-form__bttnbox{flex-direction:row;flex:1 1 100%}
-  .pm-form__bttnbox a{width:auto;flex:1}
+  .pm-form__bttnbox a{display:flex;align-items:center;justify-content:center;width:auto;min-height:44px;flex:1}
   ._intro,.gallery-container,.win-slide__wrap{grid-template-columns:1fr}
   ._intro__cont{padding:28px 22px}
   .home-charm__sec,.home-charm__sec:nth-child(even),.ghj-yado,.ghj-yado:nth-child(even){flex-direction:column}
   .home-charm__image,.ghj-yado__img{width:100%}
   .home-charm__main,.home-charm__sec:nth-child(even) .home-charm__main{width:92%;margin:-40px 0 0 auto;padding:26px 22px}
   .home-charm__sec:nth-child(even) .home-charm__main{margin:-40px auto 0 0}
+  /* 節の見出し（22px・太さ400）より札の見出しが強く見えていた */
+  .home-charm__main h3{font-size:19px}
   .gallery-container .simple-textbox{padding:36px 22px 30px}
-  .multiitem{margin-top:0}
-  .multiitem__cont{margin:0;outline-offset:-5px}
-  .pic-grid{grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
-  .pic-grid figure:last-child{grid-column:1/-1}
+  /* 3枚を同じ扱いにする。最後の1枚だけ幅いっぱいにすると、冬の一品がいちばん大きく見えた */
+  .pic-grid{grid-template-columns:1fr;gap:20px;margin-top:36px}
+  .pic-grid figure{display:grid;grid-template-columns:34% 1fr;gap:14px;align-items:start}
+  .pic-grid figcaption{margin-top:0}
   ._news__wrap .home-news__item{grid-template-columns:1fr;gap:12px}
+  .home-news__item img{width:200px}
   .win-slide__wrap img{min-height:220px}
   .win-slide__cont{padding:26px 20px}
+  /* 時刻を文の上に置く。横に並べると本文が1行17字ほどになり、夕食の行が5行に折れた */
+  .win-slide__cont li{grid-template-columns:1fr;gap:0}
   .ghj-yado__content{width:94%;margin:-30px auto 0;padding:22px}
   ._plan-arch-links{flex-direction:column;align-items:stretch}
-  .trans-meth__scrollbox{flex-wrap:wrap;gap:6px}
+  /* 線を消して箱と区間の文字の揃えが違うと、読む順が左右に飛んだ。左端に縦の線を通して流れにする */
+  .trans-meth__scrollbox{flex-direction:column;align-items:flex-start}
   .trans-meth__scrollbox+.trans-meth__scrollbox{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
-  .trans-meth__scrollbox>span:nth-child(even){flex:1 1 100%;padding-bottom:4px}
+  .trans-meth__scrollbox>span:nth-child(odd),.trans-meth__scrollbox>span:first-child,.trans-meth__scrollbox>span:last-child{width:auto;min-height:40px;padding:6px 14px;justify-content:flex-start}
+  .trans-meth__scrollbox>span:nth-child(even){flex:none;padding:10px 0 10px 14px;border-left:1px solid #9d968c;text-align:left}
   .trans-meth__scrollbox>span:nth-child(even)::after{display:none}
-  .trans-meth__scrollbox>span:nth-child(odd){width:auto;min-height:0;padding:6px 12px}
+  .trans-meth+.trans-meth .trans-meth__scrollbox>span:nth-child(2){border-left:3px double #555}
   .datalist{padding:26px 18px}
   .privacy-policy{padding:22px 18px}
   .datalist dl div{grid-template-columns:1fr;gap:2px}
   .contact_area form{padding:22px 18px}
-  .reserve{display:none}
-  .sp-fixed{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30}
+  /* 帯のボタンと同じ行き先が画面に2つ並ぶので、帯を過ぎてから出す */
+  .sp-fixed{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;opacity:0;pointer-events:none;transition:opacity .3s}
+  .sp-fixed.is-show{opacity:1;pointer-events:auto}
   .sp-fixed a{display:flex;align-items:center;justify-content:center;height:54px;color:#fff;text-decoration:none;font-size:14px;letter-spacing:.04em}
   .sp-fixed a:first-child{background:var(--bengara)}
   .sp-fixed a:last-child{background:var(--ink)}
   .footer-wrap{padding-bottom:54px}
+  .footer-info>div{padding:0 12px}
+  .diamond-list{grid-template-columns:auto 1fr;gap:0 24px}
+  .diamond-list a{display:block;padding:10px 0;font-size:14px}
+  /* 箱が短いので、語の途中で折らず文節で折る */
+  p,li,dd,dt,figcaption,th,td{word-break:auto-phrase}
+}
+@media (min-width:768px){
+  /* 札の左端が写真の案山子に乗っていた */
+  .home-charm__sec:nth-child(3) .home-charm__main{width:46%;margin-left:-2%}
 }
 @media (prefers-reduced-motion:reduce){
   .fadein{opacity:1;transform:none;transition:none}
@@ -389,9 +406,11 @@ h1,h2,h3{text-wrap:balance}
 /* 見出しは文節の切れ目で折る。携帯で「出かけら／れる」と語の途中で割れていた。
    auto-phrase を読むのは Chrome だけで、ほかのブラウザは従来どおり折り返す */
 h1,h2,h3{word-break:auto-phrase}
+/* 短い箱の本文も文節で折る。段落の長い所まで広げると行末が空く */
+.home-charm__main p,.multiitem__cont p,.pic-grid figcaption,.note,.facility02 figcaption,.facility02 dd,.win-slide__cont li,.ghj-yado__content p,._intro__cont p,.answer,.datalist dd,.contact_tel p,.attention+p,._access-info__map p,._access-info__txt p,._news__wrap p,.fine,.privacy-policy p{word-break:auto-phrase}
 .nw{white-space:nowrap}
 </style>
-<noscript><style>.fadein{opacity:1;transform:none}.reserve{opacity:1;pointer-events:auto}.hero__slide:not(:first-child),._intro__slide:not(:first-child){display:none}</style></noscript>
+<noscript><style>.fadein{opacity:1;transform:none}.reserve,.sp-fixed{opacity:1;pointer-events:auto}.hero__slide:not(:first-child),._intro__slide:not(:first-child){display:none}</style></noscript>
 </head>
 <body>
 
@@ -406,7 +425,7 @@ h1,h2,h3{word-break:auto-phrase}
   <div class="hero__title">
     <p>信州上田 一日一組限定の宿</p>
     <h1>古民家 穂ノ家<span>HONOYA</span></h1>
-    <p class="price">1泊2食付（税込）<b>62,000円</b>〜（<span class="nw">2名</span>様・1棟）</p>
+    <p class="price">1泊2食付<b>62,000円</b>〜（1棟・<span class="nw">2名</span>様・税込）</p>
     <a class="bttn" href="#reserve">空室状況のお問い合わせ</a>
   </div>
 </div>
@@ -446,7 +465,7 @@ h1,h2,h3{word-break:auto-phrase}
     <div class="contact">
       <p>お電話でのお問い合わせ</p>
       <b class="contact__tel"><a href="tel:0268000000">0268-00-0000</a></b>
-      <p>受付時間9:00〜19:00</p>
+      <p>受付時間<span class="nw">9:00〜19:00</span></p>
       <p>不定休</p>
     </div>
   </div>
@@ -455,7 +474,7 @@ h1,h2,h3{word-break:auto-phrase}
 <section class="container" id="about">
   <div class="separator" aria-hidden="true">◇</div>
   <div class="wrapper">
-    <h2 class="section-tit scroll fadein">一日に一組だけの古民家一棟貸し、<br>山あいの宿</h2>
+    <h2 class="section-tit scroll fadein">山あいに建つ一棟貸しの古民家</h2>
   </div>
   <div class="_intro">
     <div class="_intro__slider scroll fadein" id="intro-slider">
@@ -464,30 +483,30 @@ h1,h2,h3{word-break:auto-phrase}
     </div>
     <div class="_intro__cont simple-textbox scroll fadein">
       <h3>築80年の茅葺き民家</h3>
-      <p>昭和21年築、茅葺きの趣ある上田の古民家。貸切なので、他のお客様と会うことはありません。</p>
-      <p>上田駅より車で<span class="nw">約15分</span>。山あいにひっそりとたたずみ、雑木林や棚田に囲まれた静かな里山の宿です。柱や梁には、囲炉裏の煤の跡が今も残っております。</p>
+      <p>昭和21年に建てられた家です。貸切ですので、他のお客様と会うことはありません。</p>
+      <p>上田駅から車で<span class="nw">約15分</span>。山あいにひっそりとたたずみ、雑木林や棚田に囲まれた静かな里山の宿です。柱や梁には、囲炉裏の煤が今も残っています。</p>
     </div>
   </div>
 </section>
 
 <section class="home-charm" id="charm">
   <div class="wrapper">
-    <h2 class="section-tit scroll fadein">4つの魅力</h2>
+    <h2 class="section-tit scroll fadein">穂ノ家の魅力</h2>
     <div>
       <div class="home-charm__sec scroll fadein">
         <div class="home-charm__image"><img src="img/irori_night.jpg" alt="囲炉裏の鉄瓶と薪の火" loading="lazy"></div>
         <div class="home-charm__main">
           <span class="home-charm__num">01</span>
           <h3>囲炉裏端での夕食</h3>
-          <p>川魚の塩焼き、季節の野菜の煮物、お味噌汁を、18:00からお出しいたします。味噌は自家製です。囲炉裏を囲みながら、ゆったりとお召し上がりください。</p>
+          <p>川魚の塩焼き、季節の野菜の煮物、お味噌汁を、<span class="nw">18:00</span>からお出しします。味噌は自家製です。囲炉裏を囲みながら、ゆったりとお召し上がりください。</p>
         </div>
       </div>
       <div class="home-charm__sec scroll fadein">
-        <div class="home-charm__image"><img src="img/bath.jpg" alt="窓際の木の湯船" loading="lazy"></div>
+        <div class="home-charm__image"><img src="img/bath.jpg" alt="窓辺の檜風呂" loading="lazy"></div>
         <div class="home-charm__main">
           <span class="home-charm__num">02</span>
           <h3>窓辺の檜風呂</h3>
-          <p>窓の向こうに広がる雑木林を眺めながら、心ゆくまでおくつろぎください。お風呂はお好きな時に、何度でもご利用いただけます。</p>
+          <p>窓の向こうに広がる雑木林を眺めながら、心ゆくまでおくつろぎください。お風呂は<span class="nw">17:00</span>から、お好きな時間に何度でもご利用いただけます。</p>
         </div>
       </div>
       <div class="home-charm__sec scroll fadein">
@@ -495,7 +514,7 @@ h1,h2,h3{word-break:auto-phrase}
         <div class="home-charm__main">
           <span class="home-charm__num">03</span>
           <h3>棚田の朝</h3>
-          <p>夜明けの棚田は霧に包まれ、幻想的で美しい表情を見せます。早起きして散歩をされるお客様もいらっしゃいます。</p>
+          <p>夜明けの棚田が霧に包まれる日があります。早起きして散歩をされるお客様もいらっしゃいます。</p>
         </div>
       </div>
       <div class="home-charm__sec scroll fadein">
@@ -503,7 +522,7 @@ h1,h2,h3{word-break:auto-phrase}
         <div class="home-charm__main">
           <span class="home-charm__num">04</span>
           <h3>上田駅から無料送迎</h3>
-          <p>上田駅までお迎えに参ります。送迎の時刻は、<a href="#outline">施設概要</a>をご覧ください。</p>
+          <p><span class="nw">15:15</span>に上田駅までお迎えに参ります。お帰りの日は、<span class="nw">10:00</span>に当宿を出発し、上田駅までお送りいたします。</p>
         </div>
       </div>
     </div>
@@ -516,22 +535,22 @@ h1,h2,h3{word-break:auto-phrase}
     <div class="gallery-container">
       <div class="simple-textbox scroll fadein">
         <p class="section-tit__subtit">お料理</p>
-        <h2 class="section-tit section-tit--bg">四季折々の<br>地の食材を味わう</h2>
+        <h2 class="section-tit section-tit--bg">地の食材を<br>季節ごとに味わう</h2>
       </div>
       <div class="multiitem scroll fadein">
         <img src="img/dinner.jpg" alt="炭火と鮎の塩焼き" loading="lazy">
         <div class="multiitem__cont">
           <h3>川魚の塩焼き</h3>
-          <p>夏は鮎、秋は岩魚。どちらも囲炉裏で香ばしく焼き上げます。</p>
+          <p>春は岩魚、夏は鮎。どちらも囲炉裏で香ばしく焼き上げます。</p>
         </div>
       </div>
     </div>
     <div class="pic-grid">
-      <figure class="scroll fadein"><img src="img/breakfast.jpg" alt="焼き鮭と玉子焼きの朝食" loading="lazy"><figcaption><b>朝食</b>お櫃ご飯、焼き鮭、玉子焼き、おひたしをご用意しております。</figcaption></figure>
-      <figure class="scroll fadein"><img src="img/sansai.jpg" alt="山菜の天ぷらとご飯" loading="lazy"><figcaption><b>春の山菜</b>ふきのとう、こしあぶらなどの天ぷらをご用意いたします。雪解けの頃からゴールデンウィークまでの献立です。</figcaption></figure>
-      <figure class="scroll fadein"><img src="img/kinoko.jpg" alt="土鍋の湯豆腐" loading="lazy"><figcaption><b>冬の湯豆腐</b>土鍋のまま、こんろにかけてお出しいたします。冬の初めから春先までの献立です。</figcaption></figure>
+      <figure class="scroll fadein"><img src="img/breakfast.jpg" alt="焼き鮭と玉子焼きの朝食" loading="lazy"><figcaption><b>朝食</b>お櫃のご飯、焼き鮭、玉子焼き、おひたしをお出しします。</figcaption></figure>
+      <figure class="scroll fadein"><img src="img/sansai.jpg" alt="山菜の天ぷらとご飯" loading="lazy"><figcaption><b>春の山菜</b>雪解けの頃からゴールデンウィークまで、ふきのとう、こしあぶらなどの天ぷらをお出しします。</figcaption></figure>
+      <figure class="scroll fadein"><img src="img/kinoko.jpg" alt="土鍋の湯豆腐" loading="lazy"><figcaption><b>冬の湯豆腐</b>冬の初めから春先まで、土鍋のままこんろにかけてお出しします。</figcaption></figure>
     </div>
-    <p class="note scroll fadein"><span class="nw">アレルギー</span>や苦手な食材がございましたら、ご予約時にお知らせください。お子様にも大人と同じお料理をお出しいたします。量はご希望に合わせて加減いたします。</p>
+    <p class="note scroll fadein"><span class="nw">アレルギー</span>や苦手な食材がございましたら、ご予約時にお知らせください。<span class="nw">3歳</span>以上のお子様にも大人と同じお料理をお出しします。量はご希望に合わせて加減いたします。</p>
   </div>
 </section>
 
@@ -546,17 +565,16 @@ h1,h2,h3{word-break:auto-phrase}
         <img src="img/room.jpg" alt="畳の上の布団" loading="lazy">
         <div class="multiitem__cont">
           <h3>寝室</h3>
-          <p>ご利用人数に合わせてお布団をご用意いたします。</p>
+          <p>ご人数に合わせてお布団をご用意いたします。</p>
         </div>
       </div>
     </div>
     <div class="facility01">
-      <figure class="facility02 scroll fadein"><img src="img/kamado.jpg" alt="土間に残る竈と羽釜" loading="lazy"><figcaption><b>土間の竈</b>家が建てられた当時のまま残しております。火入れは行っておりません。</figcaption></figure>
+      <figure class="facility02 scroll fadein"><img src="img/kamado.jpg" alt="土間に残る竈と羽釜" loading="lazy"><figcaption><b>土間の竈</b>家が建てられた当時のまま残しています。火入れは行っておりません。</figcaption></figure>
       <dl class="facility02 scroll fadein">
-        <div><dt>囲炉裏の間</dt><dd>家の中心にある座敷です。囲炉裏には毎日、主人が火を入れております。</dd></div>
-        <div><dt>檜風呂</dt><dd>窓辺に檜の湯船がございます。</dd></div>
-        <div><dt>間取り</dt><dd>8畳1間と6畳2間の寝室は、襖で仕切られております。各部屋に<span class="nw">エアコン</span>を備えております。</dd></div>
-        <div><dt>薪<span class="nw">ストーブ</span></dt><dd>土間に薪<span class="nw">ストーブ</span>がございます。薪は無料でご用意しております。</dd></div>
+        <div><dt>囲炉裏の間</dt><dd>家の中心にある部屋です。囲炉裏には毎日、主人が火を入れております。</dd></div>
+        <div><dt>間取り</dt><dd>8畳1間と6畳2間の寝室は、襖で仕切られています。各部屋に<span class="nw">エアコン</span>を備えております。</dd></div>
+        <div><dt>薪<span class="nw">ストーブ</span></dt><dd>土間にございます。薪は無料でお使いいただけます。</dd></div>
       </dl>
     </div>
   </div>
@@ -570,12 +588,12 @@ h1,h2,h3{word-break:auto-phrase}
       <img src="img/hoshi.jpg" alt="天の川と山並み" loading="lazy">
       <div class="win-slide__cont">
         <ol>
-          <li><time>15:30</time><span>ご記帳のあと、鍵をお渡しして館内をご案内いたします。</span></li>
-          <li><time>17:00</time><span>お風呂の支度が整います。以降はお好きな時間にご利用いただけます。</span></li>
-          <li><time>18:00</time><span>1泊2食付のお客様には、囲炉裏端で夕食をご用意いたします。主人と女将は、お食事の支度と片付けの時だけ参ります。素泊まりのお客様は、台所をご自由にお使いいただけます。</span></li>
-          <li><time>21:00</time><span>縁側で星をご覧になる方も、早くお休みになる方もいらっしゃいます。</span></li>
-          <li><time>翌8:00</time><span>1泊2食付のお客様には、朝食をご用意いたします。</span></li>
-          <li><time>翌10:00</time><span><span class="nw">チェックアウト</span>です。送迎をご利用の方は、主人が上田駅までお送りいたします。お車でお越しの方は、鍵を玄関の鍵箱へお返しください。</span></li>
+          <li><time><span class="nw">15:30</span></time><span>ご記帳のあと、鍵をお渡しして館内をご案内いたします。</span></li>
+          <li><time><span class="nw">17:00</span></time><span>お風呂の支度が整います。以降はお好きな時間にご利用いただけます。</span></li>
+          <li><time><span class="nw">18:00</span></time><span>1泊2食付のお客様には、囲炉裏端で夕食をお出しします。主人と女将は、お食事の支度と片付けの時だけ参ります。素泊まりのお客様は、台所をご自由にお使いいただけます。</span></li>
+          <li><time><span class="nw">21:00</span></time><span>縁側で星をご覧になる方も、早くお休みになる方もいらっしゃいます。</span></li>
+          <li><time>翌<span class="nw">8:00</span></time><span>1泊2食付のお客様には、朝食をお出しします。</span></li>
+          <li><time>翌<span class="nw">10:00</span></time><span><span class="nw">チェックアウト</span>です。送迎をご利用の場合は、主人の車で上田駅までお送りいたします。お車でお越しのお客様は、鍵を玄関の鍵箱へお返しください。</span></li>
         </ol>
       </div>
     </div>
@@ -592,22 +610,21 @@ h1,h2,h3{word-break:auto-phrase}
         <div class="ghj-yado__content">
           <h3>【素泊まり】台所つきの古民家</h3>
           <p>冷蔵庫、炊飯器、食器などはご自由にお使いいただけます。食材・調味料はお客様ご自身でご用意ください。</p>
-          <p class="ghj-yado__price">38,000円（税込）〜<small>1棟・<span class="nw">2名</span>様</small></p>
+          <p class="ghj-yado__price">38,000円〜<small>（1棟・<span class="nw">2名</span>様・税込）</small></p>
         </div>
       </div>
       <div class="ghj-yado scroll fadein">
         <div class="ghj-yado__img"><img src="img/zen.jpg" alt="川魚の塩焼きと煮物の膳" loading="lazy"></div>
         <div class="ghj-yado__content">
           <h3>【1泊2食付】囲炉裏端のお食事</h3>
-          <p>夕食では、季節のお料理をご用意しております。朝食はお櫃ご飯と焼き鮭です。季節や日によって献立が変わります。</p>
-          <p class="ghj-yado__price">62,000円（税込）〜<small>1棟・<span class="nw">2名</span>様</small></p>
+          <p>夕食には季節のお料理をお出しします。朝食はお櫃のご飯と焼き鮭です。<span class="nw">日によって</span>献立が変わります。</p>
+          <p class="ghj-yado__price">62,000円〜<small>（1棟・<span class="nw">2名</span>様・税込）</small></p>
         </div>
       </div>
     </div>
     <div class="_plan-arch-links">
-      <a class="bttn bttn--maroon-ghost" href="#reserve">空室状況のお問い合わせ</a>
-      <a class="bttn" href="#price-table">人数ごとの料金表</a>
-      <a class="bttn bttn--grey" href="#cancel">キャンセル料について</a>
+      <a class="bttn" href="#reserve">空室状況のお問い合わせ</a>
+      <a class="bttn bttn--maroon-ghost" href="#cancel">キャンセル料について</a>
     </div>
     <div class="scroll fadein" id="price-table">
       <table class="table">
@@ -622,9 +639,9 @@ h1,h2,h3{word-break:auto-phrase}
         </tbody>
       </table>
     </div>
+    <p class="fine"><span class="nw">金曜・土曜・祝前日</span>は、一律<span class="nw">8,000円</span>を加算します。年末年始（<span class="nw">12月29日</span>〜<span class="nw">1月3日</span>）は曜日を問わず、一律<span class="nw">20,000円</span>を加算します。</p>
     <p class="fine">表示料金は1泊あたりの貸切料金です。<span class="nw">1名</span>様でのご利用も、<span class="nw">2名</span>様と同じ料金です。</p>
-    <p class="fine"><span class="nw">金曜・土曜・祝前日</span>は、一律<span class="nw">8,000円</span>を加算いたします。年末年始（<span class="nw">12月29日</span>〜<span class="nw">1月3日</span>）は曜日を問わず、一律<span class="nw">20,000円</span>を加算いたします。</p>
-    <p class="fine">お子様料金の設定はございません。お子様を人数に含めるかどうかについては、<a href="#outline">施設概要</a>の定員をご覧ください。</p>
+    <p class="fine">お子様料金の設定はございません。<span class="nw">3歳</span>以上のお子様はご人数に含みます。</p>
     <p class="fine">寝具代・清掃料は宿泊料金に含まれています。連泊の場合、2泊目からは1泊につき<span class="nw">5,000円</span>を割り引きます。</p>
     <p class="fine">大人<span class="nw">4名</span>様が平日に1泊2食付でお泊まりの場合、宿泊税を含めた総額は<span class="nw">94,800円</span>です。</p>
   </div>
@@ -635,7 +652,7 @@ h1,h2,h3{word-break:auto-phrase}
     <h2 class="section-tit scroll fadein">お知らせ</h2>
     <ul class="_news__wrap scroll fadein">
       <li><time datetime="2026-09-01"><span class="nw">2026年9月1日</span></time><p>年末年始のご予約を承っております。</p></li>
-      <li class="home-news__item"><div><time datetime="2026-08-20"><span class="nw">2026年8月20日</span></time><p>新米のご案内｜集落の棚田では、9月の末に稲刈りが行われます。その棚田で収穫した新米を、10月のご宿泊からお出しいたします。</p></div><img src="img/hazekake.jpg" alt="稲刈り後の棚田のはぜ掛け" loading="lazy"></li>
+      <li class="home-news__item"><div><time datetime="2026-08-20"><span class="nw">2026年8月20日</span></time><p>新米のご案内｜集落の棚田では、9月の末に稲刈りが行われます。その棚田で収穫した新米を、10月のご宿泊からお出しします。</p></div><img src="img/hazekake.jpg" alt="稲刈り後の棚田のはぜ掛け" loading="lazy"></li>
       <li><time datetime="2026-05-15"><span class="nw">2026年5月15日</span></time><p>長野県宿泊税のお知らせ｜<span class="nw">6月1日</span>のご宿泊分から、宿泊税を申し受けます。詳しくは<a href="#outline">施設概要</a>をご覧ください。</p></li>
     </ul>
   </div>
@@ -647,20 +664,20 @@ h1,h2,h3{word-break:auto-phrase}
     <h2 class="section-tit scroll fadein">よくあるご質問</h2>
     <div>
       <div class="scroll fadein">
-        <h3>空室状況はどこで確認できますか？</h3>
-        <p class="answer">お電話またはお問い合わせ<span class="nw">フォーム</span>でおたずねください。その際、ご希望のご宿泊日とご人数をお知らせください。</p>
+        <h3>空室状況はどうすれば確認できますか？</h3>
+        <p class="answer">お電話または<span class="nw">フォーム</span>で<span class="nw">お問い合わせ</span>ください。その際、ご希望のご宿泊日とご人数をお知らせください。</p>
       </div>
       <div class="scroll fadein">
         <h3>お子様連れでも泊まれますか？</h3>
-        <p class="answer">お子様連れでもご宿泊いただけます。囲炉裏に火が入っておりますので、火のそばではお子様から目を離さないようお願いいたします。</p>
+        <p class="answer">お子様連れでもご宿泊いただけます。囲炉裏には火が入っておりますので、そばではお子様から目を離さないようお願いいたします。</p>
       </div>
       <div class="scroll fadein">
         <h3>食材を買えるお店はありますか？</h3>
-        <p class="answer"><span class="nw">コンビニ</span>・<span class="nw">スーパー</span>は上田市街にございます。素泊まりの方は道中のお店をご利用ください。送迎の途中で、ご希望があれば<span class="nw">スーパー</span>に立ち寄ります。当宿から車で<span class="nw">約10分</span>のところに農産物直売所がございます。</p>
+        <p class="answer"><span class="nw">コンビニ</span>・<span class="nw">スーパー</span>は上田市街にございます。素泊まりのお客様は、お越しの途中で食材をお求めください。当宿から車で<span class="nw">約10分</span>のところに農産物直売所がございます。</p>
       </div>
       <div class="scroll fadein">
-        <h3>連泊中に観光できる場所はありますか？</h3>
-        <p class="answer">上田駅から徒歩で上田城跡公園まで<span class="nw">約12分</span>。別所温泉まで上田電鉄別所線で<span class="nw">30分</span>ほどです。観光の際は、上田駅まで送り迎えいたします。ご希望の時刻を事前にお知らせください。日中も当宿でお過ごしいただけますので、お出かけにならないお客様もいらっしゃいます。</p>
+        <h3>近くに観光できる場所はありますか？</h3>
+        <p class="answer">上田城跡公園は上田駅から徒歩<span class="nw">約12分</span>、別所温泉は上田電鉄別所線で<span class="nw">約30分</span>です。観光の際は、上田駅との間を送迎いたします。ご希望の時刻を事前にお知らせください。</p>
       </div>
       <div class="scroll fadein">
         <h3>事前に荷物を送りたいのですが、お預かりいただけますか？</h3>
@@ -687,7 +704,7 @@ h1,h2,h3{word-break:auto-phrase}
       </div>
       <div class="_access-info__map scroll fadein">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.520263251687!2d138.2492805!3d36.396606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601dbcda710ff00b%3A0x34f214a313298c5f!2z5LiK55Sw6aeF!5e0!3m2!1sja!2sjp!4v1790593074021!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="上田駅周辺の地図"></iframe>
-        <p>上田駅から車で<span class="nw">約15分</span>の集落に当宿がございます。お城口にて、送迎の車をご用意しております。<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E7%94%B0%E9%A7%85" target="_blank" rel="noopener">上田駅周辺の地図を開く</a></p>
+        <p>上田駅から車で<span class="nw">約15分</span>の集落に当宿がございます。<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E7%94%B0%E9%A7%85" target="_blank" rel="noopener">上田駅周辺の地図を開く</a></p>
       </div>
     </div>
 
@@ -704,14 +721,14 @@ h1,h2,h3{word-break:auto-phrase}
       </div>
       <div class="trans-meth__scrollbox">
         <span>名古屋方面</span>
-        <span>中央自動車道・長野自動車道<br><span class="nw">約2時間</span><span class="nw">40分</span></span>
+        <span>東名高速道路・中央自動車道・長野自動車道<br><span class="nw">約2時間</span><span class="nw">40分</span></span>
         <span>更埴JCT</span>
         <span>上信越自動車道<br><span class="nw">約20分</span></span>
         <span>上田菅平IC</span>
         <span><span class="nw">約20分</span></span>
         <span>穂ノ家</span>
       </div>
-      <p class="fine">東京方面の所要時間は練馬IC起点の目安です。名古屋方面は名古屋IC起点です。冬期（12〜3月）は冬用<span class="nw">タイヤ</span>か<span class="nw">チェーン</span>をご用意ください。集落の中は道が入り組んでおりますので、詳しい道順はご予約の確定後にご案内いたします。</p>
+      <p class="fine">所要時間は、東京方面は練馬IC、名古屋方面は名古屋ICからの目安です。冬期（12〜3月）は冬用<span class="nw">タイヤ</span>か<span class="nw">チェーン</span>をご用意ください。集落の中は道が<span class="nw">入り組んで</span>おりますので、詳しい道順はご予約の確定後にご案内いたします。</p>
     </div>
     <div class="trans-meth scroll fadein">
       <h3>電車でお越しのお客様</h3>
@@ -722,7 +739,7 @@ h1,h2,h3{word-break:auto-phrase}
         <span>送迎の車で<span class="nw">約15分</span></span>
         <span>穂ノ家</span>
       </div>
-      <p class="fine">上田駅前から路線バスもございますが、便数が限られております。上田駅からは、当宿の送迎の車をご利用ください。</p>
+      <p class="fine">上田駅からは、当宿の送迎の車をご利用ください。</p>
     </div>
   </div>
 </section>
@@ -734,29 +751,21 @@ h1,h2,h3{word-break:auto-phrase}
     <div class="datalist scroll fadein">
         <dl>
           <div><dt>客室</dt><dd>一棟貸し（寝室：8畳1間・6畳2間、囲炉裏の間）</dd></div>
-          <div><dt>定員</dt><dd><span class="nw">1名</span>様からご予約いただけます。<span class="nw">最大6名</span>様までご宿泊可能です。※<span class="nw">3歳</span>以上のお子様は、ご利用人数に含まれます。※<span class="nw">2歳</span>以下のお子様は添い寝となります。お食事のご用意はございません。</dd></div>
-          <div><dt><span class="nw">チェックイン</span>・<span class="nw">アウト</span></dt><dd><span class="nw">チェックイン</span>15:30／<span class="nw">チェックアウト</span>10:00</dd></div>
-          <div><dt>ご予約の締切</dt><dd>素泊まりは前日の19:00まで、1泊2食付は食材を仕入れるため<span class="nw">3日</span>前まで承ります。</dd></div>
-          <div><dt>送迎</dt><dd>上田駅から無料送迎いたします。<span class="nw">8名</span>乗りの送迎車をご用意しております。上田駅でのお迎えは15:15です。お帰りの日は、10:00に当宿を出発し、上田駅までお送りいたします。</dd></div>
-          <div><dt>駐車場</dt><dd><span class="nw">3台</span>の駐車<span class="nw">スペース</span>がございます。無料でご利用いただけます。</dd></div>
+          <div><dt>定員</dt><dd><span class="nw">最大6名</span>様。<span class="nw">1名</span>様からご予約いただけます。※<span class="nw">3歳</span>以上のお子様は、ご人数に含みます。※<span class="nw">2歳</span>以下のお子様は添い寝となり、お食事はご用意しておりません。</dd></div>
+          <div><dt><span class="nw">チェックイン</span>・<span class="nw">アウト</span></dt><dd><span class="nw">チェックイン</span><span class="nw">15:30</span>／<span class="nw">チェックアウト</span><span class="nw">10:00</span></dd></div>
+          <div><dt>ご予約の締切</dt><dd>素泊まりは前日の<span class="nw">19:00</span>まで、1泊2食付は食材を仕入れるため<span class="nw">3日</span>前まで承ります。</dd></div>
+          <div><dt>送迎</dt><dd>上田駅から無料送迎いたします。上田駅お城口でのお迎えは<span class="nw">15:15</span>です。お帰りの日は、<span class="nw">10:00</span>に当宿を出発し、上田駅までお送りいたします。送迎の車は<span class="nw">8名</span>乗りです。</dd></div>
+          <div><dt>駐車場</dt><dd>無料の駐車<span class="nw">スペース</span>が<span class="nw">3台</span>分ございます。</dd></div>
           <div><dt>館内設備</dt><dd>囲炉裏・薪<span class="nw">ストーブ</span>・檜風呂（沸かし湯／洗い場・<span class="nw">シャワー</span>つき）・<span class="nw">トイレ</span>・台所（ガスこんろ・冷蔵庫・炊飯器・鍋・食器）・洗濯機・無料Wi-Fi・寝室<span class="nw">エアコン</span></dd></div>
           <div><dt><span class="nw">アメニティ</span></dt><dd><span class="nw">シャンプー</span>・<span class="nw">コンディショナー</span>・<span class="nw">ボディソープ</span>・<span class="nw">バスタオル</span>・<span class="nw">フェイスタオル</span>・歯<span class="nw">ブラシ</span>・<span class="nw">ドライヤー</span>・作務衣（館内着）</dd></div>
           <div><dt>館内の段差</dt><dd>建物は平屋です。敷居・上がり框に段差がございます。</dd></div>
           <div><dt><span class="nw">ペット</span></dt><dd><span class="nw">ペット</span>の同伴はご遠慮いただいております。</dd></div>
-          <div id="cancel"><dt>キャンセル料</dt><dd>宿泊日の<span class="nw">8日</span>前までは無料です。<span class="nw">7〜4日</span>前は宿泊料金の<span class="nw">30%</span>、<span class="nw">3〜1日</span>前は<span class="nw">50%</span>、当日・ご連絡なしの不泊は<span class="nw">100%</span>です。ご出発地からの新幹線、特急、高速バスが運休した場合、又は高速道路の通行止めがあった場合は、キャンセル料はご請求いたしません。</dd></div>
-          <div><dt>宿泊税</dt><dd>長野県宿泊税 お一人様1泊<span class="nw">200円</span>（<span class="nw">2029年6月1日</span>のご宿泊から<span class="nw">300円</span>）。お一人様1泊の宿泊料金（食事等を除く）が税抜<span class="nw">6,000円</span>未満の場合は、課税されません。詳しくは<a href="https://www.pref.nagano.lg.jp/kankoki/syukuhakuzei/zei_gaiyou.html">長野県の案内</a>をご覧ください。</dd></div>
-          <div><dt>お支払い</dt><dd>現金・<span class="nw">クレジットカード</span>・<span class="nw">スマホ</span>決済（<span class="nw">チェックアウト</span>時に現地で）</dd></div>
-          <div><dt>喫煙</dt><dd>屋内は禁煙です。庭に喫煙所をご用意しております。</dd></div>
-          <div><dt>領収書</dt><dd>当宿は適格請求書発行事業者です。領収書・請求書を発行し、登録番号を明記します。</dd></div>
+          <div id="cancel"><dt>キャンセル料</dt><dd>宿泊日の<span class="nw">8日</span>前までは無料です。<span class="nw">7〜4日</span>前は宿泊料金の<span class="nw">30%</span>、<span class="nw">3〜1日</span>前は<span class="nw">50%</span>、当日・ご連絡なしの不泊は<span class="nw">100%</span>です。ご出発地からの新幹線、特急、高速バスが運休した場合、または高速道路の通行止めがあった場合は、キャンセル料をご請求いたしません。</dd></div>
+          <div><dt>宿泊税</dt><dd>長野県宿泊税 お一人様1泊<span class="nw">200円</span>（<span class="nw">2029年6月1日</span>のご宿泊から<span class="nw">300円</span>）。詳しくは<a href="https://www.pref.nagano.lg.jp/kankoki/syukuhakuzei/zei_gaiyou.html">長野県の案内</a>をご覧ください。</dd></div>
+          <div><dt>お支払い</dt><dd>現金・<span class="nw">クレジットカード</span>・<span class="nw">スマホ</span>決済（<span class="nw">チェックイン</span>時にお支払いください）</dd></div>
+          <div><dt>喫煙</dt><dd>屋内は禁煙です。喫煙所は庭にございます。</dd></div>
+          <div><dt>領収書</dt><dd>適格請求書に対応した領収書・請求書を発行いたします。</dd></div>
         </dl>
-    </div>
-
-    <div class="privacy-policy scroll fadein" id="privacy">
-      <h3>個人情報の取扱い</h3>
-      <p>当宿では、お客様からのお問い合わせや宿泊プランへのお申し込み等を通じて、お客様のお名前、お電話番号、<span class="nw">メールアドレス</span>、ご宿泊日・ご人数、ご希望<span class="nw">プラン</span>・ご質問内容等の個人情報をご提供いただく場合があります。</p>
-      <p>お預かりした個人情報は、お問い合わせ・ご宿泊への対応に利用します。上記の目的以外には利用いたしません。</p>
-      <p>お客様からお預かりした個人情報を、個人情報保護法その他の法令に基づき開示が認められる場合を除き、ご本人様の同意を得ずに第三者に提供することはありません。開示・訂正・削除をご希望の場合は、ご本人様よりお申し出ください。</p>
-      <p>個人情報の取扱いに関するお問い合わせは、当宿（0268-00-0000）までお願いいたします。</p>
     </div>
   </div>
 </section>
@@ -788,10 +797,17 @@ h1,h2,h3{word-break:auto-phrase}
         <select id="r-plan" required><option>素泊まり</option><option>1泊2食付</option><option>未定</option></select>
         <label for="r-note">ご質問・アレルギー・苦手な食材<span>任意</span></label>
         <textarea id="r-note"></textarea>
-        <button type="submit">空室状況のお問い合わせ</button>
+        <button type="submit">この内容で送信する</button>
         <p class="attention">このお問い合わせフォームは見本のため、ご入力の内容は送信されません。</p>
-        <p>お問い合わせには、翌日中にご返信いたします。ご入力内容の扱いについては、<a href="#privacy">個人情報の取扱い</a>をご覧ください。お急ぎの場合はお電話にてお問い合わせください。</p>
+        <p>お問い合わせには、翌日中にご返信いたします。ご入力内容については、<a href="#privacy">個人情報の取扱い</a>をご覧ください。お急ぎの場合はお電話にて<span class="nw">お問い合わせ</span>ください。</p>
       </form>
+      <div class="privacy-policy scroll fadein" id="privacy">
+        <h3>個人情報の取扱い</h3>
+        <p>当宿では、お問い合わせや宿泊プランへのお申し込み等を通じて、お客様のお名前、お電話番号、メールアドレス、ご宿泊日・ご人数、ご希望のプラン・ご質問内容等の個人情報をご提供いただく場合があります。</p>
+        <p>お預かりした個人情報は、お問い合わせ・ご宿泊への対応にのみ利用いたします。</p>
+        <p>お客様からお預かりした個人情報を、個人情報保護法その他の法令に基づき開示が認められる場合を除き、ご本人様の同意を得ずに第三者に提供することはありません。開示・訂正・削除をご希望の場合は、ご本人様よりお申し出ください。</p>
+        <p>個人情報の取扱いに関するお問い合わせは、当宿（0268-00-0000）までお願いいたします。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -803,12 +819,12 @@ h1,h2,h3{word-break:auto-phrase}
     <div class="footer-info__brand">
       <p>信州上田 一日一組限定の宿</p>
       <p class="footer__logo">古民家 穂ノ家</p>
-      <p>長野県上田市（架空の住所です）<br>TEL 0268-00-0000</p>
+      <p>長野県上田市（架空の住所です）</p>
     </div>
     <div class="footer-info__contact contact">
       <p>お電話でのお問い合わせ</p>
       <p class="contact__tel"><a href="tel:0268000000">0268-00-0000</a></p>
-      <p>受付時間9:00〜19:00</p>
+      <p>受付時間<span class="nw">9:00〜19:00</span></p>
       <p>不定休</p>
     </div>
     <div class="footer-info__nav">
@@ -825,7 +841,7 @@ h1,h2,h3{word-break:auto-phrase}
   </div>
   <div class="wrapper site-info">
     <p>旅館業法 簡易宿所営業 上田保健所 第00-000号（架空）｜食品衛生法 飲食店営業 上田保健所 第00-000号（架空）｜適格請求書発行事業者 登録番号T0000000000000（架空）</p>
-    <p>この宿は架空のものです。写真は、ほかの場所で撮影されたものです。出典の一覧は、<a href="img/CREDITS.md">img/CREDITS.md</a>をご覧ください。この<span class="nw">ページ</span>はLP制作の見本です。<br>制作：常夜燈</p>
+    <p>この宿は架空のものです。写真は、ほかの場所で撮影されたものです。<a href="img/credits.html">出典の一覧</a>をご覧ください。この<span class="nw">ページ</span>はLP制作の見本です。<br>制作：常夜燈</p>
     <ul class="credit">
       <li>山菜の天ぷら：Manabu Itoh（<a href="https://www.flickr.com/photos/s_freesia/18562023572/">DSC_1868</a>／<a href="https://creativecommons.org/licenses/by-sa/2.0/deed.ja">CC BY-SA 2.0</a>）</li>
       <li>鮎の塩焼き：Koda6029（<a href="https://commons.wikimedia.org/wiki/File:%E9%AE%8E%E3%81%AE%E5%A1%A9%E7%84%BC%E3%81%8D%EF%BC%88%E5%A4%A7%E7%80%AC%E3%82%84%E3%81%AA%EF%BC%89.jpg">鮎の塩焼き（大瀬やな）</a>／<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">CC BY-SA 4.0</a>）</li>
@@ -846,7 +862,7 @@ h1,h2,h3{word-break:auto-phrase}
 <script>
 // 読み込み先から jQuery が届かないと、現れる部品が透明のまま残る
 if (!window.jQuery) {
-  document.querySelectorAll('.scroll').forEach(function (e) { e.classList.add('is-show'); });
+  document.querySelectorAll('.scroll,.reserve,.sp-fixed').forEach(function (e) { e.classList.add('is-show'); });
 }
 </script>
 <script>
@@ -955,12 +971,11 @@ window.jQuery && (function ($) {
   });
 
   var hero = $('.hero');
+  var bar = $('.pm-searchbar');
   $(window).scroll(function () {
-    if ($(this).scrollTop() > hero.outerHeight()) {
-      $('.reserve').addClass('is-show');
-    } else {
-      $('.reserve').removeClass('is-show');
-    }
+    var y = $(this).scrollTop();
+    $('.reserve').toggleClass('is-show', y > hero.outerHeight());
+    $('.sp-fixed').toggleClass('is-show', y > bar.offset().top + bar.outerHeight());
   });
 })(jQuery);
 </script>
